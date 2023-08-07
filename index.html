@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>window.console = window.console || function(t) {};</script>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="overlay__city"></div>
+  <div class="preloader">
+    <div class="preloader__top"></div>
+    <svg class="preloader__image" role="img" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="2.5" cy="22.5" r="2.5"/>
+      <circle cx="2.5" cy="12.5" r="2.5"/>
+      <circle cx="2.5" cy="2.5" r="2.5"/>
+      <circle cx="12.5" cy="2.5" r="2.5"/>
+      <circle cx="22.5" cy="2.5" r="2.5"/>
+      <circle cx="22.5" cy="12.5" r="2.5"/>
+      <circle cx="12.5" cy="12.5" r="2.5"/>
+      <circle cx="12.5" cy="22.5" r="2.5"/>
+      <circle cx="22.5" cy="22.5" r="2.5"/>
+    </svg>
+    <div class="preloader__bottom"></div>
+  </div>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__flex">
+        <div class="header__top">
+          <div class="header__left">
+            <a href="index.html" class="header__logo link"><img src="img/logo.svg" alt=""></a>
+            <div class="header__contacts">
+              <button class="header__region">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g mask="url(#mask0_324_37)">
+                    <path d="M14 14.0002C14.6416 14.0002 15.1909 13.7717 15.6479 13.3147C16.1048 12.8578 16.3333 12.3085 16.3333 11.6668C16.3333 11.0252 16.1048 10.4759 15.6479 10.0189C15.1909 9.56197 14.6416 9.3335 14 9.3335C13.3583 9.3335 12.809 9.56197 12.352 10.0189C11.8951 10.4759 11.6666 11.0252 11.6666 11.6668C11.6666 12.3085 11.8951 12.8578 12.352 13.3147C12.809 13.7717 13.3583 14.0002 14 14.0002ZM14 22.5752C16.3722 20.3974 18.1319 18.4189 19.2791 16.6397C20.4263 14.8606 21 13.2807 21 11.9002C21 9.78072 20.3243 8.0453 18.9729 6.69391C17.6215 5.34252 15.9638 4.66683 14 4.66683C12.0361 4.66683 10.3784 5.34252 9.02704 6.69391C7.67565 8.0453 6.99996 9.78072 6.99996 11.9002C6.99996 13.2807 7.57357 14.8606 8.72079 16.6397C9.86801 18.4189 11.6277 20.3974 14 22.5752ZM14 25.6668C10.8694 23.0029 8.53121 20.5286 6.98538 18.2439C5.43954 15.9592 4.66663 13.8446 4.66663 11.9002C4.66663 8.9835 5.60482 6.65988 7.48121 4.92933C9.3576 3.19877 11.5305 2.3335 14 2.3335C16.4694 2.3335 18.6423 3.19877 20.5187 4.92933C22.3951 6.65988 23.3333 8.9835 23.3333 11.9002C23.3333 13.8446 22.5604 15.9592 21.0145 18.2439C19.4687 20.5286 17.1305 23.0029 14 25.6668Z" fill="currentColor"/>
+                  </g>
+                </svg>
+                <span>Ваш регион</span>
+              </button>
+              <div class="header__contacts_right">
+                <a href="tel://88002002255" class="header__tel_mobile"></a>
+                <a href="#" class="header__mail_mobile"></a>
+              </div>
+            </div>
+            <a href="tel://88002002255" class="header__tel">
+              <svg width="161" height="161" viewBox="0 0 161 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M151.056 160.375C131.975 160.375 113.374 156.122 95.2547 147.617C77.1349 139.112 61.0859 127.87 47.1078 113.892C33.1297 99.9141 21.888 83.8651 13.3828 65.7453C4.8776 47.6255 0.625 29.025 0.625 9.94375C0.625 7.28125 1.5125 5.0625 3.2875 3.2875C5.0625 1.5125 7.28125 0.625 9.94375 0.625H45.8875C47.9583 0.625 49.8073 1.29063 51.4344 2.62188C53.0615 3.95313 54.0229 5.65417 54.3188 7.725L60.0875 38.7875C60.3833 40.8583 60.3464 42.7443 59.9766 44.4453C59.6068 46.1464 58.7563 47.6625 57.425 48.9938L35.9031 70.7375C42.1156 81.3875 49.9182 91.3719 59.3109 100.691C68.7036 110.009 79.0208 118.071 90.2625 124.875L111.119 104.019C112.45 102.688 114.188 101.689 116.333 101.023C118.478 100.358 120.585 100.173 122.656 100.469L153.275 106.681C155.346 107.125 157.047 108.123 158.378 109.677C159.709 111.23 160.375 113.042 160.375 115.113V151.056C160.375 153.719 159.488 155.938 157.713 157.713C155.938 159.488 153.719 160.375 151.056 160.375ZM27.4719 53.875L42.1156 39.2313L38.3438 18.375H18.5969C19.3365 24.4396 20.3719 30.4302 21.7031 36.3469C23.0344 42.2635 24.9573 48.1063 27.4719 53.875ZM106.903 133.306C112.672 135.821 118.552 137.818 124.542 139.297C130.533 140.776 136.56 141.738 142.625 142.181V122.656L121.769 118.441L106.903 133.306Z" fill="currentColor"/>
+              </svg>
+              <span>8-800 200-22-55</span>
+            </a>
+          </div>
+          <div class="header__right">
+            <a href="action.html" class="link">Акции</a>
+            <a href="tradein.html" class="link">Trade-in</a>
+            <a href="reviews.html" class="link">Отзывы</a>
+            <a href="contacts.html" class="link">Контакты</a>
+            <a href="finance.html" class="link">Финансирование</a>
+          </div>
+          <button class="header__burger_mobile"><span class="header__burger_mobile_block"><span></span></span></button>
+        </div>
+        <div class="header__bottom">
+          <div class="header__list_block">
+            <div class="header__list_scroll" data-scrollbar>
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__burger" aria-label="Открыть меню">
+                    <span>
+                      <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.133301 4.29367L4.01462 0.5L7.89594 4.29367L4.01462 8.08734L0.133301 4.29367Z" fill="currentColor"/>
+                        <path d="M14.7707 4.29367L18.652 0.5L22.5333 4.29367L18.652 8.08734L14.7707 4.29367Z" fill="currentColor"/>
+                        <path d="M14.7707 17.7063L18.652 13.9127L22.5333 17.7063L18.652 21.5L14.7707 17.7063Z" fill="currentColor"/>
+                        <path d="M0.133301 17.7063L4.01462 13.9127L7.89594 17.7063L4.01462 21.5L0.133301 17.7063Z" fill="currentColor"/>
+                        <path d="M5.62231 11.1216L11.0003 5.86503L16.3783 11.1216L11.0003 16.3782L5.62231 11.1216Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span>Техника</span>
+                  </a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link link" href="technique.html">Техника</a>
+                  <button class="header__button">Техника</button>
+                  <div class="header__block">
+                    <ul class="header__block_list">
+                      <li class="header__block_item">
+                        <a href="#" class="header__block_link link">Каталог запчастей</a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="propelled.html" class="header__block_sublink link">Cash in</a></li>
+                          <li class="header__block_subitem"><a href="propelled.html" class="header__block_sublink link">New Holland</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__block_item">
+                        <a href="service.html" class="header__block_link link">Сервисное обслуживание</a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="service.html" class="header__block_sublink link">Cash in</a></li>
+                          <li class="header__block_subitem"><a href="service.html" class="header__block_sublink link">New Holland</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__item">
+                  <a class="header__link link" href="agriculture.html">Точное земледелие</a>
+                  <button class="header__button">Точное земледелие</button>
+                  <div class="header__block">
+                    <ul class="header__block_list">
+                      <li class="header__block_item">
+                        <a href="#" class="header__block_link link"></a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="#" class="header__block_sublink link"></a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__item">
+                  <a class="header__link link" href="news.html">Новости</a>
+                  <button class="header__button">Новости</button>
+                  <div class="header__block">
+                    <ul class="header__block_list">
+                      <li class="header__block_item">
+                        <a href="#" class="header__block_link link"></a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="#" class="header__block_sublink link"></a></li>
+                        </ul>
+                      </li>
+                      <li class="header__block_item">
+                        <a href="#" class="header__block_link link"></a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="#" class="header__block_sublink link"></a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__item">
+                  <a class="header__link link" href="spareparts.html">Запчасти и сервис</a>
+                  <button class="header__button">Запчасти и сервис</button>
+                  <div class="header__block">
+                    <ul class="header__block_list">
+                      <li class="header__block_item">
+                        <a href="spareparts.html" class="header__block_link link">Каталог запчастей</a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="propelled.html" class="header__block_sublink link">Cash in</a></li>
+                          <li class="header__block_subitem"><a href="propelled.html" class="header__block_sublink link">New Holland</a></li>
+                        </ul>
+                      </li>
+                      <li class="header__block_item">
+                        <a href="service.html" class="header__block_link link">Сервисное обслуживание</a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="service.html" class="header__block_sublink link">Cash in</a></li>
+                          <li class="header__block_subitem"><a href="service.html" class="header__block_sublink link">New Holland</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__item">
+                  <a class="header__link link" href="aboutus.html">О нас</a>
+                  <button class="header__button">О нас</button>
+                  <div class="header__block">
+                    <ul class="header__block_list">
+                      <li class="header__block_item">
+                        <a href="#" class="header__block_link link"></a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="#" class="header__block_sublink link"></a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__item">
+                  <a class="header__link link" href="academy.html">БМ Академия</a>
+                  <button class="header__button">БМ Академия</button>
+                  <div class="header__block">
+                    <ul class="header__block_list">
+                      <li class="header__block_item">
+                        <a href="#" class="header__block_link link"></a>
+                        <ul class="header__block_sublist">
+                          <li class="header__block_subitem"><a href="#" class="header__block_sublink link"></a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__buttons">
+            <button class="header__search"></button>
+            <input id="headersearch" type="text" class="header__search_input">
+            <a href="#" class="header__mail link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main" data-scroll-speed="10" data-scroll-container id="top">
+    <div class="main__section">
+      <section class="hero" data-scroll-section>
+        <div class="container hero__container">
+          <div class="hero__slider swiper-container">
+            <ul class="hero__list swiper-wrapper">
+              <li class="hero__item swiper-slide">
+                <div class="hero__block slide-inner slide-bg-image" data-background="img/slide/slide_1.webp">
+                  <div class="hero__shadow">
+                    <h2 data-swiper-parallax="300" class="hero__head">ОТ ДОСТИГНУТЫХ ЦЕЛЕЙ К НОВЫМ ГОРИЗОНТАМ</h2>
+                    <p data-swiper-parallax="400" class="hero__desc">id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc.</p>
+                    <div data-swiper-parallax="500" class="hero__buttons">
+                      <button class="button__default hero__button">Напиши нам<span></span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="hero__item swiper-slide">
+                <div class="hero__block slide-inner slide-bg-image" data-background="img/slide/slide_2.webp">
+                  <div class="hero__shadow">
+                    <h2 data-swiper-parallax="300" class="hero__head">ВЫСОЧАЙШАЯ ТОЧНОСТЬ РАСПЫЛЕНИЯ</h2>
+                    <p data-swiper-parallax="400" class="hero__desc">id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc.</p>
+                    <div data-swiper-parallax="500" class="hero__buttons">
+                      <button class="button__default hero__button">Напиши нам<span></span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="hero__item swiper-slide">
+                <div class="hero__block slide-inner slide-bg-image" data-background="img/slide/slide_3.webp">
+                  <div class="hero__shadow">
+                    <h2 data-swiper-parallax="300" class="hero__head">DONGFENG- ЭКСПЕРТ ИЗ АЗИИ</h2>
+                    <p data-swiper-parallax="400" class="hero__desc">id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc.</p>
+                    <div data-swiper-parallax="500" class="hero__buttons">
+                      <button class="button__default hero__button">Напиши нам<span></span></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination hero__pagination"></div>
+            <div class="swiper-button-next hero__next"></div>
+            <div class="swiper-button-prev hero__prev"></div>
+          </div>
+        </div>
+      </section>
+      <section class="partners" data-scroll-section>
+        <div class="container partners__container">
+          <div class="partners__divider"></div>
+          <div class="partners__list_top swiper-container">
+            <ul class="partners__list swiper-wrapper">
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_5.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_4.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_3.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_2.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_1.png" alt=""></div></a>
+              </li>
+            </ul>
+          </div>
+          <div class="partners__divider"></div>
+          <div class="partners__list_bottom swiper-container">
+            <ul class="partners__list  swiper-wrapper">
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_1.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_2.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_3.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_4.png" alt=""></div></a>
+              </li>
+              <li class="partners__item swiper-slide">
+                <a href="#" class="link"><div class="partners__block"><img src="img/partners/partner_5.png" alt=""></div></a>
+              </li>
+            </ul>
+          </div>
+          <div class="partners__divider"></div>
+        </div>
+      </section>
+      <section class="events" data-scroll-section>
+        <div class="container events__container">
+          <div class="events__block">
+            <h3 class="events__head">Cобытия компании</h3>
+            <a href="news.html" class="events__desc link">Все события</a>
+          </div>
+          <ul class="events__list">
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_1.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события Название события Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_2.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_3.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_4.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_5.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_6.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_7.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="events__item">
+              <div class="events__top">
+                <img src="img/events/events_8.webp" alt="">
+              </div>
+              <div class="events__bottom">
+                <a href="article.html" class="link">
+                  <p class="events__name">Название события</p>
+                  <p class="events__date">06.07.2022</p>
+                </a>
+                <div class="events__buttons">
+                  <a href="article.html" class="events__button link">Подробнее
+                    <span>
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.63238 8.00347L13.2578 4.37113L3.63238 0.738787L3.58683e-05 4.37113L3.63238 8.00347Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a href="article.html" class="events__desc mobile link">Все события</a>
+        </div>
+      </section>
+      <section class="company" data-scroll-section>
+        <div class="container company__container">
+          <ul class="company__info_list">
+            <li class="company__info_item">
+              <div class="company__info_number"><span>60</span></div>
+              <div class="company__info_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            </li>
+            <li class="company__info_item">
+              <div class="company__info_number"><span>120</span>+</div>
+              <div class="company__info_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            </li>
+            <li class="company__info_item">
+              <div class="company__info_number"><span>82</span></div>
+              <div class="company__info_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            </li>
+          </ul>
+          <div class="company__flex">
+            <h2 class="company__head">Команда профессионалов</h2>
+            <p class="company__desc">по продаже и обслуживанию сельскохозяйственной техники.</p>
+            <div class="company__buttons">
+              <button class="button__default button__form company__button">Напиши нам<span></span></button>
+            </div>
+          </div>
+          <div class="company__slider">
+            <div class="company__top swiper-container">
+              <ul class="company__list swiper-wrapper">
+                <li class="company__item swiper-slide">
+                  <div class="company__block slide-inner slide-bg-image" data-background="img/company/company_1.jpg"></div>
+                </li>
+                <li class="company__item swiper-slide">
+                  <div class="company__block slide-inner slide-bg-image" data-background="img/company/company_2.jpg"></div>
+                </li>
+                <li class="company__item swiper-slide">
+                  <div class="company__block slide-inner slide-bg-image" data-background="img/company/company_3.jpg"></div>
+                </li>
+              </ul>
+            </div>
+            <h4 class="company__name">Принципы компании</h4>
+            <div class="swiper-button-next company__next">
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.4979 10.5346C18.0032 10.0294 18.0032 9.21014 17.4979 8.70486L9.26392 0.470878C8.75864 -0.0344009 7.93942 -0.0344009 7.43414 0.470878C6.92887 0.976155 6.92887 1.79537 7.43414 2.30065L14.7532 9.61975L7.43414 16.9388C6.92887 17.4441 6.92887 18.2633 7.43414 18.7686C7.93942 19.2739 8.75864 19.2739 9.26392 18.7686L17.4979 10.5346ZM0.154358 10.9136H16.583V8.3259H0.154358V10.9136Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="swiper-button-prev company__prev">
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.870321 10.8654C0.365042 10.3602 0.365042 9.54095 0.870321 9.03567L9.10431 0.801688C9.60958 0.29641 10.4288 0.29641 10.9341 0.801688C11.4394 1.30697 11.4394 2.12618 10.9341 2.63146L3.61498 9.95056L10.9341 17.2697C11.4394 17.7749 11.4394 18.5942 10.9341 19.0994C10.4288 19.6047 9.60958 19.6047 9.10431 19.0994L0.870321 10.8654ZM18.2139 11.2444H1.78521V8.65672H18.2139V11.2444Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="swiper-pagination company__counter"></div>
+            <div class="swiper-container company__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url('img/company/company_1.jpg')"></div>
+                <div class="swiper-slide" style="background-image:url('img/company/company_2.jpg')"></div>
+                <div class="swiper-slide" style="background-image:url('img/company/company_3.jpg')"></div>
+              </div>
+            </div>
+            <div class="swiper-container company__texts">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <h2 class="company__heading">Честь и доверие</h2>
+                  <p class="company__description">id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc.</p>
+                </div>
+                <div class="swiper-slide">
+                  <h2 class="company__heading">Честь и доверие</h2>
+                  <p class="company__description">id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc.</p>
+                </div>
+                <div class="swiper-slide">
+                  <h2 class="company__heading">Честь и доверие</h2>
+                  <p class="company__description">id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offer" data-scroll-section>
+        <div class="container offer__container">
+          <div class="events__block">
+            <h3 class="events__head">Выгодные предложения</h3>
+            <a href="action.html" class="events__desc link">Все события</a>
+          </div>
+        </div>
+        <div class="container offer__slider_container">
+          <div class="offer__slider swiper-container">
+            <ul class="offer__list swiper-wrapper">
+              <li class="offer__item swiper-slide">
+                <a href="promotion.html" class="offer__link link">
+                  <div class="offer__top">
+                    <p class="offer__name">Лизинг</p>
+                    <h4 class="offer__head">Лизинг от “Агрочемпион”</h4>
+                  </div>
+                  <div class="offer__middle">
+                    <img src="img/offer/offer_1.jpg" alt="">
+                  </div>
+                  <div class="offer__bottom">
+                    <p class="offer__desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui ut ornare lectus sit amet est placerat in egestas. 
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="offer__item swiper-slide">
+                <a href="promotion.html" class="offer__link link">
+                  <div class="offer__top">
+                    <p class="offer__name">Лизинг</p>
+                    <h4 class="offer__head">Лизинг от “Агрочемпион”</h4>
+                  </div>
+                  <div class="offer__middle">
+                    <img src="img/offer/offer_1.jpg" alt="">
+                  </div>
+                  <div class="offer__bottom">
+                    <p class="offer__desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui ut ornare lectus sit amet est placerat in egestas. 
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-pagination offer__pagination"></div>
+        </div>
+      </section>
+      <section class="map" data-scroll-section>
+        <div class="container map__container" id="map__search">
+          <div class="map__search_block">
+            <label for="map__input" class="map__label"></label>
+            <input type="text" placeholder="Поиск" id="map__input" class="map__input" onkeyup="filterFunction()">
+          </div>
+          <div class="map__zoom">
+            <button class="map__zoom_plus" id="zoom-in"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8 13.2V24H13.2V13.2H24V10.8H13.2V0H10.8V10.8H0V13.2H10.8Z" fill="currentColor"/></svg></button>
+            <button class="map__zoom_minus" id="zoom-out"><svg width="24" height="4" viewBox="0 0 24 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0.800049H24V3.20005H0V0.800049Z" fill="currentColor"/></svg></button>
+          </div>
+          <div class="map__city" data-scrollbar>
+            <button href="#" class="map__search_back close">
+              <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="5" width="6" height="6" transform="rotate(-45 0 5)" fill="currentColor"/>
+              </svg>
+              <span>Назад</span>
+            </button>
+            <p class="map__search_city" id="#moscow">
+              <a class="map__search_head" href="javascript:moscow();">г. Москва<span class="map__search_desc">Россия, Московская обл., г. Химки, ул. Бабакина, д. 5-А, оф. 707</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+74956200926"><span>8 (495) 620-09-26</span></a>
+                <a class="map__search_tel" href="tel://+79851456382"><span>8 (985) 145-63-82</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service77@bmtechnics.ru">service77@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#peterburg">
+              <a class="map__search_head" href="javascript:peterburg();">г. Санкт-Петербург<span class="map__search_desc">Россия, Ленинградская обл., Гатчинский р-н, д. Малое Верево, ул. Кутышева, д. 5, стр. 5</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+79110313479"><span>8 (911) 031-34-79</span></a>
+                <a class="map__search_tel" href="tel://+79102600073"><span>8 (910) 260-00-73</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service78@bmtechnics.ru">service78@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#vologda">
+              <a class="map__search_head" href="javascript:vologda();">г. Вологда<span class="map__search_desc">Россия, г. Вологда, ул. Гагарина, д. 91, оф. 3</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service35@bmtechnics.ru">service35@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#voronezh">
+              <a class="map__search_head" href="javascript:voronezh();">г. Воронеж<span class="map__search_desc">Россия, Воронежская обл., Новоусманский р-н, п. Отрадное, ул. Автодорожная, д. 7</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+74732332842"><span>8 (473) 233-28-42</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service36-1@bmtechnics.ru">service36-1@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#kursk">
+              <a class="map__search_head" href="javascript:kursk();">г. Курск<span class="map__search_desc">Россия, Курская область, Курский район, дер. Кукуевка, Промышленный пер., 4а</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+79606731727"><span>8 (960) 673-17-27</span></a>
+                <a class="map__search_tel" href="tel://+79155117707"><span>8 (915) 511-77-07</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:sergey.evdokimov@bmtechnics.ru">sergey.evdokimov@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="lipetsk">
+              <a class="map__search_head" href="javascript:lipetsk();">г. Липецк<span class="map__search_desc">Россия, г. Липецк, ул. Ангарская, д. 26Д</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+79191652555"><span>8 (919) 165-25-55</span></a>
+                <a class="map__search_tel" href="tel://+79192553111"><span>8 (919) 255-31-11</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service48@bmtechnics.ru">service48@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#orel">
+              <a class="map__search_head" href="javascript:orel();">г. Орёл<span class="map__search_desc">Россия, г. Орёл, ул. Итальянская, д. 1 Г</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+79102600160"><span>8 (910) 260-01-60</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:aleksey.monogarov@bmtechnics.ru">aleksey.monogarov@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#pavlovsck">
+              <a class="map__search_head" href="javascript:pavlovsck();">г. Павловск<span class="map__search_desc">Россия, Воронежская обл., г. Павловск, ул. Транспортная, д. 2</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+747362294"><span>8 (473) 6-22-94</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service36-2@bmtechnics.ru">service36-2@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#penza">
+              <a class="map__search_head" href="javascript:penza();">г. Пенза<span class="map__search_desc">Россия, Пензенская обл., Бессоновский р-он, с. Ухтинка, ул. Ухтинка, д. 1Б</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+79374116885"><span>8 (937) 411-68-85</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service58@bmtechnics.ru">service58@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="pskov">
+              <a class="map__search_head" href="javascript:pskov();">г. Псков<span class="map__search_desc">Россия, Псковская обл., Бежаницкий р-он, д. Красное Солнце, ул. Философовой, д. 13</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service60@bmtechnics.ru">service60@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#ryazan">
+              <a class="map__search_head" href="javascript:ryazan();">г. Рязань<span class="map__search_desc">Россия, г. Рязань, 184 км (Окружная дорога), стр. 8</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+79167659715"><span>8 (916) 765-97-15</span></a>
+                <a class="map__search_tel" href="tel://+79100601491"><span>8 (910) 060-14-91</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service62@bmtechnics.ru">service62@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#tambov">
+              <a class="map__search_head" href="javascript:tambov();">г. Тамбов<span class="map__search_desc">Россия, Тамбовская обл., Тамбовский р-н, п. Строитель, Промышленная зона, стр. 1</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://+79158654877"><span>8 (915) 865-48-77</span></a>
+                <a class="map__search_tel" href="tel://+79108578916"><span>8 (910) 857-89-16</span></a>
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service68@bmtechnics.ru">service68@bmtechnics.ru</a>
+              </span>
+            </p>
+            <p class="map__search_city" id="#yaroslavl">
+              <a class="map__search_head" href="javascript:yaroslavl();">г. Ярославль<span class="map__search_desc">Россия, Ярославская обл., Ярославский р-он, п. Лесная поляна, д. 43, стр. 8</span></a>
+              <span class="map__search_info">
+                <a class="map__search_tel" href="tel://88002002252"><span>8-800-200-22-52</span></a>
+                <a class="map__search_mail" href="mailto:service76@bmtechnics.ru">service76@bmtechnics.ru</a>
+              </span>
+            </p>
+          </div>
+          <div id="map" class="map__yandex"></div>
+        </div>
+      </section>
+      <footer class="footer" data-scroll-section>
+        <div class="container footer__container">
+          <div class="footer__production">
+            <div class="footer__block">
+              <div class="footer__contacts">
+                <div class="footer__contacts_block">
+                  <span>Горячая линия</span>
+                  <a href="tel://88002002255" class="footer__tel">8 800 200 22 55</a>
+                </div>
+                <div class="footer__buttons">
+                  <button class="button__default button__form footer__button">Напиши нам<span></span></button>
+                </div>
+              </div>
+              <div class="footer__flex">
+                <div class="footer__social">
+                  <a href="#" class="footer__logo link"><img src="img/footer__logo.svg" alt=""></a>
+                  <ul class="footer__social_list">
+                    <li class="footer__social_item footer__social_vk"><a href="#" target="_blank"></a></li>
+                    <li class="footer__social_item footer__social_yt"><a href="#" target="_blank"></a></li>
+                    <li class="footer__social_item footer__social_tg"><a href="#" target="_blank"></a></li>
+                  </ul>
+                </div>
+                <div class="footer__navigation">
+                  <ul class="footer__list">
+                    <li class="footer__item"><a href="technique.html" class="footer__link link">Техника</a></li>
+                    <li class="footer__item"><a href="tradein.html" class="footer__link link">Trade In</a></li>
+                    <li class="footer__item"><a href="spareparts.html" class="footer__link link">Запасные части</a></li>
+                    <li class="footer__item"><a href="service.html" class="footer__link link">Сервис</a></li>
+                  </ul>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a href="news.html" class="footer__link link">Новости</a></li>
+                    <li class="footer__item"><a href="articles.html" class="footer__link link">Статьи</a></li>
+                    <li class="footer__item"><a href="action.html" class="footer__link link">Акции</a></li>
+                  </ul>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a href="reviews.html" class="footer__link link">Отзывы</a></li>
+                    <li class="footer__item"><a href="contacts.html" class="footer__link link">Контакты</a></li>
+                    <li class="footer__item"><a href="aboutus.html" class="footer__link link">О компании</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <ul class="footer__info">
+              <li class="footer__info_item">
+                <p>Все права защищены</p>
+                <a href="" class="link">Пользовательское соглашение</a>
+                <p class="footer__copyright">© ООО «Агрочемпион» 2020-<span class="footer__year"></span></p>
+              </li>
+              <li class="footer__info_item">
+                <a href="policy.html" class="footer__privacy link">Политика конфиденциальности</a>
+              </li>
+              <li class="footer__info_item">
+                <p>Разработано <a href="https://anyera.ru/" target="_blank">Anyera Digital &amp; Design</a></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <div class="header__nav">
+    <div class="header__nav_scroll" data-scrollbar>
+      <div class="container header__nav_container">
+        <ul class="header__nav_list">
+          <li class="header__nav_item active">
+            <a href="#" class="header__nav_link link"><span>Самоходная</span></a>
+            <div class="header__subnav">
+              <div class="header__subnav_scroll" data-scrollbar>
+                <ul class="header__list_top">
+                  <li class="header__item_top selected"><a href="#" class="header__link_top">Все<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">CASE IH<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">NEW HOLLAND<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Tecnoma<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">BLUE SERIES<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">BLUE SERIES<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Dongfeng<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Jan Spartan<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Краснокамский РМЗ<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">ГКЗ<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">MASCHIO GASPARDO<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">FEATAGRO<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">DIECI<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">RAZOR<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">McCormick<span></span></a></li>
+                </ul>
+                <ul class="header__list_bottom">
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Вся сельхозтехника<span>227</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Сеялки<span>12</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Кормозаготовительная техника<span>109</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Дроны<span>2</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Системы орошения<span>5</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для внесения удобрений<span>11</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для хранения с/х культур<span>1</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Тракторы<span>12</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Почвообрабатывающее оборудование<span>29</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Опрыскиватели<span>9</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для посадки и уборки картофеля<span>4</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Растворные узлы и узлы дозации<span>13</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Телескопические погрузчики<span>9</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для сушки с/х культур<span>2</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav_item">
+            <a href="#" class="header__nav_link"><span>Прицепная</span></a>
+            <div class="header__subnav">
+              <div class="header__subnav_scroll" data-scrollbar>
+                <ul class="header__list_top">
+                  <li class="header__item_top selected"><a href="#" class="header__link_top">Все<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">CASE IH<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">NEW HOLLAND<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Tecnoma<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">BLUE SERIES<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">BLUE SERIES<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Dongfeng<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Jan Spartan<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">Краснокамский РМЗ<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">ГКЗ<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">MASCHIO GASPARDO<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">FEATAGRO<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">DIECI<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">RAZOR<span></span></a></li>
+                  <li class="header__item_top"><a href="#" class="header__link_top">McCormick<span></span></a></li>
+                </ul>
+                <ul class="header__list_bottom">
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Вся сельхозтехника<span>227</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Сеялки<span>12</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Кормозаготовительная техника<span>109</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Дроны<span>2</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Системы орошения<span>5</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для внесения удобрений<span>11</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для хранения с/х культур<span>1</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Тракторы<span>12</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Почвообрабатывающее оборудование<span>29</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Опрыскиватели<span>9</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для посадки и уборки картофеля<span>4</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Растворные узлы и узлы дозации<span>13</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Телескопические погрузчики<span>9</span></a></li>
+                  <li class="header__item_bottom"><a href="propelled.html" class="header__link_bottom link">Техника для сушки с/х культур<span>2</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="form__read">
+    <div class="form__read_scroll" data-scrollbar>
+      <div class="container header__nav_container">
+        <div class="form__read_block">
+          <button class="form__read_button">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.979649 2.3934L2.39386 0.979184L13.0005 11.5858L23.6071 0.979184L25.0213 2.3934L14.4147 13L25.0213 23.6066L23.6071 25.0208L13.0005 14.4142L2.39386 25.0208L0.979649 23.6066L11.5863 13L0.979649 2.3934Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <div class="form__read_desc">
+            <form id="formpopup" class="form">
+              <div class="form__width">
+                <p class="form__head">Оставьте заявку на покупку и мы сразу подготовим для вас персональное предложение</p>
+                <div class="form__controls">
+                  <div class="form__control">
+                    <input class="form__input" type="text" minlength="4" maxlength="40" placeholder="Ваше имя*" id="usernamepopup" />
+                    <span class="form__border"></span>
+                    <span class="form__bar"></span>
+                    <small>Error message</small>
+                  </div>
+                  <div class="form__control">
+                    <input class="form__input" type="tel" minlength="5" maxlength="20" placeholder="Телефон*" id="phonepopup" />
+                    <span class="form__border"></span>
+                    <span class="form__bar"></span>
+                    <small>Error message</small>
+                  </div>
+                  <div class="form__control">
+                    <input class="form__input" type="tel" minlength="5" maxlength="20" placeholder="Регион*" id="regionpopup" />
+                    <span class="form__border"></span>
+                    <span class="form__bar"></span>
+                    <small>Error message</small>
+                  </div>
+                </div>
+                <div class="button__default form__button">
+                  <input type="submit" name="submit" value="Отправить" class="button__text">
+                  <span></span>
+                </div>
+                <p class="form__policy">Нажимая на кнопку: "Отправить", вы соглашаетесь с условиями <a href="#" class="link">политики конфиденциальности</a>.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__city">
+    <div class="header__city_scroll" data-scrollbar>
+      <div class="container header__nav_container">
+        <div class="header__city_block">
+          <button class="header__city_button">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.979649 2.3934L2.39386 0.979184L13.0005 11.5858L23.6071 0.979184L25.0213 2.3934L14.4147 13L25.0213 23.6066L23.6071 25.0208L13.0005 14.4142L2.39386 25.0208L0.979649 23.6066L11.5863 13L0.979649 2.3934Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <p class="header__city_head">Выбирите город</p>
+          <ul class="header__city_list">
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Москва</div><span>Россия, Московская обл., г. Химки, ул. Бабакина, д. 5-А, оф. 707</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Санкт-Петербург</div><span>Россия, Ленинградская обл., Гатчинский р-н, д. Малое Верево, ул. Кутышева, д. 5, стр. 5</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Вологда</div><span>Россия, г. Вологда, ул. Гагарина, д. 91, оф. 3</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Воронеж</div><span>Россия, Воронежская обл., Новоусманский р-н, п. Отрадное, ул. Автодорожная, д. 7</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Курск</div><span>Россия, Курская область, Курский район, дер. Кукуевка, Промышленный пер., 4а</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Липецк</div><span>Россия, г. Липецк, ул. Ангарская, д. 26Д</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Орёл</div><span>Россия, г. Орёл, ул. Итальянская, д. 1 Г</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Павловск</div><span>Россия, Воронежская обл., г. Павловск, ул. Транспортная, д. 2</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Пенза</div><span>Россия, Пензенская обл., Бессоновский р-он, с. Ухтинка, ул. Ухтинка, д. 1Б</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Псков</div><span>Россия, Псковская обл., Бежаницкий р-он, д. Красное Солнце, ул. Философовой, д. 13</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Рязань</div><span>Россия, г. Рязань, 184 км (Окружная дорога), стр. 8</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Тамбов</div><span>Россия, Тамбовская обл., Тамбовский р-н, п. Строитель, Промышленная зона, стр. 1</span></a></li>
+            <li class="header__city_item"><a href="#" class="header__city_link"><div class="header__city_inner">г. Ярославль</div><span>Россия, Ярославская обл., Ярославский р-он, п. Лесная поляна, д. 43, стр. 8</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/scrollbar.js"></script>
+  <script>
+    window.onload = function () {
+      window.setTimeout(function () {
+        document.body.classList.add('loaded_hiding');
+        document.querySelector('.preloader__top').style.top = "-50%";
+        document.querySelector('.preloader__bottom').style.top = "100%";
+        window.scrollTo(0,0);
+        window.setTimeout(function () {
+          document.body.classList.add('loaded');
+          document.body.classList.remove('loaded_hiding');
+        }, 300);
+      }, 300);
+    }
+    scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),inertia: 0.8,smooth: true,getDirection: true,mobile: {breakpoint: 0,smooth: true,getDirection: true,},tablet: {breakpoint: 0,smooth: true,getDirection: true,},smartphone: {breakpoint: 0,smooth: true,getDirection: true,}})
+    new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

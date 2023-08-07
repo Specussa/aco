@@ -1,0 +1,458 @@
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-Light.eot');
+  src: local('TT Firs Neue Light'), local('TTFirsNeue-Light'),
+      url('../fonts/TTFirsNeue-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-Light.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-Light.woff') format('woff'),
+      url('../fonts/TTFirsNeue-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-Regular.eot');
+  src: local('TT Firs Neue Regular'), local('TTFirsNeue-Regular'),
+      url('../fonts/TTFirsNeue-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-Regular.woff') format('woff'),
+      url('../fonts/TTFirsNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-BoldItalic.eot');
+  src: local('TT Firs Neue Bold Italic'), local('TTFirsNeue-BoldItalic'),
+      url('../fonts/TTFirsNeue-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-BoldItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-BoldItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-DemiBoldItalic.eot');
+  src: local('TT Firs Neue DemiBold Italic'), local('TTFirsNeue-DemiBoldItalic'),
+      url('../fonts/TTFirsNeue-DemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-DemiBoldItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-DemiBoldItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-DemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-ExtraLight.eot');
+  src: local('TT Firs Neue ExtraLight'), local('TTFirsNeue-ExtraLight'),
+      url('../fonts/TTFirsNeue-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-ExtraLight.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-ExtraLight.woff') format('woff'),
+      url('../fonts/TTFirsNeue-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-ThinItalic.eot');
+  src: local('TT Firs Neue Thin Italic'), local('TTFirsNeue-ThinItalic'),
+      url('../fonts/TTFirsNeue-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-ThinItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-ThinItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-MediumItalic.eot');
+  src: local('TT Firs Neue Medium Italic'), local('TTFirsNeue-MediumItalic'),
+      url('../fonts/TTFirsNeue-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-MediumItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-MediumItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-DemiBold.eot');
+  src: local('TT Firs Neue DemiBold'), local('TTFirsNeue-DemiBold'),
+      url('../fonts/TTFirsNeue-DemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-DemiBold.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-DemiBold.woff') format('woff'),
+      url('../fonts/TTFirsNeue-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-BlackItalic.eot');
+  src: local('TT Firs Neue Black Italic'), local('TTFirsNeue-BlackItalic'),
+      url('../fonts/TTFirsNeue-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-BlackItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-BlackItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-LightItalic.eot');
+  src: local('TT Firs Neue Light Italic'), local('TTFirsNeue-LightItalic'),
+      url('../fonts/TTFirsNeue-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-LightItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-LightItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-ExtraLightItalic.eot');
+  src: local('TT Firs Neue ExtraLight Italic'), local('TTFirsNeue-ExtraLightItalic'),
+      url('../fonts/TTFirsNeue-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-ExtraLightItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-ExtraLightItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-Bold.eot');
+  src: local('TT Firs Neue Bold'), local('TTFirsNeue-Bold'),
+      url('../fonts/TTFirsNeue-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-Bold.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-Bold.woff') format('woff'),
+      url('../fonts/TTFirsNeue-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-ExtraBold.eot');
+  src: local('TT Firs Neue ExtraBold'), local('TTFirsNeue-ExtraBold'),
+      url('../fonts/TTFirsNeue-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-ExtraBold.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-ExtraBold.woff') format('woff'),
+      url('../fonts/TTFirsNeue-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-Medium.eot');
+  src: local('TT Firs Neue Medium'), local('TTFirsNeue-Medium'),
+      url('../fonts/TTFirsNeue-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-Medium.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-Medium.woff') format('woff'),
+      url('../fonts/TTFirsNeue-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-Thin.eot');
+  src: local('TT Firs Neue Thin'), local('TTFirsNeue-Thin'),
+      url('../fonts/TTFirsNeue-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-Thin.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-Thin.woff') format('woff'),
+      url('../fonts/TTFirsNeue-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-ExtraBoldItalic.eot');
+  src: local('TT Firs Neue ExtraBold Italic'), local('TTFirsNeue-ExtraBoldItalic'),
+      url('../fonts/TTFirsNeue-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-ExtraBoldItalic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-ExtraBoldItalic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-Black.eot');
+  src: local('TT Firs Neue Black'), local('TTFirsNeue-Black'),
+      url('../fonts/TTFirsNeue-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-Black.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-Black.woff') format('woff'),
+      url('../fonts/TTFirsNeue-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-Italic.eot');
+  src: local('TT Firs Neue Italic'), local('TTFirsNeue-Italic'),
+      url('../fonts/TTFirsNeue-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTFirsNeue-Italic.woff2') format('woff2'),
+      url('../fonts/TTFirsNeue-Italic.woff') format('woff'),
+      url('../fonts/TTFirsNeue-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+:root {
+  --inc-step: 1;
+  --height: 100vh;
+  --width: 100vw;
+  --border: #d9d9d9;
+  --bg: #fff;
+  --text: #000;
+  --blue: #006eb9;
+  --dblue: #001523;
+  --gray: #9c9c9c;
+  --back: #f2f7fb;
+  --error: #d91717;
+  --font: 'TT Firs Neue', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::-moz-selection {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+*::selection {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+input::-moz-selection {
+  background-color: yellow;
+  color: var(--text);
+}
+
+input::selection {
+  background-color: yellow;
+  color: var(--text);
+}
+
+*::marker {
+  font-size: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--dblue);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background: var(--blue);
+}
+
+html body.loaded {
+  height: var(--height);
+  position: relative;
+  background: var(--bg);
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body,
+.has-scroll-smooth body,
+.has-scroll-smooth body.loaded {
+  height: 100%;
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+  scroll-behavior: auto;
+}
+
+section {
+  margin: -1px 0 0;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 150px 0 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+input {
+  font-family: var(--font);
+  border: none;
+  border-bottom: 1px solid var(--bg);
+  outline: none;
+  -webkit-text-fill-color: var(--bg);
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  color: var(--bg);
+  background: transparent;
+}
+
+a {
+  color: var(--text);
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+button,
+button:hover {
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+}
+
+svg path {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container { 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background-color: var(--text);
+  visibility: hidden;
+  -webkit-transition: visibility 0.3s linear, opacity 0.3s linear, background-color 0.3s linear, z-index 0.3s linear;
+  transition: visibility 0.3s linear, opacity 0.3s linear, background-color 0.3s linear, z-index 0.3s linear;
+  -webkit-transition-delay: 0.3s, 0s, 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s, 0.3s, 0.3s;
+}
+
+.overlay {
+  z-index: 99;
+}
+
+.overlay.active {
+  opacity: 0.7;
+  background-color: var(--text);
+  visibility: visible;
+  -webkit-transition-delay: 0s, 0s, 0s, 0s;
+  transition-delay: 0s, 0s, 0s, 0s;
+}
+
+/* start buttons */
+
+.button__default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 492px;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--bg);
+  border: 1px solid var(--bg);
+  position: relative;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+.button__default,
+.button__default:hover {
+  border: 1px solid var(--bg);
+}
+
+.button__default span,
+.button__default:hover span {
+  -webkit-transition: background-color 0.2s linear, width 0.2s linear, height 0.2s linear;
+  transition: background-color 0.2s linear, width 0.2s linear, height 0.2s linear;
+}
+
+.button__default:hover {
+  color: var(--dblue);
+  background-color: var(--bg);
+}
+
+.button__default:hover span {
+  width: 25px;
+  height: 25px;
+  background-color: var(--dblue);
+}
+
+.button__default span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--bg);
+}
+
+/* end buttons */
