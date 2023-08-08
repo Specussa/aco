@@ -1,17 +1,16 @@
 // start height
 var oldWidth = window.innerWidth;
 const docheight = document.documentElement
-const appHeight = () => {docheight.style.setProperty('--height', `${window.innerHeight}px`)}
-window.addEventListener('resize', appHeight)
-appHeight()
-window.onresize = function () {
-  var newWidth = window.innerWidth;
-  if (newWidth != oldWidth) {
-    const appHeight = () => {docheight.style.setProperty('--height', `${window.innerHeight}px`)}
-    window.addEventListener('resize', appHeight)
-    appHeight()
-  }
-};
+const appHeight = () => {docheight.style.setProperty('--height', `${window.innerHeight}px`)};
+window.addEventListener('resize', appHeight);
+appHeight();
+
+const circle = document.querySelector('.circle');
+if(circle){
+  const appCircle = () => {docheight.style.setProperty('--circle', `${circle.offsetWidth}px`)};
+  window.addEventListener('resize', appCircle);
+  appCircle();
+}
 // end
 
 // кнопка header__burger
@@ -52,6 +51,8 @@ year.insertAdjacentText('beforebegin', currentYear);
 year.remove();
 }
 // end year
+
+// start best__sliders
 const bestsliders = document.querySelector('.best__sliders');
 if(bestsliders){
   var gallerySlider = new Swiper('.best__slider', {
@@ -91,3 +92,4 @@ if(bestsliders){
   gallerySlider.controller.control = galleryThumbs;
   galleryThumbs.controller.control = gallerySlider;
 }
+// end best__sliders

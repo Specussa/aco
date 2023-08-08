@@ -1,6 +1,7 @@
 :root {
   --inc-step: 1;
   --height: 100vh;
+  --circle: 100%;
   --border: rgba(215, 215, 215, 1);
   --dborder: rgba(72, 72, 72, 1);
   --white: rgba(255, 255, 255, 1);
@@ -160,6 +161,7 @@ svg path {
   height: 100%;
   max-width: 1880px;
   margin: 0 auto;
+  padding: 0 20px;
   flex-direction: column;
   position: relative;
   z-index: 2;
@@ -730,6 +732,7 @@ svg path {
 }
 
 .best__heading {
+  padding: 0 20px;
   font-size: 130px;
   font-weight: 600;
   line-height: 120px;
@@ -849,7 +852,6 @@ svg path {
   justify-content: center;
   top: 420px;
   bottom: auto;
-  border: 1px solid var(--bg);
   color: var(--black);
   background: transparent;
   background-color: transparent;
@@ -880,3 +882,68 @@ svg path {
 }
 
 /* end best */
+
+/* start reliable */
+
+.reliable__block {
+  padding: 60px 0;
+}
+
+.reliable__heading {
+  max-width: 75%;
+  margin: 0 0 60px auto;
+  font-size: 130px;
+  font-weight: 600;
+  line-height: 120px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+  text-align: right;
+}
+
+.reliable__heading span {
+  color: var(--green);
+}
+
+.reliable__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+}
+
+.reliable__item {
+  width: 25%;
+  padding: 0 20px;
+}
+
+.reliable__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: var(--circle);
+  padding: 60px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  shape-outside: circle(50%);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-transition: background-color 0.2s linear, color 0.1s linear;
+  transition: background-color 0.2s linear, color 0.1s linear;
+}
+
+.reliable__link:hover {
+  color: var(--white);
+  background-color: var(--lgreen);
+}
+
+/* end reliable */
