@@ -23,11 +23,15 @@ burger.addEventListener('click', function() {
     bodyoverlay.classList.remove("active");
     menu.classList.remove("active");
     burger.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
   } else {
+    document.body.scrollTo(0, 0);
     bodyoverlay.classList.add("active");
     menu.classList.add("active");
     burger.classList.add("active");
     document.body.style.height = "100vh";
+    document.body.style.overflow = "hidden";
   }
 })
 // end
@@ -39,3 +43,12 @@ bodyoverlay.addEventListener('click', function() {
   burger.classList.remove("active");
 })
 // end
+
+// start year
+const year = document.querySelector('.footer__year');
+if(year){
+const currentYear = new Date().getFullYear();
+year.insertAdjacentText('beforebegin', currentYear);
+year.remove();
+}
+// end year
