@@ -52,3 +52,42 @@ year.insertAdjacentText('beforebegin', currentYear);
 year.remove();
 }
 // end year
+const bestsliders = document.querySelector('.best__sliders');
+if(bestsliders){
+  var gallerySlider = new Swiper('.best__slider', {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 1,
+    touchRatio: 0.2,
+    loopedSlides: 2,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    speed: 1000,
+    navigation: {
+      nextEl: '.best__next',
+      prevEl: '.best__prev',
+    },
+    breakpoints: {
+      800: {
+        spaceBetween: 20,
+      }
+    }
+  });
+  var galleryThumbs = new Swiper('.best__thumbs', {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 2,
+    touchRatio: 0.2,
+    loopedSlides: 2,
+    speed: 1000,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    breakpoints: {
+      1700: {
+        spaceBetween: 20,
+      }
+    }
+  });
+  gallerySlider.controller.control = galleryThumbs;
+  galleryThumbs.controller.control = gallerySlider;
+}

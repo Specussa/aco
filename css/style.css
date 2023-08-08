@@ -741,4 +741,142 @@ svg path {
   color: var(--green);
 }
 
+.best__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin: 60px 0 70px auto;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.best__desc {
+  width: 50%;
+  padding: 0 20px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.best__head {
+  max-width: 580px;
+  padding: 0 20px;
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+}
+
+.best__sliders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.best__slider_left,
+.best__slider_right {
+  width: 50%;
+  padding: 0 20px;
+  position: relative;
+}
+
+.best__block,
+.best__thumbs_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.best__thumbs_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.best__thumbs_image {
+  position: relative;
+}
+
+.best__thumbs_desc {
+  max-width: calc(100% - 80px);
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--white);
+  text-align: right;
+}
+
+.best__number {
+  max-width: calc(100% - 80px);
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: -0.05em;
+  color: var(--white);
+}
+
+.best__thumbs_info {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.best__prev,
+.best__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  height: 60px;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+  top: 420px;
+  bottom: auto;
+  border: 1px solid var(--bg);
+  color: var(--black);
+  background: transparent;
+  background-color: transparent;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.best__prev:hover,
+.best__next:hover {
+  color: var(--lgreen);
+}
+
+.best__prev {
+  left: 20px;
+  right: auto;
+}
+
+.best__prev svg,
+.best__next svg {
+  display: inline-block;
+  width: 65px;
+  height: 12px;
+}
+
+.best__next {
+  left: 100px;
+  right: auto;
+}
+
 /* end best */
