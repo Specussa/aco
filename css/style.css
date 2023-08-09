@@ -942,7 +942,7 @@ svg path {
   display: flex;
   width: 100%;
   height: var(--circle);
-  padding: 60px;
+  padding: 20px;
   align-items: center;
   justify-content: center;
   text-align: center;
