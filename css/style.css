@@ -361,14 +361,19 @@ svg path {
   height: 52px;
 }
 
+.header__logo svg {
+  width: 45px;
+  height: 52px;
+}
+
 .header__cart svg {
-  width: 40px;
-  height: 40px;
+  width: 41px;
+  height: 38px;
 }
 
 .header__login svg {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 38px;
 }
 
 .header__buttons {
@@ -382,20 +387,23 @@ svg path {
   display: block;
   position: relative;
   overflow: hidden;
-  width: 52px;
-  height: 52px;
+  width: 38px;
+  height: 38px;
  }
 
 .header__burger span {
   display: block;
   width: 38px;
-  height: 1.2px;
+  height: 4px;
   position: absolute;
-  top: 26px;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
   background-color: var(--white);
   -webkit-transition: background-color 0s 0.3s;
   transition: background-color 0s 0.3s;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .header__burger.active span {
@@ -406,10 +414,11 @@ svg path {
 .header__burger span::after {
   content: "";
   display: block;
-  width: 52px;
-  height: 1.2px;
+  width: 38px;
+  height: 4px;
   position: absolute;
-  left: -14px;
+  left: 0;
+  border-radius: 4px;
   background-color: var(--white);
   -webkit-transition-duration: 0.3s, 0.3s;
   transition-duration: 0.3s, 0.3s;
@@ -419,12 +428,13 @@ svg path {
 
 .header__burger.active span::before,
 .header__burger.active span::after {
+  width: 43px;
   -webkit-transition-delay: 0s, 0.3s;
   transition-delay: 0s, 0.3s;
 }
 
 .header__burger span::before {
-  top: -9px;
+  top: -14px;
   -webkit-transition-property: top, transform;
   transition-property: top, transform;
 }
@@ -436,7 +446,7 @@ svg path {
 }
 
 .header__burger span::after {
-  bottom: -9px;
+  bottom: -14px;
   -webkit-transition-property: bottom, transform;
   transition-property: bottom, transform;
 }
@@ -966,6 +976,9 @@ svg path {
 }
 
 .orderclick__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 75%;
   margin: 0 0 60px auto;
   padding: 0 20px;
@@ -1563,3 +1576,8 @@ svg path {
 }
 
 /* end map */
+
+/* start media 1919px */
+@media (max-width: 1919px) {
+
+}
