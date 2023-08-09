@@ -1437,6 +1437,8 @@ svg path {
   height: 960px;
   position: relative;
   z-index: 2;
+	-webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .map__point {
