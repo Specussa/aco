@@ -4,6 +4,7 @@
   --circle: 100%;
   --border: rgba(221, 221, 221, 1);
   --dborder: rgba(72, 72, 72, 1);
+  --gborder: rgba(60, 76, 23, 1);
   --white: rgba(255, 255, 255, 1);
   --black: rgba(9, 9, 9, 1);
   --green: rgba(72, 98, 12, 1);
@@ -221,6 +222,10 @@ svg path {
   transform: translateX(-50%);
 }
 
+.border.border__green {
+  width: calc(100% - 40px);
+}
+
 .border span {
   display: block;
   width: 1.6px;
@@ -239,7 +244,7 @@ svg path {
 }
 
 .border.border__green span {
-  background-color: var(--green);
+  background-color: var(--gborder);
 }
 
 .border span:nth-child(1) {
@@ -313,10 +318,15 @@ svg path {
   top: 0;
   left: 0;
   z-index: 100;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s linear 0.3s;
+  transition: background-color 0.2s linear 0.3s;
 }
 
-.header__container {
-  padding: 40px;
+.header.active {
+  background-color: var(--white);
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 
 .header__block {
@@ -324,6 +334,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  padding: 40px;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
@@ -348,6 +359,15 @@ svg path {
   color: var(--white);
 }
 
+.header.active .header__link,
+.header.active .header__link span {
+  color: var(--green);
+}
+
+.header.active .header__link:hover {
+  color: var(--black);
+}
+
 .header__login,
 .header__cart,
 .header__logo {
@@ -357,6 +377,18 @@ svg path {
   align-items: center;
   justify-content: center;
   color: var(--white);
+}
+
+.header.active .header__login,
+.header.active .header__cart,
+.header.active .header__logo {
+  color: var(--green);
+}
+
+.header.active .header__login:hover,
+.header.active .header__cart:hover,
+.header.active .header__logo:hover {
+  color: var(--black);
 }
 
 .header__logo {
@@ -403,8 +435,8 @@ svg path {
   left: 50%;
   border-radius: 4px;
   background-color: var(--white);
-  -webkit-transition: background-color 0s 0.3s;
-  transition: background-color 0s 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -423,23 +455,46 @@ svg path {
   left: 0;
   border-radius: 4px;
   background-color: var(--white);
-  -webkit-transition-duration: 0.3s, 0.3s;
-  transition-duration: 0.3s, 0.3s;
-  -webkit-transition-delay: 0.3s, 0s;
-  transition-delay: 0.3s, 0s;
+  -webkit-transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s, 0s;
+  transition-delay: 0.3s, 0s, 0s;
+}
+
+.header.active .header__burger span,
+.header.active .header__burger span::before,
+.header.active .header__burger span::after,
+.header .header__burger:hover span {
+  background-color: var(--green);
+}
+
+.header .header__burger:hover span,
+.header .header__burger:hover span::before,
+.header .header__burger:hover span::after {
+  background-color: var(--lgreen);
+}
+
+.header.active .header__burger:hover span,
+.header.active .header__burger:hover span::before,
+.header.active .header__burger:hover span::after {
+  background-color: var(--black);
+}
+
+.header.active .header__burger.active span {
+  background-color: transparent;
 }
 
 .header__burger.active span::before,
 .header__burger.active span::after {
   width: 43px;
-  -webkit-transition-delay: 0s, 0.3s;
-  transition-delay: 0s, 0.3s;
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+  transition-delay: 0s, 0s, 0.3s;
 }
 
 .header__burger span::before {
   top: -14px;
-  -webkit-transition-property: top, transform;
-  transition-property: top, transform;
+  -webkit-transition-property: top, background-color, transform;
+  transition-property: top, background-color, transform;
 }
 
 .header__burger.active span::before {
@@ -450,8 +505,8 @@ svg path {
 
 .header__burger span::after {
   bottom: -14px;
-  -webkit-transition-property: bottom, transform;
-  transition-property: bottom, transform;
+  -webkit-transition-property: bottom, background-color, transform;
+  transition-property: bottom, background-color, transform;
 }
 
 .header__burger.active span::after {
@@ -463,18 +518,6 @@ svg path {
 /* end header */
 
 /* start header__nav */
-
-.header__nav_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 210px 20px 80px;
-  flex-direction: column;
-  justify-content: center;
-  gap: 80px 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
 
 .header__nav {
   display: -webkit-box;
@@ -494,6 +537,7 @@ svg path {
   transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.5s linear;
   transition: transform 0.5s linear;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -501,6 +545,26 @@ svg path {
   visibility: visible;
   -webkit-transform: translateY(0%);
   transform: translateY(0%);
+}
+
+.header__nav_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  padding: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.header__nav_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 210px 20px 80px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px 0;
 }
 
 .header__nav_list {
@@ -1579,5 +1643,13 @@ svg path {
 
 /* start media 1919px */
 @media (max-width: 1919px) {
-
+  .header__block {
+    padding: 20px 10px;
+  }
+  .border {
+    width: calc(100% - 40px);
+  }
+  .header__nav_block {
+    padding: 130px 20px 30px;
+  }
 }
