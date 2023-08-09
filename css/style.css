@@ -2,15 +2,17 @@
   --inc-step: 1;
   --height: 100vh;
   --circle: 100%;
-  --border: rgba(215, 215, 215, 1);
+  --border: rgba(221, 221, 221, 1);
   --dborder: rgba(72, 72, 72, 1);
   --white: rgba(255, 255, 255, 1);
-  --black: rgba(0, 0, 0, 1);
+  --black: rgba(9, 9, 9, 1);
   --green: rgba(72, 98, 12, 1);
   --lgreen: rgba(147, 198, 30, 1);
   --dgreen: rgba(45, 63, 5, 1);
-  --gray: rgba(144, 144, 144, 1);
+  --lgray: rgba(125, 125, 125, 1);
+  --gray: rgba(89, 89, 89, 1);
   --dgray: rgba(28, 28, 28, 1);
+  --fgray: rgba(175, 175, 175, 1);
   --back: rgba(46, 46, 46, 1);
   --error: #d91717;
   --font: 'Manrope', sans-serif;
@@ -285,11 +287,12 @@ svg path {
 
 .button__default:hover {
   color: var(--green);
-  background-color: var(--lgreen);
-  border: 1.6px solid var(--green);
+  background-color: var(--white);
+  border: 1.6px solid var(--white);
 }
 
 .button__hero {
+  color: var(--white);
   border: 1.6px solid var(--white);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -297,7 +300,7 @@ svg path {
 .button__hero:hover {
   color: var(--white);
   border: 1.6px solid var(--white);
-  background-color: var(--green);
+  background-color: rgba(197, 197, 197, 1);
 }
 
 /* end buttons */
@@ -548,7 +551,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--fgray);
 }
 
 /* end header__nav */
@@ -594,7 +597,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--lgray);
 }
 
 .footer__link:hover,
@@ -616,11 +619,11 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--lgray);
 }
 
 .footer__list_bottom .footer__link {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--lgray);
 }
 
 /* end footer */
@@ -777,7 +780,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--gray);
 }
 
 .best__head {
@@ -854,7 +857,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--gray);
 }
 
 .best__prev,
@@ -911,7 +914,6 @@ svg path {
 .reliable__heading,
 .spectrum__heading,
 .working__heading {
-  max-width: 75%;
   margin: 0 0 60px auto;
   padding: 0 20px;
   text-align: right;
@@ -952,10 +954,8 @@ svg path {
   line-height: 58px;
   letter-spacing: -0.05em;
   color: var(--black);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(175, 175, 175, 1);
   border-radius: 100%;
-  word-wrap: break-word;
-  word-break: break-all;
   -webkit-transition: background-color 0.2s linear, color 0.1s linear;
   transition: background-color 0.2s linear, color 0.1s linear;
 }
@@ -1039,7 +1039,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: var(--black);
+  color: var(--gray);
 }
 
 /* end orderclick */
@@ -1066,6 +1066,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
+  color: var(--gray);
 }
 
 .spectrum__image {
@@ -1091,7 +1092,6 @@ svg path {
 }
 
 .rent__heading {
-  max-width: 75%;
   padding: 0 20px;
   margin: 0 0 0 auto;
   text-align: right;
@@ -1147,7 +1147,7 @@ svg path {
   font-weight: 300;
   line-height: 35px;
   letter-spacing: -0.05em;
-  color: var(--gray);
+  color: var(--lgray);
 }
 
 .rent__head {
@@ -1162,7 +1162,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--gray);
 }
 
 /* end rent */
@@ -1199,17 +1199,18 @@ svg path {
 }
 
 .working__head {
-  font-size: 50px;
+  font-size: 58px;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 58px;
   letter-spacing: -0.05em;
   color: var(--white);
 }
 
 .working__desc {
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 500;
   line-height: 28px;
+  letter-spacing: 0em;
   color: var(--white);
 }
 
@@ -1268,7 +1269,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: var(--black);
+  color: var(--gray);
 }
 
 .partner__bottom {
@@ -1389,7 +1390,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--fgray);
 }
 
 .together__desc a:hover {
@@ -1423,7 +1424,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   max-width: 75%;
-  padding: 60px 0;
+  padding: 60px 0 120px;
   margin: 0 auto 0 0;
   flex-wrap: wrap;
   gap: 20px 0;
@@ -1438,7 +1439,7 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--fgray);
 }
 
 .map__link.active {
