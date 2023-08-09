@@ -288,7 +288,7 @@ svg path {
 .button__default:hover {
   color: var(--green);
   background-color: var(--white);
-  border: 1.6px solid var(--white);
+  border: 1.6px solid var(--green);
 }
 
 .button__hero {
@@ -1024,6 +1024,10 @@ svg path {
   width: 50%;
   flex-direction: column;
   gap: 60px;
+}
+
+.orderclick__item .button__default {
+  width: calc(50% - 20px);
 }
 
 .orderclick__buy {
