@@ -55,7 +55,7 @@ year.remove();
 // start best__sliders
 const bestsliders = document.querySelector('.best__sliders');
 if(bestsliders){
-  var gallerySlider = new Swiper('.best__slider', {
+  var bestSlider = new Swiper('.best__slider', {
     loop: true,
     spaceBetween: 40,
     slidesPerView: 1,
@@ -74,7 +74,7 @@ if(bestsliders){
       }
     }
   });
-  var galleryThumbs = new Swiper('.best__thumbs', {
+  var bestThumbs = new Swiper('.best__thumbs', {
     loop: true,
     spaceBetween: 40,
     slidesPerView: 2,
@@ -89,7 +89,32 @@ if(bestsliders){
       }
     }
   });
-  gallerySlider.controller.control = galleryThumbs;
-  galleryThumbs.controller.control = gallerySlider;
+  bestSlider.controller.control = bestThumbs;
+  bestThumbs.controller.control = bestSlider;
 }
 // end best__sliders
+
+// start partner__slider
+const partnerslider = document.querySelector('.partner__slider');
+if(partnerslider){
+  var partnerSlider = new Swiper('.partner__slider', {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 1,
+    touchRatio: 0.2,
+    loopedSlides: 2,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    speed: 1000,
+    navigation: {
+      nextEl: '.partner__next',
+      prevEl: '.partner__prev',
+    },
+    breakpoints: {
+      800: {
+        spaceBetween: 20,
+      }
+    }
+  });
+}
+// end partner__slider
