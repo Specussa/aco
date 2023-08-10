@@ -391,12 +391,7 @@ svg path {
   color: var(--black);
 }
 
-.header__logo {
-  width: 45px;
-  height: 52px;
-}
-
-.header__logo svg {
+.header__logo, .header__logo svg {
   width: 45px;
   height: 52px;
 }
@@ -1009,7 +1004,6 @@ svg path {
   width: 100%;
   height: var(--circle);
   padding: 20px;
-  align-items: center;
   justify-content: center;
   text-align: center;
   shape-outside: circle(50%);
@@ -1018,7 +1012,7 @@ svg path {
   line-height: 58px;
   letter-spacing: -0.05em;
   color: var(--black);
-  border: 1px solid rgba(175, 175, 175, 1);
+  border: 1px solid var(--fgray);
   border-radius: 100%;
   -webkit-transition: background-color 0.2s linear, color 0.1s linear;
   transition: background-color 0.2s linear, color 0.1s linear;
@@ -1262,19 +1256,23 @@ svg path {
 }
 
 .working__head {
+  height: 2em;
   font-size: 58px;
   font-weight: 600;
   line-height: 58px;
   letter-spacing: -0.05em;
   color: var(--white);
+  overflow: hidden;
 }
 
 .working__desc {
+  height: 4.3em;
   font-size: 27px;
   font-weight: 500;
   line-height: 28px;
   letter-spacing: 0em;
   color: var(--white);
+  overflow: hidden;
 }
 
 /* end working */
@@ -1651,5 +1649,10 @@ svg path {
   }
   .header__nav_block {
     padding: 130px 20px 30px;
+  }
+  .header__logo,
+  .header__logo svg {
+    width: 29.72px;
+    height: 34px;
   }
 }
