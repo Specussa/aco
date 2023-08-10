@@ -77,6 +77,9 @@ if(bestsliders){
     breakpoints: {
       800: {
         spaceBetween: 20,
+      },
+      1919: {
+        spaceBetween: 20,
       }
     }
   });
@@ -91,6 +94,9 @@ if(bestsliders){
     allowTouchMove: true,
     breakpoints: {
       1700: {
+        spaceBetween: 20,
+      },
+      1919: {
         spaceBetween: 20,
       }
     }
@@ -118,6 +124,9 @@ if(partnerslider){
     },
     breakpoints: {
       800: {
+        spaceBetween: 20,
+      },
+      1919: {
         spaceBetween: 20,
       }
     }
