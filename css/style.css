@@ -382,7 +382,9 @@ svg path {
 } */
 
 .header.active .header__link,
-.header.active .header__link span {
+.header.active .header__link span,
+.header__dark .header__link,
+.header__dark .header__link span {
   color: var(--black);
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
@@ -409,7 +411,10 @@ svg path {
 
 .header.active .header__login,
 .header.active .header__cart,
-.header.active .header__logo {
+.header.active .header__logo,
+.header__dark .header__login,
+.header__dark .header__cart,
+.header__dark .header__logo {
   color: var(--black);
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
@@ -472,7 +477,8 @@ svg path {
   transform: translate(-50%, -50%);
 }
 
-.header.active .header__burger span {
+.header.active .header__burger span,
+.header__dark .header__burger span {
   background-color: var(--black);
 }
 
@@ -500,7 +506,9 @@ svg path {
 }
 
 .header.active .header__burger span::before,
-.header.active .header__burger span::after {
+.header.active .header__burger span::after,
+.header__dark .header__burger span::before,
+.header__dark .header__burger span::after {
   background-color: var(--black);
 }
 
@@ -1111,6 +1119,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 75%;
+  height: 700px;
   padding: 0 20px;
   margin: 0 0 0 auto;
   position: relative;
@@ -1119,7 +1128,7 @@ svg path {
 
 .orderclick__image img {
   width: 100%;
-  height: 700px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1209,12 +1218,13 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
+  height: 430px;
   padding: 0 20px;
 }
 
 .spectrum__image img {
   width: 100%;
-  height: 430px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1711,6 +1721,83 @@ svg path {
 
 /* end map */
 
+/* start map */
+
+.cart__block {
+  margin: 150px 0 50px;
+  padding: 100px 0 100px;
+  background-color: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cart__heading {
+  padding: 0 20px 60px;
+}
+
+.cart__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  padding: 0 20px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cart__user_logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+
+.cart__user_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart__user_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart__user_name {
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+}
+
+.cart__user_item {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--gray);
+}
+
+.cart__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  padding: 0 20px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* end map */
+
 /* start media 1919px */
 @media (max-width: 1919px) {
   .header__block {
@@ -1888,7 +1975,7 @@ svg path {
   .orderclick__flex {
     padding: 0 0 40px;
   }
-  .orderclick__image img {
+  .orderclick__image {
     height: 450px;
   }
   .orderclick__image span {
@@ -1908,7 +1995,7 @@ svg path {
   .orderclick__item .button__default {
     max-width: calc(50% - 10px);
   }
-  .spectrum__image img {
+  .spectrum__image {
     height: 270px;
   }
   .spectrum__desc {
@@ -2172,7 +2259,7 @@ svg path {
     display: block;
     width: 33.333%;
   }
-  .orderclick__image img {
+  .orderclick__image {
     height: 310px;
   }
   .orderclick__buy {
@@ -2182,7 +2269,7 @@ svg path {
   .spectrum__image {
     width: 66.666%;
   }
-  .spectrum__image img {
+  .spectrum__image {
     height: 230px;
   }
   .rent__item {
