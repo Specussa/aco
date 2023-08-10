@@ -75,8 +75,8 @@ if(bestsliders){
       prevEl: '.best__prev',
     },
     breakpoints: {
-      800: {
-        spaceBetween: 20,
+      766: {
+        spaceBetween: 10,
       },
       1919: {
         spaceBetween: 20,
@@ -93,8 +93,8 @@ if(bestsliders){
     slideToClickedSlide: true,
     allowTouchMove: true,
     breakpoints: {
-      1700: {
-        spaceBetween: 20,
+      766: {
+        spaceBetween: 10,
       },
       1919: {
         spaceBetween: 20,
@@ -123,8 +123,8 @@ if(partnerslider){
       prevEl: '.partner__prev',
     },
     breakpoints: {
-      800: {
-        spaceBetween: 20,
+      766: {
+        spaceBetween: 10,
       },
       1919: {
         spaceBetween: 20,
