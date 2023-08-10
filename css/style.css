@@ -1313,7 +1313,6 @@ svg path {
 }
 
 .partner__heading {
-  max-width: 85%;
   padding: 0 20px;
 }
 
@@ -2013,6 +2012,9 @@ svg path {
     font-size: 28px;
     line-height: 22px;
   }
+  .header__list {
+    display: none;
+  }
   h2 {
     font-size: 60px;
     line-height: 70px;
@@ -2074,15 +2076,28 @@ svg path {
   .best__thumbs_image {
     height: 170px;
   }
-  .best__next,
-  .partner__next,
   .best__prev,
   .partner__prev {
-    top: 310px;
+    position: relative;
+    top: 0;
+    left: -6px;
   }
   .best__next,
   .partner__next {
-    left: calc(16.666% + 75px);
+    position: relative;
+    top: 0;
+    left: auto;
+    right: 4px;
+  }
+  .best__buttons, .partner__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 33.333%;
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10px;
   }
   .reliable__item,
   .spectrum__item,
@@ -2115,6 +2130,9 @@ svg path {
   .orderclick__buy {
     font-size: 42px;
     line-height: 42px;
+  }
+  .spectrum__image {
+    width: 66.666%;
   }
   .spectrum__image img {
     height: 230px;
@@ -2164,3 +2182,10 @@ svg path {
     padding: 40px 0;
   }
 }
+/* start media 1199px */
+
+/* start media 766px */
+@media (max-width: 766px) {
+
+}
+/* start media 766px */
