@@ -1658,6 +1658,7 @@ svg path {
   }
   .header__nav_block {
     padding: 130px 20px 30px;
+    gap: 40px 0;
   }
   .header__logo,
   .header__logo svg {
@@ -1740,6 +1741,7 @@ svg path {
     font-size: 85px;
     line-height: 90px;
   }
+  .header__nav_item,
   .best__heading,
   .best__slider_left,
   .best__slider_right,
@@ -1943,5 +1945,26 @@ svg path {
   }
   .footer__list_bottom .footer__item {
     padding: 80px 10px 40px;
+  }
+}
+/* end media 1919px */
+
+/* start media 1199px */
+@media (max-width: 1199px) {
+  .border span:nth-child(3) {
+    display: none;
+  }
+  .border span:nth-child(2) {
+    left: 33.333%;
+  }
+  .border span:nth-child(4) {
+    left: 66.666%;
+  }
+  .header__nav_list {
+    width: 100%;
+  }
+  .header__nav_block {
+    padding: 130px 20px 30px;
+    gap: 80px 0;
   }
 }
