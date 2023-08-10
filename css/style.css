@@ -676,7 +676,6 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  padding: 120px 0;
   align-items: flex-end;
   font-size: 24px;
   font-weight: 300;
