@@ -2215,6 +2215,19 @@ svg path {
   .map__yandex {
     height: 500px;
   }
+  .map__zoom_plus,
+  .map__zoom_minus {
+    width: 50px;
+    height: 50px;
+  }
+  .map__zoom {
+    right: 40px;
+  }
+  .map__zoom_plus svg,
+  .map__zoom_minus svg {
+    width: 13px;
+    height: 13px;
+  }
   .footer__list_top {
     width: 66.666%;
   }
@@ -2386,6 +2399,9 @@ svg path {
   .map__block,
   .map__list {
     padding: 35px 0;
+  }
+  .map__zoom {
+    right: 30px;
   }
   .reliable__heading,
   .spectrum__heading,
