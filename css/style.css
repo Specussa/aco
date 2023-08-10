@@ -1004,6 +1004,7 @@ svg path {
   width: 100%;
   height: var(--circle);
   padding: 20px;
+  align-items: center;
   justify-content: center;
   text-align: center;
   shape-outside: circle(50%);
