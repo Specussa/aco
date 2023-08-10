@@ -2064,7 +2064,6 @@ svg path {
   }
   .best__sliders {
     flex-direction: column;
-    gap: 60px;
   }
   .best__slider_left,
   .best__slider_right {
