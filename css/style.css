@@ -314,19 +314,33 @@ svg path {
 
 .header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   background-color: transparent;
-  -webkit-transition: background-color 0.2s linear 0.3s;
-  transition: background-color 0.2s linear 0.3s;
 }
 
-.header.active {
+.header__back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
   background-color: var(--white);
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.2s ease-in 0.5s, top 0.2s ease-in 0.5s;
+  transition: background-color 0.2s ease-in 0.5s, top 0.2s ease-in 0.5s;
+}
+
+.header.active .header__back {
+  top: 0;
+  background-color: var(--white);
+  -webkit-transition: background-color 0.2s linear, top 0.2s linear;
+  transition: background-color 0.2s linear, top 0.2s linear;
 }
 
 .header__block {
@@ -352,21 +366,33 @@ svg path {
   font-size: 20px;
   font-weight: 300;
   line-height: 23px;
-  color: var(--white);
 }
 
+.header__link,
 .header__link span {
   color: var(--white);
+  -webkit-transition: color 0.2s linear 0.5s;
+  transition: color 0.2s linear 0.5s;
 }
+
+/* .header__link:hover {
+  color: var(--lgreen);
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+} */
 
 .header.active .header__link,
 .header.active .header__link span {
-  color: var(--green);
+  color: var(--black);
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
-.header.active .header__link:hover {
-  color: var(--black);
-}
+/* .header.active .header__link:hover {
+  color: var(--lgreen);
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+} */
 
 .header__login,
 .header__cart,
@@ -377,19 +403,28 @@ svg path {
   align-items: center;
   justify-content: center;
   color: var(--white);
+  -webkit-transition: color 0.2s linear 0.5s;
+  transition: color 0.2s linear 0.5s;
 }
 
 .header.active .header__login,
 .header.active .header__cart,
 .header.active .header__logo {
-  color: var(--green);
+  color: var(--black);
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
-.header.active .header__login:hover,
+/* .header.active .header__login:hover,
 .header.active .header__cart:hover,
-.header.active .header__logo:hover {
-  color: var(--black);
-}
+.header.active .header__logo:hover,
+.header__login:hover,
+.header__cart:hover,
+.header__logo:hover {
+  color: var(--lgreen);
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+} */
 
 .header__logo,
 .header__logo svg {
@@ -438,7 +473,7 @@ svg path {
 }
 
 .header__burger.active span {
-  background-color: transparent;
+  background-color: var(--black);
 }
 
 .header__burger span::before,
@@ -451,30 +486,29 @@ svg path {
   left: 0;
   border-radius: 4px;
   background-color: var(--white);
-  -webkit-transition-duration: 0.3s, 0.3s, 0.3s;
+  -webkit-transition-duration: 0.3s , 0.3s, 0.3s;
   transition-duration: 0.3s, 0.3s, 0.3s;
-  -webkit-transition-delay: 0.3s, 0s, 0s;
-  transition-delay: 0.3s, 0s, 0s;
+  -webkit-transition-delay: 0.3s, 0.5s, 0s;
+  transition-delay: 0.3s, 0.5s, 0s;
 }
 
 .header.active .header__burger span,
 .header.active .header__burger span::before,
-.header.active .header__burger span::after,
-.header .header__burger:hover span {
-  background-color: var(--green);
+.header.active .header__burger span::after {
+  background-color: var(--black);
 }
 
-.header .header__burger:hover span,
+/* .header .header__burger:hover span,
 .header .header__burger:hover span::before,
 .header .header__burger:hover span::after {
   background-color: var(--lgreen);
-}
+} */
 
-.header.active .header__burger:hover span,
+/* .header.active .header__burger:hover span,
 .header.active .header__burger:hover span::before,
 .header.active .header__burger:hover span::after {
-  background-color: var(--black);
-}
+  background-color: var(--lgreen);
+} */
 
 .header.active .header__burger.active span {
   background-color: transparent;
