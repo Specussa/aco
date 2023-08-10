@@ -332,15 +332,15 @@ svg path {
   bottom: 0;
   z-index: 2;
   background-color: var(--white);
-  -webkit-transition: background-color 0.2s ease-in 0.5s, top 0.2s ease-in 0.5s;
-  transition: background-color 0.2s ease-in 0.5s, top 0.2s ease-in 0.5s;
+  -webkit-transition: background-color 0.3s linear 0.5s, top 0.3s linear 0.5s;
+  transition: background-color 0.3s linear 0.5s, top 0.3s linear 0.5s;
 }
 
 .header.active .header__back {
   top: 0;
   background-color: var(--white);
-  -webkit-transition: background-color 0.2s linear, top 0.2s linear;
-  transition: background-color 0.2s linear, top 0.2s linear;
+  -webkit-transition: background-color 0.3s linear, top 0.3s linear;
+  transition: background-color 0.3s linear, top 0.3s linear;
 }
 
 .header__block {
@@ -472,8 +472,13 @@ svg path {
   transform: translate(-50%, -50%);
 }
 
-.header__burger.active span {
+.header.active .header__burger span {
   background-color: var(--black);
+}
+
+.header .header__burger.active span,
+.header.active .header__burger.active span {
+  background-color: transparent;
 }
 
 .header__burger span::before,
@@ -492,7 +497,6 @@ svg path {
   transition-delay: 0.3s, 0.5s, 0s;
 }
 
-.header.active .header__burger span,
 .header.active .header__burger span::before,
 .header.active .header__burger span::after {
   background-color: var(--black);
@@ -509,10 +513,6 @@ svg path {
 .header.active .header__burger:hover span::after {
   background-color: var(--lgreen);
 } */
-
-.header.active .header__burger.active span {
-  background-color: transparent;
-}
 
 .header__burger.active span::before,
 .header__burger.active span::after {
@@ -571,10 +571,19 @@ svg path {
   overflow-x: hidden;
 }
 
+.header.active .header__nav {
+  top: 0;
+  background-color: var(--white);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+}
+
 .header__nav.active {
   visibility: visible;
   -webkit-transform: translateY(0%);
   transform: translateY(0%);
+  -webkit-transition: -webkit-transform 0.5s linear 0.3s;
+  transition: transform 0.5s linear 0.3s;
 }
 
 .header__nav_container {
