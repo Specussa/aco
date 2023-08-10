@@ -390,7 +390,8 @@ svg path {
   color: var(--black);
 }
 
-.header__logo, .header__logo svg {
+.header__logo,
+.header__logo svg {
   width: 45px;
   height: 52px;
 }
@@ -674,13 +675,18 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
-  padding: 120px 20px;
+  width: 50%;
+  padding: 120px 0;
   align-items: flex-end;
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
   color: var(--lgray);
+}
+
+.footer__list_bottom .footer__item p {
+  width: 50%;
+  padding: 120px 20px;
 }
 
 .footer__list_bottom .footer__link {
@@ -1042,13 +1048,26 @@ svg path {
   padding: 60px 0;
 }
 
+.orderclick__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 60px;
+}
+
+.orderclick__desc_double {
+  display: none;
+  width: 25%;
+  padding: 0 20px;
+}
+
 .orderclick__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 75%;
-  margin: 0 0 60px auto;
   padding: 0 20px;
+  margin: 0 0 0 auto;
   position: relative;
   overflow: hidden;
 }
@@ -1684,7 +1703,8 @@ svg path {
     height: 3px;
     border-radius: 3px;
   }
-  .header__burger.active span::before, .header__burger.active span::after {
+  .header__burger.active span::before,
+  .header__burger.active span::after {
     width: 34.27px;
   }
   .header__burger span::before {
@@ -1718,6 +1738,9 @@ svg path {
   }
   .hero__buttons {
     gap: 10px;
+  }
+  .hero__block {
+    gap: 40px;
   }
   .button__default {
     max-width: 270px;
@@ -1756,7 +1779,11 @@ svg path {
   .together__heading,
   .together__item,
   .map__heading,
-  .map__item {
+  .map__item,
+  .orderclick__item,
+  .orderclick__desc_double,
+  .orderclick__image,
+  .footer__list_bottom .footer__item p {
     padding: 0 10px;
   }
   .best__desc {
@@ -1812,12 +1839,16 @@ svg path {
     font-size: 30px;
     line-height: 36px;
   }
-  .orderclick__image {
-    margin: 0 0 40px auto;
-    padding: 0 10px;
+  .orderclick__flex {
+    padding: 0 0 40px;
   }
   .orderclick__image img {
     height: 450px;
+  }
+  .orderclick__image span {
+    width: calc(100% - 20px);
+    left: 10px;
+    right: 10px;
   }
   .orderclick__buy {
     max-width: 445px;
@@ -1827,6 +1858,9 @@ svg path {
   .orderclick__desc {
     font-size: 14px;
     line-height: 16px;
+  }
+  .orderclick__item .button__default {
+    max-width: calc(50% - 10px);
   }
   .spectrum__image img {
     height: 270px;
@@ -1873,6 +1907,7 @@ svg path {
     line-height: 36px;
   }
   .working__desc {
+    height: 4.5em;
     font-size: 14px;
     line-height: 16px;
   }
@@ -1944,7 +1979,7 @@ svg path {
     padding: 40px 0;
   }
   .footer__list_bottom .footer__item {
-    padding: 80px 10px 40px;
+    padding: 80px 0 40px;
   }
 }
 /* end media 1919px */
@@ -1960,11 +1995,172 @@ svg path {
   .border span:nth-child(4) {
     left: 66.666%;
   }
+  .header__nav_list:first-child {
+    width: 66.666%;
+    margin: 0 auto 0 0;
+  }
+  .header__nav_list:first-child .header__nav_item {
+    width: 50%;
+  }
   .header__nav_list {
     width: 100%;
   }
   .header__nav_block {
-    padding: 130px 20px 30px;
+    padding: 140px 20px 30px;
     gap: 80px 0;
+  }
+  .header__nav_heading {
+    font-size: 28px;
+    line-height: 22px;
+  }
+  h2 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .hero__head {
+    font-size: 60px;
+    line-height: 55px;
+  }
+  .hero__desc {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .hero__desc_block:last-child {
+    width: 200px;
+  }
+  .hero__desc_block:first-child {
+    max-width: 100%;
+  }
+  .hero__head span:nth-child(1),
+  .hero__buttons {
+    width: 100%;
+  }
+  .hero__head span:nth-child(2) {
+    width: 84%;
+  }
+  .hero__head span:nth-child(3) {
+    width: 94%;
+  }
+  .hero__container {
+    min-height: calc(var(--height) + 1px);
+    padding: 120px 30px 40px;
+    justify-content: center;
+  }
+  .hero {
+    min-height: calc(var(--height) + 1px);
+  }
+  .best__right {
+    width: 33.333%;
+    margin: 20px auto;
+    gap: 20px;
+  }
+  .best__desc {
+    width: 100%;
+  }
+  .best__sliders {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .best__slider_left,
+  .best__slider_right {
+    width: 100%;
+  }
+  .best__block {
+    height: 310px;
+  }
+  .best__thumbs_image {
+    height: 170px;
+  }
+  .best__next,
+  .partner__next,
+  .best__prev,
+  .partner__prev {
+    top: 310px;
+  }
+  .best__next,
+  .partner__next {
+    left: calc(16.666% + 75px);
+  }
+  .reliable__item,
+  .spectrum__item,
+  .working__item,
+  .orderclick__item {
+    width: 33.333%;
+  }
+  .reliable__link,
+  .spectrum__link,
+  .working__link {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .orderclick__image, .orderclick__item:first-child {
+    width: 66.666%;
+  }
+  .orderclick__item:nth-child(2) {
+    display: none;
+  }
+  .orderclick__item:last-child {
+    margin: 0 0 0 auto;
+  }
+  .orderclick__desc_double {
+    display: block;
+    width: 33.333%;
+  }
+  .orderclick__image img {
+    height: 310px;
+  }
+  .orderclick__buy {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .spectrum__image img {
+    height: 230px;
+  }
+  .rent__item {
+    width: 33.333%;
+  }
+  .rent__flex svg {
+    display: none;
+  }
+  .rent__buttons {
+    width: calc(66.666% - 5px);
+  }
+  .working__list {
+    justify-content: center;
+  }
+  .partner__item:first-child .partner__info {
+    width: 100%;
+  }
+  .partner__item:first-child, .partner__item {
+    width: 33.333%;
+  }
+  .partner__image {
+    height: 310px;
+  }
+  .partner__bottom, .together__list, .map__list {
+    max-width: 100%;
+  }
+  .map__yandex {
+    height: 500px;
+  }
+  .footer__list_top {
+    width: 66.666%;
+  }
+  .footer__list_bottom .footer__item:first-child {
+    flex-direction: column-reverse;
+    gap: 20px;
+    width: 33.333%;
+  }
+  .footer__list_bottom .footer__item:first-child p {
+    width: 100%;
+  }
+  .footer__list_bottom .footer__item:last-child {
+    width: 66.666%;
+  }
+  .footer__list_bottom .footer__item {
+    padding: 40px 0;
   }
 }
