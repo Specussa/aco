@@ -57,13 +57,20 @@ input::selection {
 }
 
 .header__nav::-webkit-scrollbar {
-  width: 8px;
-  background: var(--dgreen);
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+
+.header__nav::-webkit-scrollbar-thumb {
+  display: none;
+  width: 0px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   width: 8px;
-  background: var(--lgreen);
+  background: var(--dgreen);
 }
 
 html body.loaded {
