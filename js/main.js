@@ -148,7 +148,7 @@ if(relatedslider){
   var relatedSlider = new Swiper('.related__slider', {
     loop: true,
     spaceBetween: 40,
-    slidesPerView: 'auto',
+    slidesPerView: 4,
     touchRatio: 0.2,
     loopedSlides: 4,
     slideToClickedSlide: true,
@@ -161,6 +161,7 @@ if(relatedslider){
     breakpoints: {
       766: {
         spaceBetween: 10,
+        slidesPerView: 'auto',
       },
       1919: {
         spaceBetween: 20,

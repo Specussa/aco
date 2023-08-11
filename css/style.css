@@ -1804,7 +1804,6 @@ svg path {
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 30px;
 }
 
 .cart__item {
@@ -1815,8 +1814,11 @@ svg path {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+.cart__item:first-child {
+  border-top: 1px solid var(--border);
 }
 
 .cart__image {
@@ -1990,6 +1992,35 @@ svg path {
   width: calc(33.333% - 20px);
 }
 
+.cart__empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 20px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cart__empty_head {
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+}
+
+.cart__empty_desc {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--gray);
+}
+
+.cart__empty .button__default {
+  margin: 40px 0 0;
+}
+
 /* end cart */
 
 /* start related */
@@ -2144,7 +2175,36 @@ svg path {
     width: 29.72px;
     height: 34px;
   }
-  .header__link {
+  .header__link,
+  .header__nav_subhead,
+  .hero__desc,
+  .button__default,
+  .best__desc,
+  .best__thumbs_desc,
+  .best__thumbs_info,
+  .orderclick__desc,
+  .spectrum__desc,
+  .rent__desc,
+  .working__desc,
+  .partner__desc,
+  .together__desc,
+  .together__desc a,
+  .map__link,
+  .cart__user_item,
+  .cart__name,
+  .cart__minus,
+  .cart__plus,
+  .cart__input,
+  .cart__desc,
+  .cart__price,
+  .cart__prepayment span,
+  .cart__total span,
+  .cart__manager,
+  .cart__prepayment,
+  .related__desc,
+  .footer__list_top .footer__link,
+  .footer__list_bottom .footer__item,
+  .cart__empty_desc {
     font-size: 14px;
     line-height: 16px;
   }
@@ -2184,17 +2244,9 @@ svg path {
     font-size: 20px;
     line-height: 22px;
   }
-  .header__nav_subhead {
-    font-size: 14px;
-    line-height: 16px;
-  }
   .hero__head {
     font-size: 85px;
     line-height: 75px;
-  }
-  .hero__desc {
-    font-size: 14px;
-    line-height: 16px;
   }
   .hero__buttons {
     gap: 10px;
@@ -2205,8 +2257,6 @@ svg path {
   .button__default {
     max-width: 270px;
     padding: 27px;
-    font-size: 14px;
-    line-height: 16px;
   }
   .hero__desc_block:first-child {
     max-width: 550px;
@@ -2245,12 +2295,16 @@ svg path {
   .orderclick__image,
   .footer__list_bottom .footer__item p,
   .best__desc,
-  .best__head {
+  .best__head,
+  .cart__user,
+  .cart__order,
+  .related__heading,
+  .reliable__item,
+  .spectrum__item,
+  .working__item,
+  .questions__item,
+  .cart__empty {
     padding: 0 10px;
-  }
-  .best__desc {
-    font-size: 14px;
-    line-height: 16px;
   }
   .best__head {
     font-size: 36px;
@@ -2267,14 +2321,6 @@ svg path {
   .best__number {
     font-size: 32px;
     line-height: 22px;
-  }
-  .best__thumbs_desc {
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .best__thumbs_info {
-    font-size: 14px;
-    line-height: 16px;
   }
   .best__thumbs_block {
     gap: 20px;
@@ -2297,7 +2343,8 @@ svg path {
   }
   .reliable__link,
   .spectrum__link,
-  .working__link {
+  .working__link,
+  .questions__link {
     font-size: 30px;
     line-height: 36px;
   }
@@ -2317,10 +2364,6 @@ svg path {
     font-size: 48px;
     line-height: 48px;
   }
-  .orderclick__desc {
-    font-size: 14px;
-    line-height: 16px;
-  }
   .orderclick__item .button__default {
     max-width: calc(50% - 10px);
   }
@@ -2329,8 +2372,6 @@ svg path {
   }
   .spectrum__desc {
     padding: 0 10px;
-    font-size: 14px;
-    line-height: 16px;
   }
   .reliable__block,
   .spectrum__block,
@@ -2350,10 +2391,6 @@ svg path {
     font-size: 36px;
     line-height: 36px;
   }
-  .rent__desc {
-    font-size: 14px;
-    line-height: 16px;
-  }
   .rent__order {
     font-size: 48px;
     line-height: 48px;
@@ -2370,8 +2407,6 @@ svg path {
   }
   .working__desc {
     height: 4.5em;
-    font-size: 14px;
-    line-height: 16px;
   }
   .partner__block {
     padding: 30px 0 120px;
@@ -2379,10 +2414,6 @@ svg path {
   .partner__head {
     font-size: 36px;
     line-height: 36px;
-  }
-  .partner__desc {
-    font-size: 14px;
-    line-height: 16px;
   }
   .partner__list {
     padding: 40px 0;
@@ -2407,18 +2438,9 @@ svg path {
     font-size: 30px;
     line-height: 36px;
   }
-  .together__desc,
-  .together__desc a {
-    font-size: 14px;
-    line-height: 16px;
-  }
   .map__list {
     padding: 40px 0 80px;
     gap: 10px 0;
-  }
-  .map__link {
-    font-size: 14px;
-    line-height: 16px;
   }
   .map__yandex {
     height: 600px;
@@ -2426,13 +2448,91 @@ svg path {
   .map__zoom {
     right: 40px;
   }
+  .cart__block {
+    padding: 80px 0;
+    margin: 95px 1px 20px;
+  }
+  .cart__heading {
+    padding: 0 10px 60px;
+  }
+  .cart__user_name {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .cart__user_list {
+    gap: 10px;
+  }
+  .cart__user {
+    gap: 25px;
+  }
+  .cart__list_bottom {
+    gap: 40px;
+  }
+  .cart__item {
+    padding: 10px 0;
+  }
+  .cart__total {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .cart__manager {
+    width: calc(33.333% - 10px);
+  }
+  .cart__item_bottom .button__default {
+    width: calc(33.333% - 10px);
+    max-width: 100%;
+  }
+  .cart__input input {
+    width: 30px;
+  }
+  .cart__empty_head {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .cart__empty {
+    gap: 20px;
+  }
+  .cart__empty .button__default {
+    margin: 20px 0 0;
+  }
+  .related__padding {
+    padding: 40px 10px 0;
+  }
+  .related__info .button__default {
+    max-width: 100%;
+  }
+  .related__image {
+    height: 270px;
+  }
+  .related__prev,
+  .related__next {
+    top: 260px;
+  }
+  .related__next {
+    right: 20px;
+  }
+  .related__prev {
+    left: 20px;
+  }
+  .related__head {
+    padding: 15px 0 20px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .related__info {
+    gap: 10px;
+  }
+  .related__block {
+    padding: 20px 0 40px;
+  }
+  .questions__heading {
+    padding: 0 10px 40px;
+  }
+  .questions__block {
+    padding: 40px 0 80px;
+  }
   .footer__list_top {
     gap: 10px 0;
-  }
-  .footer__list_top .footer__link,
-  .footer__list_bottom .footer__item {
-    font-size: 14px;
-    line-height: 16px;
   }
   .footer__list_top .footer__item {
     padding: 0 10px;
@@ -2565,12 +2665,14 @@ svg path {
   .reliable__item,
   .spectrum__item,
   .working__item,
-  .orderclick__item {
+  .orderclick__item,
+  .questions__item {
     width: 33.333%;
   }
   .reliable__link,
   .spectrum__link,
-  .working__link {
+  .working__link,
+  .questions__link {
     font-size: 28px;
     line-height: 34px;
   }
@@ -2777,7 +2879,8 @@ svg path {
   }
   .reliable__link,
   .spectrum__link,
-  .working__link {
+  .working__link,
+  .questions__link {
     font-size: 18px;
     line-height: 22px;
   }
