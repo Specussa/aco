@@ -160,8 +160,12 @@ if(relatedslider){
     },
     breakpoints: {
       766: {
-        spaceBetween: 10,
-        slidesPerView: 'auto',
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
+      1199: {
+        spaceBetween: 20,
+        slidesPerView: 3,
       },
       1919: {
         spaceBetween: 20,
