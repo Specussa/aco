@@ -56,18 +56,6 @@ input::selection {
   background: var(--gray);
 }
 
-.header__nav::-webkit-scrollbar {
-  display: none;
-  width: 0px;
-  background: transparent;
-}
-
-.header__nav::-webkit-scrollbar-thumb {
-  display: none;
-  width: 0px;
-  background: transparent;
-}
-
 ::-webkit-scrollbar-thumb {
   width: 8px;
   background: var(--dgreen);
@@ -222,6 +210,9 @@ svg path {
 }
 
 .border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: calc(100% - 80px);
   height: 100%;
   max-width: 1840px;
@@ -242,6 +233,7 @@ svg path {
   display: block;
   width: 1.6px;
   height: 100%;
+  flex: 0 0 auto;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -570,6 +562,18 @@ svg path {
 
 /* start header__nav */
 
+.header__nav::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+
+.header__nav::-webkit-scrollbar-thumb {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -651,6 +655,7 @@ svg path {
 }
 
 .header__nav_heading {
+  width: fit-content;
   font-size: 56px;
   font-weight: 600;
   line-height: 68px;
@@ -667,6 +672,7 @@ svg path {
 }
 
 .header__nav_head {
+  width: fit-content;
   font-size: 30px;
   font-weight: 300;
   line-height: 33px;
@@ -1736,11 +1742,19 @@ svg path {
 
 /* end map */
 
+/* start top */
+
+.top__block {
+  padding: 150px 0 0;
+}
+
+/* end top */
+
 /* start cart */
 
 .cart__block {
   padding: 100px 0 100px;
-  margin: 150px 1px 25px;
+  margin: 0 1px 25px;
   background-color: var(--white);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -2171,6 +2185,118 @@ svg path {
 
 /* end questions */
 
+/* start services */
+
+.services__block {
+  padding: 100px 0 60px;
+}
+
+.services__heading {
+  width: 25%;
+  padding: 0 20px 60px;
+  margin: 0 25% 0 auto;
+}
+
+.services__list,
+.services_floors__list,
+.services_walls__list,
+.services_floors__flex,
+.services_walls__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services__item,
+.services_floors__item,
+.services_walls__item {
+  width: 50%;
+}
+
+.services__item,
+.services_formwork__desc,
+.services_floors__desc,
+.services_walls__desc {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--gray);
+}
+
+.services__item p,
+.services_floors__flex,
+.services_walls__flex {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.services_formwork__block,
+.services_floors__block,
+.services_walls__block {
+  padding: 60px 0;
+}
+
+.services_formwork__heading {
+  padding: 0 20px 60px;
+}
+
+.services_formwork__desc {
+  width: 50%;
+  margin: 0 0 0 auto;
+  padding: 0 20px;
+}
+
+.services_floors__heading {
+  padding: 0 20px 60px;
+  text-align: right;
+}
+
+.services_floors__flex,
+.services_walls__flex {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services_floors__list,
+.services_walls__list {
+  gap: 60px 0;
+}
+
+.services_floors__head,
+.services_walls__head {
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+}
+
+.services_floors__number,
+.services_walls__number {
+  margin: 0 0 10px;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 35px;
+  letter-spacing: -0.05em;
+  color: var(--gray);
+}
+
+.services_floors__item:last-child .services_floors__flex,
+.services_walls__item:last-child .services_walls__flex {
+  width: 100%;
+}
+
+.services_walls__heading {
+  padding: 0 20px 60px;
+}
+
+.services_walls__list {
+  justify-content: flex-end;
+}
+
+/* end services */
+
 /* start media 1919px */
 @media (max-width: 1919px) {
   .header__block {
@@ -2461,9 +2587,12 @@ svg path {
   .map__zoom {
     right: 40px;
   }
+  .top__block {
+    padding: 95px 0 0;
+  }
   .cart__block {
     padding: 80px 0;
-    margin: 95px 1px 20px;
+    margin: 0 1px 20px;
   }
   .cart__heading {
     padding: 0 10px 60px;
@@ -2761,7 +2890,7 @@ svg path {
   }
   .cart__block {
     padding: 60px 0;
-    margin: 95px 1px 10px;
+    margin: 0 1px 10px;
   }
   .cart__heading {
     padding: 0 10px 40px;
@@ -3019,9 +3148,12 @@ svg path {
     font-size: 20px;
     line-height: 20px;
   }
+  .top__block {
+    padding: 70px 0 0;
+  }
   .cart__block {
     padding: 40px 0;
-    margin: 70px 1px 10px;
+    margin: 0 1px 10px;
   }
   .cart__total {
     font-size: 20px;
