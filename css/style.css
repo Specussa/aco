@@ -53,6 +53,11 @@ input::selection {
 
 ::-webkit-scrollbar {
   width: 8px;
+  background: var(--gray);
+}
+
+.header__nav::-webkit-scrollbar {
+  width: 8px;
   background: var(--dgreen);
 }
 
