@@ -107,12 +107,11 @@ select:-webkit-autofill:hover,
 input {
   font-family: var(--font);
   border: none;
-  border-bottom: 1px solid var(--white);
   outline: none;
-  -webkit-text-fill-color: var(--white);
+  -webkit-text-fill-color: var(--black);
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   box-shadow: 0 0 0px 1000px transparent inset;
-  color: var(--white);
+  color: var(--black);
   background: transparent;
 }
 
@@ -1724,8 +1723,8 @@ svg path {
 /* start map */
 
 .cart__block {
-  margin: 150px 0 50px;
   padding: 100px 0 100px;
+  margin: 150px 1px 50px;
   background-color: var(--white);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -1739,6 +1738,7 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 40px;
 }
 
 .cart__user {
@@ -1800,6 +1800,12 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .cart__image {
@@ -1814,6 +1820,93 @@ svg path {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.cart__buttons,
+.cart__input,
+.cart__left,
+.cart__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+.cart__left {
+  width: 45%;
+  gap: 20px;
+}
+
+.cart__right {
+  width: calc(55% - 20px);
+}
+
+.cart__name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--black);
+}
+
+.cart__buttons,
+.cart__desc,
+.cart__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart__buttons,
+.cart__desc {
+  width: 35%;
+}
+.cart__price {
+  width: 30%;
+}
+
+.cart__minus,
+.cart__plus,
+.cart__input {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--black);
+}
+
+.cart__input input {
+  width: 50px;
+  text-align: center;
+}
+
+.cart__minus,
+.cart__plus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cart__desc {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--black);
+}
+
+.cart__desc_tablet {
+  display: none;
+}
+
+.cart__price {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--black);
 }
 
 /* end map */
