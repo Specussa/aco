@@ -1047,7 +1047,8 @@ svg path {
 
 .reliable__list,
 .spectrum__list,
-.working__list {
+.working__list,
+.questions__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1057,14 +1058,16 @@ svg path {
 
 .reliable__item,
 .spectrum__item,
-.working__item {
+.working__item,
+.questions__item {
   width: 25%;
   padding: 0 20px;
 }
 
 .reliable__link,
 .spectrum__link,
-.working__link {
+.working__link,
+.questions__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1087,7 +1090,8 @@ svg path {
 }
 
 .reliable__link:hover,
-.spectrum__link:hover {
+.spectrum__link:hover,
+.questions__link:hover {
   color: var(--white);
   background-color: var(--lgreen);
 }
@@ -2106,6 +2110,22 @@ svg path {
 }
 
 /* end related */
+
+/* start questions */
+
+.questions__block {
+  padding: 60px 0 120px;
+}
+
+.questions__heading {
+  padding: 0 20px 60px;
+}
+
+.questions__list {
+  justify-content: center;
+}
+
+/* end questions */
 
 /* start media 1919px */
 @media (max-width: 1919px) {
