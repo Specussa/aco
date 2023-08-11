@@ -53,12 +53,12 @@ input::selection {
 
 ::-webkit-scrollbar {
   width: 8px;
-  background: var(--dblue);
+  background: var(--gray);
 }
 
 ::-webkit-scrollbar-thumb {
   width: 8px;
-  background: var(--green);
+  background: var(--lgreen);
 }
 
 html body.loaded {
