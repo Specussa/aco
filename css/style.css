@@ -3418,6 +3418,24 @@ svg path {
   .services_supervision__block {
     padding: 35px 0 70px;
   }
+  .services_floors__number,
+  .services_walls__number,
+  .services_qualitative__number,
+  .services_supervision__number {
+    font-size: 32px;
+    line-height: 22px;
+  }
+  .services_floors__head,
+  .services_walls__head {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .services_floors__flex,
+  .services_walls__flex,
+  .services_qualitative__flex,
+  .services_supervision__flex {
+    gap: 10px;
+  }
   .footer__list_bottom .footer__item:first-child {
     width: 50%;
   }
