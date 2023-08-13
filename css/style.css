@@ -2200,8 +2200,14 @@ svg path {
 .services__list,
 .services_floors__list,
 .services_walls__list,
+.services_qualitative__list,
 .services_floors__flex,
-.services_walls__flex {
+.services_walls__flex,
+.services_qualitative__flex,
+.services_qualitative__block,
+.services_supervision__block,
+.services_supervision__list,
+.services_supervision__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2210,14 +2216,22 @@ svg path {
 
 .services__item,
 .services_floors__item,
-.services_walls__item {
+.services_walls__item,
+.services_qualitative__item,
+.services_supervision__item {
   width: 50%;
 }
 
 .services__item,
 .services_formwork__desc,
 .services_floors__desc,
-.services_walls__desc {
+.services_walls__desc,
+.services_qualitative__desc,
+.services_qualitative__top,
+.services_qualitative__bottom,
+.services_supervision__desc,
+.services_supervision__top,
+.services_supervision__bottom {
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
@@ -2226,14 +2240,20 @@ svg path {
 
 .services__item p,
 .services_floors__flex,
-.services_walls__flex {
+.services_walls__flex,
+.services_qualitative__flex,
+.services_qualitative__bottom,
+.services_supervision__flex,
+.services_supervision__top,
+.services_supervision__bottom {
   width: 50%;
   padding: 0 20px;
 }
 
 .services_formwork__block,
 .services_floors__block,
-.services_walls__block {
+.services_walls__block,
+.services_qualitative__block {
   padding: 60px 0;
 }
 
@@ -2253,14 +2273,25 @@ svg path {
 }
 
 .services_floors__flex,
-.services_walls__flex {
+.services_walls__flex,
+.services_qualitative__flex,
+.services_supervision__flex {
   flex-direction: column;
   gap: 30px;
 }
 
 .services_floors__list,
-.services_walls__list {
+.services_walls__list,
+.services_qualitative__list,
+.services_qualitative__block,
+.services_supervision__block,
+.services_supervision__list {
   gap: 60px 0;
+}
+
+.services_qualitative__block,
+.services_supervision__block {
+  flex-direction: column;
 }
 
 .services_floors__head,
@@ -2273,7 +2304,9 @@ svg path {
 }
 
 .services_floors__number,
-.services_walls__number {
+.services_walls__number,
+.services_qualitative__number,
+.services_supervision__number {
   margin: 0 0 10px;
   font-size: 50px;
   font-weight: 300;
@@ -2293,6 +2326,28 @@ svg path {
 
 .services_walls__list {
   justify-content: flex-end;
+}
+
+.services_qualitative__heading,
+.services_supervision__heading {
+  padding: 0 20px;
+}
+
+.services_qualitative__top {
+  width: 25%;
+  padding: 0 20px;
+}
+
+.services_qualitative__bottom,
+.services_qualitative__flex,
+.services_supervision__flex,
+.services_supervision__top,
+.services_supervision__bottom {
+  margin: 0 0 0 auto;
+}
+
+.services_supervision__block {
+  padding: 60px 0 120px;
 }
 
 /* end services */
@@ -2343,7 +2398,17 @@ svg path {
   .related__desc,
   .footer__list_top .footer__link,
   .footer__list_bottom .footer__item,
-  .cart__empty_desc {
+  .cart__empty_desc,
+  .services__item,
+  .services_formwork__desc,
+  .services_floors__desc,
+  .services_walls__desc,
+  .services_qualitative__desc,
+  .services_qualitative__top,
+  .services_qualitative__bottom,
+  .services_supervision__desc,
+  .services_supervision__top,
+  .services_supervision__bottom {
     font-size: 14px;
     line-height: 16px;
   }
@@ -2442,7 +2507,19 @@ svg path {
   .spectrum__item,
   .working__item,
   .questions__item,
-  .cart__empty {
+  .cart__empty,
+  .services__item p,
+  .services_floors__flex,
+  .services_walls__flex,
+  .services_qualitative__flex,
+  .services_qualitative__bottom,
+  .services_supervision__flex,
+  .services_supervision__top,
+  .services_supervision__bottom,
+  .services_formwork__desc,
+  .services_qualitative__heading,
+  .services_supervision__heading,
+  .services_qualitative__top {
     padding: 0 10px;
   }
   .best__head {
@@ -2671,6 +2748,50 @@ svg path {
     padding: 0 10px 40px;
   }
   .questions__block {
+    padding: 40px 0 80px;
+  }
+  .services__heading,
+  .services_formwork__heading,
+  .services_floors__heading,
+  .services_walls__heading {
+    padding: 0 10px 40px;
+  }
+  .services__block {
+    padding: 80px 0 40px;
+  }
+  .services_formwork__block,
+  .services_floors__block,
+  .services_walls__block,
+  .services_qualitative__block {
+    padding: 40px 0;
+  }
+  .services_floors__flex,
+  .services_walls__flex,
+  .services_qualitative__flex,
+  .services_supervision__flex {
+    gap: 20px;
+  }
+  .services_floors__list,
+  .services_walls__list,
+  .services_qualitative__list,
+  .services_qualitative__block,
+  .services_supervision__block,
+  .services_supervision__list {
+    gap: 40px 0;
+  }
+  .services_floors__number,
+  .services_walls__number,
+  .services_qualitative__number,
+  .services_supervision__number {
+    font-size: 32px;
+    line-height: 22px;
+  }
+  .services_floors__head,
+  .services_walls__head {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .services_supervision__block {
     padding: 40px 0 80px;
   }
   .footer__list_top {
@@ -2921,8 +3042,49 @@ svg path {
   .questions__list {
     justify-content: flex-end;
   }
-  .footer__list_top {
+  .services__heading {
+    width: 33.333%;
+    margin: 0 0 0 auto;
+  }
+  .services__item,
+  .services_floors__item,
+  .services_walls__item,
+  .services_qualitative__item,
+  .services_supervision__item,
+  .services_qualitative__top {
+    width: 33.333%;
+  }
+  .services__list {
+    justify-content: space-between;
+  }
+  .services_floors__item:nth-child(2n),
+  .services_walls__item:nth-child(2),
+  .services_walls__item:nth-child(3),
+  .services_qualitative__list,
+  .services_formwork__desc,
+  .footer__list_bottom .footer__item:last-child,
+  .footer__list_top,
+  .services_qualitative__bottom,
+  .services_supervision__top,
+  .services_supervision__bottom,
+  .services_supervision__list {
     width: 66.666%;
+  }
+  .services_floors__flex,
+  .services_walls__flex,
+  .services_qualitative__flex,
+  .services_supervision__flex {
+    width: 100%;
+    margin: 0 0 0 auto;
+  }
+  .services_floors__item:nth-child(2) .services_floors__flex,
+  .services_walls__item:nth-child(2) .services_walls__flex,
+  .services_qualitative__item,
+  .services_supervision__item {
+    width: 50%;
+  }
+  .services_qualitative__list {
+    margin: 0 0 0 auto;
   }
   .footer__list_bottom .footer__item:first-child {
     flex-direction: column-reverse;
@@ -2931,9 +3093,6 @@ svg path {
   }
   .footer__list_bottom .footer__item:first-child p {
     width: 100%;
-  }
-  .footer__list_bottom .footer__item:last-child {
-    width: 66.666%;
   }
   .footer__list_bottom .footer__item {
     padding: 40px 0;
@@ -2994,7 +3153,19 @@ svg path {
   .spectrum__item,
   .working__item,
   .questions__item,
-  .cart__empty {
+  .cart__empty,
+  .services__item p,
+  .services_floors__flex,
+  .services_walls__flex,
+  .services_qualitative__flex,
+  .services_qualitative__bottom,
+  .services_supervision__flex,
+  .services_supervision__top,
+  .services_supervision__bottom,
+  .services_formwork__desc,
+  .services_qualitative__heading,
+  .services_supervision__heading,
+  .services_qualitative__top {
     padding: 0 5px;
   }
   .header__nav_heading {
@@ -3193,6 +3364,58 @@ svg path {
     padding: 10px 0 35px;
   }
   .questions__block {
+    padding: 35px 0 70px;
+  }
+  .services__block {
+    padding: 40px 0 35px;
+  }
+  .services__item,
+  .services_floors__item,
+  .services_walls__item,
+  .services_qualitative__item,
+  .services_supervision__item,
+  .services_qualitative__top,
+  .services_floors__item:nth-child(2),
+  .services_walls__item:nth-child(2),
+  .services_qualitative__item,
+  .services_supervision__item,
+  .services__heading {
+    width: 50%;
+  }
+  .services_walls__item:nth-child(3),
+  .services_qualitative__list,
+  .services_formwork__desc, 
+  .footer__list_bottom .footer__item:last-child,
+  .footer__list_top, .services_qualitative__bottom,
+  .services_supervision__top,
+  .services_supervision__bottom,
+  .services_supervision__list,
+  .services_floors__item:nth-child(2) .services_floors__flex,
+  .services_walls__item:nth-child(2) .services_walls__flex,
+  .services_floors__item:nth-child(4) {
+    width: 100%;
+  }
+  .services__heading,
+  .services_formwork__heading,
+  .services_floors__heading,
+  .services_walls__heading {
+    padding: 0 5px 20px;
+  }
+  .services_floors__list,
+  .services_walls__list,
+  .services_qualitative__list,
+  .services_qualitative__block,
+  .services_supervision__block,
+  .services_supervision__list {
+    gap: 30px 0;
+  }
+  .services_formwork__block,
+  .services_floors__block,
+  .services_walls__block,
+  .services_qualitative__block {
+    padding: 35px 0;
+  }
+  .services_supervision__block {
     padding: 35px 0 70px;
   }
   .footer__list_bottom .footer__item:first-child {
