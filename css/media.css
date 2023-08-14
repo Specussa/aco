@@ -14,6 +14,23 @@
 
 /*** Min-width 768 ***/
 @media (min-width: 768px) {
+  .inner-container {
+    padding: 0 10px;
+  }
+
+  .unique-offers {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .unique-offers__desc-item {
+    flex: 0 0 33.33%;
+  }
+
+  .unique-offers__desc-item:last-child {
+    margin-left: auto;
+  }
+
   .walls__desc {
     width: 66.66%;
   }
@@ -21,6 +38,22 @@
 
 /*** Min-width 1200 ***/
 @media (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 60px;
+  }
+
+  .unique-offers {
+    padding-top: 120px;
+  }
+
+  .unique-offers__desc-item {
+    flex: 0 0 25%;
+  }
+
+  .unique-offers__desc-item:last-child {
+    margin-left: 25%;
+  }
+
   .walls__desc {
     width: 50%;
   }
@@ -28,6 +61,20 @@
 
 /*** Min-width 1920 ***/
 @media (min-width: 1920px) {
+  p {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+
+  .inner-container {
+    padding: 0 20px;
+  }
+
+  .unique-offers {
+    padding-top: 160px;
+    padding-bottom: 140px;
+  }
+
   .walls__list {
     row-gap: 40px;
   }

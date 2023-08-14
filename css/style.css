@@ -145,6 +145,12 @@ h2 span {
   color: var(--green);
 }
 
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.14;
+}
+
 button,
 button:hover {
   outline: 0;
@@ -180,6 +186,18 @@ svg path {
   flex-direction: column;
   position: relative;
   z-index: 2;
+}
+
+.inner-container {
+  padding: 0 5px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.section-title--right {
+  text-align: right;
 }
 
 .overlay {
@@ -2640,6 +2658,20 @@ svg path {
 }
 
 /* end largepanel */
+
+/*** Unique offers ***/
+.unique-offers {
+  padding: 60px 0 30px;
+}
+
+.unique-offers__desc {
+  display: flex;
+  color: var(--gray);
+}
+
+.unique-offers__desc-item {
+  flex: 0 0 50%;
+}
 
 /* start media 1919px */
 @media (max-width: 1919px) {
