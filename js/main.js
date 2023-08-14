@@ -175,6 +175,39 @@ if(relatedslider){
 }
 // end related__slider
 
+// start related__slider
+const largepanelslider = document.querySelector('.largepanel__slider');
+if(largepanelslider){
+  var relatedSlider = new Swiper('.largepanel__slider', {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 1,
+    touchRatio: 0.2,
+    loopedSlides: 1,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    speed: 1000,
+    navigation: {
+      nextEl: '.largepanel__next',
+      prevEl: '.largepanel__prev',
+    },
+    breakpoints: {
+      766: {
+        spaceBetween: 20,
+        slidesPerView: 1,
+      },
+      1199: {
+        spaceBetween: 20,
+        slidesPerView: 1,
+      },
+      1919: {
+        spaceBetween: 20,
+      }
+    }
+  });
+}
+// end related__slider
+
 // map
 // start click map link
 let idyamoscow = document.getElementById('yamoscow');
