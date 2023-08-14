@@ -160,7 +160,7 @@ if(relatedslider){
     },
     breakpoints: {
       766: {
-        spaceBetween: 20,
+        spaceBetween: 10,
         slidesPerView: 2,
       },
       1199: {
@@ -175,7 +175,7 @@ if(relatedslider){
 }
 // end related__slider
 
-// start related__slider
+// start largepanel__slider
 const largepanelslider = document.querySelector('.largepanel__slider');
 if(largepanelslider){
   var relatedSlider = new Swiper('.largepanel__slider', {
@@ -193,7 +193,7 @@ if(largepanelslider){
     },
     breakpoints: {
       766: {
-        spaceBetween: 20,
+        spaceBetween: 10,
         slidesPerView: 1,
       },
       1199: {
@@ -206,7 +206,7 @@ if(largepanelslider){
     }
   });
 }
-// end related__slider
+// end largepanel__slider
 
 // map
 // start click map link
