@@ -2610,7 +2610,7 @@ svg path {
 }
 
 .largepanel__prev {
-  left: 0;
+  left: 14px;
   right: auto;
 }
 
@@ -2634,6 +2634,7 @@ svg path {
 
 .largepanel_shields__heading {
   padding: 0 20px;
+  text-align: right;
 }
 
 .largepanel__list {
@@ -3468,6 +3469,9 @@ svg path {
   }
   .footer__list_top {
     gap: 10px 0;
+  }
+  .largepanel__prev {
+    left: 1px;
   }
   .footer__list_top .footer__item {
     padding: 0 10px;
@@ -4332,6 +4336,9 @@ svg path {
   }
   .largepanel__subitem:first-child .largepanel__description {
     padding: 20px 5px 20px 0;
+  }
+  .largepanel__prev {
+    left: -2px;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
