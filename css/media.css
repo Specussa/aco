@@ -1,0 +1,34 @@
+/*** Min-width 390 ***/
+@media (max-width: 389px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  .together__desc,
+  .together__desc a,
+  .footer__list_bottom .footer__item {
+    font-size: 12px;
+    word-break: break-word;
+  }
+}
+
+/*** Min-width 768 ***/
+@media (min-width: 768px) {
+  .walls__desc {
+    width: 66.66%;
+  }
+}
+
+/*** Min-width 1200 ***/
+@media (min-width: 1200px) {
+  .walls__desc {
+    width: 50%;
+  }
+}
+
+/*** Min-width 1920 ***/
+@media (min-width: 1920px) {
+  .walls__list {
+    row-gap: 40px;
+  }
+}
