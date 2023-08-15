@@ -1,4 +1,5 @@
-/*** Min-width 390 ***/
+/****** MAX ******/
+/*** Max-width 389 ***/
 @media (max-width: 389px) {
   h2 {
     font-size: 30px;
@@ -8,7 +9,31 @@
   .together__desc a,
   .footer__list_bottom .footer__item {
     font-size: 12px;
+  }
+  .together__desc,
+  .together__desc a {
     word-break: break-word;
+  }
+}
+
+/*** Max-width 575 ***/
+@media (max-width: 575px) {
+  .footer__list_bottom .footer__item {
+    word-break: break-word;
+  }
+}
+
+/****** MIN ******/
+@media (any-hover: hover) {
+  .btn:hover {
+    background-color: #c5c5c5;
+    border: 1px solid var(--white);
+  }
+
+  .btn--bg:hover {
+    background-color: var(--white);
+    border-color: var(--green);
+    color: var(--green);
   }
 }
 
@@ -16,6 +41,47 @@
 @media (min-width: 768px) {
   .inner-container {
     padding: 0 10px;
+  }
+
+  .discounts__inner-wrapper {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .discounts__feature-wrapper {
+    width: 66.66%;
+  }
+
+  .discount-list__content {
+    gap: 30px;
+  }
+
+  .discounts__feature {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .discounts__feature-title {
+    font-size: 28px;
+  }
+
+  .discount-list__item {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .discount-list__title,
+  .discount-list__price {
+    flex: 0 0 23.3%;
+  }
+
+  .discount-list__text {
+    flex: 0 0 calc(53.4% - 60px);
+  }
+
+  .discounts__btns {
+    width: 33.33%;
+    margin-left: auto;
   }
 
   .unique-offers {
@@ -54,6 +120,43 @@
     margin-left: 25%;
   }
 
+  .discounts__inner-wrapper {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .discounts__content {
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  .discounts__feature {
+    padding: 20px;
+  }
+
+  .discounts__feature-title {
+    font-size: 30px;
+  }
+
+  .discounts__feature-wrapper {
+    width: 25%;
+  }
+
+  .discounts__value {
+    flex: 1 0 100%;
+    order: -1;
+    margin-top: -50px;
+    margin-bottom: 60px;
+  }
+
+  .discounts__list {
+    width: 75%;
+  }
+
+  .discounts__btns {
+    width: 25%;
+  }
+
   .walls__desc {
     width: 50%;
   }
@@ -66,13 +169,46 @@
     line-height: 1.16;
   }
 
+  .btn {
+    height: 120px;
+    font-size: 24px;
+  }
+
   .inner-container {
     padding: 0 20px;
+  }
+
+  .discounts__inner-wrapper {
+    padding-top: 100px;
   }
 
   .unique-offers {
     padding-top: 160px;
     padding-bottom: 140px;
+  }
+
+  .discounts__value {
+    margin-top: -40px;
+    margin-bottom: 80px;
+  }
+
+  .discounts__feature {
+    padding: 30px;
+  }
+
+  .discounts__feature-title {
+    font-size: 48px;
+  }
+
+  .discounts__feature-text {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .discount-list__title,
+  .discount-list__price,
+  .discount-list__text {
+    flex: 1 1 calc(33.33% - 30px);
   }
 
   .walls__list {
