@@ -2084,7 +2084,7 @@ svg path {
 /* start related */
 
 .related__block {
-  padding: 25px 0 60px;
+  padding: 60px 0;
 }
 
 .related__padding {
@@ -3331,7 +3331,7 @@ svg path {
     gap: 10px;
   }
   .related__block {
-    padding: 20px 0 40px;
+    padding: 40px 0;
   }
   .questions__heading {
     padding: 0 10px 40px;
@@ -3739,7 +3739,7 @@ svg path {
     height: 220px;
   }
   .related__block {
-    padding: 10px 0 20px;
+    padding: 35px 0;
   }
   .related__buttons {
     display: none;
@@ -4179,9 +4179,6 @@ svg path {
   }
   .cart__desc_tablet {
     display: block;
-  }
-  .related__block {
-    padding: 10px 0 35px;
   }
   .services_supervision__block,
   .services_advantages__block,
