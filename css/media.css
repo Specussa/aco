@@ -100,6 +100,16 @@
   .walls__desc {
     width: 66.66%;
   }
+
+  .equipments-page-info__content {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .equipments-page-info__desc {
+    width: 66.66%;
+    margin-left: auto;
+  }
 }
 
 /*** Min-width 1200 ***/
@@ -160,6 +170,14 @@
   .walls__desc {
     width: 50%;
   }
+
+  .equipments-page-info__content {
+    padding-top: 120px;
+  }
+
+  .equipments-page-info__desc {
+    width: 50%;
+  }
 }
 
 /*** Min-width 1920 ***/
@@ -213,5 +231,9 @@
 
   .walls__list {
     row-gap: 40px;
+  }
+
+  .equipments-page-info__content {
+    padding-bottom: 120px;
   }
 }
