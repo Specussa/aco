@@ -1331,6 +1331,10 @@ svg path {
   width: 50%;
 }
 
+.rent__item.plascticrent__item:last-child {
+  width: 25%;
+}
+
 .rent__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2659,7 +2663,8 @@ svg path {
 .largepanel__slider_list,
 .largepanel__item,
 .largepanel__bottom_item,
-.largepanel_shields__buttons {
+.largepanel_shields__buttons,
+.plasticpanel__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2739,13 +2744,18 @@ svg path {
   padding: 30px 0 0 20px;
 }
 
-.largepanel__bottom_list {
+.largepanel__bottom_list,
+.plasticpanel__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 75%;
-  padding: 0 20px;
   margin: 0 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.largepanel__bottom_list {
+  padding: 0 20px;
   flex-direction: column;
 }
 
@@ -2916,6 +2926,32 @@ svg path {
   max-width: 100%;
 }
 
+.plasticpanel__item {
+  width: 100%;
+  margin: 0 20px;
+  gap: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.plasticpanel__head {
+  width: 33.333%;
+  padding: 10px 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+}
+
+.plasticpanel__desc {
+  width: 33.333%;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--black);
+}
+
 /* end largepanel */
 
 /*** Unique offers ***/
@@ -3016,6 +3052,44 @@ svg path {
     width: 29.72px;
     height: 34px;
   }
+  .best__head,
+  .largepanel_advantages__head,
+  .largepanel_shields__price,
+  .walls__name,
+  .services_advantages__head,
+  .services_floors__head,
+  .services_walls__head,
+  .cart__empty_head,
+  .cart__total,
+  .cart__user_name,
+  .partner__head,
+  .working__head,
+  .rent__head {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .best__number,
+  .rent__number,
+  .services_floors__number,
+  .services_walls__number,
+  .services_qualitative__number,
+  .services_supervision__number,
+  .header__nav_heading {
+    font-size: 32px;
+    line-height: 22px;
+  }
+  .reliable__link,
+  .spectrum__link,
+  .working__link,
+  .questions__link,
+  .together__head,
+  .largepanel__head,
+  .largepanel__bottom_head,
+  .largepanel_shields__head,
+  .plasticpanel__head {
+    font-size: 30px;
+    line-height: 36px;
+  }
   .header__link,
   .header__nav_subhead,
   .hero__desc,
@@ -3064,7 +3138,8 @@ svg path {
   .largepanel__description,
   .largepanel__info,
   .largepanel__bottom_desc,
-  .largepanel_advantages__desc {
+  .largepanel_advantages__desc,
+  .plasticpanel__desc {
     font-size: 14px;
     line-height: 16px;
   }
@@ -3095,10 +3170,6 @@ svg path {
   }
   .header__buttons {
     gap: 20px;
-  }
-  .header__nav_heading {
-    font-size: 32px;
-    line-height: 26px;
   }
   .header__nav_head {
     font-size: 20px;
@@ -3193,10 +3264,6 @@ svg path {
   .largepanel_advantages__item {
     padding: 0 10px;
   }
-  .best__head {
-    font-size: 36px;
-    line-height: 36px;
-  }
   .best__right {
     margin: 40px 0 20px auto;
     gap: 40px;
@@ -3204,10 +3271,6 @@ svg path {
   .best__block,
   .best__thumbs_image {
     height: 270px;
-  }
-  .best__number {
-    font-size: 32px;
-    line-height: 22px;
   }
   .best__thumbs_block {
     gap: 20px;
@@ -3227,13 +3290,6 @@ svg path {
   .working__heading {
     margin: 0 0 40px auto;
     padding: 0 10px;
-  }
-  .reliable__link,
-  .spectrum__link,
-  .working__link,
-  .questions__link {
-    font-size: 30px;
-    line-height: 36px;
   }
   .orderclick__flex {
     padding: 0 0 40px;
@@ -3270,14 +3326,6 @@ svg path {
     gap: 25px 0;
     padding: 0 10px;
   }
-  .rent__number {
-    font-size: 32px;
-    line-height: 22px;
-  }
-  .rent__head {
-    font-size: 36px;
-    line-height: 36px;
-  }
   .rent__order {
     font-size: 48px;
     line-height: 48px;
@@ -3288,19 +3336,11 @@ svg path {
   .rent__buttons .button__default {
     max-width: 100%;
   }
-  .working__head {
-    font-size: 36px;
-    line-height: 36px;
-  }
   .working__desc {
     height: 4.5em;
   }
   .partner__block {
     padding: 30px 0 120px;
-  }
-  .partner__head {
-    font-size: 36px;
-    line-height: 36px;
   }
   .partner__list {
     padding: 40px 0;
@@ -3320,10 +3360,6 @@ svg path {
   }
   .together__item {
     gap: 20px;
-  }
-  .together__head {
-    font-size: 30px;
-    line-height: 36px;
   }
   .map__list {
     padding: 40px 0 80px;
@@ -3345,10 +3381,6 @@ svg path {
   .cart__heading {
     padding: 0 10px 60px;
   }
-  .cart__user_name {
-    font-size: 36px;
-    line-height: 36px;
-  }
   .cart__user_list {
     gap: 10px;
   }
@@ -3361,10 +3393,6 @@ svg path {
   .cart__item {
     padding: 10px 0;
   }
-  .cart__total {
-    font-size: 36px;
-    line-height: 36px;
-  }
   .cart__manager {
     width: calc(33.333% - 10px);
   }
@@ -3374,10 +3402,6 @@ svg path {
   }
   .cart__input input {
     width: 30px;
-  }
-  .cart__empty_head {
-    font-size: 36px;
-    line-height: 36px;
   }
   .cart__empty {
     gap: 20px;
@@ -3450,18 +3474,6 @@ svg path {
   .services_supervision__list {
     gap: 40px 0;
   }
-  .services_floors__number,
-  .services_walls__number,
-  .services_qualitative__number,
-  .services_supervision__number {
-    font-size: 32px;
-    line-height: 22px;
-  }
-  .services_floors__head,
-  .services_walls__head {
-    font-size: 36px;
-    line-height: 36px;
-  }
   .services_supervision__block {
     padding: 40px 0 80px;
   }
@@ -3485,11 +3497,6 @@ svg path {
   }
   .services_advantages__list {
     gap: 40px 0;
-  }
-  .walls__name,
-  .services_advantages__head {
-    font-size: 36px;
-    line-height: 36px;
   }
   .walls__item {
     height: 270px;
@@ -3522,17 +3529,6 @@ svg path {
   .largepanel__bottom_desc {
     width: calc(33.333% - 2.5px);
     padding: 30px 0 30px 10px;
-  }
-  .largepanel__head,
-  .largepanel__bottom_head,
-  .largepanel_shields__head {
-    font-size: 30px;
-    line-height: 36px;
-  }
-  .largepanel_advantages__head,
-  .largepanel_shields__price {
-    font-size: 36px;
-    line-height: 36px;
   }
   .largepanel__block {
     padding: 80px 0 40px;
@@ -3587,6 +3583,19 @@ svg path {
   .largepanel__prev {
     left: 1px;
   }
+  .plasticpanel__list {
+    width: 100%;
+  }
+  .plasticpanel__item {
+    margin: 0 10px;
+    gap: 20px;
+  }
+  .rent__list {
+    gap: 30px 0;
+  }
+  .rent__list {
+    gap: 20px 0;
+  }
   .footer__list_top .footer__item {
     padding: 0 10px;
   }
@@ -3634,6 +3643,44 @@ svg path {
   h2 {
     font-size: 60px;
     line-height: 70px;
+  }
+  .best__head,
+  .largepanel_advantages__head,
+  .largepanel_shields__price,
+  .walls__name,
+  .services_advantages__head,
+  .services_floors__head,
+  .services_walls__head,
+  .cart__empty_head,
+  .cart__total,
+  .cart__user_name,
+  .partner__head,
+  .working__head,
+  .rent__head {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  .best__number,
+  .rent__number,
+  .services_floors__number,
+  .services_walls__number,
+  .services_qualitative__number,
+  .services_supervision__number,
+  .header__nav_heading {
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .reliable__link,
+  .spectrum__link,
+  .working__link,
+  .questions__link,
+  .together__head,
+  .largepanel__head,
+  .largepanel__bottom_head,
+  .largepanel_shields__head,
+  .plasticpanel__head {
+    font-size: 28px;
+    line-height: 34px;
   }
   .hero__head {
     font-size: 60px;
@@ -3721,13 +3768,6 @@ svg path {
   .orderclick__item,
   .questions__item {
     width: 33.333%;
-  }
-  .reliable__link,
-  .spectrum__link,
-  .working__link,
-  .questions__link {
-    font-size: 28px;
-    line-height: 34px;
   }
   .orderclick__image,
   .orderclick__item:first-child {
@@ -4143,6 +4183,34 @@ svg path {
     font-size: 36px;
     line-height: 40px;
   }
+  .best__head,
+  .largepanel_advantages__head,
+  .largepanel_shields__price,
+  .walls__name,
+  .services_advantages__head,
+  .services_floors__head,
+  .services_walls__head,
+  .cart__empty_head,
+  .cart__total,
+  .cart__user_name,
+  .partner__head,
+  .working__head,
+  .rent__head {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .reliable__link,
+  .spectrum__link,
+  .working__link,
+  .questions__link,
+  .together__head,
+  .largepanel__head,
+  .largepanel__bottom_head,
+  .largepanel_shields__head,
+  .plasticpanel__head {
+    font-size: 18px;
+    line-height: 22px;
+  }
   .best__right {
     width: 100%;
     margin: 20px 0 30px;
@@ -4157,23 +4225,6 @@ svg path {
   }
   .best__block {
     height: 155px;
-  }
-  .best__head,
-  .cart__total,
-  .services_floors__head,
-  .services_walls__head,
-  .walls__name,
-  .services_advantages__head,
-  .cart__empty_head {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .reliable__link,
-  .spectrum__link,
-  .working__link,
-  .questions__link {
-    font-size: 18px;
-    line-height: 22px;
   }
   .orderclick__flex {
     padding: 0 0 15px;
@@ -4293,7 +4344,8 @@ svg path {
   .services_qualitative__item,
   .services_supervision__item,
   .services__heading,
-  .footer__list_bottom .footer__item:first-child {
+  .footer__list_bottom .footer__item:first-child,
+  .rent__item.plascticrent__item:last-child {
     width: 50%;
   }
   .orderclick__item .button__default,
@@ -4450,6 +4502,20 @@ svg path {
   }
   .largepanel__prev {
     left: -2px;
+  }
+  .plasticpanel__item {
+    margin: 0 5px;
+    gap: 10px;
+    background-color: var(--white);
+  }
+  .plasticpanel__item:first-child {
+    border-top: 1px solid var(--border);
+  }
+  .plasticpanel__item p:nth-child(2) {
+    text-align: center;
+  }
+  .plasticpanel__item p:nth-child(3) {
+    text-align: right;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
