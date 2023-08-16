@@ -136,6 +136,27 @@
     padding-bottom: 80px;
   }
 
+  .object-section {
+    padding-bottom: 80px;
+  }
+
+  .object-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .object-list__title,
+  .object-list__text {
+    margin-bottom: 15px;
+  }
+
+  .object-list__title {
+    font-size: 36px;
+  }
+
+  .object-list__image {
+    height: 430px;
+  }
+
   .objects-page-info__desc {
     display: flex;
     flex-wrap: wrap;
@@ -288,6 +309,27 @@
   .objects-page-info__desc .discounts__btns {
     margin-left: 50%;
   }
+
+  .object-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+
+  .object-list__item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .object-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .object-list__image {
+    margin-top: auto;
+    height: 340px;
+  }
 }
 
 /*** Min-width 1920 ***/
@@ -366,5 +408,27 @@
   .objects-page-info {
     padding-top: 120px;
     padding-bottom: 240px;
+  }
+
+  .object-list {
+    row-gap: 50px;
+  }
+
+  .object-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .object-list__title {
+    font-size: 58px;
+  }
+
+  .object-list__title,
+  .object-list__text {
+    margin-bottom: 20px;
+  }
+
+  .object-list__image {
+    height: 420px;
   }
 }
