@@ -149,7 +149,6 @@ p {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.14;
-  opacity: .65;
 }
 
 button,
@@ -3072,6 +3071,11 @@ svg path {
   font-size: 30px;
   font-weight: 600;
   color: var(--green);
+}
+
+.equipments-page-info__desc,
+.equipment__text {
+  color: var(--gray);
 }
 
 /* start media 1919px */
