@@ -23,6 +23,13 @@
   }
 }
 
+/*** Max-width 767 ***/
+@media (max-width: 767px) {
+  .objects-page-info__desc-item {
+    margin-bottom: 20px;
+  }
+}
+
 /****** MIN ******/
 @media (any-hover: hover) {
   .btn:hover {
@@ -122,6 +129,24 @@
   .equipment__price {
     margin-bottom: 40px;
     font-size: 32px;
+  }
+
+  .objects-page-info {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .objects-page-info__desc {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .objects-page-info__desc-item {
+    width: 33.33%;
+  }
+
+  .objects-page-info__desc-item:nth-child(2) {
+    margin-left: 33.33%;
   }
 }
 
@@ -243,6 +268,26 @@
   .equipments-page-info__desc {
     width: 50%;
   }
+
+  .objects-page-info {
+    padding-top: 100px;
+  }
+
+  .objects-page-info .section-title {
+    margin-left: 25%;
+  }
+
+  .objects-page-info__desc-item {
+    width: 25%;
+  }
+
+  .objects-page-info__desc-item:nth-child(2) {
+    margin-left: 25%;
+  }
+
+  .objects-page-info__desc .discounts__btns {
+    margin-left: 50%;
+  }
 }
 
 /*** Min-width 1920 ***/
@@ -316,5 +361,10 @@
 
   .equipments-list__item:not(:last-child) {
     margin-bottom: 60px;
+  }
+
+  .objects-page-info {
+    padding-top: 120px;
+    padding-bottom: 240px;
   }
 }

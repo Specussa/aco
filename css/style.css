@@ -3078,6 +3078,15 @@ svg path {
   color: var(--gray);
 }
 
+/*** Objects ***/
+.objects-page-info {
+  padding: 65px 0 40px;
+}
+
+.objects-page-info__desc {
+  color: var(--gray);
+}
+
 /* start media 1919px */
 @media (max-width: 1919px) {
   .header__block {
