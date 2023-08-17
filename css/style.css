@@ -2170,7 +2170,13 @@ svg path {
 }
 
 .related__prev,
-.related__next {
+.related__next,
+.related__prev_two,
+.related__next_two,
+.related__prev_three,
+.related__next_three,
+.related__prev_four,
+.related__next_four {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2191,22 +2197,40 @@ svg path {
 }
 
 .related__prev:hover,
-.related__next:hover {
+.related__next:hover,
+.related__prev_two:hover,
+.related__next_two:hover,
+.related__prev_three:hover,
+.related__next_three:hover,
+.related__prev_four:hover,
+.related__next_four:hover {
   background-color: var(--lgreen);
 }
 
-.related__next {
+.related__next,
+.related__next_two,
+.related__next_three,
+.related__next_four {
   left: auto;
   right: 40px;
 }
 
-.related__prev {
+.related__prev,
+.related__prev_two,
+.related__prev_three,
+.related__prev_four {
   left: 40px;
   right: auto;
 }
 
 .related__prev svg,
-.related__next svg {
+.related__next svg,
+.related__prev_two svg,
+.related__next_two svg,
+.related__prev_three svg,
+.related__next_three svg,
+.related__prev_four svg,
+.related__next_four svg {
   display: inline-block;
   width: 65px;
   height: 12px;
@@ -2216,7 +2240,13 @@ svg path {
 }
 
 .related__prev:hover svg,
-.related__next:hover svg {
+.related__next:hover svg,
+.related__prev_two:hover svg,
+.related__next_two:hover svg,
+.related__prev_three:hover svg,
+.related__next_three:hover svg,
+.related__prev_four:hover svg,
+.related__next_four:hover svg {
   color: var(--white);
 }
 
@@ -2428,7 +2458,7 @@ svg path {
 }
 
 .walls__desc {
-  width: 100%;
+  width: 50%;
   padding: 60px 20px 120px;
   margin: 0 0 0 auto;
   font-size: 24px;
@@ -4046,7 +4076,10 @@ svg path {
   .related__buttons {
     display: none;
   }
-  .related__slider {
+  .related__slider,
+  .related__slider_two,
+  .related__slider_three,
+  .related__slider_four {
     overflow: visible;
   }
   .questions__list {
@@ -4742,6 +4775,12 @@ svg path {
   .tablefour__item {
     margin: 0 5px;
     padding: 15px 0;
+  }
+  .tablefour__item:last-child p:nth-child(2) {
+    align-items: flex-start;
+  }
+  .tablefour__item:last-child p:nth-child(4) {
+    align-items: flex-end;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;

@@ -175,6 +175,105 @@ if(relatedslider){
 }
 // end related__slider
 
+// start related__slider
+const relatedslidertwo = document.querySelector('.related__slider_two');
+if(relatedslidertwo){
+  var relatedSlider = new Swiper('.related__slider_two', {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 4,
+    touchRatio: 0.2,
+    loopedSlides: 4,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    speed: 1000,
+    navigation: {
+      nextEl: '.related__next_two',
+      prevEl: '.related__prev_two',
+    },
+    breakpoints: {
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1199: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      1919: {
+        spaceBetween: 20,
+      }
+    }
+  });
+}
+// end related__slider
+
+// start related__slider
+const relatedsliderthree = document.querySelector('.related__three_slider');
+if(relatedsliderthree){
+  var relatedSlider = new Swiper('.related__three_slider', {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 4,
+    touchRatio: 0.2,
+    loopedSlides: 4,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    speed: 1000,
+    navigation: {
+      nextEl: '.related__next_three',
+      prevEl: '.related__prev_three',
+    },
+    breakpoints: {
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1199: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      1919: {
+        spaceBetween: 20,
+      }
+    }
+  });
+}
+// end related__slider
+
+// start related__slider
+const relatedsliderfour = document.querySelector('.related__slider_four');
+if(relatedsliderfour){
+  var relatedSlider = new Swiper('.related__slider_four', {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 4,
+    touchRatio: 0.2,
+    loopedSlides: 4,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    speed: 1000,
+    navigation: {
+      nextEl: '.related__next_four',
+      prevEl: '.related__prev_four',
+    },
+    breakpoints: {
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1199: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      1919: {
+        spaceBetween: 20,
+      }
+    }
+  });
+}
+// end related__slider
+
 // start largepanel__slider
 const largepanelslider = document.querySelector('.largepanel__slider');
 if(largepanelslider){
