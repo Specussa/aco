@@ -209,9 +209,9 @@ if(relatedslidertwo){
 // end related__slider
 
 // start related__slider
-const relatedsliderthree = document.querySelector('.related__three_slider');
+const relatedsliderthree = document.querySelector('.related__slider_three');
 if(relatedsliderthree){
-  var relatedSlider = new Swiper('.related__three_slider', {
+  var relatedSlider = new Swiper('.related__slider_three', {
     loop: true,
     spaceBetween: 40,
     slidesPerView: 4,

@@ -3225,6 +3225,42 @@ svg path {
 
 /* end tablethree */
 
+/* start protective */
+
+.protective__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0 0;
+  flex-direction: column;
+}
+
+.protective__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20px;
+  padding: 30px 0;
+  gap: 40px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--white);
+}
+
+.protective__item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.protective__item .services_advantages__head,
+.protective__item .services_advantages__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+/* end protective */
+
 /* start media 1919px */
 @media (max-width: 1919px) {
   .header__block {
@@ -3802,6 +3838,11 @@ svg path {
   }
   .tablethree__item p {
     width: calc(25% - 15px);
+  }
+  .protective__item {
+    padding: 20px 0;
+    margin: 0 10px;
+    gap: 20px;
   }
   .footer__list_top .footer__item {
     padding: 0 10px;
@@ -4758,18 +4799,26 @@ svg path {
   .tablefour__item p {
     width: calc(25% - 10px);
   }
-  .tablethree__item p:last-child,
-  .tablefour__item p:nth-child(4) {
-    justify-content: flex-end;
-  }
-  .tablefour__item p:nth-child(3) {
-    justify-content: center;
-  }
   .tablefour__item:last-child p:not(:first-child) {
     writing-mode: vertical-rl;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     justify-content: flex-start;
+  }
+  .tablefour__list_two .tablefour__item:last-child p:not(:first-child) {
+    writing-mode: horizontal-tb;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    justify-content: flex-start;
+  }
+  .tablethree__item p:last-child,
+  .tablefour__item p:nth-child(4),
+  .tablefour__list_two .tablefour__item:last-child p:nth-child(4) {
+    justify-content: flex-end;
+  }
+  .tablefour__item p:nth-child(3),
+  .tablefour__list_two .tablefour__item:last-child p:nth-child(3) {
+    justify-content: center;
   }
   .tablethree__item,
   .tablefour__item {
@@ -4781,6 +4830,15 @@ svg path {
   }
   .tablefour__item:last-child p:nth-child(4) {
     align-items: flex-end;
+  }
+  .protective__item {
+    margin: 0 5px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .protective__item .services_advantages__head,
+  .protective__item .services_advantages__desc {
+    width: 100%;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
