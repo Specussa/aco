@@ -3036,6 +3036,7 @@ svg path {
   margin-top: 30px;
 }
 
+<<<<<<< Updated upstream
 /*** Equipment ***/
 .equipments-page-info__content {
   padding: 65px 0 30px;
@@ -3120,6 +3121,82 @@ svg path {
   height: 100%;
   object-fit: cover;
 }
+=======
+/* start tablethree */
+
+.tablethree__list,
+.tablefour__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0;
+  flex-direction: column;
+}
+
+.tablethree__item,
+.tablefour__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20px;
+  padding: 30px 0;
+  gap: 40px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--white);
+}
+
+.tablethree__item:first-child,
+.tablefour__item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.tablethree__item p:first-child {
+  width: calc(50% - 20px);
+}
+
+.tablethree__item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(25% - 30px);
+  align-items: center;
+}
+
+.tablethree__item:first-child .tablethree__head {
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+}
+
+.tablethree__head,
+.tablefour__head {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  color: var(--black);
+}
+
+.tablethree__desc,
+.tablefour__desc {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--black);
+}
+
+.tablefour__item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  align-items: center;
+}
+
+/* end tablethree */
+>>>>>>> Stashed changes
 
 /* start media 1919px */
 @media (max-width: 1919px) {
@@ -3150,7 +3227,8 @@ svg path {
   .cart__user_name,
   .partner__head,
   .working__head,
-  .rent__head {
+  .rent__head,
+  .tablethree__item:first-child .tablethree__head {
     font-size: 36px;
     line-height: 36px;
   }
@@ -3172,7 +3250,9 @@ svg path {
   .largepanel__head,
   .largepanel__bottom_head,
   .largepanel_shields__head,
-  .plasticpanel__head {
+  .plasticpanel__head,
+  .tablethree__head,
+  .tablefour__head {
     font-size: 30px;
     line-height: 36px;
   }
@@ -3225,7 +3305,9 @@ svg path {
   .largepanel__info,
   .largepanel__bottom_desc,
   .largepanel_advantages__desc,
-  .plasticpanel__desc {
+  .plasticpanel__desc,
+  .tablethree__desc,
+  .tablefour__desc {
     font-size: 14px;
     line-height: 16px;
   }
@@ -3682,6 +3764,18 @@ svg path {
   .rent__list {
     gap: 20px 0;
   }
+  .tablethree__item,
+  .tablefour__item {
+    margin: 0 10px;
+    padding: 20px 0;
+    gap: 20px;
+  }
+  .tablethree__item p:first-child {
+    width: calc(50% - 10px);
+  }
+  .tablethree__item p {
+    width: calc(25% - 15px);
+  }
   .footer__list_top .footer__item {
     padding: 0 10px;
   }
@@ -3764,7 +3858,10 @@ svg path {
   .largepanel__head,
   .largepanel__bottom_head,
   .largepanel_shields__head,
-  .plasticpanel__head {
+  .plasticpanel__head,
+  .tablethree__head,
+  .tablefour__head,
+  .tablethree__item:first-child .tablethree__head {
     font-size: 28px;
     line-height: 34px;
   }
@@ -4129,6 +4226,23 @@ svg path {
   .largepanel_shields__shadow {
     display: none;
   }
+  .tablethree__item {
+    background-color: transparent;
+  }
+  .tablethree__item p:first-child,
+  .tablethree__item p,
+  .tablefour__item p:first-child {
+    width: 33.333%;
+  }
+  .tablefour__item p {
+    width: 22.222%;
+  }
+  .tablefour__item p:nth-child(3) {
+    justify-content: center;
+  }
+  .tablefour__item p:nth-child(4) {
+    justify-content: flex-end;
+  }
   .footer__list_bottom .footer__item:first-child {
     flex-direction: column-reverse;
     gap: 20px;
@@ -4293,7 +4407,10 @@ svg path {
   .largepanel__head,
   .largepanel__bottom_head,
   .largepanel_shields__head,
-  .plasticpanel__head {
+  .plasticpanel__head,
+  .tablethree__head,
+  .tablefour__head,
+  .tablethree__item:first-child .tablethree__head {
     font-size: 18px;
     line-height: 22px;
   }
@@ -4602,6 +4719,25 @@ svg path {
   }
   .plasticpanel__item p:nth-child(3) {
     text-align: right;
+  }
+  .tablethree__item p:first-child,
+  .tablefour__item p:first-child {
+    width: calc(50% - 5px);
+  }
+  .tablethree__item p,
+  .tablefour__item p {
+    width: calc(25% - 10px);
+  }
+  .tablethree__item p:last-child,
+  .tablefour__item p:nth-child(3) {
+    justify-content: flex-end;
+  }
+  .tablefour__item p:last-child {
+    display: none;
+  }
+  .tablethree__item,
+  .tablefour__item {
+    margin: 0 5px;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
