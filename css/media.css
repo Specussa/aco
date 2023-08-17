@@ -44,10 +44,30 @@
   }
 }
 
+/*** Max-width 389 ***/
+@media (min-width: 390px) {
+  .have-account {
+    font-size: 20px;
+  }
+}
+
+/*** Min-width 576 ***/
+@media (min-width: 576px) {
+  .registration-form-wrapper {
+    margin: 0 auto;
+    max-width: 570px;
+    width: 100%;
+  }
+}
+
 /*** Min-width 768 ***/
 @media (min-width: 768px) {
   .inner-container {
     padding: 0 10px;
+  }
+
+  .form__group:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .discounts__inner-wrapper {
@@ -168,6 +188,20 @@
 
   .objects-page-info__desc-item:nth-child(2) {
     margin-left: 33.33%;
+  }
+
+  .auth-section {
+    padding-bottom: 80px;
+  }
+
+  .registration-form .from__submit {
+    max-width: 270px;
+  }
+
+  .have-account {
+    margin-bottom: 40px;
+    font-size: 36px;
+    letter-spacing: -1px;
   }
 }
 
@@ -330,6 +364,21 @@
     margin-top: auto;
     height: 340px;
   }
+
+  .auth-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .registration-form-wrapper {
+    max-width: none;
+    width: 50%;
+  }
+
+  .registration-form .from__submit {
+    max-width: none;
+    width: calc(50% - 10px);
+  }
 }
 
 /*** Min-width 1920 ***/
@@ -430,5 +479,23 @@
 
   .object-list__image {
     height: 420px;
+  }
+
+  .have-account {
+    margin-bottom: 60px;
+    font-size: 58px;
+  }
+
+  .form__input {
+    height: 68px;
+    font-size: 24px;
+  }
+
+  .checkbox__name {
+    font-size: 24px;
+  }
+
+  .registration-form .from__submit {
+    width: calc(50% - 20px);
   }
 }
