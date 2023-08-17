@@ -372,7 +372,7 @@
 
   .registration-form-wrapper {
     max-width: none;
-    width: 50%;
+    width: calc(50% - 6px);
   }
 
   .registration-form .from__submit {
