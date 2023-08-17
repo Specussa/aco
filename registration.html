@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Objects</title>
-  <link href="img/favicon.ico" type='image/x-icon' rel="shortcut icon">
+  <title>Registration</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
-  <script>window.console = window.console || function(t) {};</script>
+  <script>window.console = window.console || function (t) {};</script>
 </head>
 <body>
 <div class="overlay"></div>
@@ -96,8 +96,8 @@
     </div>
   </section>
   
-  <!-- Page info -->
-  <section class="objects-page-info">
+  <!-- Registration -->
+  <section class="auth-section">
     <!-- Border grid -->
     <div class="border border__gray">
       <span></span>
@@ -106,67 +106,52 @@
       <span></span>
       <span></span>
     </div>
-    
-    <div class="container">
-      <h2 class="inner-container section-title">Объекты с нашей<br><span>опалубкой</span></h2>
   
-      <div class="objects-page-info__desc">
-        <p class="objects-page-info__desc-item inner-container">Наша компания
-          за 10 лет поставила опалубку на сотни объектов. От мелких частных коттеджей до глобальных проектов
-          (многоэтажки, стадионы, пожарные резервуары и т.п.).</p>
-        <p class="objects-page-info__desc-item inner-container">Примеры использования нашей
-          опалубки в реальных условиях можно увидеть в этом разделе и на страницах товаров в нашем каталоге опалубки</p>
-    
-        <div class="inner-container objects-page-info__btns discounts__btns">
-          <button class="btn btn--bg">К каталогу</button>
-        </div>
+    <div class="container">
+      <div class="registration-form-wrapper inner-container inner-container--bg">
+        <h2 class="section-title">Регистрация</h2>
+        
+        <div class="have-account">У вас уже есть аккаунт? <a href="login.html">Войти</a></div>
+        
+        <!-- Registration form -->
+        <form class="form registration-form">
+          <div class="form__group">
+            <input class="form__input" name="orgId" type="text" placeholder="ИНН организации *" maxlength="50" required>
+          </div>
+  
+          <div class="form__group">
+            <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
+          </div>
+  
+          <div class="form__group">
+            <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
+          </div>
+  
+          <div class="form__group">
+            <input class="form__input" name="mail" type="text" placeholder="Почта *" maxlength="50" required>
+          </div>
+  
+          <div class="form__group">
+            <input class="form__input" name="password" type="password" placeholder="Пароль *" maxlength="50" required>
+          </div>
+  
+          <div class="form__group">
+            <input class="form__input" name="confirmPassword" type="password" placeholder="Повторите пароль *"
+                   maxlength="50" required>
+          </div>
+  
+          <div class="form__group">
+            <label class="checkbox">
+              <input class="checkbox__input" name="privacy" type="checkbox">
+              <span class="checkbox__name">Даю согласие на обработку персональных данных</span>
+            </label>
+          </div>
+          
+          <div class="form__group">
+            <button class="btn btn--bg from__submit">Зарегистрироваться</button>
+          </div>
+        </form>
       </div>
-    </div>
-  </section>
-  
-  <!-- Objects list -->
-  <section class="object-section">
-    <!-- Border grid -->
-    <div class="border border__gray">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  
-    <div class="container">
-      <ul class="object-list">
-        <li class="object-list__item inner-container">
-          <h4 class="object-list__title">Жилой дом</h4>
-          
-          <p class="object-list__text">Предоставленные услуги/продукция: Опалубка перекрытий</p>
-          
-          <div class="object-list__image">
-            <img src="img/object.webp" alt="Жилой-дом" title="Жилой-дом">
-          </div>
-        </li>
-  
-        <li class="object-list__item inner-container">
-          <h4 class="object-list__title">Электростанция</h4>
-    
-          <p class="object-list__text">Предоставленные услуги/продукция: Аренда опалубки стен. Продажа фанеры для опалубки</p>
-    
-          <div class="object-list__image">
-            <img src="img/object.webp" alt="Электростанция" title="Электростанция">
-          </div>
-        </li>
-  
-        <li class="object-list__item inner-container">
-          <h4 class="object-list__title">Реконструкция «Садовники»</h4>
-    
-          <p class="object-list__text">Предоставленные услуги/продукция: Аренда опалубки стен. Продажа фанеры для опалубки</p>
-    
-          <div class="object-list__image">
-            <img src="img/object.webp" alt="Реконструкция-«Садовники»" title="Реконструкция-«Садовники»">
-          </div>
-        </li>
-      </ul>
     </div>
   </section>
   
@@ -306,18 +291,18 @@
         <li class="header__nav_item"><a href="objects.html" class="header__nav_heading">Объекты</a></li>
         <li class="header__nav_item"><a href="equipment.html" class="header__nav_heading">Оборудование</a></li>
         <li class="header__nav_item"><a href="services.html" class="header__nav_heading">Услуги</a></li>
-        <li class="header__nav_item"><a href="accessories.html" class="header__nav_heading">Комплектующие</a></li>
+        <li class="header__nav_item"><a href="#" class="header__nav_heading">Комплектующие</a></li>
         <li class="header__nav_item"><a href="#" class="header__nav_heading">Контакты</a></li>
       </ul>
       <ul class="header__nav_list">
         <li class="header__nav_item">
           <a href="floors.html" class="header__nav_head">Опалубка перекрытий</a>
           <ul class="header__nav_sublist">
-            <li class="header__nav_subitem"><a href="wedgepanel.html" class="header__nav_subhead">Объёмные стойки клиновые</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Объёмные стойки клиновые</a></li>
             <li class="header__nav_subitem"><a href="cuppanel.html" class="header__nav_subhead">Объёмные стойки чашечные</a></li>
-            <li class="header__nav_subitem"><a href="bridgepanel.html" class="header__nav_subhead">Мостовая опалубка</a></li>
-            <li class="header__nav_subitem"><a href="scaffoldingpanel.html" class="header__nav_subhead">Строительные леса и вышки туры</a></li>
-            <li class="header__nav_subitem"><a href="telescopicpanel.html" class="header__nav_subhead">Телескопические стойки</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Мостовая опалубка</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Строительные леса и вышки туры</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Телескопические стойки</a></li>
           </ul>
         </li>
         <li class="header__nav_item">
@@ -332,16 +317,18 @@
         <li class="header__nav_item">
           <a href="security.html" class="header__nav_head">Системы безопасности</a>
           <ul class="header__nav_sublist">
-            <li class="header__nav_subitem"><a href="protective.html" class="header__nav_subhead">Защитно-улавливающие системы</a></li>
-            <li class="header__nav_subitem"><a href="windproof.html" class="header__nav_subhead">Ветрозащитные экраны</a></li>
-            <li class="header__nav_subitem"><a href="covering.html" class="header__nav_subhead">Укрывные материалы</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Защитно-улавливающие системы</a>
+            </li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Ветрозащитные экраны</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Укрывные материалы</a></li>
           </ul>
         </li>
         <li class="header__nav_item">
           <a href="walls.html" class="header__nav_head">Стеновая опалубка</a>
           <ul class="header__nav_sublist">
-            <li class="header__nav_subitem"><a href="largepanel.html" class="header__nav_subhead">Крупнощитовая опалубка</a></li>
-            <li class="header__nav_subitem"><a href="smallpanel.html" class="header__nav_subhead">Мелкощитовая опалубка</a></li>
+            <li class="header__nav_subitem"><a href="largepanel.html" class="header__nav_subhead">Крупнощитовая
+              опалубка</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Мелкощитовая опалубка</a></li>
           </ul>
         </li>
         <li class="header__nav_item">
