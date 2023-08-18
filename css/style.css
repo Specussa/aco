@@ -406,7 +406,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 40px;
+  padding: 40px 20px;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
@@ -1809,13 +1809,47 @@ svg path {
 
 /* end map */
 
-/* start top */
+/* start breadcrumbs */
 
-.top__block {
-  padding: 150px 0 0;
+.breadcrumbs__block {
+  padding: 150px 20px 0;
 }
 
-/* end top */
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  color: var(--black);
+}
+
+.breadcrumbs__item:last-child .breadcrumbs__link {
+  color: var(--fgray);
+}
+
+.breadcrumbs__item:not(:last-child):after {
+  content: "|";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+}
+
+/* end breadcrumbs */
 
 /* start cart */
 
@@ -3662,7 +3696,7 @@ svg path {
   .map__zoom {
     right: 40px;
   }
-  .top__block {
+  .breadcrumbs__block {
     padding: 95px 0 0;
   }
   .cart__block {
@@ -4602,7 +4636,7 @@ svg path {
   .cart__empty {
     gap: 10px;
   }
-  .top__block {
+  .breadcrumbs__block {
     padding: 70px 0 0;
   }
   .cart__block {
