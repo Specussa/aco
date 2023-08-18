@@ -43,6 +43,11 @@
           </li>
         </ul>
         <div class="header__buttons">
+          <button class="header__search">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1 16.5339C1 7.95477 7.88074 1 16.3686 1C20.4446 1 24.3536 2.6366 27.2358 5.54978C30.1179 8.46295 31.7371 12.4141 31.7371 16.5339C31.7371 25.1131 24.8564 32.0678 16.3686 32.0678C7.88074 32.0678 1 25.1131 1 16.5339ZM31.4817 29.0419L36.0589 32.7366H36.1383C37.0644 33.6726 37.0644 35.1902 36.1383 36.1261C35.2123 37.0621 33.7109 37.0621 32.7849 36.1261L28.9865 31.7728C28.6274 31.4111 28.4255 30.9198 28.4255 30.4073C28.4255 29.8949 28.6274 29.4036 28.9865 29.0419C29.679 28.3541 30.7891 28.3541 31.4817 29.0419Z" fill="currentColor"/>
+            </svg>
+          </button>
           <a href="cart.html" class="header__cart">
             <svg width="78" height="73" viewBox="0 0 78 73" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.5 66.5C36.5 69.8137 33.8137 72.5 30.5 72.5C27.1863 72.5 24.5 69.8137 24.5 66.5C24.5 63.1863 27.1863 60.5 30.5 60.5C33.8137 60.5 36.5 63.1863 36.5 66.5Z" fill="currentColor"/>
@@ -64,7 +69,7 @@
     </div>
   </header>
   <main class="main">
-    <section class="top">
+    <section class="breadcrumbs">
       <div class="border border__gray">
         <span></span>
         <span></span>
@@ -72,8 +77,19 @@
         <span></span>
         <span></span>
       </div>
-      <div class="container top__container">
-        <div class="top__block">
+      <div class="container breadcrumbs__container">
+        <div class="breadcrumbs__block">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="index.html" class="breadcrumbs__link link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link link">Главная</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -746,6 +762,44 @@
             </ul>
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
+  <div class="search__overlay">
+    <div class="border border__green">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container search__overlay_container">
+      <div class="border border__green">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="search__overlay_block">
+        <div class="search__overlay_flex">
+          <input type="text" id="search__overlay_input" name="search" value="" class="search__overlay_input" placeholder="Поиск">
+          <div class="search__overlay_button">
+            <label for="search__overlay_input" id="search__overlay_icon" class="search__overlay_icon active">
+              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 16.5339C1 7.95477 7.88074 1 16.3686 1C20.4446 1 24.3536 2.6366 27.2358 5.54978C30.1179 8.46295 31.7371 12.4141 31.7371 16.5339C31.7371 25.1131 24.8564 32.0678 16.3686 32.0678C7.88074 32.0678 1 25.1131 1 16.5339ZM31.4817 29.0419L36.0589 32.7366H36.1383C37.0644 33.6726 37.0644 35.1902 36.1383 36.1261C35.2123 37.0621 33.7109 37.0621 32.7849 36.1261L28.9865 31.7728C28.6274 31.4111 28.4255 30.9198 28.4255 30.4073C28.4255 29.8949 28.6274 29.4036 28.9865 29.0419C29.679 28.3541 30.7891 28.3541 31.4817 29.0419Z" fill="currentColor"/>
+              </svg>
+            </label>
+            <span id="search__overlay_del" class="search__overlay_del">
+              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41612 30.5865C2.63507 31.3676 2.63768 32.6313 3.42194 33.4091C4.20621 34.1869 5.47515 34.1843 6.2562 33.4033L18.5019 21.1576L31.1532 33.8089C31.9342 34.5899 33.2032 34.5925 33.9875 33.8147C34.7717 33.0369 34.7743 31.7732 33.9933 30.9921L21.3303 18.3292L33.8334 5.8261C34.6144 5.04506 34.6118 3.78135 33.8275 3.00353C33.0433 2.22571 31.7743 2.22833 30.9933 3.00938L18.5019 15.5008L6.41612 3.41497C5.63507 2.63392 4.36613 2.6313 3.58186 3.40912C2.79759 4.18694 2.79499 5.45065 3.57604 6.2317L15.6735 18.3292L3.41612 30.5865Z" fill="currentColor"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <p class="search__overlay_info">
+          Введите запрос и нажмите Enter
+        </p>
       </div>
     </div>
   </div>
