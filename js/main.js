@@ -101,19 +101,34 @@ year.remove();
 // end year
 
 // start search
-const searchInput = document.querySelector('#search__overlay_input');
-const searchClear = document.querySelector('#search__overlay_del');
-const searchIcon = document.querySelector('#search__overlay_icon');
+const searchOverlayInput = document.querySelector('#search__overlay_input');
+const searchOverlayClear = document.querySelector('#search__overlay_del');
+const searchOverlayIcon = document.querySelector('#search__overlay_icon');
+const searchInput = document.querySelector('#search__input');
+const searchClear = document.querySelector('#search__del');
+const searchIcon = document.querySelector('#search__icon');
 
-searchClear.addEventListener('click', function() {
-  searchInput.value = '';
-  searchInput.dispatchEvent(new Event('input'));
-});
+if(searchOverlayInput){
+  searchOverlayClear.addEventListener('click', function() {
+    searchOverlayInput.value = '';
+    searchOverlayInput.dispatchEvent(new Event('input'));
+  });
+  searchOverlayInput.addEventListener('input', function() {
+    searchOverlayClear.classList.toggle('active', this.value);
+    searchOverlayIcon.classList.toggle('active', !this.value);
+  });
+}
 
-searchInput.addEventListener('input', function() {
-  searchClear.classList.toggle('active', this.value);
-  searchIcon.classList.toggle('active', !this.value);
-});
+if(searchInput){
+  searchClear.addEventListener('click', function() {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+  });
+  searchInput.addEventListener('input', function() {
+    searchClear.classList.toggle('active', this.value);
+    searchIcon.classList.toggle('active', !this.value);
+  });
+}
 // end search
 
 // start best__sliders
