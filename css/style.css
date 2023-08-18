@@ -483,6 +483,7 @@ svg path {
 .header.active .header__login,
 .header.active .header__cart,
 .header.active .header__logo,
+.header.active .header__search,
 .header__dark .header__login,
 .header__dark .header__cart,
 .header__dark .header__logo,
