@@ -3372,7 +3372,7 @@ svg path {
 
 /* start search */
 
-.search__flex {
+.search__overlay_flex {
   display: flex;
   width: 75%;
   padding: 0 20px;
@@ -3380,27 +3380,27 @@ svg path {
   position: relative;
 }
 
-.search__button {
+.search__overlay_button {
   display: flex;
   flex-direction: column;
 }
 
-.search__input {
+.search__overlay_input {
   width: 100%;
   padding: 35px 100px 35px 50px;
   background: transparent;
   border-bottom: 1px solid var(--gborder);
 }
 
-.search__input,
-.search__input::placeholder {
+.search__overlay_input,
+.search__overlay_input::placeholder {
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
   color: var(--white);
 }
 
-.search__button {
+.search__overlay_button {
   width: 38px;
   height: 38px;
   position: absolute;
@@ -3412,45 +3412,45 @@ svg path {
   overflow: hidden;
 }
 
-.search__del,
-.search__icon {
+.search__overlay_del,
+.search__overlay_icon {
   -webkit-transition: color 0.2s linear, -webkit-transform 0.2s linear;
   transition: color 0.2s linear, transform 0.2s linear;
   cursor: pointer;
 }
 
-.search__del {
+.search__overlay_del {
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
 
-.search__del.active {
+.search__overlay_del.active {
   -webkit-transform: translateY(-38px);
   transform: translateY(-38px);
 }
 
-.search__icon {
+.search__overlay_icon {
   -webkit-transform: translateY(-38px);
   transform: translateY(-38px);
 }
 
-.search__icon.active {
+.search__overlay_icon.active {
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
 
-.search__del:hover,
-.search__icon:hover {
+.search__overlay_del:hover,
+.search__overlay_icon:hover {
   color: var(--lgreen);
 }
 
-.search__del svg,
-.search__icon svg {
+.search__overlay_del svg,
+.search__overlay_icon svg {
   width: 38px;
   height: 38px;
 }
 
-.search__info {
+.search__overlay_info {
   width: 75%;
   padding: 0 70px 20px 20px;
   font-size: 24px;
@@ -3573,9 +3573,9 @@ svg path {
   .plasticpanel__desc,
   .tablethree__desc,
   .tablefour__desc,
-  .search__input,
-  .search__input::placeholder,
-  .search__info {
+  .search__overlay_input,
+  .search__overlay_input::placeholder,
+  .search__overlay_info {
     font-size: 14px;
     line-height: 16px;
   }
@@ -3702,8 +3702,8 @@ svg path {
   .largepanel_advantages__heading,
   .largepanel_shields__heading,
   .largepanel_advantages__item,
-  .search__flex,
-  .search__info {
+  .search__overlay_flex,
+  .search__overlay_info {
     padding: 0 10px;
   }
   .best__right {
@@ -4050,24 +4050,24 @@ svg path {
   .tablethree__item p {
     width: calc(25% - 15px);
   }
-  .search__input {
+  .search__overlay_input {
     padding: 25px 65px 25px 30px;
   }
-  .search__del svg,
-  .search__icon svg,
-  .search__button {
+  .search__overlay_del svg,
+  .search__overlay_icon svg,
+  .search__overlay_button {
     width: 25px;
     height: 25px;
   }
-  .search__icon {
+  .search__overlay_icon {
     -webkit-transform: translateY(-25px);
     transform: translateY(-25px);
   }
-  .search__del.active {
+  .search__overlay_del.active {
     -webkit-transform: translateY(-25px);
     transform: translateY(-25px);
   }
-  .search__button {
+  .search__overlay_button {
     right: 30px;
   }
   .footer__list_top .footer__item {
@@ -4479,8 +4479,8 @@ svg path {
   .largepanel_shields__item,
   .largepanel_shields__price,
   .largepanel_shields__buttons .button__default,
-  .search__flex,
-  .search__info {
+  .search__overlay_flex,
+  .search__overlay_info {
     width: 100%;
   }
   .largepanel_shields__desc,
@@ -4540,10 +4540,10 @@ svg path {
   .tablefour__item p:nth-child(4) {
     justify-content: flex-end;
   }
-  .search__input {
+  .search__overlay_input {
     padding: 25px 55px 25px 20px;
   }
-  .search__button {
+  .search__overlay_button {
     right: 20px;
   }
   .footer__list_bottom .footer__item:first-child {
@@ -4641,8 +4641,8 @@ svg path {
   .largepanel_advantages__heading,
   .largepanel_shields__heading,
   .largepanel_advantages__item,
-  .search__flex,
-  .search__info {
+  .search__overlay_flex,
+  .search__overlay_info {
     padding: 0 5px;
   }
   .header__nav_heading {
@@ -5052,10 +5052,10 @@ svg path {
     margin: 0 5px;
     padding: 15px 0;
   }
-  .search__input {
+  .search__overlay_input {
     padding: 25px 45px 25px 10px;
   }
-  .search__button {
+  .search__overlay_button {
     right: 10px;
   }
   .footer__list_bottom .footer__item:last-child {

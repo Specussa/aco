@@ -101,9 +101,9 @@ year.remove();
 // end year
 
 // start search
-const searchInput = document.querySelector('#search__input');
-const searchClear = document.querySelector('#search__del');
-const searchIcon = document.querySelector('#search__icon');
+const searchInput = document.querySelector('#search__overlay_input');
+const searchClear = document.querySelector('#search__overlay_del');
+const searchIcon = document.querySelector('#search__overlay_icon');
 
 searchClear.addEventListener('click', function() {
   searchInput.value = '';
