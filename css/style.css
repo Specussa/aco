@@ -3697,7 +3697,7 @@ svg path {
     right: 40px;
   }
   .breadcrumbs__block {
-    padding: 95px 0 0;
+    padding: 95px 10px 0;
   }
   .cart__block {
     padding: 80px 0;
@@ -4637,7 +4637,7 @@ svg path {
     gap: 10px;
   }
   .breadcrumbs__block {
-    padding: 70px 0 0;
+    padding: 70px 5px 0;
   }
   .cart__block {
     padding: 40px 0;
