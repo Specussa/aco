@@ -225,6 +225,10 @@ svg path {
   background-color: var(--green);
 }
 
+.hidden {
+  display: none;
+}
+
 .section-title {
   margin-bottom: 40px;
 }
@@ -3316,6 +3320,10 @@ svg path {
   color: var(--green);
 }
 
+.form__group {
+  position: relative;
+}
+
 .form__group:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -3369,6 +3377,142 @@ svg path {
 
 .registration-form .from__submit {
   margin-top: 10px;
+}
+
+/*** Profile ***/
+.profile {
+  position: relative;
+  margin-top: 80px;
+  padding: 40px 0 60px;
+  border: 1px solid var(--border);
+  border-bottom: 0;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.profile__sidebar {
+  margin-top: 113px;
+}
+
+.user-info-form .form__group:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.user-info-form .from__submit {
+  margin-top: 65px;
+}
+
+.profile__content .tabs__navigation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+}
+
+.user-avatar {
+  position: relative;
+}
+
+.user-image {
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 170px;
+  height: 170px;
+  background-color: var(--gray);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.user-avatar__field {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.change-image-popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  font-weight: 300;
+  background: #fff;
+  border: 1px solid #afafaf;
+  padding: 20px 30px;
+  width: max-content;
+}
+
+.change-image-popup__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.change-image-popup__item--delete {
+  color: #958169;
+}
+
+.user-contacts {
+  text-align: center;
+}
+
+.user-contacts__name,
+.user-contacts__mail {
+  margin-bottom: 10px;
+}
+
+.user-contacts__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.user-contacts__mail,
+.user-contacts__phone {
+  color: var(--gray);
+}
+
+.tabs__navigation-item {
+  display: flex;
+}
+
+.tabs__navigation-link {
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tabs__navigation-link.active {
+  border-bottom: 1px solid var(--green);
+  color: var(--green);
+}
+
+.user-info-form__edit-icon {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.user-info-form .form__input {
+  padding-right: 60px;
 }
 
 /* start search */

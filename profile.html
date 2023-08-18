@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script>window.console = window.console || function (t) {};</script>
+</head>
+<body>
+<div class="overlay"></div>
+<!-- Header -->
+<header class="header header__dark">
+  <span class="header__back"></span>
+  <div class="container header__container">
+    <div class="header__block">
+      <a href="index.html" class="header__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="40px" height="44px"
+             viewBox="0 0 40 44" version="1.1" id="svg542">
+          <g id="layer1" transform="matrix(0.81,0,0,0.81268115,-36.841842,-51.387645)"
+             shape-rendering="geometricPrecision">
+            <g id="Layer1006" transform="matrix(0.83740431,0,0,0.83740431,-532.37161,-142.49037)"
+               style="image-rendering:auto">
+              <g id="Layer1007">
+                <path
+                    d="m 745.9304,309.3809 c -18.6251,0 -37.25,0 -55.875,0 0,-10.7253 0,-21.4507 0,-32.176 l 25.7874,19.2439 -11.9036,0.0122 -6.755,-5.041 v 10.8321 h 37.7615 l -44.8903,-33.3027 v -4.0387 l 9.5719,-6.5934 v -8.9207 l 6.2164,4.6389 c 1.016,-0.6999 12.1489,-8.3686 12.1491,-8.3685 l 27.9376,19.2435 z m -46.2763,-42.1871 39.1475,29.0424 v -27.3409 l -20.809,-14.3332 -5.9311,4.0855 20.9483,15.5413 v 8.8443 l -27.1503,-20.1136 z"
+                    style="fill:currentColor;fill-rule:evenodd" id="#path322"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="tel://88007075406" class="header__link"><span>Отдел продаж:</span> 8 800 707-54-06</a>
+        </li>
+        <li class="header__item">
+          <a href="tel://+74955454673" class="header__link"><span>Офис / Приёмная:</span> +7 495 545-46-73</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">Telegram</a>
+        </li>
+        <li class="header__item">
+          <a href="mailto://moskva@arendaopalubki.com" class="header__link">moskva@arendaopalubki.com</a>
+        </li>
+      </ul>
+      <div class="header__buttons">
+        <a href="cart.html" class="header__cart">
+          <svg width="78" height="73" viewBox="0 0 78 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M36.5 66.5C36.5 69.8137 33.8137 72.5 30.5 72.5C27.1863 72.5 24.5 69.8137 24.5 66.5C24.5 63.1863 27.1863 60.5 30.5 60.5C33.8137 60.5 36.5 63.1863 36.5 66.5Z"
+                fill="currentColor"/>
+            <path
+                d="M65.5 66.5C65.5 69.8137 62.8137 72.5 59.5 72.5C56.1863 72.5 53.5 69.8137 53.5 66.5C53.5 63.1863 56.1863 60.5 59.5 60.5C62.8137 60.5 65.5 63.1863 65.5 66.5Z"
+                fill="currentColor"/>
+            <path
+                d="M73.414 17.5H17.5C15.8186 10.607 14.7194 6.0016 12.2189 2.68784C10.7183 0.699037 8.15489 0 5.66344 0H3.25C1.45507 0 0 1.45507 0 3.25C0 5.04493 1.45507 6.5 3.25 6.5H8.5C14.0605 25.8024 16.9903 40.3928 23.9904 52.3198C25.1797 54.3461 27.4131 55.4819 29.7624 55.4518L60.4861 55.0579C63.2344 55.0226 65.7124 53.3864 66.8566 50.8873C69.8402 44.3705 73.5569 36.2296 77.2439 22.4342C77.9128 19.9314 76.0046 17.5 73.414 17.5Z"
+                fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="registration.html" class="header__login">
+          <svg width="86" height="89" viewBox="0 0 86 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M67 24.5C67 38.031 56.031 49 42.5 49C28.969 49 18 38.031 18 24.5C18 10.969 28.969 0 42.5 0C56.031 0 67 10.969 67 24.5Z"
+                fill="currentColor"/>
+            <path d="M85.5 83.9998L80.5 88.9998H6.5L0 83.9998C2.5 53.0003 84.5 56.5 85.5 83.9998Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <button class="header__burger">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main -->
+<main class="main">
+  <!-- Top padding -->
+  <section class="top">
+    <div class="border border__gray">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container top__container">
+      <div class="top__block">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Profile -->
+  <div class="container">
+    <section class="profile">
+      <a href="#" class="logout-btn">Выход</a>
+      
+      <aside class="profile__sidebar inner-container">
+        <div class="user-avatar">
+          <div class="js-change-avatar user-image">
+            <img src="img/object.webp" alt="user-img" title="user-img">
+          </div>
+  
+          <input type="file" class="user-avatar__field" name="userAvatar">
+  
+          <div class="change-image-popup">
+            <div class="js-change-img change-image-popup__item">Изменить фотографию</div>
+            <div class="js-delete-img change-image-popup__item change-image-popup__item--delete">Удалить фотографию</div>
+          </div>
+        </div>
+        
+        <div class="user-contacts">
+          <div class="user-contacts__name">ООО «Чебурашка»</div>
+          <p class="user-contacts__mail">ivanov@gmail.com</p>
+          <p class="user-contacts__phone">303054662759</p>
+        </div>
+      </aside>
+      
+      <div class="profile__content">
+        <div class="js-tabs tabs">
+          <div class="tabs__navigation">
+            <div class="tabs__navigation-item inner-container">
+              <a href="#user-info" class="tabs__navigation-link active">Личная информация</a>
+            </div>
+    
+            <div class="tabs__navigation-item inner-container">
+              <a href="#user-orders" class="tabs__navigation-link">Мои заказы</a>
+            </div>
+          </div>
+          
+          <div class="tabs__content inner-container">
+            <div id="user-info" class="tabs__content-item">
+              <form class="form user-info-form">
+                <div class="form__group">
+                  <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
+  
+                  <div class="user-info-form__edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.75 21C2.75 20.5858 3.08579 20.25 3.5 20.25H21.5C21.9142 20.25 22.25 20.5858 22.25 21C22.25 21.4142 21.9142 21.75 21.5 21.75H3.5C3.08579 21.75 2.75 21.4142 2.75 21Z"
+                            fill="currentColor"/>
+                      <path d="M5.5 13.36V17H9.1586L19.5 6.65405L15.8476 3L5.5 13.36Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.8474 2.25C16.0464 2.24996 16.2373 2.32903 16.378 2.46979L20.0304 6.12384C20.3232 6.4167 20.3232 6.8914 20.0304 7.18426L9.68905 17.5302C9.54838 17.6709 9.35757 17.75 9.1586 17.75H5.5C5.08579 17.75 4.75 17.4142 4.75 17V13.36C4.75 13.1612 4.82889 12.9706 4.96935 12.8299L15.3169 2.46999C15.4575 2.32918 15.6484 2.25004 15.8474 2.25ZM15.8478 4.06109L6.25 13.6703V16.25H8.84784L18.4396 6.65405L15.8478 4.06109Z"
+                            fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="password" type="password" placeholder="Пароль *" maxlength="50"
+                         required>
+  
+                  <div class="user-info-form__edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.75 21C2.75 20.5858 3.08579 20.25 3.5 20.25H21.5C21.9142 20.25 22.25 20.5858 22.25 21C22.25 21.4142 21.9142 21.75 21.5 21.75H3.5C3.08579 21.75 2.75 21.4142 2.75 21Z"
+                            fill="currentColor"/>
+                      <path d="M5.5 13.36V17H9.1586L19.5 6.65405L15.8476 3L5.5 13.36Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.8474 2.25C16.0464 2.24996 16.2373 2.32903 16.378 2.46979L20.0304 6.12384C20.3232 6.4167 20.3232 6.8914 20.0304 7.18426L9.68905 17.5302C9.54838 17.6709 9.35757 17.75 9.1586 17.75H5.5C5.08579 17.75 4.75 17.4142 4.75 17V13.36C4.75 13.1612 4.82889 12.9706 4.96935 12.8299L15.3169 2.46999C15.4575 2.32918 15.6484 2.25004 15.8474 2.25ZM15.8478 4.06109L6.25 13.6703V16.25H8.84784L18.4396 6.65405L15.8478 4.06109Z"
+                            fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="mail" type="text" placeholder="Почта *" maxlength="50" required>
+  
+                  <div class="user-info-form__edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.75 21C2.75 20.5858 3.08579 20.25 3.5 20.25H21.5C21.9142 20.25 22.25 20.5858 22.25 21C22.25 21.4142 21.9142 21.75 21.5 21.75H3.5C3.08579 21.75 2.75 21.4142 2.75 21Z"
+                            fill="currentColor"/>
+                      <path d="M5.5 13.36V17H9.1586L19.5 6.65405L15.8476 3L5.5 13.36Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.8474 2.25C16.0464 2.24996 16.2373 2.32903 16.378 2.46979L20.0304 6.12384C20.3232 6.4167 20.3232 6.8914 20.0304 7.18426L9.68905 17.5302C9.54838 17.6709 9.35757 17.75 9.1586 17.75H5.5C5.08579 17.75 4.75 17.4142 4.75 17V13.36C4.75 13.1612 4.82889 12.9706 4.96935 12.8299L15.3169 2.46999C15.4575 2.32918 15.6484 2.25004 15.8474 2.25ZM15.8478 4.06109L6.25 13.6703V16.25H8.84784L18.4396 6.65405L15.8478 4.06109Z"
+                            fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
+  
+                  <div class="user-info-form__edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.75 21C2.75 20.5858 3.08579 20.25 3.5 20.25H21.5C21.9142 20.25 22.25 20.5858 22.25 21C22.25 21.4142 21.9142 21.75 21.5 21.75H3.5C3.08579 21.75 2.75 21.4142 2.75 21Z"
+                            fill="currentColor"/>
+                      <path d="M5.5 13.36V17H9.1586L19.5 6.65405L15.8476 3L5.5 13.36Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.8474 2.25C16.0464 2.24996 16.2373 2.32903 16.378 2.46979L20.0304 6.12384C20.3232 6.4167 20.3232 6.8914 20.0304 7.18426L9.68905 17.5302C9.54838 17.6709 9.35757 17.75 9.1586 17.75H5.5C5.08579 17.75 4.75 17.4142 4.75 17V13.36C4.75 13.1612 4.82889 12.9706 4.96935 12.8299L15.3169 2.46999C15.4575 2.32918 15.6484 2.25004 15.8474 2.25ZM15.8478 4.06109L6.25 13.6703V16.25H8.84784L18.4396 6.65405L15.8478 4.06109Z"
+                            fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="orgId" type="text" placeholder="ИНН организации *" maxlength="50"
+                         required>
+  
+                  <div class="user-info-form__edit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.75 21C2.75 20.5858 3.08579 20.25 3.5 20.25H21.5C21.9142 20.25 22.25 20.5858 22.25 21C22.25 21.4142 21.9142 21.75 21.5 21.75H3.5C3.08579 21.75 2.75 21.4142 2.75 21Z"
+                            fill="currentColor"/>
+                      <path d="M5.5 13.36V17H9.1586L19.5 6.65405L15.8476 3L5.5 13.36Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.8474 2.25C16.0464 2.24996 16.2373 2.32903 16.378 2.46979L20.0304 6.12384C20.3232 6.4167 20.3232 6.8914 20.0304 7.18426L9.68905 17.5302C9.54838 17.6709 9.35757 17.75 9.1586 17.75H5.5C5.08579 17.75 4.75 17.4142 4.75 17V13.36C4.75 13.1612 4.82889 12.9706 4.96935 12.8299L15.3169 2.46999C15.4575 2.32918 15.6484 2.25004 15.8474 2.25ZM15.8478 4.06109L6.25 13.6703V16.25H8.84784L18.4396 6.65405L15.8478 4.06109Z"
+                            fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="form__group">
+                  <button class="btn btn--bg from__submit">Сохранить</button>
+                </div>
+              </form>
+            </div>
+            
+            <div id="user-orders" class="tabs__content-item hidden">ЗАКАЗЫ</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Cool project -->
+  <section class="together">
+    <div class="border border__dgray">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container together__container">
+      <div class="together__block">
+        <h2 class="together__heading">Давайте вместе <br>сделаем <span>крутой проект!</span></h2>
+        <ul class="together__list">
+          <li class="together__item">
+            <p class="together__head">Офис АСО в Москве</p>
+            <p class="together__desc">115114, г. Москва, Павелецкая наб.<br>2-с1, офис 102<br>с 8 утра до 17</p>
+          </li>
+          <li class="together__item">
+            <p class="together__head">Отдел продаж</p>
+            <p class="together__desc"><a href="tel://88007071769">8 800 707-17-69</a><br>(по России — бесплатно)</p>
+          </li>
+          <li class="together__item">
+            <p class="together__head">Склад в МО</p>
+            <p class="together__desc"><a href="tel://+74955454673">+7 495 545-46-73</a><br><a href="tel://88007071769">8 800 707-17-69</a>
+            </p>
+          </li>
+          <li class="together__item">
+            <p class="together__head">Почта</p>
+            <p class="together__desc"><a href="mailto://office@arendaopalubki.com">office@arendaopalubki.com</a></p>
+          </li>
+          <li class="together__item">
+            <p class="together__head">Офис / Приёмная</p>
+            <p class="together__desc"><a href="tel://+74955454673">+7 495 545-46-73</a></p>
+          </li>
+          <li class="together__item">
+            <p class="together__head">Telegram</p>
+            <p class="together__desc"><a href="https://t.me/@asoOpalubka_bot" target="_blank">@asoOpalubka_bot</a><br>Круглосуточно
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Map -->
+  <section class="map">
+    <div class="border border__dgray">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container map__container">
+      <div class="map__block">
+        <h2 class="map__heading">У нас есть <br><span>представительства</span></h2>
+        <ul class="map__list">
+          <li class="map__item">
+            <a href="javascript:yamoscow();" id="yamoscow" class="map__link">г. Москва</a>
+          </li>
+          <li class="map__item">
+            <a href="javascript:yamo();" id="yamo" class="map__link">Московская обл.</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="map" class="map__yandex">
+      <div class="map__zoom">
+        <button class="map__zoom_plus" id="zoom-in">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.8 13.2V24H13.2V13.2H24V10.8H13.2V0H10.8V10.8H0V13.2H10.8Z" fill="currentColor"/>
+          </svg>
+        </button>
+        <button class="map__zoom_minus" id="zoom-out">
+          <svg width="24" height="4" viewBox="0 0 24 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0.800049H24V3.20005H0V0.800049Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="border border__dgray">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="container footer__list_container">
+    <ul class="footer__list footer__list_top">
+      <li class="footer__item"><a href="#" class="footer__link">Главная страница</a></li>
+      <li class="footer__item"><a href="objects.html" class="footer__link">Объекты</a></li>
+      <li class="footer__item"><a href="services.html" class="footer__link">Каталог и услуги</a></li>
+      <li class="footer__item"><a href="#" class="footer__link">Акции</a></li>
+    </ul>
+  </div>
+  <ul class="footer__list footer__list_bottom">
+    <div class="container footer__list_container">
+      <li class="footer__item"><p>Все права защищены © 2011–<span class="footer__year"></span> ООО «АСО»</p>
+        <p>Информация о ценах, товаре и условиях его приобретения, размещённая на сайте arendaopalubki.com, не является
+          публичной офертой!</p></li>
+      <li class="footer__item"><p>Используя наш сайт, вы соглашаетесь на условия нашей <a href="#" class="footer__link">Политики
+        Конфиденциальности</a></p>
+        <p>ОГРН 1117746062280 ИНН 7731664874</p></li>
+    </div>
+  </ul>
+</footer>
+
+<!-- Header menu -->
+<div class="header__nav">
+  <div class="border border__green">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="container header__nav_container">
+    <div class="border border__green">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="header__nav_block">
+      <ul class="header__nav_list">
+        <li class="header__nav_item"><a href="unique-offers.html" class="header__nav_heading">Акции</a></li>
+        <li class="header__nav_item"><a href="objects.html" class="header__nav_heading">Объекты</a></li>
+        <li class="header__nav_item"><a href="equipment.html" class="header__nav_heading">Оборудование</a></li>
+        <li class="header__nav_item"><a href="services.html" class="header__nav_heading">Услуги</a></li>
+        <li class="header__nav_item"><a href="#" class="header__nav_heading">Комплектующие</a></li>
+        <li class="header__nav_item"><a href="#" class="header__nav_heading">Контакты</a></li>
+      </ul>
+      <ul class="header__nav_list">
+        <li class="header__nav_item">
+          <a href="floors.html" class="header__nav_head">Опалубка перекрытий</a>
+          <ul class="header__nav_sublist">
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Объёмные стойки клиновые</a></li>
+            <li class="header__nav_subitem"><a href="cuppanel.html" class="header__nav_subhead">Объёмные стойки чашечные</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Мостовая опалубка</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Строительные леса и вышки туры</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Телескопические стойки</a></li>
+          </ul>
+        </li>
+        <li class="header__nav_item">
+          <a href="сolumn.html" class="header__nav_head">Опалубка колонн</a>
+          <ul class="header__nav_sublist">
+            <li class="header__nav_subitem"><a href="transompanel.html" class="header__nav_subhead">Балочно-ригельная опалубка</a></li>
+            <li class="header__nav_subitem"><a href="streelpanel.html" class="header__nav_subhead">Стальная опалубка круглых колонн</a></li>
+            <li class="header__nav_subitem"><a href="disposable-formwork.html" class="header__nav_subhead">Одноразовая опалубка колонн</a></li>
+            <li class="header__nav_subitem"><a href="plasticpanel.html" class="header__nav_subhead">Пластиковая опалубка колонн</a></li>
+          </ul>
+        </li>
+        <li class="header__nav_item">
+          <a href="security.html" class="header__nav_head">Системы безопасности</a>
+          <ul class="header__nav_sublist">
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Защитно-улавливающие системы</a>
+            </li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Ветрозащитные экраны</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Укрывные материалы</a></li>
+          </ul>
+        </li>
+        <li class="header__nav_item">
+          <a href="walls.html" class="header__nav_head">Стеновая опалубка</a>
+          <ul class="header__nav_sublist">
+            <li class="header__nav_subitem"><a href="largepanel.html" class="header__nav_subhead">Крупнощитовая
+              опалубка</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Мелкощитовая опалубка</a></li>
+          </ul>
+        </li>
+        <li class="header__nav_item">
+          <a href="" class="header__nav_head">Опалубка фундамента</a>
+          <ul class="header__nav_sublist">
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Балки</a></li>
+            <li class="header__nav_subitem"><a href="#" class="header__nav_subhead">Фанера</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script>
+  window.onload = function () {
+    window.setTimeout(function () {
+      document.body.classList.add('loaded_hiding');
+      window.scrollTo(0, 0);
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 0);
+    }, 0);
+  }
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
