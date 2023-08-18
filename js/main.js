@@ -566,3 +566,9 @@ $('.user-avatar__field').on('change', function () {
 
   $('.change-image-popup').hide();
 });
+
+/*** Order filter ***/
+$('.js-order-filter .orders-heading__filters-item').on('click', function () {
+  $('.js-order-filter .orders-heading__filters-item').removeClass('active');
+  $(this).addClass('active');
+});

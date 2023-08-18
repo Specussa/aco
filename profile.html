@@ -99,9 +99,12 @@
   <!-- Profile -->
   <div class="container">
     <section class="profile">
+      <!-- Logout -->
       <a href="#" class="logout-btn">Выход</a>
-      
+  
+      <!-- Profile sidebar -->
       <aside class="profile__sidebar inner-container">
+        <!-- Profile avatar -->
         <div class="user-avatar">
           <div class="js-change-avatar user-image">
             <img src="img/object.webp" alt="user-img" title="user-img">
@@ -114,16 +117,19 @@
             <div class="js-delete-img change-image-popup__item change-image-popup__item--delete">Удалить фотографию</div>
           </div>
         </div>
-        
+  
+        <!-- Profile contacts -->
         <div class="user-contacts">
           <div class="user-contacts__name">ООО «Чебурашка»</div>
           <p class="user-contacts__mail">ivanov@gmail.com</p>
           <p class="user-contacts__phone">303054662759</p>
         </div>
       </aside>
-      
+  
+      <!-- Profile content -->
       <div class="profile__content">
         <div class="js-tabs tabs">
+          <!-- Tabs navigation -->
           <div class="tabs__navigation">
             <div class="tabs__navigation-item inner-container">
               <a href="#user-info" class="tabs__navigation-link active">Личная информация</a>
@@ -133,8 +139,10 @@
               <a href="#user-orders" class="tabs__navigation-link">Мои заказы</a>
             </div>
           </div>
-          
+  
+          <!-- Tabs content -->
           <div class="tabs__content inner-container">
+            <!-- User info -->
             <div id="user-info" class="tabs__content-item">
               <form class="form user-info-form">
                 <div class="form__group">
@@ -224,8 +232,34 @@
                 </div>
               </form>
             </div>
-            
-            <div id="user-orders" class="tabs__content-item hidden">ЗАКАЗЫ</div>
+  
+            <!-- User orders -->
+            <div id="user-orders" class="tabs__content-item hidden">
+              <div class="orders-heading">
+                <div class="orders-heading__search">
+                  <div class="orders-heading__search-name">
+                    <label for="order-search">Поиск</label>
+                    <input id="order-search" class="orders-heading__input" name="orderSearch" type="text" maxlength="50">
+                  </div>
+  
+                  <div class="orders-heading__search-period">
+                    <label for="order-range">Период</label>
+                    <input id="order-range" class="orders-heading__input" name="rangeFrom" type="text" maxlength="50">
+                    <input class="orders-heading__input" name="rangeTo" type="text" maxlength="50">
+                  </div>
+                </div>
+  
+                <div class="js-order-filter orders-heading__filters">
+                  <div class="orders-heading__filters-item active">Все</div>
+                  <div class="orders-heading__filters-item">Оплаченные заказы</div>
+                  <div class="orders-heading__filters-item">Закрытые заказы</div>
+                </div>
+              </div>
+              
+              <div class="orders-body">orders-body</div>
+              
+              <div class="orders-pagination">orders-pagination</div>
+            </div>
           </div>
         </div>
       </div>

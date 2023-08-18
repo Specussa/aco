@@ -3514,6 +3514,40 @@ svg path {
   padding-right: 60px;
 }
 
+.orders-heading {
+  margin-bottom: 60px;
+}
+
+.orders-heading__search {
+  margin-bottom: 30px;
+}
+
+.orders-heading__filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.orders-heading__filters-item {
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: .2s ease;
+}
+
+.orders-heading__filters-item.active {
+  color: var(--back);
+  background: var(--border);
+}
+
+.orders-body {
+  margin-bottom: 80px;
+}
+
 /* start search */
 
 .search__overlay_flex {

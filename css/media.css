@@ -269,6 +269,10 @@
     width: 200px;
     height: 200px;
   }
+
+  .orders-heading__filters {
+    gap: 15px;
+  }
 }
 
 /*** Min-width 768 and Max-width 1199 ***/
@@ -487,6 +491,14 @@
   .user-contacts__name {
     font-size: 30px;
   }
+
+  .orders-heading {
+    margin-bottom: 80px;
+  }
+
+  .orders-body {
+    margin-bottom: 150px;
+  }
 }
 
 /*** Min-width 1200 and Max-width 1919 ***/
@@ -647,5 +659,17 @@
 
   .user-info-form .from__submit {
     width: calc(50% - 20px);
+  }
+
+  .orders-heading {
+    margin-bottom: 120px;
+  }
+
+  .orders-body {
+    margin-bottom: 200px;
+  }
+
+  .orders-heading__filters-item {
+    font-size: 24px;
   }
 }
