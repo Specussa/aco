@@ -13,6 +13,7 @@ if(circle){
 }
 // end
 
+// при скролле header
 const header = document.querySelector('.header');
 window.addEventListener('scroll', function () {
     if (window.scrollY > 1) {
@@ -21,6 +22,7 @@ window.addEventListener('scroll', function () {
       header.classList.remove("active");
     }
 });
+// end
 
 // кнопка header__burger
 const bodyoverlay = document.querySelector('.overlay');
@@ -31,6 +33,8 @@ burger.addEventListener('click', function() {
     bodyoverlay.classList.remove("active");
     menu.classList.remove("active");
     burger.classList.remove("active");
+    searchoverlay.classList.remove("active");
+    hsearch.classList.remove("active");
     if (window.scrollY > 1) {} else {header.classList.remove("active");}
     document.body.style.height = null;
     document.body.style.overflow = null;
@@ -40,6 +44,36 @@ burger.addEventListener('click', function() {
     menu.classList.add("active");
     burger.classList.add("active");
     header.classList.add("active");
+    hsearch.classList.remove("active");
+    searchoverlay.classList.remove("active");
+    document.body.style.height = "100vh";
+    document.body.style.overflow = "hidden";
+  }
+})
+// end
+
+// кнопка header__burger
+const hsearch = document.querySelector('.header__search');
+const searchoverlay = document.querySelector('.search__overlay');
+hsearch.addEventListener('click', function() {
+  if (searchoverlay.classList.contains("active")) {
+    bodyoverlay.classList.remove("active");
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+    hsearch.classList.remove("active");
+    searchoverlay.classList.remove("active");
+    if (window.scrollY > 1) {} else {header.classList.remove("active");}
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  } else {
+    document.body.scrollTo(0, 0);
+    bodyoverlay.classList.add("active");
+    menu.classList.add("active");
+    burger.classList.add("active");
+    header.classList.add("active");
+    hsearch.classList.add("active");
+    searchoverlay.classList.add("active");
+    menu.classList.remove("active");
     document.body.style.height = "100vh";
     document.body.style.overflow = "hidden";
   }
@@ -65,6 +99,22 @@ year.insertAdjacentText('beforebegin', currentYear);
 year.remove();
 }
 // end year
+
+// start search
+const searchInput = document.querySelector('#search__input');
+const searchClear = document.querySelector('#search__del');
+const searchIcon = document.querySelector('#search__icon');
+
+searchClear.addEventListener('click', function() {
+  searchInput.value = '';
+  searchInput.dispatchEvent(new Event('input'));
+});
+
+searchInput.addEventListener('input', function() {
+  searchClear.classList.toggle('active', this.value);
+  searchIcon.classList.toggle('active', !this.value);
+});
+// end search
 
 // start best__sliders
 const bestsliders = document.querySelector('.best__sliders');

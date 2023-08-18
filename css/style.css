@@ -61,6 +61,14 @@ input::selection {
   background: var(--dgreen);
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: var(--font);
+}
+
 html body.loaded {
   height: var(--height);
   position: relative;
@@ -625,19 +633,22 @@ svg path {
 
 /* start header__nav */
 
-.header__nav::-webkit-scrollbar {
+.header__nav::-webkit-scrollbar,
+.search__overlay::-webkit-scrollbar {
   display: none;
   width: 0px;
   background: transparent;
 }
 
-.header__nav::-webkit-scrollbar-thumb {
+.header__nav::-webkit-scrollbar-thumb,
+.search__overlay::-webkit-scrollbar-thumb {
   display: none;
   width: 0px;
   background: transparent;
 }
 
-.header__nav {
+.header__nav,
+.search__overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,14 +670,16 @@ svg path {
   overflow-x: hidden;
 }
 
-.header.active .header__nav {
+.header.active .header__nav,
+.header.active .search__overlay {
   top: 0;
   background-color: var(--white);
   -webkit-transition: -webkit-transform 0.5s linear;
   transition: -webkit-transform 0.5s linear;
 }
 
-.header__nav.active {
+.header__nav.active,
+.search__overlay.active {
   visibility: visible;
   -webkit-transform: translateY(0%);
   transform: translateY(0%);
@@ -674,7 +687,8 @@ svg path {
   transition: transform 0.5s linear 0.3s;
 }
 
-.header__nav_container {
+.header__nav_container,
+.search__overlay_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,7 +698,8 @@ svg path {
   justify-content: flex-end;
 }
 
-.header__nav_block {
+.header__nav_block,
+.search__overlay_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3355,6 +3370,98 @@ svg path {
   margin-top: 10px;
 }
 
+/* start search */
+
+.search__flex {
+  display: flex;
+  width: 75%;
+  padding: 0 20px;
+  align-items: center;
+  position: relative;
+}
+
+.search__button {
+  display: flex;
+  flex-direction: column;
+}
+
+.search__input {
+  width: 100%;
+  padding: 35px 100px 35px 50px;
+  background: transparent;
+  border-bottom: 1px solid var(--gborder);
+}
+
+.search__input,
+.search__input::placeholder {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--white);
+}
+
+.search__button {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  color: var(--white);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.search__del,
+.search__icon {
+  -webkit-transition: color 0.2s linear, -webkit-transform 0.2s linear;
+  transition: color 0.2s linear, transform 0.2s linear;
+  cursor: pointer;
+}
+
+.search__del {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.search__del.active {
+  -webkit-transform: translateY(-38px);
+  transform: translateY(-38px);
+}
+
+.search__icon {
+  -webkit-transform: translateY(-38px);
+  transform: translateY(-38px);
+}
+
+.search__icon.active {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.search__del:hover,
+.search__icon:hover {
+  color: var(--lgreen);
+}
+
+.search__del svg,
+.search__icon svg {
+  width: 38px;
+  height: 38px;
+}
+
+.search__info {
+  width: 75%;
+  padding: 0 70px 20px 20px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--white);
+  text-align: right;
+}
+
+/* end search */
+
 /* start media 1919px */
 @media (max-width: 1919px) {
   .header__block {
@@ -3363,7 +3470,8 @@ svg path {
   .border {
     width: calc(100% - 40px);
   }
-  .header__nav_block {
+  .header__nav_block,
+  .search__overlay_block {
     padding: 130px 20px 30px;
     gap: 40px 0;
   }
@@ -3464,7 +3572,10 @@ svg path {
   .largepanel_advantages__desc,
   .plasticpanel__desc,
   .tablethree__desc,
-  .tablefour__desc {
+  .tablefour__desc,
+  .search__input,
+  .search__input::placeholder,
+  .search__info {
     font-size: 14px;
     line-height: 16px;
   }
@@ -3474,6 +3585,10 @@ svg path {
   }
   .header__login svg {
     width: 24px;
+    height: 25px;
+  }
+  .header__search svg {
+    width: 25px;
     height: 25px;
   }
   .header__burger span,
@@ -3586,7 +3701,9 @@ svg path {
   .services_advantages__heading,
   .largepanel_advantages__heading,
   .largepanel_shields__heading,
-  .largepanel_advantages__item {
+  .largepanel_advantages__item,
+  .search__flex,
+  .search__info {
     padding: 0 10px;
   }
   .best__right {
@@ -3697,7 +3814,7 @@ svg path {
     right: 40px;
   }
   .breadcrumbs__block {
-    padding: 95px 10px 0;
+    padding: 80px 10px 0;
   }
   .cart__block {
     padding: 80px 0;
@@ -3933,6 +4050,26 @@ svg path {
   .tablethree__item p {
     width: calc(25% - 15px);
   }
+  .search__input {
+    padding: 25px 65px 25px 30px;
+  }
+  .search__del svg,
+  .search__icon svg,
+  .search__button {
+    width: 25px;
+    height: 25px;
+  }
+  .search__icon {
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+  }
+  .search__del.active {
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+  }
+  .search__button {
+    right: 30px;
+  }
   .footer__list_top .footer__item {
     padding: 0 10px;
   }
@@ -3966,7 +4103,8 @@ svg path {
   .header__nav_list {
     width: 100%;
   }
-  .header__nav_block {
+  .header__nav_block,
+  .search__overlay_block {
     padding: 140px 20px 30px;
     gap: 80px 0;
   }
@@ -4340,7 +4478,9 @@ svg path {
   .largepanel__bottom_list,
   .largepanel_shields__item,
   .largepanel_shields__price,
-  .largepanel_shields__buttons .button__default {
+  .largepanel_shields__buttons .button__default,
+  .search__flex,
+  .search__info {
     width: 100%;
   }
   .largepanel_shields__desc,
@@ -4399,6 +4539,12 @@ svg path {
   }
   .tablefour__item p:nth-child(4) {
     justify-content: flex-end;
+  }
+  .search__input {
+    padding: 25px 55px 25px 20px;
+  }
+  .search__button {
+    right: 20px;
   }
   .footer__list_bottom .footer__item:first-child {
     flex-direction: column-reverse;
@@ -4494,7 +4640,9 @@ svg path {
   .services_advantages__heading,
   .largepanel_advantages__heading,
   .largepanel_shields__heading,
-  .largepanel_advantages__item {
+  .largepanel_advantages__item,
+  .search__flex,
+  .search__info {
     padding: 0 5px;
   }
   .header__nav_heading {
@@ -4529,8 +4677,9 @@ svg path {
   .header__nav_item {
     width: 50%;
   }
-  .header__nav_block {
-    padding: 110px 15px 30px;
+  .header__nav_block,
+  .search__overlay_block {
+    padding: 110px 0 30px;
     gap: 60px 0;
   }
   .best__container {
@@ -4637,7 +4786,7 @@ svg path {
     gap: 10px;
   }
   .breadcrumbs__block {
-    padding: 70px 5px 0;
+    padding: 90px 5px 0;
   }
   .cart__block {
     padding: 40px 0;
@@ -4902,6 +5051,12 @@ svg path {
   .tablefour__item {
     margin: 0 5px;
     padding: 15px 0;
+  }
+  .search__input {
+    padding: 25px 45px 25px 10px;
+  }
+  .search__button {
+    right: 10px;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
