@@ -104,17 +104,19 @@ year.remove();
 // end year
 
 // start search
-const searchInput = document.querySelector('#search__overlay_input');
-const searchClear = document.querySelector('#search__overlay_del');
-const searchIcon = document.querySelector('#search__overlay_icon');
+const searchOverlayInput = document.querySelector('#search__overlay_input');
+const searchOverlayClear = document.querySelector('#search__overlay_del');
+const searchOverlayIcon = document.querySelector('#search__overlay_icon');
+const searchInput = document.querySelector('#search__input');
+const searchClear = document.querySelector('#search__del');
+const searchIcon = document.querySelector('#search__icon');
 
 if (searchClear || searchInput) {
   searchClear.addEventListener('click', function () {
     searchInput.value = '';
     searchInput.dispatchEvent(new Event('input'));
   });
-
-  searchInput.addEventListener('input', function () {
+  searchInput.addEventListener('input', function() {
     searchClear.classList.toggle('active', this.value);
     searchIcon.classList.toggle('active', !this.value);
   });
