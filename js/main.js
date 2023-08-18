@@ -460,3 +460,21 @@ if(maps) {
 }
 // end yandex map
 // end map
+
+/*** Tabs ***/
+const tabs = document.querySelector('.js-tabs');
+
+if (tabs) {
+  $('.js-tabs .tabs__navigation-link').on('click', function (e) {
+    e.preventDefault();
+
+    let thisAnchor = $(this).attr('href'),
+        thisTarget = $(thisAnchor);
+
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+    $('.tabs__content-item').hide();
+    thisTarget.show();
+  });
+}
+

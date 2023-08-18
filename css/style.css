@@ -217,6 +217,10 @@ svg path {
   background-color: var(--green);
 }
 
+.hidden {
+  display: none;
+}
+
 .section-title {
   margin-bottom: 40px;
 }
@@ -3311,6 +3315,31 @@ svg path {
 
 .registration-form .from__submit {
   margin-top: 10px;
+}
+
+/*** Profile ***/
+.profile {
+  position: relative;
+  padding: 40px 0 60px;
+  border: 1px solid var(--border);
+  border-bottom: 0;
+}
+
+.profile__sidebar {
+  margin-top: 100px;
+}
+
+.user-info-form .form__group:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.user-info-form .from__submit {
+  margin-top: 65px;
+}
+
+.profile__content .tabs__navigation {
+  display: flex;
+  flex-direction: column;
 }
 
 /* start media 1919px */

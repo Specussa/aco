@@ -28,6 +28,14 @@
   .objects-page-info__desc-item {
     margin-bottom: 20px;
   }
+
+  .profile__sidebar {
+    margin-bottom: 40px;
+  }
+
+  .profile__content .tabs__navigation {
+    top: 40px;
+  }
 }
 
 /****** MIN ******/
@@ -203,6 +211,28 @@
     font-size: 36px;
     letter-spacing: -1px;
   }
+
+  .profile {
+    display: flex;
+    padding-top: 60px;
+  }
+
+  .profile__sidebar {
+    width: 33.33%;
+  }
+
+  .profile__content {
+    margin-top: 100px;
+    width: 66.66%;
+  }
+
+  .user-info-form .from__submit {
+    margin-top: 50px;
+  }
+
+  .profile__content .tabs__navigation {
+    flex-direction: row;
+  }
 }
 
 /*** Min-width 768 and Min-width 1199 ***/
@@ -229,12 +259,21 @@
   .equipment__btn {
     margin-left: auto;
   }
+
+  .profile__content .tabs__navigation {
+    top: 60px;
+  }
 }
 
 /*** Max-width 1199 ***/
 @media (max-width: 1199px) {
   .equipment__image {
     margin-bottom: 20px;
+  }
+
+  .profile__content .tabs__navigation {
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -379,6 +418,36 @@
     max-width: none;
     width: calc(50% - 10px);
   }
+
+  .profile {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .profile__sidebar,
+  .profile__content {
+    margin-top: 0;
+  }
+
+  .profile__content .tabs__navigation {
+    margin-bottom: 80px;
+  }
+
+  .profile__sidebar {
+    width: 25%;
+  }
+
+  .profile__content {
+    width: 75%;
+  }
+
+  .user-info-form {
+    width: calc(66.66% - 10px);
+  }
+
+  .user-info-form .from__submit {
+    margin-top: 70px;
+  }
 }
 
 /*** Min-width 1920 ***/
@@ -497,5 +566,13 @@
 
   .registration-form .from__submit {
     width: calc(50% - 20px);
+  }
+
+  .profile {
+    padding-top: 60px;
+  }
+
+  .user-info-form .from__submit {
+    margin-top: 80px;
   }
 }
