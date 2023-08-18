@@ -1017,6 +1017,7 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-start;
 }
 
 .best__slider_left,
