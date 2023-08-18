@@ -3354,12 +3354,17 @@ svg path {
   width: 100%;
 }
 
+.user-avatar {
+  position: relative;
+}
+
 .user-image {
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
   width: 170px;
   height: 170px;
+  background-color: var(--gray);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -3369,6 +3374,33 @@ svg path {
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+.user-avatar__field {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.change-image-popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  font-weight: 300;
+  background: #fff;
+  border: 1px solid #afafaf;
+  padding: 20px 30px;
+  width: max-content;
+}
+
+.change-image-popup__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.change-image-popup__item--delete {
+  color: #958169;
 }
 
 .user-contacts {

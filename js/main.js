@@ -478,3 +478,36 @@ if (tabs) {
   });
 }
 
+/*** Change avatar ***/
+$('.js-change-avatar').on('click', function () {
+  $('.js-change-avatar ~ .change-image-popup').show();
+});
+
+$(document).mouseup(function (e) {
+  const div = $(".change-image-popup");
+
+  if (!div.is(e.target) && div.has(e.target).length === 0) {
+    $('.change-image-popup').hide();
+  }
+});
+
+// Delete img
+$('.js-delete-img').on('click', function () {
+  console.log('delete avatar');
+
+  $('.change-image-popup').hide();
+});
+
+// Choose file
+$('.js-change-img').on('click', function () {
+  console.log('choose file');
+
+  $('.user-avatar__field').click();
+});
+
+// Change avatar
+$('.user-avatar__field').on('change', function () {
+  console.log('change avatar');
+
+  $('.change-image-popup').hide();
+});

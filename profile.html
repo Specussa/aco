@@ -102,8 +102,17 @@
       <a href="#" class="logout-btn">Выход</a>
       
       <aside class="profile__sidebar inner-container">
-        <div class="user-image">
-          <img src="img/user/user-logo.webp" alt="user-img" title="user-img">
+        <div class="user-avatar">
+          <div class="js-change-avatar user-image">
+            <img src="img/object.webp" alt="user-img" title="user-img">
+          </div>
+  
+          <input type="file" class="user-avatar__field" name="userAvatar">
+  
+          <div class="change-image-popup">
+            <div class="js-change-img change-image-popup__item">Изменить фотографию</div>
+            <div class="js-delete-img change-image-popup__item change-image-popup__item--delete">Удалить фотографию</div>
+          </div>
         </div>
         
         <div class="user-contacts">
