@@ -52,10 +52,23 @@
   }
 }
 
-/*** Max-width 389 ***/
+/*** Min-width 389 ***/
 @media (min-width: 390px) {
   .have-account {
     font-size: 20px;
+  }
+}
+
+/*** Min-width 389 and Max-width 767 ***/
+@media (min-width: 390px) and (max-width: 767px) {
+  .profile__sidebar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .user-image {
+    margin: 0;
   }
 }
 
@@ -222,20 +235,39 @@
   }
 
   .profile__content {
-    margin-top: 100px;
+    margin-top: 113px;
     width: 66.66%;
+  }
+
+  .logout-btn {
+    top: 60px;
+    right: 10px;
   }
 
   .user-info-form .from__submit {
     margin-top: 50px;
+    width: calc(50% - 10px);
   }
 
   .profile__content .tabs__navigation {
     flex-direction: row;
   }
+
+  .tabs__navigation-item {
+    width: 33.33%;
+  }
+
+  .user-contacts__name {
+    font-size: 28px;
+  }
+
+  .user-image {
+    width: 200px;
+    height: 200px;
+  }
 }
 
-/*** Min-width 768 and Min-width 1199 ***/
+/*** Min-width 768 and Max-width 1199 ***/
 @media (min-width: 768px) and (max-width: 1199px) {
   .equipment__desc {
     display: flex;
@@ -420,7 +452,6 @@
   }
 
   .profile {
-    padding-top: 80px;
     padding-bottom: 120px;
   }
 
@@ -447,6 +478,21 @@
 
   .user-info-form .from__submit {
     margin-top: 70px;
+  }
+
+  .user-contacts__name {
+    font-size: 30px;
+  }
+}
+
+/*** Min-width 1200 and Max-width 1919 ***/
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .profile {
+    padding-top: 80px;
+  }
+
+  .logout-btn {
+    top: 80px;
   }
 }
 
@@ -568,11 +614,34 @@
     width: calc(50% - 20px);
   }
 
-  .profile {
-    padding-top: 60px;
+  .user-info-form .from__submit {
+    margin-top: 80px;
+  }
+
+  .tabs__navigation-link,
+  .logout-btn {
+    font-size: 24px;
+  }
+
+  .logout-btn {
+    right: 20px;
+  }
+
+  .user-image,
+  .user-contacts__name,
+  .user-contacts__mail {
+    margin-bottom: 20px;
+  }
+
+  .user-contacts__name {
+    font-size: 48px;
+  }
+
+  .user-info-form {
+    width: calc(66.66% - 20px);
   }
 
   .user-info-form .from__submit {
-    margin-top: 80px;
+    width: calc(50% - 20px);
   }
 }

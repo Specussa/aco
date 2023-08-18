@@ -471,7 +471,7 @@ if (tabs) {
     let thisAnchor = $(this).attr('href'),
         thisTarget = $(thisAnchor);
 
-    $(this).siblings().removeClass('active');
+    $('.js-tabs .tabs__navigation-link').removeClass('active');
     $(this).addClass('active');
     $('.tabs__content-item').hide();
     thisTarget.show();

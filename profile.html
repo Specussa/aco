@@ -98,58 +98,70 @@
   
   <!-- Profile -->
   <div class="container">
-  <section class="profile">
-    <aside class="profile__sidebar inner-container">
-      <div class="user-image">
-        <img src="img/user/user-logo.webp" alt="user-img" title="user-img">
-      </div>
+    <section class="profile">
+      <a href="#" class="logout-btn">Выход</a>
       
-      <div class="user-name">ООО «Чебурашка»</div>
-      <div class="user-mail">ivanov@gmail.com</div>
-      <div class="user-phone">303054662759</div>
-    </aside>
-  
-    <div class="profile__content inner-container">
-      <div class="js-tabs tabs">
-        <div class="tabs__navigation">
-          <a href="#user-info" class="tabs__navigation-link active">Личная информация</a>
-          <a href="#user-orders" class="tabs__navigation-link">Мои заказы</a>
+      <aside class="profile__sidebar inner-container">
+        <div class="user-image">
+          <img src="img/user/user-logo.webp" alt="user-img" title="user-img">
         </div>
-      
-        <div class="tabs__content">
-          <div id="user-info" class="tabs__content-item">
-            <form class="form user-info-form">
-              <div class="form__group">
-                <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
-              </div>
-  
-              <div class="form__group">
-                <input class="form__input" name="password" type="password" placeholder="Пароль *" maxlength="50" required>
-              </div>
-  
-              <div class="form__group">
-                <input class="form__input" name="mail" type="text" placeholder="Почта *" maxlength="50" required>
-              </div>
-  
-              <div class="form__group">
-                <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
-              </div>
-  
-              <div class="form__group">
-                <input class="form__input" name="orgId" type="text" placeholder="ИНН организации *" maxlength="50" required>
-              </div>
-  
-              <div class="form__group">
-                <button class="btn btn--bg from__submit">Сохранить</button>
-              </div>
-            </form>
-          </div>
         
-          <div id="user-orders" class="tabs__content-item hidden">ЗАКАЗЫ</div>
+        <div class="user-contacts">
+          <div class="user-contacts__name">ООО «Чебурашка»</div>
+          <p class="user-contacts__mail">ivanov@gmail.com</p>
+          <p class="user-contacts__phone">303054662759</p>
+        </div>
+      </aside>
+      
+      <div class="profile__content">
+        <div class="js-tabs tabs">
+          <div class="tabs__navigation">
+            <div class="tabs__navigation-item inner-container">
+              <a href="#user-info" class="tabs__navigation-link active">Личная информация</a>
+            </div>
+    
+            <div class="tabs__navigation-item inner-container">
+              <a href="#user-orders" class="tabs__navigation-link">Мои заказы</a>
+            </div>
+          </div>
+          
+          <div class="tabs__content inner-container">
+            <div id="user-info" class="tabs__content-item">
+              <form class="form user-info-form">
+                <div class="form__group">
+                  <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="password" type="password" placeholder="Пароль *" maxlength="50"
+                         required>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="mail" type="text" placeholder="Почта *" maxlength="50" required>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
+                </div>
+                
+                <div class="form__group">
+                  <input class="form__input" name="orgId" type="text" placeholder="ИНН организации *" maxlength="50"
+                         required>
+                </div>
+                
+                <div class="form__group">
+                  <button class="btn btn--bg from__submit">Сохранить</button>
+                </div>
+              </form>
+            </div>
+            
+            <div id="user-orders" class="tabs__content-item hidden">ЗАКАЗЫ</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section></div>
+    </section>
+  </div>
   
   <!-- Cool project -->
   <section class="together">
