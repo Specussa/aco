@@ -556,41 +556,62 @@ if (tabs) {
 }
 
 /*** Change avatar ***/
-$('.js-change-avatar').on('click', function () {
-  $('.js-change-avatar ~ .change-image-popup').show();
-});
+if ($('.js-change-avatar')) {
+  $('.js-change-avatar').on('click', function () {
+    $('.js-change-avatar ~ .change-image-popup').show();
+  });
 
-$(document).mouseup(function (e) {
-  const div = $(".change-image-popup");
+  $(document).mouseup(function (e) {
+    const div = $(".change-image-popup");
 
-  if (!div.is(e.target) && div.has(e.target).length === 0) {
-    $('.change-image-popup').hide();
-  }
-});
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      $('.change-image-popup').hide();
+    }
+  });
 
 // Delete img
-$('.js-delete-img').on('click', function () {
-  console.log('delete avatar');
+  $('.js-delete-img').on('click', function () {
+    console.log('delete avatar');
 
-  $('.change-image-popup').hide();
-});
+    $('.change-image-popup').hide();
+  });
 
 // Choose file
-$('.js-change-img').on('click', function () {
-  console.log('choose file');
+  $('.js-change-img').on('click', function () {
+    console.log('choose file');
 
-  $('.user-avatar__field').click();
-});
+    $('.user-avatar__field').click();
+  });
 
 // Change avatar
-$('.user-avatar__field').on('change', function () {
-  console.log('change avatar');
+  $('.user-avatar__field').on('change', function () {
+    console.log('change avatar');
 
-  $('.change-image-popup').hide();
-});
+    $('.change-image-popup').hide();
+  });
+}
 
 /*** Order filter ***/
 $('.js-order-filter .orders-heading__filters-item').on('click', function () {
   $('.js-order-filter .orders-heading__filters-item').removeClass('active');
   $(this).addClass('active');
 });
+
+/*** Switch hide/show password ***/
+const visibilityPasswordSwitcher = $('.js-toggle-show-password');
+
+if (visibilityPasswordSwitcher) {
+  visibilityPasswordSwitcher.on('click', function () {
+    const thisPrevInput = $(this).prev();
+
+    if (thisPrevInput.attr('type') === 'password') {
+      thisPrevInput.attr('type','text');
+      $('.show-password-icon', this).removeClass('hidden');
+      $('.hide-password-icon', this).addClass('hidden');
+    } else {
+      thisPrevInput.attr('type','password');
+      $('.show-password-icon', this).addClass('hidden');
+      $('.hide-password-icon', this).removeClass('hidden');
+    }
+  });
+}

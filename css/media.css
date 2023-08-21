@@ -733,4 +733,14 @@
   .pagination__list {
     gap: 20px;
   }
+
+  .hide-password-icon,
+  .show-password-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .form__input[type="password"] {
+    padding-right: 60px;
+  }
 }

@@ -3288,6 +3288,11 @@ svg path {
   margin-bottom: 10px;
 }
 
+.tip {
+  margin-bottom: 30px;
+  color: var(--gray);
+}
+
 .form__input {
   padding: 0 20px;
   width: 100%;
@@ -3298,10 +3303,8 @@ svg path {
 
 .checkbox {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .checkbox__input {
@@ -3320,6 +3323,7 @@ svg path {
   font-size: 14px;
   font-weight: 300;
   color: var(--gray);
+  cursor: pointer;
 }
 
 .checkbox__input:checked + .checkbox__name:before {
@@ -3473,6 +3477,31 @@ svg path {
 
 .user-info-form .form__input {
   padding-right: 60px;
+}
+
+.form__input[type="password"] {
+  padding-right: 55px;
+}
+
+.toggle-show-password {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.hide-password-icon,
+.show-password-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.hide-password-icon svg,
+.show-password-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .orders-heading {
