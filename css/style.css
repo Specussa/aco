@@ -389,6 +389,16 @@ svg path {
   left: 0;
   z-index: 100;
   background-color: transparent;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.header.active,
+.header__dark {
+  border-bottom: 1px solid var(--border);
 }
 
 .header__back {
@@ -406,7 +416,8 @@ svg path {
   transition: background-color 0.3s linear 0.5s, top 0.3s linear 0.5s;
 }
 
-.header.active .header__back {
+.header.active .header__back,
+.header__dark .header__back {
   top: 0;
   background-color: var(--white);
   -webkit-transition: background-color 0.3s linear, top 0.3s linear;
