@@ -3586,6 +3586,50 @@ svg path {
   margin-bottom: 20px;
 }
 
+/*** Pagination ***/
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 300;
+  transition: .2s ease;
+}
+
+.pagination__link.active {
+  font-weight: 500;
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.pagination__btn--disabled {
+  color: #c5c5c5;
+  pointer-events: none;
+}
+
 /* start search */
 
 .search__block {
