@@ -3573,6 +3573,32 @@ svg path {
   margin-bottom: 80px;
 }
 
+.orders-list__item {
+  margin-bottom: 60px;
+}
+
+.order__heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 20px;
+  margin-bottom: 10px;
+}
+
+.order__date {
+  width: 100%;
+}
+
+.order__title,
+.order__status {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.order__status {
+  color: var(--green);
+  margin-left: auto;
+}
+
 /* start search */
 
 .search__block {

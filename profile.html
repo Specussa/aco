@@ -236,6 +236,7 @@
             <!-- User orders -->
             <div id="user-orders" class="tabs__content-item hidden">
               <div class="orders-heading">
+                <!-- Search -->
                 <div class="orders-heading__search">
                   <div class="orders-heading__search-name">
                     <label for="order-search" class="orders-heading__label">Поиск</label>
@@ -254,15 +255,49 @@
                   </div>
                 </div>
   
+                <!-- Filters -->
                 <div class="js-order-filter orders-heading__filters">
                   <div class="orders-heading__filters-item active">Все</div>
                   <div class="orders-heading__filters-item">Оплаченные заказы</div>
                   <div class="orders-heading__filters-item">Закрытые заказы</div>
                 </div>
               </div>
-              
-              <div class="orders-body">orders-body</div>
-              
+  
+              <!-- Orders list -->
+              <div class="orders-body">
+                <ul class="orders-list">
+                  <li class="orders-list__item order">
+                    <div class="order__heading">
+                      <p class="order__date">15.08.2023</p>
+                      <span class="order__title">Заказ №1</span>
+                      <span class="order__status">Оплачен</span>
+                    </div>
+                    
+                    <div class="order__body">list</div>
+                    
+                    <div class="order__footer">
+                      <div class="order__price">
+                        <p>Итого <span class="order__total">56 652 руб</span></p>
+                        <p>Залог <span class="order__deposit">10 884 руб</span></p>
+                      </div>
+                      
+                      <button class="btn button__white">Повторить заказ</button>
+                    </div>
+                  </li>
+                  
+                  <li class="orders-list__item order">
+                    <div class="order__heading">
+                      <span class="order__date">15.08.2023</span>
+                      <span class="order__title">Заказ №2</span>
+                      <span class="order__status">Закрыт</span>
+                    </div>
+  
+                    <div class="order__body">list</div>
+                  </li>
+                </ul>
+              </div>
+  
+              <!-- Orders pagination -->
               <div class="orders-pagination">orders-pagination</div>
             </div>
           </div>

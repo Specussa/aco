@@ -286,6 +286,19 @@
     display: flex;
     gap: 20px;
   }
+
+  .orders-list__item {
+    margin-bottom: 80px;
+  }
+
+  .order__title,
+  .order__status {
+    font-size: 28px;
+  }
+
+  .order__heading {
+    margin-bottom: 20px;
+  }
 }
 
 /*** Min-width 768 and Max-width 1199 ***/
@@ -541,6 +554,15 @@
   .orders-heading__search-period {
     width: calc(33.33% - 10px);
   }
+
+  .orders-list__item {
+    margin-bottom: 100px;
+  }
+
+  .order__title,
+  .order__status {
+    font-size: 30px;
+  }
 }
 
 /*** Min-width 1200 and Max-width 1919 ***/
@@ -725,5 +747,14 @@
 
   .orders-heading__search {
     gap: 40px;
+  }
+
+  .orders-list__item {
+    margin-bottom: 120px;
+  }
+
+  .order__title,
+  .order__status {
+    font-size: 48px;
   }
 }
