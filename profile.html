@@ -132,11 +132,11 @@
           <!-- Tabs navigation -->
           <div class="tabs__navigation">
             <div class="tabs__navigation-item inner-container">
-              <a href="#user-info" class="tabs__navigation-link active">Личная информация</a>
+              <a href="#user-info" class="tabs__navigation-link active" data-type="info">Личная информация</a>
             </div>
     
             <div class="tabs__navigation-item inner-container">
-              <a href="#user-orders" class="tabs__navigation-link">Мои заказы</a>
+              <a href="#user-orders" class="tabs__navigation-link" data-type="orders">Мои заказы</a>
             </div>
           </div>
   
@@ -238,14 +238,19 @@
               <div class="orders-heading">
                 <div class="orders-heading__search">
                   <div class="orders-heading__search-name">
-                    <label for="order-search">Поиск</label>
-                    <input id="order-search" class="orders-heading__input" name="orderSearch" type="text" maxlength="50">
+                    <label for="order-search" class="orders-heading__label">Поиск</label>
+                    <input id="order-search" class="orders-heading__input" name="orderSearch" type="text" maxlength="50"
+                           placeholder="Номер заказа или название товара">
                   </div>
-  
+    
                   <div class="orders-heading__search-period">
-                    <label for="order-range">Период</label>
-                    <input id="order-range" class="orders-heading__input" name="rangeFrom" type="text" maxlength="50">
-                    <input class="orders-heading__input" name="rangeTo" type="text" maxlength="50">
+                    <label for="order-range" class="orders-heading__label">Период</label>
+  
+                    <div class="order-period-input-wrapper">
+                      <input id="order-range" class="orders-heading__input" name="rangeFrom" type="text" maxlength="50"
+                             placeholder="От">
+                      <input class="orders-heading__input" name="rangeTo" type="text" maxlength="50" placeholder="До">
+                    </div>
                   </div>
                 </div>
   

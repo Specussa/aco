@@ -40,6 +40,14 @@
   .profile__content .tabs__navigation {
     top: 40px;
   }
+
+  .orders-heading__search-name {
+    margin-bottom: 15px;
+  }
+
+  .order-period-input-wrapper .orders-heading__input {
+    max-width: 106px;
+  }
 }
 
 /****** MIN ******/
@@ -273,6 +281,11 @@
   .orders-heading__filters {
     gap: 15px;
   }
+
+  .orders-heading__search {
+    display: flex;
+    gap: 20px;
+  }
 }
 
 /*** Min-width 768 and Max-width 1199 ***/
@@ -302,6 +315,27 @@
 
   .profile__content .tabs__navigation {
     top: 60px;
+  }
+
+  .profile.orders-tab {
+    display: block;
+  }
+
+  .profile.orders-tab .profile__content {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .profile.orders-tab .profile__sidebar {
+    margin-top: 0;
+  }
+
+  .profile.orders-tab .tabs__navigation {
+    width: calc(66.66% - 10px);
+    right: 0;
+    left: auto;
+    top: 60px;
+    display: block;
   }
 }
 
@@ -499,6 +533,14 @@
   .orders-body {
     margin-bottom: 150px;
   }
+
+  .orders-heading__search-name {
+    width: calc(66.66% - 10px);
+  }
+
+  .orders-heading__search-period {
+    width: calc(33.33% - 10px);
+  }
 }
 
 /*** Min-width 1200 and Max-width 1919 ***/
@@ -669,7 +711,19 @@
     margin-bottom: 200px;
   }
 
-  .orders-heading__filters-item {
+  .orders-heading__filters-item,
+  .orders-heading__label,
+  .orders-heading__input {
     font-size: 24px;
+  }
+
+  .orders-heading__input {
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 60px;
+  }
+
+  .orders-heading__search {
+    gap: 40px;
   }
 }

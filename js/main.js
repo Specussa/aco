@@ -525,13 +525,18 @@ if (tabs) {
   $('.js-tabs .tabs__navigation-link').on('click', function (e) {
     e.preventDefault();
 
-    let thisAnchor = $(this).attr('href'),
-        thisTarget = $(thisAnchor);
+    const thisAnchor = $(this).attr('href');
+    const thisTarget = $(thisAnchor);
+    const thisDataAttr = $(this).attr('data-type');
+    const profileSection = $('section.profile');
 
     $('.js-tabs .tabs__navigation-link').removeClass('active');
     $(this).addClass('active');
     $('.tabs__content-item').hide();
     thisTarget.show();
+
+    // orders active
+    thisDataAttr === 'orders' ? profileSection.addClass('orders-tab') : profileSection.removeClass('orders-tab');
   });
 }
 
