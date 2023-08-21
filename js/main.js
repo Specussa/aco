@@ -16,11 +16,11 @@ if(circle){
 // при скролле header
 const header = document.querySelector('.header');
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 1) {
-      header.classList.add("active");
-    } else {
-      header.classList.remove("active");
-    }
+  if (window.scrollY > 1) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
 });
 // end
 
@@ -39,7 +39,6 @@ burger.addEventListener('click', function() {
     document.body.style.height = null;
     document.body.style.overflow = null;
   } else {
-    document.body.scrollTo(0, 0);
     bodyoverlay.classList.add("active");
     menu.classList.add("active");
     burger.classList.add("active");
@@ -68,7 +67,6 @@ if (hsearch) {
       document.body.style.height = null;
       document.body.style.overflow = null;
     } else {
-      document.body.scrollTo(0, 0);
       bodyoverlay.classList.add("active");
       menu.classList.add("active");
       burger.classList.add("active");
@@ -92,6 +90,23 @@ bodyoverlay.addEventListener('click', function() {
   document.body.style.height = null;
   document.body.style.overflow = null;
 })
+// end
+
+// link menu
+var headernav = document.querySelector(".header__nav");
+var headernavlink = document.querySelectorAll(".header__nav a");
+if(headernav){
+  for (i = 0; i < headernavlink.length; i++) {
+    headernavlink[i].onclick = function(e) {
+      bodyoverlay.classList.remove("active");
+      menu.classList.remove("active");
+      burger.classList.remove("active");
+      if (window.scrollY > 1) {} else {header.classList.remove("active");}
+      document.body.style.height = null;
+      document.body.style.overflow = null;
+    };
+  }
+}
 // end
 
 // start year

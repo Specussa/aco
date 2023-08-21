@@ -3109,48 +3109,6 @@ svg path {
   margin-top: 30px;
 }
 
-/*** Equipment ***/
-.equipments-page-info__content {
-  padding: 65px 0 30px;
-}
-
-.equipments-list__item:not(:last-child) {
-  margin-bottom: 40px;
-}
-
-.equipment__image {
-  height: 280px;
-}
-
-.equipment__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.equipment__price,
-.equipment__text {
-  margin: 20px 0;
-}
-
-.equipment__title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.equipment__price {
-  font-size: 30px;
-  font-weight: 600;
-  color: var(--green);
-}
-
-.equipments-page-info__desc,
-.equipment__text {
-  color: var(--gray);
-}
-
 /*** Objects ***/
 .objects-page-info {
   padding: 65px 0 40px;
