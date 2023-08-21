@@ -3557,6 +3557,31 @@ svg path {
   margin-left: auto;
 }
 
+.order__price-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.order__price-item:first-child {
+  margin-bottom: 10px;
+}
+
+.order__deposit,
+.order__total {
+  line-height: 1;
+}
+
+.order__total {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.order__deposit {
+  font-weight: 500;
+}
+
 /* start search */
 
 .search__block {

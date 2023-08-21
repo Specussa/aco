@@ -48,6 +48,10 @@
   .order-period-input-wrapper .orders-heading__input {
     max-width: 106px;
   }
+
+  .order__price {
+    margin-bottom: 40px;
+  }
 }
 
 /****** MIN ******/
@@ -276,6 +280,24 @@
   .order__heading {
     margin-bottom: 20px;
   }
+
+  .order__footer {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .order__btn {
+    width: calc(33.33% - 15px);
+    margin-left: auto;
+  }
+
+  .order__price-item:first-child {
+    margin-bottom: 20px;
+  }
+
+  .order__total {
+    font-size: 36px;
+  }
 }
 
 /*** Min-width 768 and Max-width 1199 ***/
@@ -487,6 +509,10 @@
   .order__status {
     font-size: 30px;
   }
+
+  .order__price-item {
+    gap: 60px;
+  }
 }
 
 /*** Min-width 1200 and Max-width 1919 ***/
@@ -660,5 +686,17 @@
   .order__title,
   .order__status {
     font-size: 48px;
+  }
+
+  .order__price-item:first-child {
+    margin-bottom: 40px;
+  }
+
+  .order__total {
+    font-size: 58px;
+  }
+
+  .order__price-item {
+    gap: 80px;
   }
 }
