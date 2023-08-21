@@ -298,6 +298,10 @@
   .order__total {
     font-size: 36px;
   }
+
+  .order__body {
+    margin-bottom: 30px;
+  }
 }
 
 /*** Min-width 768 and Max-width 1199 ***/
@@ -512,6 +516,10 @@
 
   .order__price-item {
     gap: 60px;
+  }
+
+  .order__body {
+    margin-bottom: 40px;
   }
 }
 

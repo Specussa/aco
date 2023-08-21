@@ -3582,6 +3582,10 @@ svg path {
   font-weight: 500;
 }
 
+.order__body {
+  margin-bottom: 20px;
+}
+
 /* start search */
 
 .search__block {
