@@ -185,6 +185,29 @@
     width: 66.66%;
   }
 
+  .equipments-page-info__content {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .equipments-page-info__desc {
+    width: 66.66%;
+    margin-left: auto;
+  }
+
+  .equipment__image {
+    height: 400px;
+  }
+
+  .equipment__title {
+    font-size: 36px;
+  }
+
+  .equipment__price {
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+
   .objects-page-info {
     padding-top: 60px;
     padding-bottom: 80px;
@@ -340,6 +363,25 @@
 /*** Min-width 768 and Max-width 1199 ***/
 @media (min-width: 768px) and (max-width: 1199px) {
 
+  .equipment__desc {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .equipment__title,
+  .equipment__price {
+    flex: 1 1 100%;
+  }
+
+  .equipment__text,
+  .equipment__btn {
+    flex: 0 0 33.33%;
+  }
+
+  .equipment__btn {
+    margin-left: auto;
+  }
+
   .profile__content .tabs__navigation {
     top: 60px;
   }
@@ -368,6 +410,10 @@
 
 /*** Max-width 1199 ***/
 @media (max-width: 1199px) {
+  .equipment__image {
+    margin-bottom: 20px;
+  }
+
   .profile__content .tabs__navigation {
     position: absolute;
     left: 0;
@@ -429,8 +475,47 @@
     width: 25%;
   }
 
-  .walls__desc {
+  .walls__desc,
+  .equipment__image,
+  .equipment__desc,
+  .equipment__btn {
     width: 50%;
+  }
+
+  .equipment {
+    display: flex;
+  }
+
+  .equipment__image {
+    height: 320px;
+  }
+
+  .equipment__btn {
+    margin-left: auto;
+  }
+
+  .equipments-page-info__content {
+    padding-top: 120px;
+  }
+
+  .equipments-page-info__content {
+    padding-bottom: 120px;
+  }
+
+  .equipment__image {
+    height: 427px;
+  }
+
+  .equipment__title {
+    font-size: 48px;
+  }
+
+  .equipment__price {
+    font-size: 50px;
+  }
+
+  .equipments-list__item:not(:last-child) {
+    margin-bottom: 60px;
   }
 
   .objects-page-info {
