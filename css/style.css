@@ -1085,6 +1085,10 @@ svg path {
   line-height: 28px;
   color: var(--white);
   text-align: right;
+  text-shadow: 1px 0 1px var(--black),
+              0 1px 1px var(--black),
+              -1px 0 1px var(--black),
+              0 -1px 1px var(--black);
 }
 
 .best__number {
@@ -1097,6 +1101,10 @@ svg path {
   line-height: 35px;
   letter-spacing: -0.05em;
   color: var(--white);
+  text-shadow: 1px 0 1px var(--black),
+              0 1px 1px var(--black),
+              -1px 0 1px var(--black),
+              0 -1px 1px var(--black);
 }
 
 .best__thumbs_info {
