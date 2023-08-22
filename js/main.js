@@ -615,3 +615,15 @@ if (visibilityPasswordSwitcher) {
     }
   });
 }
+
+/*** Control submit button ***/
+const controlInput = $('.js-control-submit');
+
+if (controlInput) {
+  controlInput.on('input', function () {
+    const thisParentForm = $(this).closest('form');
+    const thisValLength = $(this).val().length;
+
+    thisValLength < 10 ? $('.from__submit', thisParentForm).addClass('btn--disabled') : $('.from__submit', thisParentForm).removeClass('btn--disabled');
+  });
+}

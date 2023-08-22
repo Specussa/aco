@@ -18,6 +18,10 @@
   .change-image-popup {
     transform: translateX(-50%);
   }
+
+  .sms-code-form .form__input {
+    padding: 0 17px;
+  }
 }
 
 /*** Max-width 575 ***/
@@ -52,6 +56,10 @@
   .order__price {
     margin-bottom: 40px;
   }
+
+  .form__cancel {
+    margin-top: 20px;
+  }
 }
 
 /****** MIN ******/
@@ -80,6 +88,10 @@
 
   .pagination__list {
     gap: 10px;
+  }
+
+  .sms-code-form .form__input {
+    max-width: 60px;
   }
 }
 
@@ -310,6 +322,19 @@
   .order__body {
     margin-bottom: 30px;
   }
+
+  .restore-password-section .section-title {
+    font-size: 42px;
+  }
+
+  .restore-password-form .from__submit {
+    width: calc(50% - 15px);
+  }
+
+  .form__group--btns {
+    display: flex;
+    gap: 20px;
+  }
 }
 
 /*** Min-width 768 and Max-width 1199 ***/
@@ -533,6 +558,26 @@
   .orders-pagination {
     width: calc(66.66% - 14px);
   }
+
+  .restore-password-section .section-title {
+    font-size: 48px;
+  }
+
+  .have-password-tip {
+    margin-bottom: 40px;
+  }
+
+  .restore-password-form .from__submit {
+    margin-top: 60px;
+  }
+
+  .sms-code-form .form__input {
+    max-width: 90px;
+  }
+
+  .form__group--btns {
+    margin-top: 80px;
+  }
 }
 
 /*** Min-width 1200 and Max-width 1919 ***/
@@ -742,5 +787,26 @@
 
   .form__input[type="password"] {
     padding-right: 60px;
+  }
+
+  .restore-password-section .section-title {
+    font-size: 74px;
+  }
+
+  .have-password-tip {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .restore-password-form .from__submit {
+    margin-top: 100px;
+  }
+
+  .restore-password-form .from__submit {
+    width: calc(50% - 22px);
+  }
+
+  .form__group--btns {
+    margin-top: 100px;
   }
 }

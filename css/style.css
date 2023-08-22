@@ -225,6 +225,12 @@ svg path {
   background-color: var(--green);
 }
 
+.btn--disabled {
+  background: var(--gray);
+  color: var(--fgray);
+  pointer-events: none;
+}
+
 .hidden {
   display: none;
 }
@@ -3840,6 +3846,47 @@ svg path {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/*** Restore password ***/
+.restore-password-section .section-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.have-password {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.have-password-tip {
+  margin-bottom: 20px;
+  color: var(--gray);
+}
+
+.have-password a {
+  color: var(--green);
+}
+
+.restore-password-form .from__submit {
+  margin-top: 50px;
+}
+
+.sms-code-form .form__input {
+  max-width: 45px;
+  text-align: center;
+}
+
+.sms-code-form .form__group:not(:last-child) {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.form__group--btns {
+  margin-top: 60px;
+  width: 100%;
 }
 
 /* end search */
