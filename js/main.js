@@ -34,7 +34,9 @@ burger.addEventListener('click', function() {
     menu.classList.remove("active");
     burger.classList.remove("active");
     searchoverlay.classList.remove("active");
-    hsearch.classList.remove("active");
+    hsearch.classList.remove("hidden");
+    hcart.classList.remove("hidden");
+    hlogin.classList.remove("hidden");
     if (window.scrollY > 1) {} else {header.classList.remove("active");}
     document.body.style.height = null;
     document.body.style.overflow = null;
@@ -43,7 +45,9 @@ burger.addEventListener('click', function() {
     menu.classList.add("active");
     burger.classList.add("active");
     header.classList.add("active");
-    hsearch.classList.remove("active");
+    hsearch.classList.remove("hidden");
+    hcart.classList.remove("hidden");
+    hlogin.classList.remove("hidden");
     searchoverlay.classList.remove("active");
     document.body.style.height = "100vh";
     document.body.style.overflow = "hidden";
@@ -53,6 +57,8 @@ burger.addEventListener('click', function() {
 
 // кнопка header__burger
 const hsearch = document.querySelector('.header__search');
+const hcart = document.querySelector('.header__cart');
+const hlogin = document.querySelector('.header__login');
 const searchoverlay = document.querySelector('.search__overlay');
 
 if (hsearch) {
@@ -61,7 +67,9 @@ if (hsearch) {
       bodyoverlay.classList.remove("active");
       menu.classList.remove("active");
       burger.classList.remove("active");
-      hsearch.classList.remove("active");
+      hsearch.classList.remove("hidden");
+      hcart.classList.remove("hidden");
+      hlogin.classList.remove("hidden");
       searchoverlay.classList.remove("active");
       if (window.scrollY > 1) {} else {header.classList.remove("active");}
       document.body.style.height = null;
@@ -71,7 +79,9 @@ if (hsearch) {
       menu.classList.add("active");
       burger.classList.add("active");
       header.classList.add("active");
-      hsearch.classList.add("active");
+      hsearch.classList.add("hidden");
+      hcart.classList.add("hidden");
+      hlogin.classList.add("hidden");
       searchoverlay.classList.add("active");
       menu.classList.remove("active");
       document.body.style.height = "100vh";
@@ -86,6 +96,9 @@ bodyoverlay.addEventListener('click', function() {
   bodyoverlay.classList.remove("active");
   menu.classList.remove("active");
   burger.classList.remove("active");
+  hsearch.classList.remove("hidden");
+  hcart.classList.remove("hidden");
+  hlogin.classList.remove("hidden");
   if (window.scrollY > 1) {} else {header.classList.remove("active");}
   document.body.style.height = null;
   document.body.style.overflow = null;

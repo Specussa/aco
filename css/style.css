@@ -497,6 +497,12 @@ svg path {
   transition: color 0.2s linear 0.5s;
 }
 
+.header__login.hidden,
+.header__cart.hidden,
+.header__search.hidden {
+  display: none;
+}
+
 .header.active .header__login,
 .header.active .header__cart,
 .header.active .header__logo,
