@@ -3272,6 +3272,32 @@ svg path {
   width: 100%;
 }
 
+.equipment__description {
+  width: 100%;
+  height: auto;
+}
+
+.expand__description_text {
+  height: auto;
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--black);
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+  overflow: hidden;
+}
+
+.expand__description_text.active {
+  max-height: 900px;
+}
+
+.equipment__expand_btn {
+  display: flex;
+  margin: 0 0 0 auto;
+}
+
 /*** Objects ***/
 .objects-page-info {
   padding: 65px 0 40px;
@@ -4168,7 +4194,8 @@ svg path {
   .search__info,
   .search__link,
   .equipment__code,
-  .equipments__buttons_link {
+  .equipments__buttons_link,
+  .expand__description_text {
     font-size: 14px;
     line-height: 16px;
   }
@@ -4685,6 +4712,9 @@ svg path {
   .cart__del svg {
     width: 16px;
     height: 16px;
+  }
+  .expand__description_text {
+    margin: 10px 0;
   }
   .footer__list_top .footer__item {
     padding: 0 10px;

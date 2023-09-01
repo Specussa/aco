@@ -566,6 +566,32 @@ if(maps) {
 // end yandex map
 // end map
 
+// start collapse/expand text //
+let expand = document.querySelectorAll(".equipment__description .equipment__expand_btn");
+for (let i = 0; i < expand.length; i++) {
+  console.log(expand[i].previousElementSibling.clientHeight)
+  if (expand[i].previousElementSibling.clientHeight > 60) {
+    expand[i].previousElementSibling.style.maxHeight = "60px";
+  } else {
+    expand[i].style.display = "none";
+  }
+  expand[i].onclick = function(e) {
+    var expandText = this.previousElementSibling;
+    if (expand[i].classList.contains("active")) {
+      expandText.style.maxHeight = "60px";
+      this.previousElementSibling.classList.remove("active");
+      expand[i].classList.remove("active");
+      expand[i].innerText = "Развернуть";
+    } else {
+      expandText.style.maxHeight = expandText.scrollHeight + "px";
+      this.previousElementSibling.classList.add("active");
+      expand[i].classList.add("active");
+      this.innerText = "Свернуть";
+    }
+  }
+}
+// end collapse/expand text //
+
 /*** Tabs ***/
 const tabs = document.querySelector('.js-tabs');
 
