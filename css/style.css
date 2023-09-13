@@ -4074,6 +4074,15 @@ svg path {
 
 /* end search */
 
+/* start privacy */
+
+.privacy__text {
+  max-width: 75%;
+  padding: 0 20px;
+}
+
+/* end privacy */
+
 /* start media 1919px */
 @media (max-width: 1919px) {
   .header__block {
@@ -4329,7 +4338,8 @@ svg path {
   .search__head,
   .search__list,
   .equipments__buttons_item,
-  .equipment__code {
+  .equipment__code,
+  .privacy__text {
     padding: 0 10px;
   }
   .best__right {
@@ -4945,7 +4955,8 @@ svg path {
   }
   .partner__bottom,
   .together__list,
-  .map__list {
+  .map__list,
+  .privacy__text {
     max-width: 100%;
   }
   .map__yandex {
