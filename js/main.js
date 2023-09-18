@@ -91,6 +91,37 @@ if (hsearch) {
 }
 // end
 
+// кнопка header__burger
+const buttonorder = document.querySelector('.button__order');
+const orderoverlay = document.querySelector('.order__overlay');
+const orderclose = document.querySelector('.order__close');
+
+if (buttonorder) {
+  buttonorder.addEventListener('click', function() {
+    if (orderoverlay.classList.contains("active")) {
+      bodyoverlay.style.zIndex = null;
+      bodyoverlay.classList.remove("active");
+      orderoverlay.classList.remove("active");
+      document.body.style.height = null;
+      document.body.style.overflow = null;
+    } else {
+      bodyoverlay.style.zIndex = "120";
+      bodyoverlay.classList.add("active");
+      orderoverlay.classList.add("active");
+      document.body.style.height = "100vh";
+      document.body.style.overflow = "hidden";
+    }
+  })
+  orderclose.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = null;
+    bodyoverlay.classList.remove("active");
+    orderoverlay.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  })
+}
+// end
+
 // кнопка overlay
 bodyoverlay.addEventListener('click', function() {
   bodyoverlay.classList.remove("active");
@@ -99,6 +130,10 @@ bodyoverlay.addEventListener('click', function() {
   hsearch.classList.remove("hidden");
   hcart.classList.remove("hidden");
   hlogin.classList.remove("hidden");
+  if (orderoverlay.classList.contains("active")) {
+    bodyoverlay.style.zIndex = null;
+    orderoverlay.classList.remove("active");
+  }
   if (window.scrollY > 1) {} else {header.classList.remove("active");}
   document.body.style.height = null;
   document.body.style.overflow = null;

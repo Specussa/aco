@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <script>window.console = window.console || function(t) {};</script>
 </head>
 <body>
@@ -108,7 +109,7 @@
             <div class="cart__empty">
               <p class="cart__empty_head">Тут пока ничего нет</p>
               <p class="cart__empty_desc">Ознакомьтесь, пожалуйста, с нашим каталогом </p>
-              <button class="button__default">Оформить заказ</button>
+              <button class="button__default button__order">Оформить заказ</button>
             </div>
           </div>
           <br><br><br><br> <!-- <br> тут не нужен, чтобы 2 блока показать поставил  -->
@@ -541,6 +542,51 @@
         </p>
       </div>
     </div>
+  </div>
+  <div class="order__overlay">
+    <button class="order__close">
+      <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.59529 30.1939C0.773138 31.0161 0.775884 32.3463 1.60143 33.165C2.42697 33.9838 3.7627 33.981 4.58485 33.1589L17.4751 20.2687L30.7922 33.5858C31.6144 34.408 32.9501 34.4107 33.7757 33.592C34.6012 32.7732 34.6039 31.443 33.7818 30.6208L20.4523 17.2914L33.6134 4.13028C34.4356 3.30812 34.4329 1.9779 33.6073 1.15914C32.7818 0.340388 31.446 0.343144 30.6239 1.1653L17.4751 14.3141L4.75319 1.59224C3.93103 0.770082 2.59531 0.767325 1.76976 1.58608C0.94422 2.40483 0.941473 3.73506 1.76363 4.55721L14.4978 17.2914L1.59529 30.1939Z" fill="#AFAFAF"/>
+      </svg>
+    </button>
+    <h2 class="section-title">Оформление заказа</h2>
+    <!-- Registration form -->
+    <form class="form registration-form">
+      <div class="form__group">
+        <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
+      </div>
+  
+      <div class="form__group">
+        <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
+      </div>
+  
+      <div class="form__group">
+        <input class="form__input" name="mail" type="text" placeholder="Почта *" maxlength="50" required>
+      </div>
+  
+      <div class="form__group">
+        <input class="form__input" name="orgId" type="text" placeholder="ИНН организации *" maxlength="50" required>
+      </div>
+  
+      <div class="form__group">
+        <input class="form__input" name="orgId" type="text" placeholder="Название организации *" maxlength="50" required>
+      </div>
+  
+      <div class="form__group">
+        <p class="tip">* - поле, обязательное для заполнения</p>
+      </div>
+      
+      <div class="form__group">
+        <button class="button__default">Зарегистрироваться</button>
+      </div>
+  
+      <div class="form__group">
+        <label class="checkbox">
+          <input class="checkbox__input" name="privacy" type="checkbox">
+          <span class="checkbox__name">Даю согласие на обработку персональных данных</span>
+        </label>
+      </div>
+    </form>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/swiper.min.js"></script>
