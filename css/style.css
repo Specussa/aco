@@ -2405,6 +2405,18 @@ svg path {
   max-width: 100%;
 }
 
+.related__flex .related__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px 40px;
+}
+
+.related__flex .related__item {
+  width: calc(25% - 30px);
+}
+
 /* end related */
 
 /* start questions */
@@ -4776,6 +4788,12 @@ svg path {
     right: 20px;
     top: 20px;
   }
+  .related__flex .related__list {
+    gap: 60px 20px;
+  }
+  .related__flex .related__item {
+    width: calc(25% - 15px);
+  }
   .footer__list_top .footer__item {
     padding: 0 10px;
   }
@@ -4837,7 +4855,8 @@ svg path {
   .cart__user_name,
   .partner__head,
   .working__head,
-  .rent__head {
+  .rent__head,
+  .related__head {
     font-size: 34px;
     line-height: 34px;
   }
@@ -5280,6 +5299,12 @@ svg path {
   .order__overlay {
     padding: 60px 80px;
   }
+  .related__flex .related__list {
+    gap: 40px 20px;
+  }
+  .related__flex .related__item {
+    width: calc(33.333% - 14px);
+  }
   .footer__list_bottom .footer__item:first-child {
     flex-direction: column-reverse;
     gap: 20px;
@@ -5441,7 +5466,8 @@ svg path {
   .cart__user_name,
   .partner__head,
   .working__head,
-  .rent__head {
+  .rent__head,
+  .related__head {
     font-size: 20px;
     line-height: 20px;
   }
@@ -5828,6 +5854,18 @@ svg path {
   .order__close svg {
     width: 22px;
     height: 22px;
+  }
+  .related__flex .related__list {
+    gap: 30px 10px;
+  }
+  .related__flex .related__item {
+    width: calc(50% - 5px);
+  }
+  .button__default {
+    padding: 17px;
+  }
+  .related__button {
+    width: 100%;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
