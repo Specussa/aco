@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="new_tabs tabs largepanel-tabs">
+    <div class="tabs__navigation">
+      <div class="tabs__navigation-item inner-container">
+        <button class="tabs__navigation_button tabs__navigation_first active">Аренда</button>
+      </div>
+
+      <div class="tabs__navigation-item inner-container">
+        <button class="tabs__navigation_button tabs__navigation_second">Покупка</button>
+      </div>
+    </div>
+    <div class="tabs__content">
+      <div class="tabs__content-item tabs__content_first">
+        <ul class="largepanel__list">
+          <li class="largepanel__item">
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["SIZE"]["NAME"] ?></p>
+            </div>
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["SIZE"]["VALUE"] ?></p>
+            </div>
+          </li>
+          <li class="largepanel__item">
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["PRICE_DAY"]["NAME"] ?></p>
+            </div>
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["PRICE_DAY"]["VALUE"] ?></p>
+            </div>
+          </li>
+          <li class="largepanel__item">
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["PRICE_MONTH"]["NAME"] ?></p>
+            </div>
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["PRICE_MONTH"]["VALUE"] ?></p>
+            </div>
+          </li>
+          <li class="largepanel__item">
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["PLEDGE"]["NAME"] ?></p>
+            </div>
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?= $items["PROP"]["PLEDGE"]["VALUE"] ?></p>
+            </div>
+          </li>
+          <li class="largepanel__item">
+            <div class="largepanel__subitem">
+              <p class="largepanel__info">Хотите получить индивидуальное предложение?<br>Зарегистрируйтесь и
+                добавьте товары в корзину</p>
+            </div>
+            <div class="largepanel__subitem">
+              <button class="button__default buy-but-<?=$key?>"  data-value="<? echo $arResult['ADD_URL']; ?>">Добавить в
+                корзину
+              </button>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Buy tab -->
+      <div class="tabs__content-item tabs__content_second hidden">
+        <ul class="largepanel__list">
+          <?
+          $arSkip = [];
+          foreach ($arResult["PROPERTIES"]["POKUPKA"]["VALUE"] as $key => $value):
+
+            if(in_array($key, $arSkip)) continue;
+
+            $arSkip[] = $key+1;?>
+          <li class="largepanel__item">
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?=$value?></p>
+            </div>
+
+            <div class="largepanel__subitem">
+              <p class="largepanel__description"><?=$arResult["PROPERTIES"]["POKUPKA"]["VALUE"][$key+1]?></p>
+            </div>
+          </li>
+          <?endforeach;?>
+
+          <li class="largepanel__item">
+            <div class="largepanel__subitem">
+              <p class="largepanel__info">Хотите получить индивидуальное предложение?<br>Зарегистрируйтесь и
+                добавьте
+                товары в корзину</p>
+            </div>
+
+            <div class="largepanel__subitem">
+              <button class="button__default button__order" data-value="">Обратный звонок</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+
+
+// start new tabs
+const newtabs = document.querySelector('.new_tabs');
+
+if (newtabs) {
+  var tnf = document.getElementsByClassName("tabs__navigation_first");
+  for (i = 0; i < tnf.length; i++) {
+    tnf[i].onclick = function(e) {
+      var tnfb = this.parentElement.parentElement.nextElementSibling.children[0];
+      var tnsb = this.parentElement.parentElement.nextElementSibling.children[1];
+      if (tnfb.classList.contains("hidden")) {
+        this.parentElement.nextElementSibling.children[0].classList.remove("active");
+        tnsb.classList.add("hidden");
+        tnfb.classList.remove("hidden");
+        this.classList.add("active");
+      }
+    };
+  }
+  var tns = document.getElementsByClassName("tabs__navigation_second");
+  for (i = 0; i < tns.length; i++) {
+    tns[i].onclick = function(e) {
+      var tnfb = this.parentElement.parentElement.nextElementSibling.children[0];
+      var tnsb = this.parentElement.parentElement.nextElementSibling.children[1];
+      if (tnsb.classList.contains("hidden")) {
+        this.parentElement.previousElementSibling.children[0].classList.remove("active");
+        tnfb.classList.add("hidden");
+        tnsb.classList.remove("hidden");
+        this.classList.add("active");
+      }
+    };
+  }
+}
+// end new tabs
+  </script>
+</body>
+</html>

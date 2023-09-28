@@ -627,6 +627,39 @@ for (let i = 0; i < expand.length; i++) {
 }
 // end collapse/expand text //
 
+// start new tabs
+const newtabs = document.querySelector('.new_tabs');
+
+if (newtabs) {
+  var tnf = document.getElementsByClassName("tabs__navigation_first");
+  for (i = 0; i < tnf.length; i++) {
+    tnf[i].onclick = function(e) {
+      var tnfb = this.parentElement.parentElement.nextElementSibling.children[0];
+      var tnsb = this.parentElement.parentElement.nextElementSibling.children[1];
+      if (tnfb.classList.contains("hidden")) {
+        this.parentElement.nextElementSibling.children[0].classList.remove("active");
+        tnsb.classList.add("hidden");
+        tnfb.classList.remove("hidden");
+        this.classList.add("active");
+      }
+    };
+  }
+  var tns = document.getElementsByClassName("tabs__navigation_second");
+  for (i = 0; i < tns.length; i++) {
+    tns[i].onclick = function(e) {
+      var tnfb = this.parentElement.parentElement.nextElementSibling.children[0];
+      var tnsb = this.parentElement.parentElement.nextElementSibling.children[1];
+      if (tnsb.classList.contains("hidden")) {
+        this.parentElement.previousElementSibling.children[0].classList.remove("active");
+        tnfb.classList.add("hidden");
+        tnsb.classList.remove("hidden");
+        this.classList.add("active");
+      }
+    };
+  }
+}
+// end new tabs
+
 /*** Tabs ***/
 const tabs = document.querySelector('.js-tabs');
 
@@ -719,5 +752,31 @@ if (controlInput) {
     const thisValLength = $(this).val().length;
 
     thisValLength < 10 ? $('.from__submit', thisParentForm).addClass('btn--disabled') : $('.from__submit', thisParentForm).removeClass('btn--disabled');
+  });
+}
+
+/*** Anchor scroll ***/
+const anchor = $('.js-anchor');
+
+if (anchor) {
+  anchor.on('click', function (e) {
+    e.preventDefault();
+
+    const thisAnchorId = $(this).attr('href');
+    const headerHeight = $('header').height();
+    const anchorElemTop = $(thisAnchorId).offset().top
+
+    $('body, html').animate({ scrollTop: anchorElemTop - headerHeight }, 500);
+  });
+}
+
+/*** Registration ***/
+const privacyCheck = $('.js-toggle-submit-disabled');
+
+if (privacyCheck) {
+  privacyCheck.on('click', function () {
+    const registerSubmit = $('.js-registration-form [type="submit"]')[0];
+
+    registerSubmit.classList.toggle('btn--disabled');
   });
 }
