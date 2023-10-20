@@ -438,7 +438,13 @@ if(equipmentsslider){
     slideToClickedSlide: false,
     allowTouchMove: false,
     breakpoints: {
+      1199: {
+        slidesPerView: 3,
+        slideToClickedSlide: true,
+        allowTouchMove: true,
+      },
       766: {
+        slidesPerView: 2,
         slideToClickedSlide: true,
         allowTouchMove: true,
       },
@@ -780,3 +786,44 @@ if (privacyCheck) {
     registerSubmit.classList.toggle('btn--disabled');
   });
 }
+
+function addOrg() {
+  let neworg = document.querySelectorAll('.registration__neworg')
+  let neworgLM = ((neworg[neworg.length-1]).getAttribute('name'));
+  let neworgNM = Number(neworgLM) + 1;
+
+  let elem = document.createElement("div");
+  elem.classList.add('registration__neworg');
+  elem.id = 'neworg_' + neworgNM;
+  elem.setAttribute('name',neworgNM)
+  elem.innerHTML = `
+    <div class="form__group">
+      <input class="form__input" type="text" id="innorg_${neworgNM}" placeholder="ИНН организации *" maxlength="50" required>
+    </div>
+    <div class="form__group">
+      <input class="form__input" type="text" id="nameorg_${neworgNM}" placeholder="Наименование организации *" maxlength="50" required>
+    </div>
+    <a class="registration__neworg_del" data-del="delete">Удалить организацию</a>
+  `;
+
+  let parentGuest = document.getElementById("neworg_"+neworgLM);
+  parentGuest.parentNode.insertBefore(elem, parentGuest.nextSibling);
+}
+function removeElem(delElem, attribute, attributeName) {
+  if (!(delElem && attribute && attributeName)) return;
+  return function(e) {
+    let target = e.target;
+    if (!(target.hasAttribute(attribute) ?
+        (target.getAttribute(attribute) === attributeName ? true : false) : false)) return;
+    let elem = target;
+    while (target != this) {
+      if (target.classList.contains(delElem)) {
+        target.remove();
+        return;
+      }
+      target = target.parentNode;
+    }
+    return;
+  };
+}
+document.addEventListener("click", removeElem("registration__neworg", "data-del", "delete"));

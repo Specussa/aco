@@ -128,10 +128,7 @@
         
         <!-- Registration form -->
         <form class="form registration-form">
-          <div class="form__group">
-            <input class="form__input" name="orgId" type="text" placeholder="ИНН организации *" maxlength="50" required>
-          </div>
-  
+          <p class="registration__head">Личная информация</p>
           <div class="form__group">
             <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
           </div>
@@ -230,7 +227,24 @@
               </div>
             </div>
           </div>
-  
+          <div class="registration__flex">
+            <p class="registration__head">Данные организации</p>
+            <a class="registration__button" onclick="addOrg()">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 0.5H11V20.5H9V0.5Z" fill="currentColor"/>
+                <path d="M0 11.8846V10.1154H20V11.8846H0Z" fill="currentColor"/>
+              </svg>
+              <span>Добавить организацию</span>
+            </a>
+          </div>
+          <div class="registration__neworg" id="neworg_1" name="1">
+            <div class="form__group">
+              <input class="form__input" type="text" placeholder="ИНН организации *" maxlength="50" required>
+            </div>
+            <div class="form__group">
+              <input class="form__input" type="text" placeholder="Наименование организации *" maxlength="50" required>
+            </div>
+          </div>
           <div class="form__group">
             <p class="tip">* - поле, обязательное для заполнения</p>
           </div>
