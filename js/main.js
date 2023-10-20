@@ -938,12 +938,12 @@ if (cartuser) {
   const cartuserList = document.querySelector('.cart__user_list');
   
   const selectid = function (obselect) {
-    const SELECT_TITLE_COUNT = document.querySelector(SELECT_TITLE).getAttribute('data-select-item');
+    const SELECT_TITLE_COUNT = document.querySelector('[data-select-title]').getAttribute('data-select-item');
     cartuserAllList.forEach(n => n.classList.remove('active'));
     document.querySelector('.cart__user_list[data-select-item="' + SELECT_TITLE_COUNT + '"]').classList.add('active');
   };
   const obselect = new MutationObserver(selectid);
   const config = {attributes: true};
-  obselect.observe(document.querySelector(SELECT_TITLE), config);
+  obselect.observe(document.querySelector('[data-select-title]'), config);
 }
 // end select
