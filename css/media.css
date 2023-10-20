@@ -331,7 +331,8 @@
     align-items: flex-end;
   }
 
-  .order__btn {
+  .order__btn,
+  .neworder__btn {
     width: calc(33.33% - 15px);
     margin-left: auto;
   }
@@ -670,10 +671,6 @@
 
 /*** Min-width 1200 and Max-width 1919 ***/
 @media (min-width: 1200px) and (max-width: 1919px) {
-  .profile {
-    padding-top: 80px;
-  }
-
   .logout-btn {
     top: 80px;
   }

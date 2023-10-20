@@ -123,6 +123,7 @@ if (buttonorder) {
 // end
 
 // кнопка overlay
+const neworderoverlay = document.querySelector(".neworder__overlay");
 bodyoverlay.addEventListener('click', function() {
   bodyoverlay.classList.remove("active");
   menu.classList.remove("active");
@@ -130,9 +131,13 @@ bodyoverlay.addEventListener('click', function() {
   hsearch.classList.remove("hidden");
   hcart.classList.remove("hidden");
   hlogin.classList.remove("hidden");
-  if (orderoverlay.classList.contains("active")) {
+  if (orderoverlay) {
     bodyoverlay.style.zIndex = null;
     orderoverlay.classList.remove("active");
+  }
+  if (neworderoverlay) {
+    bodyoverlay.style.zIndex = null;
+    neworderoverlay.classList.remove("active");
   }
   if (window.scrollY > 1) {} else {header.classList.remove("active");}
   document.body.style.height = null;
@@ -957,3 +962,35 @@ $('.js-org-filter .orgs-heading__filters-item').on('click', function () {
   $('.js-org-filter .orgs-heading__filters-item').removeClass('active');
   $(this).addClass('active');
 });
+
+// start повторить заказ
+var neworderbtn = document.querySelector(".neworder__btn");
+var neworderclose = document.querySelector(".neworder__close");
+var neworderbtns = document.querySelectorAll(".neworder__btn");
+if(neworderbtn){
+  for (i = 0; i < neworderbtns.length; i++) {
+    neworderbtns[i].onclick = function(e) {
+      if (neworderoverlay.classList.contains("active")) {
+        bodyoverlay.style.zIndex = null;
+        bodyoverlay.classList.remove("active");
+        neworderoverlay.classList.remove("active");
+        document.body.style.height = null;
+        document.body.style.overflow = null;
+      } else {
+        bodyoverlay.style.zIndex = "120";
+        bodyoverlay.classList.add("active");
+        neworderoverlay.classList.add("active");
+        document.body.style.height = "100vh";
+        document.body.style.overflow = "hidden";
+      }
+    };
+  }
+  neworderclose.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = null;
+    bodyoverlay.classList.remove("active");
+    neworderoverlay.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  })
+}
+// end повторить заказ

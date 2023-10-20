@@ -50,6 +50,11 @@
         </li>
       </ul>
       <div class="header__buttons">
+        <button class="header__search">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 16.5339C1 7.95477 7.88074 1 16.3686 1C20.4446 1 24.3536 2.6366 27.2358 5.54978C30.1179 8.46295 31.7371 12.4141 31.7371 16.5339C31.7371 25.1131 24.8564 32.0678 16.3686 32.0678C7.88074 32.0678 1 25.1131 1 16.5339ZM31.4817 29.0419L36.0589 32.7366H36.1383C37.0644 33.6726 37.0644 35.1902 36.1383 36.1261C35.2123 37.0621 33.7109 37.0621 32.7849 36.1261L28.9865 31.7728C28.6274 31.4111 28.4255 30.9198 28.4255 30.4073C28.4255 29.8949 28.6274 29.4036 28.9865 29.0419C29.679 28.3541 30.7891 28.3541 31.4817 29.0419Z" fill="currentColor"/>
+          </svg>
+        </button>
         <a href="cart.html" class="header__cart">
           <svg width="78" height="73" viewBox="0 0 78 73" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -78,8 +83,6 @@
     </div>
   </div>
 </header>
-
-<!-- Main -->
 <main class="main">
   <!-- Top padding -->
   <section class="top">
@@ -92,6 +95,30 @@
     </div>
     <div class="container top__container">
       <div class="top__block">
+      </div>
+    </div>
+  </section>
+  <section class="breadcrumbs">
+    <div class="border border__gray">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container breadcrumbs__container">
+      <div class="breadcrumbs__block">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link link">Главная</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -150,9 +177,8 @@
                   </div>
                 </div>
                 
-                <div class="form__group">
-                  <input class="form__input" name="password" type="password" placeholder="Пароль *" maxlength="50"
-                         required>
+                <div class="form__group" id="form__password">
+                  <input class="form__input" name="password" type="password" placeholder="Пароль *" maxlength="50" disabled>
   
                   <div class="user-info-form__edit-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -183,8 +209,8 @@
                   </div>
                 </div>
                 
-                <div class="form__group">
-                  <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
+                <div class="form__group" id="form__phone">
+                  <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" disabled>
   
                   <div class="user-info-form__edit-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -386,7 +412,7 @@
                         <p class="order__price-item">Итого <span class="order__total">56 652 руб</span></p>
                       </div>
           
-                      <button class="btn button__white order__btn">Повторить заказ</button>
+                      <button class="btn button__white neworder__btn">Повторить заказ</button>
                     </div>
                   </li>
       
@@ -411,7 +437,7 @@
                           <div class="cart__right">
                             <div class="cart__buttons">
                               <div class="cart__input">
-                                <input type="text" id="1" class="text" maxlength="18" min="0" step="1" value="12">
+                                <input type="text" class="text" maxlength="18" min="0" step="1" value="12">
                                 <label for="1" class="cart__label">шт</label>
                               </div>
                             </div>
@@ -433,7 +459,7 @@
                           <div class="cart__right">
                             <div class="cart__buttons">
                               <div class="cart__input">
-                                <input type="text" id="2" class="text" maxlength="18" min="0" step="1" value="2">
+                                <input type="text" class="text" maxlength="18" min="0" step="1" value="2">
                                 <label for="2" class="cart__label">шт</label>
                               </div>
                             </div>
@@ -454,7 +480,7 @@
                           <div class="cart__right">
                             <div class="cart__buttons">
                               <div class="cart__input">
-                                <input type="text" id="3" class="text" maxlength="18" min="0" step="1" value="2">
+                                <input type="text" class="text" maxlength="18" min="0" step="1" value="2">
                                 <label for="3" class="cart__label">шт</label>
                               </div>
                             </div>
@@ -472,7 +498,7 @@
                         <p class="order__price-item">Итого <span class="order__total">42 180 руб</span></p>
                       </div>
           
-                      <button class="btn button__white order__btn">Повторить заказ</button>
+                      <button class="btn button__white neworder__btn">Повторить заказ</button>
                     </div>
                   </li>
                 </ul>
@@ -709,6 +735,172 @@
           </ul>
         </li>
       </ul>
+    </div>
+  </div>
+</div>
+<div class="neworder__overlay">
+  <button class="neworder__close">
+    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.59529 30.1939C0.773138 31.0161 0.775884 32.3463 1.60143 33.165C2.42697 33.9838 3.7627 33.981 4.58485 33.1589L17.4751 20.2687L30.7922 33.5858C31.6144 34.408 32.9501 34.4107 33.7757 33.592C34.6012 32.7732 34.6039 31.443 33.7818 30.6208L20.4523 17.2914L33.6134 4.13028C34.4356 3.30812 34.4329 1.9779 33.6073 1.15914C32.7818 0.340388 31.446 0.343144 30.6239 1.1653L17.4751 14.3141L4.75319 1.59224C3.93103 0.770082 2.59531 0.767325 1.76976 1.58608C0.94422 2.40483 0.941473 3.73506 1.76363 4.55721L14.4978 17.2914L1.59529 30.1939Z" fill="#AFAFAF"></path>
+    </svg>
+  </button>
+  <div class="cart__order">
+    <ul class="cart__list">
+      <li class="cart__item">
+        <div class="cart__left">
+          <div class="cart__image"><img src="img/cart/cart_1.webp" alt=""></div>
+          <div class="cart__info">
+            <p class="cart__name">Щит линейный 0,75х3,0 м</p>
+            <p class="cart__desc cart__desc_tablet">Аренда</p>
+          </div>
+        </div>
+        <div class="cart__right">
+          <div class="cart__buttons">
+            <span class="cart__minus">
+              <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="0.5" width="15" height="1" fill="currentColor"/>
+              </svg>
+            </span>
+            <div class="cart__input">
+              <input type="text" id="1" class="text" maxlength="18" min="0" step="1" value="12">
+              <label for="1" class="cart__label">шт</label>
+            </div>
+            <span class="cart__plus">
+              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="7.31641" width="15" height="1.36364" fill="currentColor"/>
+                <rect x="7.75" y="15.5" width="15" height="1.36364" transform="rotate(-90 7.75 15.5)" fill="currentColor"/>
+              </svg>
+            </span>
+          </div>
+          <p class="cart__desc">Аренда</p>
+          <p class="cart__price">28 800 руб</p>
+          <button class="cart__del">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.156 19.3195C1.66271 19.8128 1.66436 20.6109 2.15968 21.1021C2.65501 21.5934 3.45645 21.5917 3.94974 21.0984L11.6839 13.3643L19.6742 21.3546C20.1675 21.8479 20.9689 21.8496 21.4642 21.3583C21.9595 20.8671 21.9612 20.0689 21.4679 19.5756L13.4702 11.578L21.3669 3.68129C21.8602 3.188 21.8585 2.38986 21.3632 1.89861C20.8679 1.40736 20.0665 1.40901 19.5732 1.9023L11.6839 9.7916L4.05074 2.15847C3.55745 1.66517 2.75601 1.66352 2.26069 2.15477C1.76536 2.64603 1.76371 3.44416 2.25701 3.93745L9.89751 11.578L2.156 19.3195Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="cart__item">
+        <div class="cart__left">
+          <div class="cart__image"><img src="img/cart/cart_2.webp" alt=""></div>
+          <div class="cart__info">
+            <p class="cart__name">Угол распалубочный L=3,0 м</p>
+            <p class="cart__desc cart__desc_tablet">Аренда</p>
+          </div>
+        </div>
+        <div class="cart__right">
+          <div class="cart__buttons">
+            <span class="cart__minus">
+              <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="0.5" width="15" height="1" fill="currentColor"/>
+              </svg>
+            </span>
+            <div class="cart__input">
+              <input type="text" id="2" class="text" maxlength="18" min="0" step="1" value="2">
+              <label for="2" class="cart__label">шт</label>
+            </div>
+            <span class="cart__plus">
+              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="7.31641" width="15" height="1.36364" fill="currentColor"/>
+                <rect x="7.75" y="15.5" width="15" height="1.36364" transform="rotate(-90 7.75 15.5)" fill="currentColor"/>
+              </svg>
+            </span>
+          </div>
+          <p class="cart__desc">Аренда</p>
+          <p class="cart__price">13 380 руб</p>
+          <button class="cart__del">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.156 19.3195C1.66271 19.8128 1.66436 20.6109 2.15968 21.1021C2.65501 21.5934 3.45645 21.5917 3.94974 21.0984L11.6839 13.3643L19.6742 21.3546C20.1675 21.8479 20.9689 21.8496 21.4642 21.3583C21.9595 20.8671 21.9612 20.0689 21.4679 19.5756L13.4702 11.578L21.3669 3.68129C21.8602 3.188 21.8585 2.38986 21.3632 1.89861C20.8679 1.40736 20.0665 1.40901 19.5732 1.9023L11.6839 9.7916L4.05074 2.15847C3.55745 1.66517 2.75601 1.66352 2.26069 2.15477C1.76536 2.64603 1.76371 3.44416 2.25701 3.93745L9.89751 11.578L2.156 19.3195Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="cart__item">
+        <div class="cart__left">
+          <div class="cart__image"><img src="img/cart/cart_1.webp" alt=""></div>
+          <div class="cart__info">
+            <p class="cart__name">Фанера ламинированная 18х1220х2440 мм</p>
+            <p class="cart__desc cart__desc_tablet">Аренда</p>
+          </div>
+        </div>
+        <div class="cart__right">
+          <div class="cart__buttons">
+            <span class="cart__minus">
+              <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="0.5" width="15" height="1" fill="currentColor"/>
+              </svg>
+            </span>
+            <div class="cart__input">
+              <input type="text" id="3" class="text" maxlength="18" min="0" step="1" value="2">
+              <label for="3" class="cart__label">шт</label>
+            </div>
+            <span class="cart__plus">
+              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="7.31641" width="15" height="1.36364" fill="currentColor"/>
+                <rect x="7.75" y="15.5" width="15" height="1.36364" transform="rotate(-90 7.75 15.5)" fill="currentColor"/>
+              </svg>
+            </span>
+          </div>
+          <p class="cart__desc">Аренда</p>
+          <p class="cart__price">3 588 руб</p>
+          <button class="cart__del">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.156 19.3195C1.66271 19.8128 1.66436 20.6109 2.15968 21.1021C2.65501 21.5934 3.45645 21.5917 3.94974 21.0984L11.6839 13.3643L19.6742 21.3546C20.1675 21.8479 20.9689 21.8496 21.4642 21.3583C21.9595 20.8671 21.9612 20.0689 21.4679 19.5756L13.4702 11.578L21.3669 3.68129C21.8602 3.188 21.8585 2.38986 21.3632 1.89861C20.8679 1.40736 20.0665 1.40901 19.5732 1.9023L11.6839 9.7916L4.05074 2.15847C3.55745 1.66517 2.75601 1.66352 2.26069 2.15477C1.76536 2.64603 1.76371 3.44416 2.25701 3.93745L9.89751 11.578L2.156 19.3195Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </li>
+    </ul>
+    <div class="cart__bottom">
+      <ul class="cart__list_bottom">
+        <li class="cart__item_bottom">
+          <p class="cart__prepayment"><span>Залог</span> 10 884 руб</p>
+          <p class="cart__total"><span>Итого</span> 56 652 руб</p>
+        </li>
+        <li class="cart__item_bottom">
+          <button class="button__default">Продолжить</button>
+          <a href="" class="button__default button__white">Перейти в корзину</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="search__overlay">
+  <div class="border border__green">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="container search__overlay_container">
+    <div class="border border__green">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="search__overlay_block">
+      <div class="search__overlay_flex">
+        <input type="text" id="search__overlay_input" name="search" value="" class="search__overlay_input" placeholder="Поиск">
+        <div class="search__overlay_button">
+          <label for="search__overlay_input" id="search__overlay_icon" class="search__overlay_icon active">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1 16.5339C1 7.95477 7.88074 1 16.3686 1C20.4446 1 24.3536 2.6366 27.2358 5.54978C30.1179 8.46295 31.7371 12.4141 31.7371 16.5339C31.7371 25.1131 24.8564 32.0678 16.3686 32.0678C7.88074 32.0678 1 25.1131 1 16.5339ZM31.4817 29.0419L36.0589 32.7366H36.1383C37.0644 33.6726 37.0644 35.1902 36.1383 36.1261C35.2123 37.0621 33.7109 37.0621 32.7849 36.1261L28.9865 31.7728C28.6274 31.4111 28.4255 30.9198 28.4255 30.4073C28.4255 29.8949 28.6274 29.4036 28.9865 29.0419C29.679 28.3541 30.7891 28.3541 31.4817 29.0419Z" fill="currentColor"/>
+            </svg>
+          </label>
+          <span id="search__overlay_del" class="search__overlay_del">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41612 30.5865C2.63507 31.3676 2.63768 32.6313 3.42194 33.4091C4.20621 34.1869 5.47515 34.1843 6.2562 33.4033L18.5019 21.1576L31.1532 33.8089C31.9342 34.5899 33.2032 34.5925 33.9875 33.8147C34.7717 33.0369 34.7743 31.7732 33.9933 30.9921L21.3303 18.3292L33.8334 5.8261C34.6144 5.04506 34.6118 3.78135 33.8275 3.00353C33.0433 2.22571 31.7743 2.22833 30.9933 3.00938L18.5019 15.5008L6.41612 3.41497C5.63507 2.63392 4.36613 2.6313 3.58186 3.40912C2.79759 4.18694 2.79499 5.45065 3.57604 6.2317L15.6735 18.3292L3.41612 30.5865Z" fill="currentColor"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <p class="search__overlay_info">
+        Введите запрос и нажмите Enter
+      </p>
     </div>
   </div>
 </div>

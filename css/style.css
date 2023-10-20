@@ -2351,7 +2351,8 @@ svg path {
   transform: translateY(-50%) rotate(90deg);
 }
 
-.order__overlay {
+.order__overlay,
+.neworder__overlay {
   width: 100%;
   max-width: 1120px;
   height: 100%;
@@ -2371,7 +2372,8 @@ svg path {
   overflow-y: scroll;
 }
 
-.order__overlay.active {
+.order__overlay.active,
+.neworder__overlay.active {
   top: 50%;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
@@ -2380,14 +2382,16 @@ svg path {
   transition: transform 0.3s linear, top 0.3s linear, opacity 0s linear 0s;
 }
 
-.order__close {
+.order__close,
+.neworder__close {
   padding: 20px;
   position: absolute;
   right: 40px;
   top: 40px;
 }
 
-.order__close svg {
+.order__close svg,
+.neworder__close svg {
   width: 33px;
   height: 33px;
   -webkit-transform: rotate(0deg);
@@ -2396,9 +2400,25 @@ svg path {
   transition: transform 0.2s linear;
 }
 
-.order__close:hover svg {
+.order__close:hover svg,
+.neworder__close:hover svg {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.neworder__overlay {
+  padding: 140px 20px 40px;
+}
+
+.neworder__overlay .cart__item_bottom:nth-child(1) {
+  flex-direction: column;
+}
+
+.neworder__overlay .cart__order,
+.neworder__overlay .cart__prepayment,
+.neworder__overlay .cart__total,
+.neworder__overlay .cart__manager {
+  width: 100%;
 }
 
 /* end cart */
@@ -3815,7 +3835,6 @@ svg path {
 /*** Profile ***/
 .profile {
   position: relative;
-  margin-top: 80px;
   padding: 40px 0 60px;
   border: 1px solid var(--border);
   border-bottom: 0;
@@ -3974,8 +3993,9 @@ svg path {
   padding-right: 60px;
 }
 
-.form__input[type="password"] {
+.form__input {
   padding-right: 55px;
+  background-color: var(--white);
 }
 
 .toggle-show-password {
@@ -5036,7 +5056,8 @@ svg path {
   .expand__description_text {
     margin: 10px 0;
   }
-  .order__close {
+  .order__close,
+  .neworder__close {
     right: 20px;
     top: 20px;
   }
@@ -5054,6 +5075,9 @@ svg path {
   }
   .related__flex .related__item {
     width: calc(25% - 15px);
+  }
+  .neworder__overlay {
+    padding: 100px 20px 40px;
   }
   .footer__list_top .footer__item {
     padding: 0 10px;
@@ -6126,11 +6150,13 @@ svg path {
   .order__overlay {
     padding: 30px 20px;
   }
-  .order__close {
+  .order__close,
+  .neworder__close {
     right: 0;
     top: 0;
   }
-  .order__close svg {
+  .order__close svg,
+  .neworder__close svg {
     width: 22px;
     height: 22px;
   }
@@ -6151,6 +6177,15 @@ svg path {
   }
   .largepanel-tabs {
     width: 100%;
+  }
+  .neworder__overlay .cart__item_bottom {
+    flex-direction: column;
+  }
+  .neworder__overlay .button__default {
+    width: 100%;
+  }
+  .neworder__overlay {
+    padding: 80px 20px 40px;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
