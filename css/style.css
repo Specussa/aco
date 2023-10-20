@@ -1936,10 +1936,6 @@ svg path {
   margin-bottom: 30px;
 }
 
-.empty-cart-btn {
-
-}
-
 .select__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2189,6 +2185,7 @@ svg path {
 .cart__input input {
   width: 50px;
   text-align: center;
+  background-color: var(--white);
 }
 
 .cart__minus,
@@ -3827,7 +3824,7 @@ svg path {
 }
 
 .profile__sidebar {
-  margin-top: 113px;
+  margin-top: 150px;
 }
 
 .user-info-form .form__group:not(:last-child) {
@@ -3842,7 +3839,7 @@ svg path {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  width: 100%;
+  width: 75%;
 }
 
 .user-avatar {

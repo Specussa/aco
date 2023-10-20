@@ -42,6 +42,7 @@
   }
 
   .profile__content .tabs__navigation {
+    width: 100%;
     top: 40px;
   }
 

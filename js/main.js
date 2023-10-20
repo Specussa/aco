@@ -798,10 +798,10 @@ function addOrg() {
   elem.setAttribute('name',neworgNM)
   elem.innerHTML = `
     <div class="form__group">
-      <input class="form__input" type="text" id="innorg_${neworgNM}" placeholder="ИНН организации *" maxlength="50" required>
+      <input class="form__input" type="text" name="UF_INN_${neworgNM}" id="innorg_${neworgNM}" placeholder="ИНН организации *" maxlength="50" required>
     </div>
     <div class="form__group">
-      <input class="form__input" type="text" id="nameorg_${neworgNM}" placeholder="Наименование организации *" maxlength="50" required>
+      <input class="form__input" type="text" name="UF_COMPANY_NAME_${neworgNM}" id="nameorg_${neworgNM}" placeholder="Наименование организации *" maxlength="50" required>
     </div>
     <a class="registration__neworg_del" data-del="delete">Удалить организацию</a>
   `;
