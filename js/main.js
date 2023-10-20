@@ -957,11 +957,20 @@ if (cartuser) {
 }
 // end select
 
-/*** org filter ***/
-$('.js-org-filter .orgs-heading__filters-item').on('click', function () {
-  $('.js-org-filter .orgs-heading__filters-item').removeClass('active');
-  $(this).addClass('active');
-});
+// start org filter
+var orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
+  for (i = 0; i < orgshfi.length; i++) {
+    orgshfi[i].onclick = function(e) {
+      if (!this.classList.contains("active")) {
+        const orgshfiCOUNT = this.getAttribute('data-select-item');
+        orgshfi.forEach(n => n.classList.remove('active'));
+        document.querySelectorAll('.user_info_form').forEach(n => n.classList.remove('active'));
+        this.classList.add('active')
+        document.querySelector('.user_info_form[data-select-item="' + orgshfiCOUNT + '"]').classList.add('active');
+      }
+    };
+  }
+// end org filter
 
 // start повторить заказ
 var neworderbtn = document.querySelector(".neworder__btn");
@@ -993,4 +1002,11 @@ if(neworderbtn){
     document.body.style.overflow = null;
   })
 }
-// end повторить заказ
+// end повторить заказэ
+
+// start добавить организацию в лк
+const orgshf = document.querySelectorAll('.orgs-heading__filters');
+[...orgshf].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+const userifs = document.querySelectorAll('.user-info-forms');
+[...userifs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+// end

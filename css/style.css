@@ -3854,6 +3854,14 @@ svg path {
   margin-top: 150px;
 }
 
+.user_info_form {
+  display: none;
+}
+
+.user_info_form.active {
+  display: block;
+}
+
 .user-info-form .form__group:not(:last-child) {
   margin-bottom: 20px;
 }
