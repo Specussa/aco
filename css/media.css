@@ -303,7 +303,8 @@
     height: 200px;
   }
 
-  .orders-heading__filters {
+  .orders-heading__filters,
+  .orgs-heading__filters {
     gap: 15px;
   }
 
@@ -816,7 +817,8 @@
 
   .orders-heading__filters-item,
   .orders-heading__label,
-  .orders-heading__input {
+  .orders-heading__input,
+  .orgs-heading__filters-item {
     font-size: 24px;
   }
 

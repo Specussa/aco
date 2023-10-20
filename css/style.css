@@ -4029,7 +4029,8 @@ svg path {
   margin-bottom: 30px;
 }
 
-.orders-heading__filters {
+.orders-heading__filters,
+.orgs-heading__filters {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -4037,7 +4038,12 @@ svg path {
   cursor: pointer;
 }
 
-.orders-heading__filters-item {
+.orgs-heading__filters {
+  padding: 0 0 20px;
+}
+
+.orders-heading__filters-item,
+.orgs-heading__filters-item  {
   padding: 15px 20px;
   font-size: 14px;
   font-weight: 500;
@@ -4046,7 +4052,8 @@ svg path {
   transition: .2s ease;
 }
 
-.orders-heading__filters-item.active {
+.orders-heading__filters-item.active,
+.orgs-heading__filters-item.active {
   color: var(--back);
   background: var(--border);
 }

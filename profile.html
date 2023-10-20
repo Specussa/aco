@@ -221,8 +221,20 @@
             </div>
 
             <!-- User org -->
-            <div id="user-org" class="tabs__content-item">
+            <div id="user-org" class="tabs__content-item hidden">
               <form class="form user-info-form">
+                <div class="js-org-filter orgs-heading__filters">
+                  <div class="orgs-heading__filters-item active">ООО «Чебурашка»</div>
+                  <div class="orgs-heading__filters-item">ООО «Терминатор»</div>
+                  <div class="orgs-heading__filters-item">ООО «Ромашка»</div>
+                  <a class="registration__button">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 0.5H11V20.5H9V0.5Z" fill="currentColor"/>
+                      <path d="M0 11.8846V10.1154H20V11.8846H0Z" fill="currentColor"/>
+                    </svg>
+                    <span>Добавить организацию</span>
+                  </a>
+                </div>
                 <div class="form__group">
                   <input class="form__input" name="user" type="text" placeholder="Наименование организации *" maxlength="50" required>
   

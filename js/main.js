@@ -951,3 +951,9 @@ if (cartuser) {
   obselect.observe(document.querySelector('[data-select-title]'), config);
 }
 // end select
+
+/*** org filter ***/
+$('.js-org-filter .orgs-heading__filters-item').on('click', function () {
+  $('.js-org-filter .orgs-heading__filters-item').removeClass('active');
+  $(this).addClass('active');
+});
