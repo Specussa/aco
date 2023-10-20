@@ -2063,6 +2063,14 @@ svg path {
   object-fit: cover;
 }
 
+.cart__user_logo img {
+  display: none;
+}
+
+.cart__user_logo img.active {
+  display: block;
+}
+
 .cart__user_list {
   display: none;
   flex-direction: column;

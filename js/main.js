@@ -924,9 +924,11 @@ if (selectbox) {
   }
 
   Select.attach()
-
+  
   const selectlc = document.querySelectorAll('.select__list');
   [...selectlc].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+  const cartuserlogo = document.querySelectorAll('.cart__user_logo');
+  [...cartuserlogo].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
 }
 
 cartuser = document.querySelector('.select__list');
@@ -935,12 +937,14 @@ if (cartuser) {
   [...cartuls].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
   
   const cartuserAllList = document.querySelectorAll('.cart__user .cart__user_list');
-  const cartuserList = document.querySelector('.cart__user_list');
+  const cartuserlogoIMG = document.querySelectorAll('.cart__user_logo img');
   
   const selectid = function (obselect) {
     const SELECT_TITLE_COUNT = document.querySelector('[data-select-title]').getAttribute('data-select-item');
     cartuserAllList.forEach(n => n.classList.remove('active'));
+    cartuserlogoIMG.forEach(n => n.classList.remove('active'));
     document.querySelector('.cart__user_list[data-select-item="' + SELECT_TITLE_COUNT + '"]').classList.add('active');
+    document.querySelector('.cart__user_logo img[data-select-item="' + SELECT_TITLE_COUNT + '"]').classList.add('active');
   };
   const obselect = new MutationObserver(selectid);
   const config = {attributes: true};
