@@ -829,7 +829,6 @@ function removeElem(delElem, attribute, attributeName) {
 document.addEventListener("click", removeElem("registration__neworg", "data-del", "delete"));
 
 // start select
-select__box
 selectbox = document.querySelector('.select__box');
 if (selectbox) {
   const SELECT = '[data-select]'
