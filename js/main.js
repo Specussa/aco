@@ -827,3 +827,116 @@ function removeElem(delElem, attribute, attributeName) {
   };
 }
 document.addEventListener("click", removeElem("registration__neworg", "data-del", "delete"));
+
+// start select
+const SELECT = '[data-select]'
+const SELECT_LIST = '[data-select-list]'
+const SELECT_ARROW = '[data-select-arrow]'
+const SELECT_ACTION = '[data-select-action]'
+const SELECT_TITLE = '[data-select-title]'
+const SELECT_INPUT = '[data-select-input]'
+const SELECT_ITEM = 'selectItem'
+const OPEN_SELECT = 'selectOpen'
+
+class Select {
+  static attach() {
+    document.querySelectorAll(SELECT)
+      .forEach(select => new Select().init(select))
+  }
+
+  init(select) {
+    if (this.findSelect(select)) {
+      this.applyListener()
+    }
+  }
+
+  applyListener() {
+    document.querySelector('*').addEventListener('click', e => {
+      const element = this.select.contains(e.target) && e.target.closest(SELECT_ACTION)
+
+      if (this.isCallSelectElement(element)) {
+        if (this.isOpened()) {
+          this.closeSelectList();
+        } else {
+          this.openSelectList()
+        }
+      }
+
+      if (this.isCallSelectItemElement(element)) {
+        this.addSelectedValue(element);
+        document.querySelector(SELECT_TITLE).setAttribute('data-select-item', element.getAttribute('data-select-item'));
+      }
+
+      if (this.isCallSelectElement(element) !== true && this.selectOverlayIsClickedElement(element) !== true) {
+        this.closeSelectList()
+      }
+    })
+  }
+
+  isCallSelectElement(element, target) {
+    return element && OPEN_SELECT in element.dataset
+  }
+
+  isCallSelectItemElement(element, target) {
+    return element && SELECT_ITEM in element.dataset
+  }
+
+  findSelect(select) {
+
+    if (select) {
+      this.select = select
+      this.selectList = this.select.querySelector(SELECT_LIST)
+      this.selectArrow = this.select.querySelector(SELECT_ARROW)
+      this.selectTitle = this.select.querySelector(SELECT_TITLE)
+      this.selectInput = this.select.querySelector(SELECT_INPUT)
+      return true
+    }
+    return false
+  }
+
+  isOpened() {
+    return this.selectList.classList.contains('select__list_opened')
+  }
+
+  openSelectList() {
+    this.selectList.style.maxHeight = this.selectList.scrollHeight + "px";
+    this.selectList.classList.add('select__list_opened')
+    this.selectArrow.classList.add('select__arrow_rotate')
+  }
+
+  closeSelectList() {
+    this.selectList.style.maxHeight = null;
+    this.selectList.classList.remove('select__list_opened')
+    this.selectArrow.classList.remove('select__arrow_rotate')
+  }
+
+  addSelectedValue(element) {
+    this.selectTitle.innerText = element.innerText;
+    this.selectInput.value = element.innerText;
+    this.selectInput.setAttribute('value', this.selectInput.value);
+  }
+
+  selectOverlayIsClickedElement(element, target) {
+    return element && 'select' in element.dataset
+  }
+}
+
+Select.attach()
+
+const selectlc = document.querySelectorAll('.select__list');
+[...selectlc].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+const cartuls = document.querySelectorAll('.cart__user_lists');
+[...cartuls].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+
+const cartuserAllList = document.querySelectorAll('.cart__user .cart__user_list');
+const cartuserList = document.querySelector('.cart__user_list');
+
+const selectid = function (obselect) {
+  const SELECT_TITLE_COUNT = document.querySelector(SELECT_TITLE).getAttribute('data-select-item');
+  cartuserAllList.forEach(n => n.classList.remove('active'));
+  document.querySelector('.cart__user_list[data-select-item="' + SELECT_TITLE_COUNT + '"]').classList.add('active');
+};
+const obselect = new MutationObserver(selectid);
+const config = {attributes: true};
+obselect.observe(document.querySelector(SELECT_TITLE), config);
+// end select

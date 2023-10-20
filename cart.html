@@ -116,12 +116,39 @@
           <div class="cart__flex">
             <div class="cart__user">
               <div class="cart__user_logo"><img src="img/user/303054662759.webp" alt=""></div>
-              <p class="cart__user_name">ООО «Чебурашка»</p>
-              <ul class="cart__user_list">
-                <li class="cart__user_item"><p class="cart__user_id">303054662759</p></li>
-                <li class="cart__user_item"><p class="cart__user_mail">ivanov@gmail.com</p></li>
-                <li class="cart__user_item"><p class="cart__user_tel">+79999999999</p></li>
-              </ul>
+              <div class="select__box">
+                <div class="select" data-select>
+                  <div class="select__selected_item" data-select-action data-select-open>
+                    <div class="select__selected_title" data-select-title data-select-item>ООО «Чебурашка»</div>
+                    <svg class="select__arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11 1L6.05 6L1 1" stroke="currentColor"/>
+                    </svg>
+                  </div>
+                  <div class="select__list" data-select-list>
+                    <div class="select__list_item" data-select-action data-select-item><p>ООО «Чебурашка»</p></div>
+                    <div class="select__list_item" data-select-action data-select-item><p>ООО «Гена»</p></div>
+                    <div class="select__list_item" data-select-action data-select-item><p>ООО «Шапокляк»</p></div>
+                  </div>
+                  <input class="select__input" type="text" data-select-input>
+                </div>
+              </div>
+              <div class="cart__user_lists">
+                <ul class="cart__user_list active">
+                  <li class="cart__user_item"><p class="cart__user_id">303054662759</p></li>
+                  <li class="cart__user_item"><p class="cart__user_mail">«Чебурашка»@gmail.com</p></li>
+                  <li class="cart__user_item"><p class="cart__user_tel">+77777777777</p></li>
+                </ul>
+                <ul class="cart__user_list">
+                  <li class="cart__user_item"><p class="cart__user_id">303054662760</p></li>
+                  <li class="cart__user_item"><p class="cart__user_mail">«Гена»@gmail.com</p></li>
+                  <li class="cart__user_item"><p class="cart__user_tel">+78888888888</p></li>
+                </ul>
+                <ul class="cart__user_list">
+                  <li class="cart__user_item"><p class="cart__user_id">303054662761</p></li>
+                  <li class="cart__user_item"><p class="cart__user_mail">«Шапокляк»@gmail.com</p></li>
+                  <li class="cart__user_item"><p class="cart__user_tel">+79999999999</p></li>
+                </ul>
+              </div>
             </div>
             <div class="cart__order">
               <ul class="cart__list">
@@ -588,6 +615,7 @@
       </div>
     </form>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/swiper.min.js"></script>
   <script>
