@@ -957,21 +957,6 @@ if (cartuser) {
 }
 // end select
 
-// start org filter
-var orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
-  for (i = 0; i < orgshfi.length; i++) {
-    orgshfi[i].onclick = function(e) {
-      if (!this.classList.contains("active")) {
-        const orgshfiCOUNT = this.getAttribute('data-select-item');
-        orgshfi.forEach(n => n.classList.remove('active'));
-        document.querySelectorAll('.user_info_form').forEach(n => n.classList.remove('active'));
-        this.classList.add('active')
-        document.querySelector('.user_info_form[data-select-item="' + orgshfiCOUNT + '"]').classList.add('active');
-      }
-    };
-  }
-// end org filter
-
 // start повторить заказ
 var neworderbtn = document.querySelector(".neworder__btn");
 var neworderclose = document.querySelector(".neworder__close");
@@ -1005,8 +990,23 @@ if(neworderbtn){
 // end повторить заказэ
 
 // start добавить организацию в лк
-const orgshf = document.querySelectorAll('.orgs-heading__filters');
-[...orgshf].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+const orgshf = document.querySelector('.orgs-heading__filters');
+if(orgshf){
+var orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
+  for (i = 0; i < orgshfi.length; i++) {
+    orgshfi[i].onclick = function(e) {
+      if (!this.classList.contains("active")) {
+        const orgshfiCOUNT = this.getAttribute('data-select-item');
+        orgshfi.forEach(n => n.classList.remove('active'));
+        document.querySelectorAll('.user_info_form').forEach(n => n.classList.remove('active'));
+        this.classList.add('active')
+        document.querySelector('.user_info_form[data-select-item="' + orgshfiCOUNT + '"]').classList.add('active');
+      }
+    };
+  }
+const orgshfы = document.querySelectorAll('.orgs-heading__filters');
+[...orgshfы].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
 const userifs = document.querySelectorAll('.user-info-forms');
 [...userifs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+}
 // end
