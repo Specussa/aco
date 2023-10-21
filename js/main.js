@@ -952,7 +952,7 @@ if (cartuser) {
     document.querySelector('.cart__user_logo img[data-select-item="' + SELECT_TITLE_COUNT + '"]').classList.add('active');
   };
   const obselect = new MutationObserver(selectid);
-  const config = {attributes: true};
+  var config = { attributes: true, childList: false, characterData: false };
   obselect.observe(document.querySelector('[data-select-title]'), config);
 }
 // end select
@@ -992,7 +992,8 @@ if(neworderbtn){
 // start добавить организацию в лк
 const orgshf = document.querySelector('.orgs-heading__filters');
 if(orgshf){
-var orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
+  
+  let orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
   for (i = 0; i < orgshfi.length; i++) {
     orgshfi[i].onclick = function(e) {
       if (!this.classList.contains("active")) {
@@ -1004,9 +1005,132 @@ var orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
       }
     };
   }
-const orgshfы = document.querySelectorAll('.orgs-heading__filters');
-[...orgshfы].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
-const userifs = document.querySelectorAll('.user-info-forms');
-[...userifs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+  var observerss = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      let orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
+      for (i = 0; i < orgshfi.length; i++) {
+        orgshfi[i].onclick = function(e) {
+          if (!this.classList.contains("active")) {
+            const orgshfiCOUNT = this.getAttribute('data-select-item');
+            orgshfi.forEach(n => n.classList.remove('active'));
+            document.querySelectorAll('.user_info_form').forEach(n => n.classList.remove('active'));
+            this.classList.add('active')
+            document.querySelector('.user_info_form[data-select-item="' + orgshfiCOUNT + '"]').classList.add('active');
+          }
+        };
+      }
+    });    
+  });
+  
+  var config = { attributes: false, childList: true, characterData: false };
+  observerss.observe(document.querySelector('.orgs-heading__filters'), config);
+
+  const orgshfs = document.querySelectorAll('.orgs-heading__filters');
+  [...orgshfs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+  const userifs = document.querySelectorAll('.user-info-forms');
+  [...userifs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+  [...orgshfi].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+
+  function addNewOrg() {
+    let neworgform = document.querySelectorAll('.user_info_form');
+    let neworgformLM = ((neworgform[neworgform.length-1]).getAttribute('data-select-item'));
+    let neworgformNM = Number(neworgformLM) + 1;
+
+    let elem = document.createElement("form");
+    elem.classList.add('form');
+    elem.classList.add('user-info-form');
+    elem.classList.add('user_info_form');
+    elem.classList.add('active');
+    elem.id = 'neworgform_' + neworgformNM;
+    elem.setAttribute('data-select-item',neworgformNM)
+    elem.innerHTML = `
+      <div class="user-avatar">
+        <div class="js-change-avatar user-image">
+          <img src="img/object.webp" alt="user-img" title="user-img">
+        </div>
+        <input type="file" class="user-avatar__field" name="userAvatar">
+        <div class="change-image-popup">
+          <div class="js-change-img change-image-popup__item">Изменить фотографию</div>
+          <div class="js-delete-img change-image-popup__item change-image-popup__item--delete">Удалить фотографию</div>
+        </div>
+      </div>
+      <div class="form__group">
+        <input class="form__input" name="UF_INN_${neworgformNM}" id="innorg_${neworgformNM}" type="text" placeholder="Наименование организации *" maxlength="50" required>
+        <div class="user-info-form__edit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.75 21C2.75 20.5858 3.08579 20.25 3.5 20.25H21.5C21.9142 20.25 22.25 20.5858 22.25 21C22.25 21.4142 21.9142 21.75 21.5 21.75H3.5C3.08579 21.75 2.75 21.4142 2.75 21Z"
+                  fill="currentColor"/>
+            <path d="M5.5 13.36V17H9.1586L19.5 6.65405L15.8476 3L5.5 13.36Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M15.8474 2.25C16.0464 2.24996 16.2373 2.32903 16.378 2.46979L20.0304 6.12384C20.3232 6.4167 20.3232 6.8914 20.0304 7.18426L9.68905 17.5302C9.54838 17.6709 9.35757 17.75 9.1586 17.75H5.5C5.08579 17.75 4.75 17.4142 4.75 17V13.36C4.75 13.1612 4.82889 12.9706 4.96935 12.8299L15.3169 2.46999C15.4575 2.32918 15.6484 2.25004 15.8474 2.25ZM15.8478 4.06109L6.25 13.6703V16.25H8.84784L18.4396 6.65405L15.8478 4.06109Z"
+                  fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      <div class="form__group">
+        <input class="form__input" name="UF_COMPANY_NAME_${neworgformNM}" id="nameorg_${neworgformNM}" type="text" placeholder="ИНН организации *" maxlength="50"
+              required>
+        <div class="user-info-form__edit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.75 21C2.75 20.5858 3.08579 20.25 3.5 20.25H21.5C21.9142 20.25 22.25 20.5858 22.25 21C22.25 21.4142 21.9142 21.75 21.5 21.75H3.5C3.08579 21.75 2.75 21.4142 2.75 21Z"
+                  fill="currentColor"/>
+            <path d="M5.5 13.36V17H9.1586L19.5 6.65405L15.8476 3L5.5 13.36Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M15.8474 2.25C16.0464 2.24996 16.2373 2.32903 16.378 2.46979L20.0304 6.12384C20.3232 6.4167 20.3232 6.8914 20.0304 7.18426L9.68905 17.5302C9.54838 17.6709 9.35757 17.75 9.1586 17.75H5.5C5.08579 17.75 4.75 17.4142 4.75 17V13.36C4.75 13.1612 4.82889 12.9706 4.96935 12.8299L15.3169 2.46999C15.4575 2.32918 15.6484 2.25004 15.8474 2.25ZM15.8478 4.06109L6.25 13.6703V16.25H8.84784L18.4396 6.65405L15.8478 4.06109Z"
+                  fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      <a class="user_info_form_del" data-form-del="delete" data-select-item="${neworgformNM}">Удалить организацию</a>
+      <div class="form__group">
+        <button class="btn btn--bg from__submit">Сохранить</button>
+      </div>
+    `;
+
+    const orgshfis = document.querySelectorAll(".orgs-heading__filters-item");
+    let orgshfiLM = ((orgshfis[orgshfis.length-1]).getAttribute('data-select-item'));
+    let orgshfiNM = Number(orgshfiLM) + 1;
+
+    let elemName = document.createElement("div");
+    elemName.classList.add('orgs-heading__filters-item');
+    elemName.classList.add('active');
+    elemName.id = 'neworgname_' + orgshfiNM;
+    elemName.setAttribute('data-select-item',orgshfiNM);
+    elemName.innerText = `Новая организация`;
+
+    let parentGuest = document.getElementById("neworgform_"+orgshfiLM);
+    let parentName = document.getElementById("neworgname_"+orgshfiLM);
+    parentGuest.parentNode.insertBefore(elem, parentGuest.nextSibling);
+    parentName.parentNode.insertBefore(elemName, parentName.nextSibling);
+    orgshfis.forEach(n => n.classList.remove('active'));
+    document.querySelector('.orgs-heading__filters-item[data-select-item="' + orgshfiNM + '"]').classList.add('active');
+    document.querySelectorAll(".user_info_form").forEach(n => n.classList.remove('active'));
+    document.querySelector('.user_info_form[data-select-item="' + orgshfiNM + '"]').classList.add('active');
+  }
+  function removeElemForm(delElemForm, attributeForm, attributeNameForm) {
+    if (!(delElemForm && attributeForm && attributeNameForm)) return;
+    return function(e) {
+      let target = e.target;
+      if (!(target.hasAttribute(attributeForm) ?
+          (target.getAttribute(attributeForm) === attributeNameForm ? true : false) : false)) return;
+      while (target != this) {
+        if (target.classList.contains(delElemForm)) {
+          const userinfoformDelCount = target.getAttribute('data-select-item');
+          orgshfi.forEach(n => n.classList.remove('active'));
+          document.querySelectorAll(".user_info_form").forEach(n => n.classList.remove('active'));
+          document.querySelector('.orgs-heading__filters-item[data-select-item="' + (userinfoformDelCount - 1) + '"]').classList.add('active');
+          document.querySelector('.user_info_form[data-select-item="' + (userinfoformDelCount - 1) + '"]').classList.add('active');
+          document.querySelector('.orgs-heading__filters-item[data-select-item="' + userinfoformDelCount + '"]').remove();
+          target.remove();
+          return;
+        }
+        target = target.parentNode;
+      }
+      return;
+    };
+  }
+  document.addEventListener("click", removeElemForm("user_info_form", "data-form-del", "delete"));
 }
 // end
