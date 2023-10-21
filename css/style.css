@@ -3742,7 +3742,8 @@ svg path {
   padding: 0 0 20px;
 }
 
-.registration__neworg_del {
+.registration__neworg_del,
+.user_info_form_del {
   display: flex;
   justify-content: flex-end;
   font-size: 24px;
@@ -5070,7 +5071,8 @@ svg path {
     top: 20px;
   }
   .registration__button span,
-  .registration__neworg_del {
+  .registration__neworg_del,
+  .user_info_form_del {
     font-size: 18px;
     line-height: 20px;
   }
