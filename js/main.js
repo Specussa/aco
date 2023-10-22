@@ -992,44 +992,38 @@ if(neworderbtn){
 // start добавить организацию в лк
 const orgshf = document.querySelector('.orgs-heading__filters');
 if(orgshf){
-  
+  const orgshfs = document.querySelectorAll('.orgs-heading__filters');
+  const userifs = document.querySelectorAll('.user-info-forms');
   let orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
-  for (i = 0; i < orgshfi.length; i++) {
-    orgshfi[i].onclick = function(e) {
-      if (!this.classList.contains("active")) {
-        const orgshfiCOUNT = this.getAttribute('data-select-item');
-        orgshfi.forEach(n => n.classList.remove('active'));
-        document.querySelectorAll('.user_info_form').forEach(n => n.classList.remove('active'));
-        this.classList.add('active')
-        document.querySelector('.user_info_form[data-select-item="' + orgshfiCOUNT + '"]').classList.add('active');
-      }
-    };
+  [...orgshfs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+  [...userifs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+  [...orgshfi].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+  function activeFormOrgs() {
+    let orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
+    for (i = 0; i < orgshfi.length; i++) {
+      orgshfi[i].onclick = function(e) {
+        if (!this.classList.contains("active")) {
+          const orgshfiCOUNT = this.getAttribute('data-select-item');
+          orgshfi.forEach(n => n.classList.remove('active'));
+          document.querySelectorAll('.user_info_form').forEach(n => n.classList.remove('active'));
+          this.classList.add('active')
+          document.querySelector('.user_info_form[data-select-item="' + orgshfiCOUNT + '"]').classList.add('active');
+        }
+      };
+    }
+    [...orgshfs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+    [...userifs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
+    [...orgshfi].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
   }
+  activeFormOrgs();
   var observerss = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      let orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
-      for (i = 0; i < orgshfi.length; i++) {
-        orgshfi[i].onclick = function(e) {
-          if (!this.classList.contains("active")) {
-            const orgshfiCOUNT = this.getAttribute('data-select-item');
-            orgshfi.forEach(n => n.classList.remove('active'));
-            document.querySelectorAll('.user_info_form').forEach(n => n.classList.remove('active'));
-            this.classList.add('active')
-            document.querySelector('.user_info_form[data-select-item="' + orgshfiCOUNT + '"]').classList.add('active');
-          }
-        };
-      }
+      activeFormOrgs();
     });    
   });
   
   var config = { attributes: false, childList: true, characterData: false };
   observerss.observe(document.querySelector('.orgs-heading__filters'), config);
-
-  const orgshfs = document.querySelectorAll('.orgs-heading__filters');
-  [...orgshfs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
-  const userifs = document.querySelectorAll('.user-info-forms');
-  [...userifs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
-  [...orgshfi].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.setAttribute('data-select-item', index+1);}});
 
   function addNewOrg() {
     let neworgform = document.querySelectorAll('.user_info_form');
@@ -1041,7 +1035,7 @@ if(orgshf){
     elem.classList.add('user-info-form');
     elem.classList.add('user_info_form');
     elem.classList.add('active');
-    elem.id = 'neworgform_' + neworgformNM;
+    // elem.id = 'neworgform_' + neworgformNM;
     elem.setAttribute('data-select-item',neworgformNM)
     elem.innerHTML = `
       <div class="user-avatar">
@@ -1096,14 +1090,15 @@ if(orgshf){
     let elemName = document.createElement("div");
     elemName.classList.add('orgs-heading__filters-item');
     elemName.classList.add('active');
-    elemName.id = 'neworgname_' + orgshfiNM;
     elemName.setAttribute('data-select-item',orgshfiNM);
     elemName.innerText = `Новая организация`;
 
-    let parentGuest = document.getElementById("neworgform_"+orgshfiLM);
-    let parentName = document.getElementById("neworgname_"+orgshfiLM);
+    let parentGuest = document.querySelector('.user_info_form[data-select-item="' + (neworgformNM - 1) + '"]');
+    let parentName = document.querySelector('.orgs-heading__filters-item[data-select-item="' + (orgshfiNM - 1) + '"]');
+
     parentGuest.parentNode.insertBefore(elem, parentGuest.nextSibling);
     parentName.parentNode.insertBefore(elemName, parentName.nextSibling);
+
     orgshfis.forEach(n => n.classList.remove('active'));
     document.querySelector('.orgs-heading__filters-item[data-select-item="' + orgshfiNM + '"]').classList.add('active');
     document.querySelectorAll(".user_info_form").forEach(n => n.classList.remove('active'));
