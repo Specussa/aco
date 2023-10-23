@@ -1147,8 +1147,9 @@ if(orgshf){
 const changepasswordb = document.getElementById("change__password_button");
 const changepasswordsuccess = document.querySelector(".changepassword__success");
 const changepasswordforms = document.querySelector(".changepassword__forms");
-const changepasswordfb = document.querySelector(".overlay__form_buttons button");
-const changepassclose = document.querySelector(".changepass__button_close");
+const changepasswordfb = document.querySelector(".changepass__buttons button");
+const changepassclose = document.querySelector(".changepass__close");
+const changepassbclose = document.querySelector(".changepass__button_close");
 if(changepasswordb){
   changepasswordb.addEventListener('click', function() {
     bodyoverlay.style.zIndex = "120";
@@ -1157,11 +1158,11 @@ if(changepasswordb){
     document.body.style.height = "100vh";
     document.body.style.overflow = "hidden";
     if (!changepasswordsuccess.classList.contains("hidden")) {
-      changepasswordsuccess.classList.add("hidden");
-      changepasswordforms.classList.remove("hidden");
       changepasswordfb.classList.remove("hidden");
-      changepassclose.classList.add("button__white");
-      changepassclose.innerText = 'Отменить';
+      changepasswordforms.classList.remove("hidden");
+      changepasswordsuccess.classList.add("hidden");
+      changepassbclose.classList.remove("button__white");
+      changepassbclose.innerText = 'Отменить';
     }
   })
   changepassclose.addEventListener('click', function() {
@@ -1171,7 +1172,7 @@ if(changepasswordb){
     document.body.style.height = null;
     document.body.style.overflow = null;
   })
-  changepassclose.addEventListener('click', function() {
+  changepassbclose.addEventListener('click', function() {
     bodyoverlay.style.zIndex = null;
     bodyoverlay.classList.remove("active");
     changepassoverlay.classList.remove("active");
@@ -1184,6 +1185,7 @@ if(changepasswordb){
 // start повторить заказ
 const changephone = document.getElementById("change__phone");
 const changephoneclose = document.querySelector(".changephone__close");
+const changephonebclose = document.querySelector(".changephone__button_close");
 if(changephone){
   changephone.addEventListener('click', function() {
     bodyoverlay.style.zIndex = "120";
@@ -1199,5 +1201,46 @@ if(changephone){
     document.body.style.height = null;
     document.body.style.overflow = null;
   })
+  changephonebclose.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = null;
+    bodyoverlay.classList.remove("active");
+    changephoneoverlay.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  })
 }
 // end повторить заказэ
+
+// start mask phone
+const phonemask = document.querySelector('[data-phone-pattern]')
+if (phonemask) {
+  document.addEventListener("DOMContentLoaded", function () {
+    var eventCalllback = function (e) {
+      var el = e.target,
+        clearVal = el.dataset.phoneClear,
+        pattern = el.dataset.phonePattern,
+        matrix_def = "+7(___) ___-__-__",
+        matrix = pattern ? pattern : matrix_def,
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = e.target.value.replace(/\D/g, "");
+      if (clearVal !== 'false' && e.type === 'blur') {
+        if (val.length < matrix.match(/([\_\d])/g).length) {
+          e.target.value = '';
+          return;
+        }
+      }
+      if (def.length >= val.length) val = def;
+      e.target.value = matrix.replace(/./g, function (a) {
+        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+      });
+    }
+    var phone_inputs = document.querySelectorAll('[data-phone-pattern]');
+    for (let elem of phone_inputs) {
+      for (let ev of ['input', 'blur', 'focus']) {
+        elem.addEventListener(ev, eventCalllback);
+      }
+    }
+  });
+}
+// end mask phone
