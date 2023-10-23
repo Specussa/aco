@@ -124,6 +124,8 @@ if (buttonorder) {
 
 // кнопка overlay
 const neworderoverlay = document.querySelector(".neworder__overlay");
+const changephoneoverlay = document.querySelector(".changephone__overlay");
+const changepassoverlay = document.querySelector(".changepass__overlay");
 bodyoverlay.addEventListener('click', function() {
   bodyoverlay.classList.remove("active");
   menu.classList.remove("active");
@@ -138,6 +140,14 @@ bodyoverlay.addEventListener('click', function() {
   if (neworderoverlay) {
     bodyoverlay.style.zIndex = null;
     neworderoverlay.classList.remove("active");
+  }
+  if (changephoneoverlay) {
+    bodyoverlay.style.zIndex = null;
+    changephoneoverlay.classList.remove("active");
+  }
+  if (changepassoverlay) {
+    bodyoverlay.style.zIndex = null;
+    changepassoverlay.classList.remove("active");
   }
   if (window.scrollY > 1) {} else {header.classList.remove("active");}
   document.body.style.height = null;
@@ -958,9 +968,9 @@ if (cartuser) {
 // end select
 
 // start повторить заказ
-var neworderbtn = document.querySelector(".neworder__btn");
-var neworderclose = document.querySelector(".neworder__close");
-var neworderbtns = document.querySelectorAll(".neworder__btn");
+const neworderbtn = document.querySelector(".neworder__btn");
+const neworderclose = document.querySelector(".neworder__close");
+const neworderbtns = document.querySelectorAll(".neworder__btn");
 if(neworderbtn){
   for (i = 0; i < neworderbtns.length; i++) {
     neworderbtns[i].onclick = function(e) {
@@ -1129,3 +1139,62 @@ if(orgshf){
   document.addEventListener("click", removeElemForm("user_info_form", "data-form-del", "delete"));
 }
 // end
+
+// start повторить заказ
+const changepasswordb = document.getElementById("change__password_button");
+const changepasswordsuccess = document.querySelector(".changepassword__success");
+const changepasswordforms = document.querySelector(".changepassword__forms");
+const changepasswordfb = document.querySelector(".overlay__form_buttons button");
+const changepassclose = document.querySelector(".changepass__button_close");
+if(changepasswordb){
+  changepasswordb.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = "120";
+    bodyoverlay.classList.add("active");
+    changepassoverlay.classList.add("active");
+    document.body.style.height = "100vh";
+    document.body.style.overflow = "hidden";
+    if (!changepasswordsuccess.classList.contains("hidden")) {
+      changepasswordsuccess.classList.add("hidden");
+      changepasswordforms.classList.remove("hidden");
+      changepasswordfb.classList.remove("hidden");
+      changepassclose.classList.add("button__white");
+      changepassclose.innerText = 'Отменить';
+    }
+  })
+  changepassclose.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = null;
+    bodyoverlay.classList.remove("active");
+    changepassoverlay.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  })
+  changepassclose.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = null;
+    bodyoverlay.classList.remove("active");
+    changepassoverlay.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  })
+}
+// end повторить заказэ
+
+// start повторить заказ
+const changephone = document.getElementById("change__phone");
+const changephoneclose = document.querySelector(".changephone__close");
+if(changephone){
+  changephone.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = "120";
+    bodyoverlay.classList.add("active");
+    changephoneoverlay.classList.add("active");
+    document.body.style.height = "100vh";
+    document.body.style.overflow = "hidden";
+  })
+  changephoneclose.addEventListener('click', function() {
+    bodyoverlay.style.zIndex = null;
+    bodyoverlay.classList.remove("active");
+    changephoneoverlay.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  })
+}
+// end повторить заказэ
