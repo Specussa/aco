@@ -1,8 +1,9 @@
+// start validate change pass
 const changepassword = document.getElementById('changepassword');
 const changepasswordone = document.getElementById('changepassword__one');
 const changepasswordtwo = document.getElementById('changepassword__two');
 const changepasswordthree = document.getElementById('changepassword__three');
-// start validate form project
+
 if(!changepassword){} else {
   changepassword.addEventListener('submit', e => {
     e.preventDefault();
@@ -55,4 +56,4 @@ if(!changepassword){} else {
     formControl.className = 'form__group success';
   }
 }
-// end validate form project
+// end validate change pass

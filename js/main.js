@@ -812,6 +812,9 @@ function addOrg() {
   elem.id = 'neworg_' + neworgNM;
   elem.setAttribute('name',neworgNM)
   elem.innerHTML = `
+    <div class="registration__flex">
+      <p class="registration__head">Данные организации</p>
+    </div>
     <div class="form__group">
       <input class="form__input" type="text" name="UF_INN_${neworgNM}" id="innorg_${neworgNM}" placeholder="ИНН организации *" maxlength="50" required>
     </div>

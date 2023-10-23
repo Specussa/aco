@@ -1881,7 +1881,7 @@ svg path {
 /* start breadcrumbs */
 
 .breadcrumbs__block {
-  padding: 150px 20px 0;
+  padding: 150px 20px 20px;
 }
 
 .breadcrumbs__list {
@@ -3743,11 +3743,16 @@ svg path {
 }
 
 .registration__head {
+  padding: 0 0 20px;
   font-family: var(--font);
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
   color: var(--black);
+}
+
+.registration__flex .registration__head {
+  padding: 0;
 }
 
 .registration__button svg {
@@ -3763,7 +3768,7 @@ svg path {
 
 .registration__flex {
   display: flex;
-  padding: 60px 0 20px;
+  padding: 40px 0 20px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -4865,7 +4870,7 @@ svg path {
     right: 40px;
   }
   .breadcrumbs__block {
-    padding: 100px 10px 0;
+    padding: 100px 10px 10px;
   }
   .cart__block {
     padding: 80px 0;
@@ -5943,7 +5948,7 @@ svg path {
     gap: 10px;
   }
   .breadcrumbs__block {
-    padding: 90px 5px 0;
+    padding: 90px 5px 5px;
   }
   .cart__block {
     padding: 40px 0;
