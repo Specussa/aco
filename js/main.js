@@ -1143,7 +1143,7 @@ if(orgshf){
 }
 // end
 
-// start повторить заказ
+// start change password
 const changepasswordb = document.getElementById("change__password_button");
 const changepasswordsuccess = document.querySelector(".changepassword__success");
 const changepasswordforms = document.querySelector(".changepassword__forms");
@@ -1180,12 +1180,19 @@ if(changepasswordb){
     document.body.style.overflow = null;
   })
 }
-// end повторить заказэ
+// end change password
 
-// start повторить заказ
+// start change phone
 const changephone = document.getElementById("change__phone");
 const changephoneclose = document.querySelector(".changephone__close");
 const changephonebclose = document.querySelector(".changephone__button_close");
+const changephonenum = document.querySelector(".changephonenum__success");
+const changephoneecode = document.querySelector('.changephonecode__success')
+const changephonecodeforms = document.querySelector(".changephonecode__forms");
+const formfieldset = document.querySelector(".form__fieldset");
+const changephonecodebclose = document.querySelector('.changephonecode__button_close')
+const changephonecodeform = document.getElementById('changephonecode');
+const changephoneform = document.getElementById('changephone');
 if(changephone){
   changephone.addEventListener('click', function() {
     bodyoverlay.style.zIndex = "120";
@@ -1208,8 +1215,34 @@ if(changephone){
     document.body.style.height = null;
     document.body.style.overflow = null;
   })
+  changephonecodebclose.addEventListener('click', function() {
+    if (changephonecodeforms.classList.contains("hidden")) {
+      changephonecodeform.classList.add("hidden");
+      changephoneform.classList.remove("hidden");
+      changephonenum.classList.add("hidden");
+      changephonecodeforms.classList.remove("hidden");
+      formfieldset.classList.remove("success");
+      changephonecodebclose.classList.add("button__white");
+      changephonecodebclose.innerText = 'Отменить';
+      buttoncm.classList.remove("disabled");
+      buttoncm.classList.remove("hidden");
+      buttonca.classList.remove("hidden");
+      buttond.classList.add("hidden");
+    }
+    if (!changephonecodeforms.classList.contains("hidden")) {
+      changephone.classList.remove("hidden");
+      changephoneecode.classList.add("hidden");
+      changephoneform.classList.remove("hidden");
+      changephonecodeform.classList.add("hidden");
+    }
+    bodyoverlay.style.zIndex = null;
+    bodyoverlay.classList.remove("active");
+    changephoneoverlay.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  })
 }
-// end повторить заказэ
+// end change phone
 
 // start mask phone
 const phonemask = document.querySelector('[data-phone-pattern]')

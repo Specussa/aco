@@ -50,9 +50,31 @@ input::selection {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
+  display: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
   appearance: none;
-  margin: 0; 
+  margin: 0;
+}
+
+input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  -o-appearance: textfield;
+  appearance: textfield;
+}
+
+a,
+button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 *::marker {
@@ -240,10 +262,6 @@ svg path {
   pointer-events: none;
 }
 
-.hidden {
-  display: none;
-}
-
 .section-title {
   margin-bottom: 40px;
 }
@@ -361,12 +379,36 @@ svg path {
   position: relative;
   -webkit-transition: background-color 0.2s linear, color 0.2s linear, border 0.2s linear;
   transition: background-color 0.2s linear, color 0.2s linear, border 0.2s linear;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button__default:hover {
   color: var(--green);
   background-color: var(--white);
   border: 1.6px solid var(--green);
+}
+
+.button__default.disabled,
+.button__default.disabled:hover,
+.disabled .button__default,
+.disabled .button__default:hover {
+  color: #afafaf;
+  border: 1.6px solid #595959;
+  background-color: #595959;
+  pointer-events: none;
+}
+
+.button__code_message {
+  width: 100%;
+}
+
+.button__code_reload.button__default {
+  max-width: 100%;
 }
 
 .button__hero {
@@ -3748,6 +3790,7 @@ svg path {
 
 .form__fieldset {
   display: flex;
+  padding: 40px 0 20px;
   align-items: center;
   justify-content: center;
   gap: 80px;
@@ -6324,3 +6367,7 @@ svg path {
   }
 }
 /* start media 766px */
+
+.hidden {
+  display: none;
+}

@@ -62,13 +62,15 @@ if(changepassword) {
 const buttoncr = document.querySelector(".button__code_reload");
 const minutesSpan = document.querySelector(".minutes");
 const secondsSpan = document.querySelector(".seconds");
-const buttonct = document.querySelector(".button__code_times");
+const buttonca = document.querySelector(".button__code_again");
 const buttoncm = document.querySelector(".button__code_message");
+const buttond = document.querySelector(".button__code_disabled");
 
 let temp = 0;
 const timer = (remainingMinutes, d, h, m, s) => {
-  buttonct.classList.remove("hidden");
-  buttoncm.classList.remove("active");
+  buttonca.classList.add("hidden");
+  buttoncm.classList.add("disabled");
+  buttond.classList.remove("hidden");
   var finishTime = new Date();
   finishTime.setSeconds(finishTime.getSeconds() + remainingMinutes);
   var timesOver;
@@ -98,8 +100,9 @@ const timer = (remainingMinutes, d, h, m, s) => {
     timesOver = d * 86400 + h * 3600 + m * 60 + s;
 
     if (timesOver <= 0) {
-      buttonct.classList.add("hidden");
-      buttoncm.classList.add("active");
+      buttonca.classList.remove("hidden");
+      buttoncm.classList.remove("disabled");
+      buttond.classList.add("hidden");
       return
     }
     clearTimeout(temp);
@@ -109,12 +112,11 @@ const timer = (remainingMinutes, d, h, m, s) => {
 };
 
 buttoncr.addEventListener('click', function() {
-  timer(10);
+  timer(120);
 })
 // end timer
 
 // start validate change phone
-const changephoneform = document.getElementById('changephone');
 const changephonephone = document.getElementById('changephone__phone');
 const changephonepassword = document.getElementById('changephone__password');
 
@@ -131,24 +133,17 @@ if(changephoneform) {
     if(changephonepasswordValue !== '' && changephonepasswordValue.length > 5 && changephonepasswordValue.length <= 30) {setphoneSuccessFor(changephonepassword);} else {setphoneErrorFor(changephonepassword);}
 
     if(changephonephoneValue !== '' && changephonephoneValue.length > 5 && changephonephoneValue.length <= 30 && changephonepasswordValue !== '' && changephonepasswordValue.length > 5 && changephonepasswordValue.length <= 30){
-      window.setTimeout(function () {
-        fetch('/ajax/sendMail.php', {
-          method: 'POST',
-          body: JSON.stringify({
-            body: changephonephoneValue,
-            password: changephonepasswordValue
-          }),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8"
-          }
-        });
-      }, 1000);
       timer(120);
-      document.querySelector('.changephonenum').innerText = changephonephone.value;
+      document.querySelector('.changephonenum').innerText = changephonephone.value.replace(/[( \-\(\))]/g,'');
       changephoneform.classList.add("hidden");
-      document.querySelector('.changephonecode__success').classList.remove("hidden");
+      changephoneecode.classList.remove("hidden");
+      buttonca.classList.add("hidden");
+      buttoncm.classList.add("disabled");
+      buttond.classList.remove("hidden");
       changephonephone.value = '';
       changephonepassword.value = '';
+      changephonecodeform.classList.remove("hidden");
+      changephonecodeform.classList.remove("hidden");
       changephonephone.parentElement.classList.remove("success");
       changephonepassword.parentElement.classList.remove("success");
     }
@@ -164,10 +159,7 @@ if(changephoneform) {
     formControl.className = 'form__group success';
   }
 }
-// end validate change phone
 
-// start validate change phone
-const changephonecodeform = document.getElementById('changephonecode');
 const changephonecodeone = document.getElementById('changephonecode__one');
 const changephonecodetwo = document.getElementById('changephonecode__two');
 const changephonecodethree = document.getElementById('changephonecode__three');
@@ -179,27 +171,26 @@ if(changephonecodeform) {
     checkphonecodeInputs();
   });
   
-  const fields = document.querySelectorAll(".form__field");
-  // const sum = +poleOne.value + +poleTwoo.value;
+  const formfields = document.querySelectorAll(".form__field");
 
-  changephonecodeone.onclick = function(e) {changephonecodeone.value = '';}
-  changephonecodetwo.onclick = function(e) {changephonecodetwo.value = '';}
-  changephonecodethree.onclick = function(e) {changephonecodethree.value = '';}
+  changephonecodeone.onclick = function(e) {changephonecodeone.value = '';changephonecodetwo.value = '';changephonecodethree.value = '';changephonecodefour.value = '';}
+  changephonecodetwo.onclick = function(e) {changephonecodetwo.value = '';changephonecodethree.value = '';changephonecodefour.value = '';}
+  changephonecodethree.onclick = function(e) {changephonecodethree.value = '';changephonecodefour.value = '';}
   changephonecodefour.onclick = function(e) {changephonecodefour.value = '';}
-
+  changephonecodefour.addEventListener("keyup", function(e) {e.preventDefault();checkphonecodeInputs();});
+  
   function handleInputField({ target }) {
     const value = target.value.slice(0, 1);
     target.value = value;
   
     const step = value ? 1 : -1;
-    const fieldIndex = [...fields].findIndex((field) => field === target);
+    const fieldIndex = [...formfields].findIndex((field) => field === target);
     const focusToIndex = fieldIndex + step;
   
-    if (focusToIndex < 0 || focusToIndex >= fields.length) return;
-    fields[focusToIndex].focus();
-    fields[focusToIndex].value = '';
+    if (focusToIndex < 0 || focusToIndex >= formfields.length) return;
+    formfields[focusToIndex].focus();
   }
-  fields.forEach((field) => {
+  formfields.forEach((field) => {
     field.addEventListener("input", handleInputField);
   });
 
@@ -228,8 +219,12 @@ if(changephonecodeform) {
           }
         });
       }, 1000);
-      document.querySelector('.changephonenum__success').classList.remove("hidden");
-      document.querySelector('.changephonecode__success').classList.add("hidden");
+      changephonenum.classList.remove("hidden");
+      changephoneecode.classList.add("hidden");
+      changephonecodeforms.classList.add("hidden");
+      changephonecodebclose.classList.remove("button__white");
+      changephonecodebclose.innerText = 'Продолжить';
+      buttoncm.classList.add("hidden");
       changephonecodeone.value = '';
       changephonecodetwo.value = '';
       changephonecodethree.value = '';

@@ -907,8 +907,8 @@
     </svg>
   </button>
   <p class="overlay__head">Изменение номера телефона</p>
-  <p class="changephonenum__success">Новый номер телефона установлен.</p>
-  <p class="changephonecode__success">Мы выслали код на номер <span class="changephonenum">+79999999999</span></p>
+  <p class="changephonenum__success hidden">Новый номер телефона установлен.</p>
+  <p class="changephonecode__success hidden">Мы выслали код на номер <span class="changephonenum">+79999999999</span></p>
   <form class="changephone__form" id="changephone">
     <div class="changephone__forms">
       <div class="form__group">
@@ -942,8 +942,8 @@
       <a class="button__default button__white changephone__button_close">Отменить</a>
     </div>
   </form>
-  <form class="changephonecode__form" id="changephonecode">
-    <div class="changephone__forms">
+  <form class="changephonecode__form hidden" id="changephonecode">
+    <div class="changephonecode__forms">
       <div class="form__group form__fieldset">
         <input class="form__input form__field" id="changephonecode__one" type="number">
         <input class="form__input form__field" id="changephonecode__two" type="number">
@@ -952,18 +952,19 @@
       </div>
     </div>
     <div class="changephone__buttons">
-      <button class="button__default">Подтвердить</button>
       <div class="button__code_message">
         <a class="button__code_reload button__default">
-          <span>Отправить код повторно</span>
-          <span>Отправить код еще раз через </span>
-          <span class="button__code_times hidden">
-            <span class="minutes button__code_time"></span>:<span class="seconds button__code_time"></span>
+          <span class="button__code_again">Отправить код повторно</span>
+          <span class="button__code_disabled hidden">Отправить код еще раз через 
+            <span class="button__code_times">
+              <span class="minutes button__code_time"></span>:<span class="seconds button__code_time"></span>
+            </span>
           </span>
         </a>
       </div>
+      <a class="button__default button__white changephonecode__button_close">Отменить</a>
     </div>
-    <a class="button__default button__white changephone__button_close">Отменить</a>
+    <button class="button__default hidden">Подтвердить</button>
   </form>
 </div>
 <div class="changepass__overlay">
