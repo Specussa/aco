@@ -1678,7 +1678,7 @@ svg path {
   margin-top: 0;
   align-items: center;
   justify-content: center;
-  top: 540px;
+  top: 550px;
   bottom: auto;
   color: var(--black);
   background: transparent;
@@ -4891,12 +4891,12 @@ svg path {
   }
   .best__prev,
   .partner__prev {
-    top: 270px;
+    top: 280px;
     left: 4px;
   }
   .best__next,
   .partner__next {
-    top: 270px;
+    top: 280px;
     left: 90px;
   }
   .reliable__heading,
@@ -4961,7 +4961,7 @@ svg path {
   }
   .partner__prev,
   .partner__next {
-    top: 300px;
+    top: 310px;
   }
   .partner__bottom,
   .partner__list {
