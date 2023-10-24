@@ -3793,12 +3793,13 @@ svg path {
   padding: 40px 0 20px;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 20px;
 }
 
 .form__field.form__field {
   width: 80px;
-  padding: 0;
+  height: 50px;
+  padding: 0 0 10px;
   font-size: 40px;
   font-weight: 600;
   text-align: center;
@@ -6359,6 +6360,11 @@ svg path {
   .profile__content .tabs__navigation {
     margin-bottom: 40px;
     flex-direction: column;
+  }
+  .changepass__buttons,
+  .changephone__buttons {
+    flex-direction: column;
+    gap: 10px;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
