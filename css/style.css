@@ -5289,6 +5289,14 @@ svg path {
     font-size: 38px;
     line-height: 48px;
   }
+  .header__cart_count {
+    height: 22px;
+    width: 22px;
+    top: -2px;
+    right: -8px;
+    font-size: 14px;
+    line-height: 16px;
+  }
   .footer__list_top .footer__item {
     padding: 0 10px;
   }
