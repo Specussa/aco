@@ -4035,6 +4035,14 @@ svg path {
   color: var(--gray);
 }
 
+.profile {
+  display: flex;
+}
+
+.profile__users {
+  margin-bottom: 40px;
+}
+
 .profile__sidebar {
   margin-top: 150px;
 }
@@ -5827,6 +5835,9 @@ svg path {
   }
   .profile__content {
     width: 100%;
+  }
+  .profile {
+    flex-direction: column;
   }
   .footer__list_bottom .footer__item:first-child {
     flex-direction: column-reverse;
