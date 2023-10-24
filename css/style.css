@@ -2469,6 +2469,7 @@ svg path {
   transform: rotate(90deg);
 }
 
+.order__overlay,
 .neworder__overlay,
 .changephone__overlay,
 .changepass__overlay {
