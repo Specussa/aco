@@ -230,6 +230,11 @@
     height: 430px;
   }
 
+  .objects__next,
+  .objects__prev {
+    top: 430px;
+  }
+
   .objects-page-info__desc {
     display: flex;
     flex-wrap: wrap;
@@ -522,6 +527,7 @@
 
   .object-list__item {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     width: 50%;
   }
@@ -533,6 +539,11 @@
   .object-list__image {
     margin-top: auto;
     height: 340px;
+  }
+
+  .objects__next,
+  .objects__prev {
+    top: 340px;
   }
 
   .auth-section {
@@ -702,6 +713,11 @@
 
   .object-list__image {
     height: 420px;
+  }
+
+  .objects__next,
+  .objects__prev {
+    top: 420px;
   }
 
   .have-account {

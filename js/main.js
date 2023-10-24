@@ -468,6 +468,49 @@ if(equipmentsslider){
 }
 // end equipments__slider
 
+document.querySelectorAll('.objects__slider_block').forEach(n => {
+  const slider = new Swiper(n.querySelectorAll('.objects__slider'), {
+    loop: false,
+    slidesPerView: 1,
+    touchRatio: 0.2,
+    spaceBetween: 0,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: n.querySelector('.objects__next'),
+      prevEl: n.querySelector('.objects__prev'),
+    },
+  });
+});
+// const objectssb = document.querySelector('.objects__slider_block');
+// if(objectssb){
+//   document.querySelectorAll('.objects__slider_block').forEach(n => {
+//     const slider = new Swiper(n.querySelectorAll('.objects__slider'), {
+//       loop: true,
+//       spaceBetween: 40,
+//       slidesPerView: 'auto',
+//       touchRatio: 0.2,
+//       loopedSlides: 2,
+//       slideToClickedSlide: true,
+//       allowTouchMove: true,
+//       speed: 1000,
+//       navigation: {
+//         nextEl: n.querySelector('.objects__next'),
+//         prevEl: n.querySelector('.objects__prev'),
+//       },
+//       breakpoints: {
+//         766: {
+//           spaceBetween: 10,
+//         },
+//         1919: {
+//           spaceBetween: 20,
+//         }
+//       }
+//     });
+//   });
+// }
+
 // map
 // start click map link
 let idyamoscow = document.getElementById('yamoscow');

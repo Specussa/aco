@@ -68,7 +68,8 @@ input[type=number] {
 }
 
 a,
-button {
+button,
+.swiper-container {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -1644,7 +1645,9 @@ svg path {
 }
 
 .partner__prev,
-.partner__next {
+.partner__next,
+.objects__next,
+.objects__prev {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1673,12 +1676,16 @@ svg path {
 }
 
 .partner__prev:hover,
-.partner__next:hover {
+.partner__next:hover,
+.objects__next:hover,
+.objects__prev:hover {
   color: var(--lgreen);
 }
 
 .partner__prev svg,
-.partner__next svg {
+.partner__next svg,
+.objects__next svg,
+.objects__prev svg {
   display: inline-block;
   width: 65px;
   height: 12px;
@@ -3602,6 +3609,26 @@ svg path {
 }
 
 /*** Objects ***/
+.objects__slider_block {
+  padding: 0 0 60px;
+  position: relative;
+}
+
+.objects__next,
+.objects__prev {
+  top: 210px;
+}
+
+.objects__next {
+  left: 100px;
+  right: auto;
+}
+
+.objects__prev {
+  left: 0;
+  right: auto;
+}
+
 .objects-page-info {
   padding: 65px 0 40px;
 }
@@ -5398,6 +5425,10 @@ svg path {
     position: relative;
     top: 0;
     left: -6px;
+  }
+  .objects__next {
+    left: auto;
+    right: 0;
   }
   .best__next,
   .partner__next {
