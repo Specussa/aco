@@ -4280,6 +4280,13 @@ svg path {
   transition: .2s ease;
 }
 
+.orders-heading__filters-item input,
+.orgs-heading__filters-item input {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .orders-heading__filters-item.active,
 .orgs-heading__filters-item.active {
   color: var(--back);

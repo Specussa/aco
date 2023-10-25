@@ -103,25 +103,28 @@ if (hsearch) {
 
 // кнопка header__burger
 const buttonorder = document.querySelector(".button__order");
+const buttonorders = document.querySelector(".button__order");
 const orderoverlay = document.querySelector(".order__overlay");
 const orderclose = document.querySelector(".order__close");
 
 if (buttonorder) {
-  buttonorder.addEventListener("click", function () {
-    if (orderoverlay.classList.contains("active")) {
-      bodyoverlay.style.zIndex = null;
-      bodyoverlay.classList.remove("active");
-      orderoverlay.classList.remove("active");
-      document.body.style.height = null;
-      document.body.style.overflow = null;
-    } else {
-      bodyoverlay.style.zIndex = "120";
-      bodyoverlay.classList.add("active");
-      orderoverlay.classList.add("active");
-      document.body.style.height = "100vh";
-      document.body.style.overflow = "hidden";
-    }
-  });
+  buttonorders.forEach((i) =>
+    i.addEventListener("click", function () {
+      if (orderoverlay.classList.contains("active")) {
+        bodyoverlay.style.zIndex = null;
+        bodyoverlay.classList.remove("active");
+        orderoverlay.classList.remove("active");
+        document.body.style.height = null;
+        document.body.style.overflow = null;
+      } else {
+        bodyoverlay.style.zIndex = "120";
+        bodyoverlay.classList.add("active");
+        orderoverlay.classList.add("active");
+        document.body.style.height = "100vh";
+        document.body.style.overflow = "hidden";
+      }
+    })
+  );
   orderclose.addEventListener("click", function () {
     bodyoverlay.style.zIndex = null;
     bodyoverlay.classList.remove("active");
