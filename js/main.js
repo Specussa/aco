@@ -1164,8 +1164,8 @@ if (neworderbtn) {
 // start добавить организацию в лк
 const orgshf = document.querySelector(".orgs-heading__filters");
 if (orgshf) {
-  const orgshfs = document.querySelectorAll(".orgs-heading__filters");
-  const userifs = document.querySelectorAll(".user-info-forms");
+  let orgshfs = document.querySelectorAll(".orgs-heading__filters");
+  let userifs = document.querySelectorAll(".user-info-forms");
   let orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
   [...orgshfs].forEach(function (li) {
     for (let [index, elem] of [...li.children].entries()) {
@@ -1183,6 +1183,8 @@ if (orgshf) {
     }
   });
   function activeFormOrgs() {
+    let orgshfs = document.querySelectorAll(".orgs-heading__filters");
+    let userifs = document.querySelectorAll(".user-info-forms");
     let orgshfi = document.querySelectorAll(".orgs-heading__filters-item");
     for (i = 0; i < orgshfi.length; i++) {
       orgshfi[i].onclick = function (e) {
