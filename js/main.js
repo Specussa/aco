@@ -1363,9 +1363,7 @@ if (orgshf) {
 
 // start change password
 const changepasswordb = document.getElementById("change__password_button");
-const changepasswordsuccess = document.querySelector(
-  ".changepassword__success"
-);
+const changepasswordsuccess = document.querySelector(".changepassword__success");
 const changepasswordforms = document.querySelector(".changepassword__forms");
 const changepasswordfb = document.querySelector(".changepass__buttons button");
 const changepassclose = document.querySelector(".changepass__close");
@@ -1410,11 +1408,15 @@ const changephonenum = document.querySelector(".changephonenum__success");
 const changephoneecode = document.querySelector(".changephonecode__success");
 const changephonecodeforms = document.querySelector(".changephonecode__forms");
 const formfieldset = document.querySelector(".form__fieldset");
-const changephonecodebclose = document.querySelector(
-  ".changephonecode__button_close"
-);
+const changephonecodebclose = document.querySelector(".changephonecode__button_close");
 const changephonecodeform = document.getElementById("changephonecode");
 const changephoneform = document.getElementById("changephone");
+const buttoncr = document.querySelector(".button__code_reload");
+const minutesSpan = document.querySelector(".minutes");
+const secondsSpan = document.querySelector(".seconds");
+const buttonca = document.querySelector(".button__code_again");
+const buttoncm = document.querySelector(".button__code_message");
+const buttond = document.querySelector(".button__code_disabled");
 if (changephone) {
   changephone.addEventListener("click", function () {
     bodyoverlay.style.zIndex = "120";
