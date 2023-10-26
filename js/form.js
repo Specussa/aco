@@ -65,16 +65,6 @@ const secondsSpan = document.querySelector(".seconds");
 const buttonca = document.querySelector(".button__code_again");
 const buttoncm = document.querySelector(".button__code_message");
 const buttond = document.querySelector(".button__code_disabled");
-const changephone = document.getElementById("change__phone");
-const changephoneclose = document.querySelector(".changephone__close");
-const changephonebclose = document.querySelector(".changephone__button_close");
-const changephonenum = document.querySelector(".changephonenum__success");
-const changephoneecode = document.querySelector(".changephonecode__success");
-const changephonecodeforms = document.querySelector(".changephonecode__forms");
-const formfieldset = document.querySelector(".form__fieldset");
-const changephonecodebclose = document.querySelector(".changephonecode__button_close");
-const changephonecodeform = document.getElementById("changephonecode");
-const changephoneform = document.getElementById("changephone");
 
 let temp = 0;
 const timer = (remainingMinutes, d, h, m, s) => {
@@ -129,6 +119,9 @@ buttoncr.addEventListener('click', function() {
 // start validate change phone
 const changephonephone = document.getElementById('changephone__phone');
 const changephonepassword = document.getElementById('changephone__password');
+const changephoneform = document.getElementById("changephone");
+const changephoneecode = document.querySelector(".changephonecode__success");
+const changephonecodeform = document.getElementById("changephonecode");
 
 if(changephoneform) {
   changephoneform.addEventListener('submit', e => {
@@ -174,6 +167,8 @@ const changephonecodeone = document.getElementById('changephonecode__one');
 const changephonecodetwo = document.getElementById('changephonecode__two');
 const changephonecodethree = document.getElementById('changephonecode__three');
 const changephonecodefour = document.getElementById('changephonecode__four');
+const changephonecodeforms = document.querySelector(".changephonecode__forms");
+const changephonecodebclose = document.querySelector(".changephonecode__button_close");
 
 if(changephonecodeform) {
   changephonecodeform.addEventListener('submit', e => {

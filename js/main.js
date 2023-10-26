@@ -1362,12 +1362,12 @@ if (orgshf) {
 // end
 
 // start change password
-const changepasswordb = document.getElementById("change__password_button");
-const changepasswordsuccess = document.querySelector(".changepassword__success");
-const changepasswordforms = document.querySelector(".changepassword__forms");
-const changepasswordfb = document.querySelector(".changepass__buttons button");
-const changepassclose = document.querySelector(".changepass__close");
-const changepassbclose = document.querySelector(".changepass__button_close");
+let changepasswordb = document.getElementById("change__password_button");
+let changepasswordsuccess = document.querySelector(".changepassword__success");
+let changepasswordforms = document.querySelector(".changepassword__forms");
+let changepasswordfb = document.querySelector(".changepass__buttons button");
+let changepassclose = document.querySelector(".changepass__close");
+let changepassbclose = document.querySelector(".changepass__button_close");
 if (changepasswordb) {
   changepasswordb.addEventListener("click", function () {
     bodyoverlay.style.zIndex = "120";
@@ -1405,18 +1405,12 @@ const changephone = document.getElementById("change__phone");
 const changephoneclose = document.querySelector(".changephone__close");
 const changephonebclose = document.querySelector(".changephone__button_close");
 const changephonenum = document.querySelector(".changephonenum__success");
-const changephoneecode = document.querySelector(".changephonecode__success");
-const changephonecodeforms = document.querySelector(".changephonecode__forms");
+const form_changephoneecode = document.querySelector(".changephonecode__success");
+const form_changephonecodeforms = document.querySelector(".changephonecode__forms");
 const formfieldset = document.querySelector(".form__fieldset");
-const changephonecodebclose = document.querySelector(".changephonecode__button_close");
-const changephonecodeform = document.getElementById("changephonecode");
-const changephoneform = document.getElementById("changephone");
-const buttoncr = document.querySelector(".button__code_reload");
-const minutesSpan = document.querySelector(".minutes");
-const secondsSpan = document.querySelector(".seconds");
-const buttonca = document.querySelector(".button__code_again");
-const buttoncm = document.querySelector(".button__code_message");
-const buttond = document.querySelector(".button__code_disabled");
+const form_changephonecodebclose = document.querySelector(".changephonecode__button_close");
+const form_changephonecodeform = document.getElementById("changephonecode");
+const form_changephoneform = document.getElementById("changephone");
 if (changephone) {
   changephone.addEventListener("click", function () {
     bodyoverlay.style.zIndex = "120";
@@ -1439,25 +1433,25 @@ if (changephone) {
     document.body.style.height = null;
     document.body.style.overflow = null;
   });
-  changephonecodebclose.addEventListener("click", function () {
-    if (changephonecodeforms.classList.contains("hidden")) {
-      changephonecodeform.classList.add("hidden");
-      changephoneform.classList.remove("hidden");
+  form_changephonecodebclose.addEventListener("click", function () {
+    if (form_changephonecodeforms.classList.contains("hidden")) {
+      form_changephonecodeform.classList.add("hidden");
+      form_changephoneform.classList.remove("hidden");
       changephonenum.classList.add("hidden");
-      changephonecodeforms.classList.remove("hidden");
+      form_changephonecodeforms.classList.remove("hidden");
       formfieldset.classList.remove("success");
-      changephonecodebclose.classList.add("button__white");
-      changephonecodebclose.innerText = "Отменить";
+      form_changephonecodebclose.classList.add("button__white");
+      form_changephonecodebclose.innerText = "Отменить";
       buttoncm.classList.remove("disabled");
       buttoncm.classList.remove("hidden");
       buttonca.classList.remove("hidden");
       buttond.classList.add("hidden");
     }
-    if (!changephonecodeforms.classList.contains("hidden")) {
+    if (!form_changephonecodeforms.classList.contains("hidden")) {
       changephone.classList.remove("hidden");
-      changephoneecode.classList.add("hidden");
-      changephoneform.classList.remove("hidden");
-      changephonecodeform.classList.add("hidden");
+      form_changephoneecode.classList.add("hidden");
+      form_changephoneform.classList.remove("hidden");
+      form_changephonecodeform.classList.add("hidden");
     }
     bodyoverlay.style.zIndex = null;
     bodyoverlay.classList.remove("active");
