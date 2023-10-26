@@ -2516,6 +2516,16 @@ svg path {
   width: 100%;
 }
 
+#change__password_button,
+#change__phone {
+  cursor: pointer;
+}
+
+#change__password_button input,
+#change__phone input {
+  pointer-events: none;
+}
+
 /* end cart */
 
 /* start related */
@@ -2549,7 +2559,7 @@ svg path {
 .related__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .related__head {
@@ -3044,7 +3054,7 @@ svg path {
 .largepanel__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .largepanel__prev,
@@ -3127,7 +3137,9 @@ svg path {
 }
 
 .largepanel__item {
+  display: flex;
   margin: 0 20px;
+  align-items: center;
 }
 
 .largepanel__item:not(:first-child) {
@@ -3173,11 +3185,11 @@ svg path {
 }
 
 .largepanel__item:last-child .largepanel__subitem:first-child {
-  padding: 30px 20px 0 0;
+  padding: 30px 20px 30px 0;
 }
 
 .largepanel__item:last-child .largepanel__subitem:last-child {
-  padding: 30px 0 0 20px;
+  padding: 30px 0 30px 20px;
 }
 
 .largepanel__bottom_list,
@@ -3935,15 +3947,6 @@ svg path {
 .tip {
   margin-bottom: 30px;
   color: var(--gray);
-}
-
-.form__button_absolute {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
 }
 
 .form__input {
@@ -5144,7 +5147,7 @@ svg path {
     padding: 30px 10px 30px 0;
   }
   .largepanel__item:last-child .largepanel__subitem:last-child {
-    padding: 30px 0 0 10px;
+    padding: 30px 0 30px 10px;
   }
   .largepanel__subitem:last-child .largepanel__description {
     padding: 30px 0 30px 10px;
@@ -5189,7 +5192,7 @@ svg path {
     max-height: 500px;
   }
   .largepanel__item:last-child .largepanel__subitem:first-child {
-    padding: 30px 10px 0 0;
+    padding: 30px 10px 30px 0;
   }
   .largepanel_shields__image {
     height: 420px;
@@ -5714,10 +5717,10 @@ svg path {
     max-height: 100%;
   }
   .largepanel__item:last-child .largepanel__subitem:first-child {
-    padding: 20px 10px 0 0;
+    padding: 20px 10px 20px 0;
   }
   .largepanel__item:last-child .largepanel__subitem:last-child {
-    padding: 20px 0 0 10px;
+    padding: 20px 0 20px 10px;
   }
   .largepanel__slider_item {
     height: 310px;
@@ -6286,10 +6289,10 @@ svg path {
     margin: 0 5px;
   }
   .largepanel__item:last-child .largepanel__subitem:first-child {
-    padding: 20px 5px 0 0;
+    padding: 20px 5px 20px 0;
   }
   .largepanel__item:last-child .largepanel__subitem:last-child {
-    padding: 20px 0 0 5px;
+    padding: 20px 0 20px 5px;
   }
   .largepanel__bottom_head {
     width: calc(50% + 1.25px);
