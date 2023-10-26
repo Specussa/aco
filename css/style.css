@@ -2518,7 +2518,18 @@ svg path {
 
 #change__password_button,
 #change__phone {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  background: transparent;
   cursor: pointer;
+}
+
+#change__password_button:hover,
+#change__phone:hover {
+  color: var(--gray);
 }
 
 #change__password_button input,
