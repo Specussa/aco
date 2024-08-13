@@ -103,7 +103,7 @@ if (hsearch) {
 
 // кнопка header__burger
 const buttonorder = document.querySelector(".button__order");
-const buttonorders = document.querySelector(".button__order");
+const buttonorders = document.querySelectorAll(".button__order");
 const orderoverlay = document.querySelector(".order__overlay");
 const orderclose = document.querySelector(".order__close");
 
@@ -220,6 +220,7 @@ if (searchClear || searchInput) {
 }
 // end search
 
+window.onload = function(){
 // start best__sliders
 const bestsliders = document.querySelector(".best__sliders");
 if (bestsliders) {
@@ -248,6 +249,7 @@ if (bestsliders) {
   var bestThumbs = new Swiper(".best__thumbs", {
     loop: true,
     spaceBetween: 40,
+    autoHeight: true,
     slidesPerView: 2,
     touchRatio: 0.2,
     loopedSlides: 2,
@@ -296,33 +298,70 @@ if (partnerslider) {
 }
 // end partner__slider
 
+// start largepanel__product_slider
+const largepanelproductSlider = document.querySelector(".largepanel__product_slider");
+if (largepanelproductSlider) {
+  var largepanelSlider = new Swiper(".largepanel__product_swiper", {
+    loop: true,
+    spaceBetween: 40,
+    slidesPerView: 1,
+    touchRatio: 0.2,
+    loopedSlides: 2,
+    slideToClickedSlide: true,
+    allowTouchMove: true,
+    speed: 1000,
+    navigation: {
+      nextEl: ".largepanel__product_slider_next",
+      prevEl: ".largepanel__product_slider_prev",
+    },
+    breakpoints: {
+      766: {
+        spaceBetween: 10,
+      },
+      1919: {
+        spaceBetween: 20,
+      },
+    },
+  });
+}
+// end largepanel__product_slider
+
 // start related__slider
 const relatedslider = document.querySelector(".related__slider");
 if (relatedslider) {
   var relatedSlider = new Swiper(".related__slider", {
-    loop: true,
+    loop: false,
     spaceBetween: 40,
     slidesPerView: 4,
     touchRatio: 0.2,
     loopedSlides: 4,
-    slideToClickedSlide: true,
-    allowTouchMove: true,
+    slideToClickedSlide: false,
+    allowTouchMove: false,
     speed: 1000,
     navigation: {
       nextEl: ".related__next",
       prevEl: ".related__prev",
     },
     breakpoints: {
-      766: {
-        spaceBetween: 10,
-        slidesPerView: 2,
+      10000: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1919: {
+        slidesPerView: 4,
+        spaceBetween: 20,
       },
       1199: {
         spaceBetween: 20,
         slidesPerView: 3,
       },
-      1919: {
-        spaceBetween: 20,
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1: {
+        spaceBetween: 10,
+        slidesPerView: 2,
       },
     },
   });
@@ -333,29 +372,38 @@ if (relatedslider) {
 const relatedslidertwo = document.querySelector(".related__slider_two");
 if (relatedslidertwo) {
   var relatedSlider = new Swiper(".related__slider_two", {
-    loop: true,
+    loop: false,
     spaceBetween: 40,
     slidesPerView: 4,
     touchRatio: 0.2,
     loopedSlides: 4,
-    slideToClickedSlide: true,
-    allowTouchMove: true,
+    slideToClickedSlide: false,
+    allowTouchMove: false,
     speed: 1000,
     navigation: {
       nextEl: ".related__next_two",
       prevEl: ".related__prev_two",
     },
     breakpoints: {
-      766: {
-        spaceBetween: 10,
-        slidesPerView: 2,
+      10000: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1919: {
+        slidesPerView: 4,
+        spaceBetween: 20,
       },
       1199: {
         spaceBetween: 20,
         slidesPerView: 3,
       },
-      1919: {
-        spaceBetween: 20,
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1: {
+        spaceBetween: 10,
+        slidesPerView: 2,
       },
     },
   });
@@ -366,29 +414,38 @@ if (relatedslidertwo) {
 const relatedsliderthree = document.querySelector(".related__slider_three");
 if (relatedsliderthree) {
   var relatedSlider = new Swiper(".related__slider_three", {
-    loop: true,
+    loop: false,
     spaceBetween: 40,
     slidesPerView: 4,
     touchRatio: 0.2,
     loopedSlides: 4,
-    slideToClickedSlide: true,
-    allowTouchMove: true,
+    slideToClickedSlide: false,
+    allowTouchMove: false,
     speed: 1000,
     navigation: {
       nextEl: ".related__next_three",
       prevEl: ".related__prev_three",
     },
     breakpoints: {
-      766: {
-        spaceBetween: 10,
-        slidesPerView: 2,
+      10000: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1919: {
+        slidesPerView: 4,
+        spaceBetween: 20,
       },
       1199: {
         spaceBetween: 20,
         slidesPerView: 3,
       },
-      1919: {
-        spaceBetween: 20,
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1: {
+        spaceBetween: 10,
+        slidesPerView: 2,
       },
     },
   });
@@ -399,29 +456,80 @@ if (relatedsliderthree) {
 const relatedsliderfour = document.querySelector(".related__slider_four");
 if (relatedsliderfour) {
   var relatedSlider = new Swiper(".related__slider_four", {
-    loop: true,
+    loop: false,
     spaceBetween: 40,
     slidesPerView: 4,
     touchRatio: 0.2,
     loopedSlides: 4,
-    slideToClickedSlide: true,
-    allowTouchMove: true,
+    slideToClickedSlide: false,
+    allowTouchMove: false,
     speed: 1000,
     navigation: {
       nextEl: ".related__next_four",
       prevEl: ".related__prev_four",
     },
     breakpoints: {
-      766: {
-        spaceBetween: 10,
-        slidesPerView: 2,
+      10000: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1919: {
+        slidesPerView: 4,
+        spaceBetween: 20,
       },
       1199: {
         spaceBetween: 20,
         slidesPerView: 3,
       },
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+    },
+  });
+}
+// end related__slider
+
+// start related__slider
+const relatedsliderfive = document.querySelector(".related__slider_five");
+if (relatedsliderfive) {
+  var relatedSlider = new Swiper(".related__slider_five", {
+    loop: false,
+    spaceBetween: 40,
+    slidesPerView: 4,
+    touchRatio: 0.2,
+    loopedSlides: 4,
+    slideToClickedSlide: false,
+    allowTouchMove: false,
+    speed: 1000,
+    navigation: {
+      nextEl: ".related__next_five",
+      prevEl: ".related__prev_five",
+    },
+    breakpoints: {
+      10000: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
       1919: {
+        slidesPerView: 4,
         spaceBetween: 20,
+      },
+      1199: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      766: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      1: {
+        spaceBetween: 10,
+        slidesPerView: 2,
       },
     },
   });
@@ -486,6 +594,26 @@ if (equipmentsslider) {
   });
 }
 // end equipments__slider
+
+// start slider catalog
+if (document.querySelector(".related__item_swiper")) {
+  document.querySelectorAll(".related__item_swiper").forEach((n) => {
+    const slider = new Swiper(n.querySelector(".related__item_slider"), {
+      loop: false,
+      slidesPerView: 1,
+      speed: 500,
+      spaceBetween: 20,
+      slideToClickedSlide: false,
+      allowTouchMove: false,
+      navigation: {
+        nextEl: n.querySelector(".related__item_slider_next"),
+        prevEl: n.querySelector(".related__item_slider_prev"),
+      },
+    });
+  });
+}
+// end slider catalog
+}
 
 document.querySelectorAll(".objects__slider_block").forEach((n) => {
   const slider = new Swiper(n.querySelectorAll(".objects__slider"), {
@@ -756,10 +884,8 @@ if (newtabs) {
         this.parentElement.parentElement.nextElementSibling.children[0];
       var tnsb =
         this.parentElement.parentElement.nextElementSibling.children[1];
-      if (tnsb.classList.contains("hidden")) {
-        this.parentElement.previousElementSibling.children[0].classList.remove(
-          "active"
-        );
+      if (tnsb && tnsb.classList.contains("hidden")) {
+        this.parentElement.previousElementSibling.children[0].classList.remove("active");
         tnfb.classList.add("hidden");
         tnsb.classList.remove("hidden");
         this.classList.add("active");
@@ -794,7 +920,7 @@ if (tabs) {
 }
 
 /*** Change avatar ***/
-if ($(".js-change-avatar")) {
+if (document.querySelector(".js-change-avatar")) {
   $(".js-change-avatar").on("click", function () {
     $(".js-change-avatar ~ .change-image-popup").show();
   });
@@ -855,16 +981,18 @@ if ($(".js-change-avatar")) {
 }
 
 /*** Order filter ***/
-$(".js-order-filter .orders-heading__filters-item").on("click", function () {
-  $(".js-order-filter .orders-heading__filters-item").removeClass("active");
-  $(this).addClass("active");
-});
+if (document.querySelector(".js-order-filter .orders-heading__filters-item")) {
+  $(".js-order-filter .orders-heading__filters-item").on("click", function () {
+    $(".js-order-filter .orders-heading__filters-item").removeClass("active");
+    $(this).addClass("active");
+  });
+}
 
 /*** Switch hide/show password ***/
-const visibilityPasswordSwitcher = $(".js-toggle-show-password");
+const visibilityPasswordSwitcher = document.querySelector(".js-toggle-show-password");
 
 if (visibilityPasswordSwitcher) {
-  visibilityPasswordSwitcher.on("click", function () {
+  $(".js-toggle-show-password").on("click", function () {
     const thisPrevInput = $(this).prev();
 
     if (thisPrevInput.attr("type") === "password") {
@@ -880,39 +1008,24 @@ if (visibilityPasswordSwitcher) {
 }
 
 /*** Control submit button ***/
-const controlInput = $(".js-control-submit");
+const controlInput = document.querySelector(".js-control-submit");
 
 if (controlInput) {
-  controlInput.on("input", function () {
+  $(".js-control-submit").on("input", function () {
     const thisParentForm = $(this).closest("form");
     const thisValLength = $(this).val().length;
 
-    thisValLength < 10
+    thisValLength < 4
       ? $(".from__submit", thisParentForm).addClass("btn--disabled")
       : $(".from__submit", thisParentForm).removeClass("btn--disabled");
   });
 }
 
-/*** Anchor scroll ***/
-const anchor = $(".js-anchor");
-
-if (anchor) {
-  anchor.on("click", function (e) {
-    e.preventDefault();
-
-    const thisAnchorId = $(this).attr("href");
-    const headerHeight = $("header").height();
-    const anchorElemTop = $(thisAnchorId).offset().top;
-
-    $("body, html").animate({ scrollTop: anchorElemTop - headerHeight }, 500);
-  });
-}
-
 /*** Registration ***/
-const privacyCheck = $(".js-toggle-submit-disabled");
+const privacyCheck = document.querySelector(".js-toggle-submit-disabled");
 
 if (privacyCheck) {
-  privacyCheck.on("click", function () {
+  $(".js-toggle-submit-disabled").on("click", function () {
     const registerSubmit = $('.js-registration-form [type="submit"]')[0];
 
     registerSubmit.classList.toggle("btn--disabled");
@@ -1407,10 +1520,16 @@ const changephone = document.getElementById("change__phone");
 const changephoneclose = document.querySelector(".changephone__close");
 const changephonebclose = document.querySelector(".changephone__button_close");
 const changephonenum = document.querySelector(".changephonenum__success");
-const form_changephoneecode = document.querySelector(".changephonecode__success");
-const form_changephonecodeforms = document.querySelector(".changephonecode__forms");
+const form_changephoneecode = document.querySelector(
+  ".changephonecode__success"
+);
+const form_changephonecodeforms = document.querySelector(
+  ".changephonecode__forms"
+);
 const formfieldset = document.querySelector(".form__fieldset");
-const form_changephonecodebclose = document.querySelector(".changephonecode__button_close");
+const form_changephonecodebclose = document.querySelector(
+  ".changephonecode__button_close"
+);
 const form_changephonecodeform = document.getElementById("changephonecode");
 const form_changephoneform = document.getElementById("changephone");
 if (changephone) {
@@ -1435,34 +1554,48 @@ if (changephone) {
     document.body.style.height = null;
     document.body.style.overflow = null;
   });
-  form_changephonecodebclose.addEventListener("click", function () {
-    if (form_changephonecodeforms.classList.contains("hidden")) {
-      form_changephonecodeform.classList.add("hidden");
-      form_changephoneform.classList.remove("hidden");
-      changephonenum.classList.add("hidden");
-      form_changephonecodeforms.classList.remove("hidden");
-      formfieldset.classList.remove("success");
-      form_changephonecodebclose.classList.add("button__white");
-      form_changephonecodebclose.innerText = "Отменить";
-      buttoncm.classList.remove("disabled");
-      buttoncm.classList.remove("hidden");
-      buttonca.classList.remove("hidden");
-      buttond.classList.add("hidden");
-    }
-    if (!form_changephonecodeforms.classList.contains("hidden")) {
-      changephone.classList.remove("hidden");
-      form_changephoneecode.classList.add("hidden");
-      form_changephoneform.classList.remove("hidden");
-      form_changephonecodeform.classList.add("hidden");
-    }
-    bodyoverlay.style.zIndex = null;
-    bodyoverlay.classList.remove("active");
-    changephoneoverlay.classList.remove("active");
-    document.body.style.height = null;
-    document.body.style.overflow = null;
-  });
+  // form_changephonecodebclose.addEventListener("click", function () {
+  //   if (form_changephonecodeforms.classList.contains("hidden")) {
+  //     form_changephonecodeform.classList.add("hidden");
+  //     form_changephoneform.classList.remove("hidden");
+  //     changephonenum.classList.add("hidden");
+  //     form_changephonecodeforms.classList.remove("hidden");
+  //     formfieldset.classList.remove("success");
+  //     form_changephonecodebclose.classList.add("button__white");
+  //     form_changephonecodebclose.innerText = "Отменить";
+  //     buttoncm.classList.remove("disabled");
+  //     buttoncm.classList.remove("hidden");
+  //     buttonca.classList.remove("hidden");
+  //     buttond.classList.add("hidden");
+  //   }
+  //   if (!form_changephonecodeforms.classList.contains("hidden")) {
+  //     changephone.classList.remove("hidden");
+  //     form_changephoneecode.classList.add("hidden");
+  //     form_changephoneform.classList.remove("hidden");
+  //     form_changephonecodeform.classList.add("hidden");
+  //   }
+  //   bodyoverlay.style.zIndex = null;
+  //   bodyoverlay.classList.remove("active");
+  //   changephoneoverlay.classList.remove("active");
+  //   document.body.style.height = null;
+  //   document.body.style.overflow = null;
+  // });
 }
 // end change phone
+
+// start form__group_check
+const checkboxinputorgcheck = [...document.querySelectorAll('.checkbox__input_orgcheck')];
+const formgroupcheckblock = document.querySelector(".form__group_check_block");
+if (formgroupcheckblock) {
+  checkboxinputorgcheck.forEach(input => input.addEventListener('input', function(event) {
+    if (event.target.checked) {
+      formgroupcheckblock.classList.add('active');
+    } else {
+      formgroupcheckblock.classList.remove('active');
+    }
+  }))
+}
+// end form__group_check
 
 // start mask phone
 const phonemask = document.querySelector("[data-phone-pattern]");
@@ -1501,3 +1634,115 @@ if (phonemask) {
   });
 }
 // end mask phone
+
+// start button more
+var relatedbuttonmore = document.querySelector('.related__button_more');
+if (relatedbuttonmore) {
+  const rwbItems = [...document.querySelectorAll('.related_with_button .related__item')];
+  rwbItems.forEach(n => n.classList.add('hidden'));
+  
+  const rwbItemss = [...document.querySelectorAll('.related__padding .related_with_button')];
+  rwbItemss.forEach(n => {
+    if(n.children[0]){n.children[0].classList.remove('hidden')};
+    if(n.children[1]){n.children[1].classList.remove('hidden')};
+    if(n.children[2]){n.children[2].classList.remove('hidden')};
+    if(n.children[3]){n.children[3].classList.remove('hidden')};
+  });
+  
+  var rbm = document.querySelectorAll('.related__button_more');
+  for (var i = 0; i < rbm.length; i++) {
+    rbm[i].addEventListener('click', function() {
+      const thiss = this;
+      let showPerClick = 4;
+      var rwbItemsHidden = thiss.parentNode.querySelectorAll('.related__item.hidden');
+      if (rwbItemsHidden.length < showPerClick) {
+        showPerClick = rwbItemsHidden.length;
+      }
+      if (rwbItemsHidden.length === 0) {
+        thiss.classList.remove('active');
+        showPerClick = 4;
+      }
+      var rwbItem = thiss.parentNode.querySelectorAll('.related__item');
+      for (var t = 0; t < showPerClick; t++) {
+        if (rwbItemsHidden.length === 0) {
+          for (var n = 0; n < rwbItem.length; n++) {
+            rwbItem[n].classList.add('hidden');
+            if(rwbItem[0]){rwbItem[0].classList.remove('hidden');}
+            if(rwbItem[1]){rwbItem[1].classList.remove('hidden');}
+            if(rwbItem[2]){rwbItem[2].classList.remove('hidden');}
+            if(rwbItem[3]){rwbItem[3].classList.remove('hidden');}
+          }
+        } else {
+          thiss.classList.remove('active');
+          rwbItemsHidden[t].classList.remove('hidden');
+          if (rwbItemsHidden.length === showPerClick) {
+            thiss.classList.add('active');
+          }
+        }
+      }
+    });
+  }
+}
+// end button more
+
+// start vacancies
+if(document.querySelector('.vacancy__item')) {
+  const vacanciesitem = document.getElementsByClassName("vacancy__item");
+  
+  for (i = 0; i < vacanciesitem.length; i++) {
+    vacanciesitem[i].onclick = function(e) {
+      const vacanciesitemNext = this.children[1];
+      const vacanciesitembottom = document.getElementsByClassName("vacancy__info");
+      const vacanciesitemActive = document.getElementsByClassName("vacancy__item active");
+      if (vacanciesitemNext.style.maxHeight) {
+        vacanciesitemNext.style.maxHeight = null;
+        this.classList.remove("active");
+      } else {
+        for (var q = 0; q < vacanciesitemActive.length; q++) {
+          vacanciesitemActive[q].classList.remove("active");
+        }
+        for (var p = 0; p < vacanciesitembottom.length; p++) {
+          this.classList.remove("active");
+          vacanciesitembottom[p].style.maxHeight = null;
+        }
+        vacanciesitemNext.style.maxHeight = vacanciesitemNext.scrollHeight + "px";
+        this.classList.add("active");
+      }
+    };
+  }
+}
+// end vacancies
+
+/*** Anchor to contacts ***/
+// if(document.querySelector("a.header__nav_heading")){
+//   $("a.header__nav_heading").on("click", function (e) {
+//     const thisHref = $(this).attr("href");
+  
+//     if (thisHref === "#contacts") {
+//       e.preventDefault();
+  
+//       const anchorElemTop = $("#contacts").offset().top;
+//       const headerHeight = $("header").innerHeight();
+  
+//       $("body, html")
+//         .stop()
+//         .animate({ scrollTop: anchorElemTop - headerHeight }, 0);
+//     }
+//   });
+// }
+
+/*** Accordion ***/
+// const switchElement = document.querySelectorAll(".js-switch");
+
+// if (switchElement) {
+//   switchElement.forEach((item) => {
+//     item.addEventListener("click", function () {
+//       $(this).next().slideToggle(200);
+//       this.classList.toggle("active-icon");
+
+//       setTimeout(() => {
+//         this.classList.toggle("active");
+//       }, 200);
+//     });
+//   });
+// }
