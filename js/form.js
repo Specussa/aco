@@ -272,7 +272,6 @@ if(vacancyInput) {
         document.body.style.height = null;
         document.body.style.overflow = null;
       } else {
-        vacancyPopupHead.children[1].innerHTML = this.parentElement.parentElement.previousElementSibling.children[0].innerText;
         vacancyPopupName.value = this.parentElement.parentElement.previousElementSibling.children[0].innerText;
         bodyoverlays.style.zIndex = "120";
         bodyoverlays.classList.add("active");
