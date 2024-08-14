@@ -259,7 +259,6 @@ if(vacancyInput) {
   const vacancyPopupButton = document.querySelectorAll(".vacancy__popup_button");
   const vacancyPopup = document.querySelector(".vacancy__popup");
   const vacancyclose = document.querySelector(".vacancy__close");
-  const vacancyPopupHead = document.querySelector(".vacancy__popup_head");
   const vacancyPopupName = document.getElementById("vacancy__popup_name");
 
   vacancyPopupButton.forEach((i) =>

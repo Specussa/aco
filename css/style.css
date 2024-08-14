@@ -4524,10 +4524,6 @@ svg path {
   user-select: none;
 }
 
-.vacancy__popup_head {
-  margin: 40px 0 0;
-}
-
 .changepass__buttons,
 .changephone__buttons {
   display: flex;
@@ -5683,9 +5679,13 @@ svg path {
   font-size: 24px;
   font-weight: 300;
   line-height: 27.6px;
-  color: var(--lgreen);
+  color: var(--green);
   -webkit-transition: color 0.15s linear;
   transition: color 0.15s linear;
+}
+
+#vacancy__popup_name {
+  color: var(--green);
 }
 
 .form__file_button:hover {
@@ -6506,6 +6506,10 @@ svg path {
   .vacancy_contact__right,
   .vacancy_contact__left {
     gap: 30px;
+  }
+  .form__file_button {
+    font-size: 14px;
+    line-height: 16.1px;
   }
   .footer__list_top .footer__item {
     padding: 0 10px;
