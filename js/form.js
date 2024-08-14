@@ -66,7 +66,7 @@ const buttonca = document.querySelector(".button__code_again");
 const buttoncm = document.querySelector(".button__code_message");
 const buttond = document.querySelector(".button__code_disabled");
 
-if(buttoncr) {
+if (buttoncr) {
   let temp = 0;
   const timer = (remainingMinutes, d, h, m, s) => {
     buttonca.classList.add("hidden");

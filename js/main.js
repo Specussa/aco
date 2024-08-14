@@ -1717,35 +1717,35 @@ if(document.querySelector('.vacancy__button')) {
 // end vacancies
 
 /*** Anchor to contacts ***/
-// if(document.querySelector("a.header__nav_heading")){
-//   $("a.header__nav_heading").on("click", function (e) {
-//     const thisHref = $(this).attr("href");
+if(document.querySelector("a.header__nav_heading")){
+  $("a.header__nav_heading").on("click", function (e) {
+    const thisHref = $(this).attr("href");
   
-//     if (thisHref === "#contacts") {
-//       e.preventDefault();
+    if (thisHref === "#contacts") {
+      e.preventDefault();
   
-//       const anchorElemTop = $("#contacts").offset().top;
-//       const headerHeight = $("header").innerHeight();
+      const anchorElemTop = $("#contacts").offset().top;
+      const headerHeight = $("header").innerHeight();
   
-//       $("body, html")
-//         .stop()
-//         .animate({ scrollTop: anchorElemTop - headerHeight }, 0);
-//     }
-//   });
-// }
+      $("body, html")
+        .stop()
+        .animate({ scrollTop: anchorElemTop - headerHeight }, 0);
+    }
+  });
+}
 
 /*** Accordion ***/
-// const switchElement = document.querySelectorAll(".js-switch");
+const switchElement = document.querySelectorAll(".js-switch");
 
-// if (switchElement) {
-//   switchElement.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       $(this).next().slideToggle(200);
-//       this.classList.toggle("active-icon");
+if (switchElement) {
+  switchElement.forEach((item) => {
+    item.addEventListener("click", function () {
+      $(this).next().slideToggle(200);
+      this.classList.toggle("active-icon");
 
-//       setTimeout(() => {
-//         this.classList.toggle("active");
-//       }, 200);
-//     });
-//   });
-// }
+      setTimeout(() => {
+        this.classList.toggle("active");
+      }, 200);
+    });
+  });
+}
