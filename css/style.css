@@ -2711,7 +2711,8 @@ svg path {
 .order__overlay,
 .neworder__overlay,
 .changephone__overlay,
-.changepass__overlay {
+.changepass__overlay,
+.vacancy__popup {
   width: 100%;
   max-width: 1120px;
   max-height: 100%;
@@ -2741,7 +2742,8 @@ svg path {
 .order__overlay.active,
 .neworder__overlay.active,
 .changephone__overlay.active,
-.changepass__overlay.active {
+.changepass__overlay.active,
+.vacancy__popup.active {
   top: 50%;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
@@ -2760,7 +2762,8 @@ svg path {
 .order__close,
 .neworder__close,
 .changephone__close,
-.changepass__close {
+.changepass__close,
+.vacancy__close {
   padding: 20px;
   position: absolute;
   right: 40px;
@@ -2770,7 +2773,8 @@ svg path {
 .order__close svg,
 .neworder__close svg,
 .changephone__close svg,
-.changepass__close svg {
+.changepass__close svg,
+.vacancy__close svg {
   width: 33px;
   height: 33px;
   -webkit-transform: rotate(0deg);
@@ -2782,14 +2786,16 @@ svg path {
 .order__close:hover svg,
 .neworder__close:hover svg,
 .changephone__close:hover svg,
-.changepass__close:hover svg {
+.changepass__close:hover svg,
+.vacancy__close:hover svg {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .neworder__overlay,
 .changephone__overlay,
-.changepass__overlay {
+.changepass__overlay,
+.vacancy__popup {
   padding: 60px 20px 40px;
 }
 
@@ -4502,7 +4508,8 @@ svg path {
   color: var(--green);
 }
 
-.overlay__head {
+.overlay__head,
+.vacancy__popup_head {
   padding: 0 0 40px;
   font-size: 48px;
   font-weight: 600;
@@ -4515,6 +4522,10 @@ svg path {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.vacancy__popup_head {
+  margin: 40px 0 0;
 }
 
 .changepass__buttons,
@@ -5593,6 +5604,12 @@ svg path {
 
 .vacancy_contact__heading {
   padding: 0 20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .vacancy_contact__tel {
@@ -5642,6 +5659,80 @@ svg path {
   font-weight: 300;
   line-height: 27.6px;
   color: var(--gray);
+}
+
+.form__file {
+  display: flex;
+  padding: 20px 0 40px;
+  flex-direction: column;
+  gap: 20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form__file_button {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 27.6px;
+  color: var(--lgreen);
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+}
+
+.form__file_button:hover {
+  color: var(--black);
+}
+
+.form__file_button svg {
+  color: var(--green);
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+}
+
+.form__file_button:hover svg {
+  color: var(--black);
+}
+
+.form__file_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form__file_item {
+  display: flex;
+  height: 40px;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.form__file_item button,
+.form__file_item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__file_name {
+  display: block;
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* end vacancy */
@@ -6331,7 +6422,8 @@ svg path {
   .order__close,
   .neworder__close,
   .changephone__close,
-  .changepass__close {
+  .changepass__close,
+  .vacancy__close {
     right: 20px;
     top: 20px;
   }
@@ -6353,10 +6445,12 @@ svg path {
   }
   .neworder__overlay,
   .changephone__overlay,
-  .changepass__overlay {
+  .changepass__overlay,
+  .vacancy__popup {
     padding: 60px 20px 40px;
   }
-  .overlay__head {
+  .overlay__head,
+  .vacancy__popup_head {
     font-size: 38px;
     line-height: 48px;
   }
@@ -7639,14 +7733,16 @@ svg path {
   .order__close,
   .neworder__close,
   .changephone__close,
-  .changepass__close {
+  .changepass__close,
+  .vacancy__close {
     right: 0;
     top: 0;
   }
   .order__close svg,
   .neworder__close svg,
   .changephone__close svg,
-  .changepass__close svg  {
+  .changepass__close svg,
+  .vacancy__close svg  {
     width: 22px;
     height: 22px;
   }
@@ -7674,7 +7770,8 @@ svg path {
   .neworder__overlay .button__default {
     width: 100%;
   }
-  .overlay__head {
+  .overlay__head,
+  .vacancy__popup_head {
     padding: 0 0 20px;
     font-size: 34px;
     line-height: 36px;

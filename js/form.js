@@ -66,54 +66,56 @@ const buttonca = document.querySelector(".button__code_again");
 const buttoncm = document.querySelector(".button__code_message");
 const buttond = document.querySelector(".button__code_disabled");
 
-let temp = 0;
-const timer = (remainingMinutes, d, h, m, s) => {
-  buttonca.classList.add("hidden");
-  buttoncm.classList.add("disabled");
-  buttond.classList.remove("hidden");
-  var finishTime = new Date();
-  finishTime.setSeconds(finishTime.getSeconds() + remainingMinutes);
-  var timesOver;
-
-  function update() {
-    var diff = finishTime - new Date();
-    var millis = diff % 1000;
-    diff = Math.floor(diff / 1000);
-    var sec = diff % 60;
-    if (sec < 10) sec = "0" + sec;
-    diff = Math.floor(diff / 60);
-    var min = diff % 60;
-    if (min < 10) min = "0" + min;
-    diff = Math.floor(diff / 60);
-    var hours = diff % 24;
-    if (hours < 10) hours = "0" + hours;
-    var days = Math.floor(diff / 24);
-
-    d = +days;
-    h = +hours;
-    m = +min;
-    s = +sec;
-
-    minutesSpan.innerHTML = ("0" + m).slice(-2);
-    secondsSpan.innerHTML = ("0" + s).slice(-2);
-
-    timesOver = d * 86400 + h * 3600 + m * 60 + s;
-
-    if (timesOver <= 0) {
-      buttonca.classList.remove("hidden");
-      buttoncm.classList.remove("disabled");
-      buttond.classList.add("hidden");
-      return
+if(buttoncr) {
+  let temp = 0;
+  const timer = (remainingMinutes, d, h, m, s) => {
+    buttonca.classList.add("hidden");
+    buttoncm.classList.add("disabled");
+    buttond.classList.remove("hidden");
+    var finishTime = new Date();
+    finishTime.setSeconds(finishTime.getSeconds() + remainingMinutes);
+    var timesOver;
+  
+    function update() {
+      var diff = finishTime - new Date();
+      var millis = diff % 1000;
+      diff = Math.floor(diff / 1000);
+      var sec = diff % 60;
+      if (sec < 10) sec = "0" + sec;
+      diff = Math.floor(diff / 60);
+      var min = diff % 60;
+      if (min < 10) min = "0" + min;
+      diff = Math.floor(diff / 60);
+      var hours = diff % 24;
+      if (hours < 10) hours = "0" + hours;
+      var days = Math.floor(diff / 24);
+  
+      d = +days;
+      h = +hours;
+      m = +min;
+      s = +sec;
+  
+      minutesSpan.innerHTML = ("0" + m).slice(-2);
+      secondsSpan.innerHTML = ("0" + s).slice(-2);
+  
+      timesOver = d * 86400 + h * 3600 + m * 60 + s;
+  
+      if (timesOver <= 0) {
+        buttonca.classList.remove("hidden");
+        buttoncm.classList.remove("disabled");
+        buttond.classList.add("hidden");
+        return
+      }
+      clearTimeout(temp);
+      temp = setTimeout(update, millis);
     }
-    clearTimeout(temp);
-    temp = setTimeout(update, millis);
-  }
-  setTimeout(update, 0);
-};
-
-buttoncr.addEventListener('click', function() {
-  timer(120);
-})
+    setTimeout(update, 0);
+  };
+  
+  buttoncr.addEventListener('click', function() {
+    timer(120);
+  })
+}
 // end timer
 
 // start validate change phone
@@ -248,3 +250,172 @@ if(changephonecodeform) {
   }
 }
 // end validate change phone
+
+// start vacancy files
+const vacancyInput = document.getElementById('vacancy__file');
+if(vacancyInput) {
+
+  const bodyoverlays = document.querySelector(".overlay");
+  const vacancyPopupButton = document.querySelectorAll(".vacancy__popup_button");
+  const vacancyPopup = document.querySelector(".vacancy__popup");
+  const vacancyclose = document.querySelector(".vacancy__close");
+  const vacancyPopupHead = document.querySelector(".vacancy__popup_head");
+  const vacancyPopupName = document.getElementById("vacancy__popup_name");
+
+  vacancyPopupButton.forEach((i) =>
+    i.addEventListener("click", function () {
+      if (vacancyPopup.classList.contains("active")) {
+        bodyoverlays.style.zIndex = null;
+        bodyoverlays.classList.remove("active");
+        vacancyPopup.classList.remove("active");
+        vacancyPopup.classList.remove("active");
+        document.body.style.height = null;
+        document.body.style.overflow = null;
+      } else {
+        vacancyPopupHead.children[1].innerHTML = this.parentElement.parentElement.previousElementSibling.children[0].innerText;
+        vacancyPopupName.value = this.parentElement.parentElement.previousElementSibling.children[0].innerText;
+        bodyoverlays.style.zIndex = "120";
+        bodyoverlays.classList.add("active");
+        vacancyPopup.classList.add("active");
+        vacancyPopup.classList.add("active");
+        document.body.style.height = "100vh";
+        document.body.style.overflow = "hidden";
+      }
+    })
+  );
+  vacancyclose.addEventListener("click", function () {
+    bodyoverlays.style.zIndex = null;
+    bodyoverlays.classList.remove("active");
+    vacancyPopup.classList.remove("active");
+    document.body.style.height = null;
+    document.body.style.overflow = null;
+  });
+
+  var vacancyToUpload = [];
+  const vacancyfileContainer = document.getElementById('vacancy__file_container');
+
+  function vacancyfilesObserver(el, callback){
+      var done = function (){callback(el);};
+      var observer = new MutationObserver(done);
+      observer.observe(el, {childList: true, characterDataOldValue: true});
+  };
+
+  vacancyfilesObserver(vacancyfileContainer, function (){
+    if (vacancyfileContainer.children[1]) {
+      vacancyfileContainer.children[0].remove();
+    }
+  });
+
+  function vacancyformatBytes(bytes, decimals = 2) {
+    if (bytes === 0) {
+      return '0';
+    } else {
+      var k = 1024;
+      var dm = decimals < 0 ? 0 : decimals;
+      var sizes = ['B', 'Kb', 'Mb', 'Gb', 'Tb'];
+      var i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    }
+  }
+
+  vacancyInput.addEventListener('change', (e) => {
+    for (let i = 0; i < e.target.files.length; i++) {
+      let myFile = e.target.files[i];
+      let myFileID = "FID" + (1000 + Math.random() * 9000).toFixed(0);
+      let myFileSize = vacancyformatBytes(e.target.files[i].size);
+
+      vacancyToUpload.push({
+        file: myFile,
+        FID: myFileID,
+        filesize: myFileSize
+      });
+    };
+    vacancydisplayFiles();
+    // e.target.value = null;
+  });
+
+  function vacancyremoveFile(x) {
+    vacancyInput.value = "";
+    vacancyfileContainer.children[0].remove();
+    // for (let i = 0; i < vacancyToUpload.length; i++) {
+    //   if (vacancyToUpload[i].FID === x) {
+    //     vacancyToUpload.splice(i, 1);
+    //   }
+    // }
+    // vacancydisplayFiles();
+  }
+
+  function vacancydisplayFiles() {
+    vacancyfileContainer.innerHTML = "";
+    for (let i = 0; i < vacancyToUpload.length; i++) {
+      vacancyfileContainer.innerHTML += `<li class="form__file_item"><span class="form__file_name">${vacancyToUpload[i].file.name}</span><span class="form__file_size">${vacancyToUpload[i].filesize}</span><a onclick="vacancyremoveFile('${vacancyToUpload[i].FID}')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L12 12M12 12L17 7.00001M12 12L7 7M12 12L17 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>`;
+    }
+  }
+}
+// end vacancy files
+
+// start contact files
+const contactInput = document.getElementById('contact__file');
+if(contactInput) {
+  var contactToUpload = [];
+  const contactfileContainer = document.getElementById('contact__file_container');
+
+  function contactfilesObserver(el, callback){
+      var done = function (){callback(el);};
+      var observer = new MutationObserver(done);
+      observer.observe(el, {childList: true, characterDataOldValue: true});
+  };
+
+  contactfilesObserver(contactfileContainer, function (){
+    if (contactfileContainer.children[1]) {
+      contactfileContainer.children[0].remove();
+    }
+  });
+
+  function contactformatBytes(bytes, decimals = 2) {
+    if (bytes === 0) {
+      return '0';
+    } else {
+      var k = 1024;
+      var dm = decimals < 0 ? 0 : decimals;
+      var sizes = ['B', 'Kb', 'Mb', 'Gb', 'Tb'];
+      var i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    }
+  }
+
+  contactInput.addEventListener('change', (e) => {
+    for (let i = 0; i < e.target.files.length; i++) {
+      let myFile = e.target.files[i];
+      let myFileID = "FID" + (1000 + Math.random() * 9000).toFixed(0);
+      let myFileSize = contactformatBytes(e.target.files[i].size);
+
+      contactToUpload.push({
+        file: myFile,
+        FID: myFileID,
+        filesize: myFileSize
+      });
+    };
+    contactdisplayFiles();
+    // e.target.value = null;
+  });
+
+  function contactremoveFile(x) {
+    contactInput.value = "";
+    contactfileContainer.children[0].remove();
+    // for (let i = 0; i < contactToUpload.length; i++) {
+    //   if (contactToUpload[i].FID === x) {
+    //     contactToUpload.splice(i, 1);
+    //   }
+    // }
+    // contactdisplayFiles();
+  }
+
+  function contactdisplayFiles() {
+    contactfileContainer.innerHTML = "";
+    for (let i = 0; i < contactToUpload.length; i++) {
+      contactfileContainer.innerHTML += `<li class="form__file_item"><span class="form__file_name">${contactToUpload[i].file.name}</span><span class="form__file_size">${contactToUpload[i].filesize}</span><a onclick="contactremoveFile('${contactToUpload[i].FID}')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L12 12M12 12L17 7.00001M12 12L7 7M12 12L17 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>`;
+    }
+  }
+}
+// end contact files

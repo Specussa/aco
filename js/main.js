@@ -101,7 +101,7 @@ if (hsearch) {
 }
 // end
 
-// кнопка header__burger
+// кнопка button__order
 const buttonorder = document.querySelector(".button__order");
 const buttonorders = document.querySelectorAll(".button__order");
 const orderoverlay = document.querySelector(".order__overlay");
@@ -161,6 +161,9 @@ bodyoverlay.addEventListener("click", function () {
   if (changepassoverlay) {
     bodyoverlay.style.zIndex = null;
     changepassoverlay.classList.remove("active");
+  }
+  if (document.querySelector(".vacancy__popup")) {
+    document.querySelector(".vacancy__popup").classList.remove("active");
   }
   if (window.scrollY > 1) {
   } else {
@@ -1686,8 +1689,8 @@ if (relatedbuttonmore) {
 // end button more
 
 // start vacancies
-if(document.querySelector('.vacancy__item')) {
-  const vacanciesitem = document.getElementsByClassName("vacancy__item");
+if(document.querySelector('.vacancy__button')) {
+  const vacanciesitem = document.getElementsByClassName("vacancy__button");
   
   for (i = 0; i < vacanciesitem.length; i++) {
     vacanciesitem[i].onclick = function(e) {
@@ -1696,7 +1699,7 @@ if(document.querySelector('.vacancy__item')) {
       const vacanciesitemActive = document.getElementsByClassName("vacancy__item active");
       if (vacanciesitemNext.style.maxHeight) {
         vacanciesitemNext.style.maxHeight = null;
-        this.classList.remove("active");
+        this.parentElement.classList.remove("active");
       } else {
         for (var q = 0; q < vacanciesitemActive.length; q++) {
           vacanciesitemActive[q].classList.remove("active");
@@ -1706,7 +1709,7 @@ if(document.querySelector('.vacancy__item')) {
           vacanciesitembottom[p].style.maxHeight = null;
         }
         vacanciesitemNext.style.maxHeight = vacanciesitemNext.scrollHeight + "px";
-        this.classList.add("active");
+        this.parentElement.classList.add("active");
       }
     };
   }

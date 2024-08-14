@@ -489,6 +489,16 @@
                 <div class="form__group">
                   <input class="form__input" name="user" type="text" placeholder="Телефон *" maxlength="50" required="">
                 </div>
+                <div class="form__file">
+                  <input type="file" class="form__input_file" id="contact__file" hidden>
+                  <label class="form__file_button" for="contact__file">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4784 6.61236C22.431 4.65972 25.5968 4.65974 27.5494 6.61236L26.8438 7.31802L27.5494 6.61237C29.502 8.56497 29.502 11.7308 27.5495 13.6834L27.5494 13.6834L15.7643 25.4685C13.0307 28.2022 8.59849 28.2022 5.86483 25.4685L6.57194 24.7614L5.86483 25.4685C3.13116 22.7349 3.13116 18.3027 5.86483 15.569L15.7643 5.66954C16.1548 5.27902 16.788 5.27901 17.1785 5.66954C17.569 6.06006 17.569 6.69323 17.1785 7.08375L7.27904 16.9832L6.57194 16.2761L7.27904 16.9832C5.32642 18.9359 5.32642 22.1017 7.27904 24.0543L6.58434 24.749L7.27904 24.0543C9.23166 26.0069 12.3975 26.0069 14.3501 24.0543L15.0101 24.7143L14.3501 24.0543L26.1352 12.2692C26.1352 12.2692 26.1352 12.2692 26.1352 12.2692C27.3068 11.0976 27.3068 9.19811 26.1352 8.02658C24.9636 6.85498 23.0641 6.855 21.8926 8.02657L21.8926 8.02658L10.1075 19.8116C9.71696 20.2022 9.71696 20.8354 10.1075 21.2259C10.498 21.6164 11.1312 21.6164 11.5217 21.2259L21.4212 11.3264C21.8117 10.9358 22.4449 10.9358 22.8354 11.3264C23.2259 11.7169 23.2259 12.3501 22.8354 12.7406L12.9359 22.6401C11.7643 23.8117 9.86483 23.8117 8.69323 22.6401L8.6932 22.6401C7.52172 21.4685 7.52172 19.569 8.6932 18.3975L8.69324 18.3974L20.4784 6.61238C20.4784 6.61237 20.4784 6.61237 20.4784 6.61236Z" fill="currentColor"/>
+                    </svg>
+                    <span>Загрузите файл резюме (Формат файла: PDF, DOC, DOCX . Не более 15 Мб)</span>
+                  </label>
+                  <ul id="contact__file_container" class="form__file_list"></ul>
+                </div>
                 <div class="form__group">
                   <button class="btn btn--bg from__submit">Отправить</button>
                 </div>
@@ -504,6 +514,59 @@
         </div>
       </div>
     </section>
+    <div class="vacancy__popup">
+      <button class="vacancy__close">
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.59529 30.1939C0.773138 31.0161 0.775884 32.3463 1.60143 33.165C2.42697 33.9838 3.7627 33.981 4.58485 33.1589L17.4751 20.2687L30.7922 33.5858C31.6144 34.408 32.9501 34.4107 33.7757 33.592C34.6012 32.7732 34.6039 31.443 33.7818 30.6208L20.4523 17.2914L33.6134 4.13028C34.4356 3.30812 34.4329 1.9779 33.6073 1.15914C32.7818 0.340388 31.446 0.343144 30.6239 1.1653L17.4751 14.3141L4.75319 1.59224C3.93103 0.770082 2.59531 0.767325 1.76976 1.58608C0.94422 2.40483 0.941473 3.73506 1.76363 4.55721L14.4978 17.2914L1.59529 30.1939Z" fill="#AFAFAF"></path>
+        </svg>
+      </button>
+      <p class="vacancy__popup_head"><span>Отклик на вакансию -</span> <span></span></p>
+      <form class="form vacancy__form">
+        
+        <input class="form__input" id="vacancy__popup_name" name="user" type="hidden">
+
+        <div class="form__group">
+          <input class="form__input" name="user" type="text" placeholder="Руководитель проектов" maxlength="50" required>
+        </div>
+    
+        <div class="form__group">
+          <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
+        </div>
+    
+        <div class="form__group">
+          <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
+        </div>
+    
+        <div class="form__group">
+          <input class="form__input" name="mail" type="text" placeholder="Почта *" maxlength="50" required>
+        </div>
+    
+        <div class="form__group">
+          <input class="form__input" name="orgId" type="text" placeholder="Сообщение" maxlength="50" required>
+        </div>
+        <div class="form__file">
+          <input type="file" class="form__input_file" id="vacancy__file" hidden>
+          <label class="form__file_button" for="vacancy__file">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4784 6.61236C22.431 4.65972 25.5968 4.65974 27.5494 6.61236L26.8438 7.31802L27.5494 6.61237C29.502 8.56497 29.502 11.7308 27.5495 13.6834L27.5494 13.6834L15.7643 25.4685C13.0307 28.2022 8.59849 28.2022 5.86483 25.4685L6.57194 24.7614L5.86483 25.4685C3.13116 22.7349 3.13116 18.3027 5.86483 15.569L15.7643 5.66954C16.1548 5.27902 16.788 5.27901 17.1785 5.66954C17.569 6.06006 17.569 6.69323 17.1785 7.08375L7.27904 16.9832L6.57194 16.2761L7.27904 16.9832C5.32642 18.9359 5.32642 22.1017 7.27904 24.0543L6.58434 24.749L7.27904 24.0543C9.23166 26.0069 12.3975 26.0069 14.3501 24.0543L15.0101 24.7143L14.3501 24.0543L26.1352 12.2692C26.1352 12.2692 26.1352 12.2692 26.1352 12.2692C27.3068 11.0976 27.3068 9.19811 26.1352 8.02658C24.9636 6.85498 23.0641 6.855 21.8926 8.02657L21.8926 8.02658L10.1075 19.8116C9.71696 20.2022 9.71696 20.8354 10.1075 21.2259C10.498 21.6164 11.1312 21.6164 11.5217 21.2259L21.4212 11.3264C21.8117 10.9358 22.4449 10.9358 22.8354 11.3264C23.2259 11.7169 23.2259 12.3501 22.8354 12.7406L12.9359 22.6401C11.7643 23.8117 9.86483 23.8117 8.69323 22.6401L8.6932 22.6401C7.52172 21.4685 7.52172 19.569 8.6932 18.3975L8.69324 18.3974L20.4784 6.61238C20.4784 6.61237 20.4784 6.61237 20.4784 6.61236Z" fill="currentColor"/>
+            </svg>
+            <span>Загрузите файл резюме (Формат файла: PDF, DOC, DOCX . Не более 15 Мб)</span>
+          </label>
+          <ul id="vacancy__file_container" class="form__file_list"></ul>
+        </div>
+        
+        <div class="form__group">
+          <button class="button__default">Отправить</button>
+        </div>
+    
+        <div class="form__group">
+          <label class="checkbox">
+            <input class="checkbox__input" name="privacy" type="checkbox">
+            <span class="checkbox__name">Даю согласие на обработку персональных данных</span>
+          </label>
+        </div>
+      </form>
+    </div>
     <section class="together">
       <div class="border border__dgray">
         <span></span>
@@ -719,6 +782,7 @@
       }, 0);
     }
   </script>
+  <script src="js/form.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
