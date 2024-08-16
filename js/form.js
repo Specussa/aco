@@ -254,7 +254,6 @@ if(changephonecodeform) {
 // start vacancy files
 const vacancyInput = document.getElementById('vacancy__file');
 if(vacancyInput) {
-
   const bodyoverlays = document.querySelector(".overlay");
   const vacancyPopupButton = document.querySelectorAll(".vacancy__popup_button");
   const vacancyPopup = document.querySelector(".vacancy__popup");
@@ -349,6 +348,41 @@ if(vacancyInput) {
       vacancyfileContainer.innerHTML += `<li class="form__file_item"><span class="form__file_name">${vacancyToUpload[i].file.name}</span><span class="form__file_size">${vacancyToUpload[i].filesize}</span><a onclick="vacancyremoveFile('${vacancyToUpload[i].FID}')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L12 12M12 12L17 7.00001M12 12L7 7M12 12L17 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>`;
     }
   }
+
+  // document.getElementById('vacancy__form').addEventListener('submit', e => {
+  //   e.preventDefault();
+  //   checkVacancyInputs();
+  // });
+
+  // function checkVacancyInputs() {
+  // const vacancynameValue = document.getElementById('vacancy__popup_name').value.trim();
+  // const vacancylastnameValue = document.getElementById('vacancy__popup_lastname').value.trim();
+  // const vacancyphoneValue = document.getElementById('vacancy__popup_phone').value.trim();
+  // const vacancyemailValue = document.getElementById('vacancy__popup_email').value.trim();
+  // const vacancytextValue = document.getElementById('vacancy__popup_text').value.trim();
+  // const vacancyfileValue = document.getElementById('vacancy__file').value.trim();
+  // if(vacancynameValue !== '' && 
+  //   vacancylastnameValue !== '' && 
+  //   vacancyphoneValue !== '' && 
+  //   vacancyemailValue !== '' && 
+  //   vacancytextValue !== '' && 
+  //   vacancyfileValue !== '') {
+  //     var data = new FormData()
+  //     data.append('one', vacancynameValue);
+  //     data.append('two', vacancylastnameValue);
+  //     data.append('three', vacancyphoneValue);
+  //     data.append('four', vacancyemailValue);
+  //     data.append('five', vacancytextValue);
+  //     data.append('six', vacancyfileValue.files[0]);
+      
+  //     fetch('/ajax/vacancie.php', {
+  //       method: 'POST',
+  //       body: data
+  //     })
+  //   } else {
+  //     alert("Заполните все поля и загрузите файл!")
+  //   }
+  // }
 }
 // end vacancy files
 
@@ -415,5 +449,31 @@ if(contactInput) {
       contactfileContainer.innerHTML += `<li class="form__file_item"><span class="form__file_name">${contactToUpload[i].file.name}</span><span class="form__file_size">${contactToUpload[i].filesize}</span><a onclick="contactremoveFile('${contactToUpload[i].FID}')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L12 12M12 12L17 7.00001M12 12L7 7M12 12L17 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>`;
     }
   }
+
+  // document.getElementById('vacancy_contact__form').addEventListener('submit', e => {
+  //   e.preventDefault();
+  //   checkContactInputs();
+  // });
+
+  // function checkContactInputs() {
+  // const contactlastnameValue = document.getElementById('vacancy_contact__form_0').value.trim();
+  // const contactphoneValue = document.getElementById('vacancy_contact__form_1').value.trim();
+  // const contactfileValue = document.getElementById('contact__file').value.trim();
+  // if(contactlastnameValue !== '' && 
+  //   contactphoneValue !== '' && 
+  //   contactfileValue !== '') {
+  //     var data = new FormData()
+  //     data.append('one', contactlastnameValue);
+  //     data.append('two', contactphoneValue);
+  //     data.append('three', contactfileValue.files[0]);
+      
+  //     fetch('/ajax/vacancie.php', {
+  //       method: 'POST',
+  //       body: data
+  //     })
+  //   } else {
+  //     alert("Заполните все поля и загрузите файл!")
+  //   }
+  // }
 }
 // end contact files

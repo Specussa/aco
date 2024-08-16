@@ -483,12 +483,12 @@
             </div>
             <div class="vacancy_contact__right">
               <p class="vacancy_contact__desc">Не нашли подходящую вакансию? Отправьте резюме и мы рассмотрим возможность сотрудничества с вами</p>
-              <form action="" class="form vacancy_contact__form">
+              <form action="" class="form vacancy_contact__form" id="vacancy_contact__form">
                 <div class="form__group">
-                  <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required="">
+                  <input class="form__input" name="user" id="vacancy_contact__form_0" type="text" placeholder="ФИО *" maxlength="50" required="">
                 </div>
                 <div class="form__group">
-                  <input class="form__input" name="user" type="text" placeholder="Телефон *" maxlength="50" required="">
+                  <input class="form__input" name="user" id="vacancy_contact__form_1" type="text" placeholder="Телефон *" maxlength="50" required="">
                 </div>
                 <div class="form__file">
                   <input type="file" class="form__input_file" id="contact__file" hidden>
@@ -522,26 +522,26 @@
         </svg>
       </button>
       <p class="vacancy__popup_head">Отклик на вакансию</p>
-      <form class="form vacancy__form">
+      <form class="form vacancy__form" id="vacancy__form">
 
         <div class="form__group">
           <input class="form__input" name="user" id="vacancy__popup_name" type="text" placeholder="Название вакансии" maxlength="50" disabled required>
         </div>
     
         <div class="form__group">
-          <input class="form__input" name="user" type="text" placeholder="ФИО *" maxlength="50" required>
+          <input class="form__input" name="user" id="vacancy__popup_lastname" type="text" placeholder="ФИО *" maxlength="50" required>
         </div>
     
         <div class="form__group">
-          <input class="form__input" name="phone" type="text" placeholder="Телефон *" maxlength="50" required>
+          <input class="form__input" name="phone" id="vacancy__popup_phone" type="text" placeholder="Телефон *" maxlength="50" required>
         </div>
     
         <div class="form__group">
-          <input class="form__input" name="mail" type="text" placeholder="Почта *" maxlength="50" required>
+          <input class="form__input" name="mail" id="vacancy__popup_email" type="text" placeholder="Почта *" maxlength="50" required>
         </div>
     
         <div class="form__group">
-          <input class="form__input" name="orgId" type="text" placeholder="Сообщение" maxlength="50" required>
+          <input class="form__input" name="orgId" id="vacancy__popup_text" type="text" placeholder="Сообщение" maxlength="50" required>
         </div>
         <div class="form__file">
           <input type="file" class="form__input_file" id="vacancy__file" hidden>

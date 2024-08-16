@@ -6507,6 +6507,10 @@ svg path {
   .vacancy_contact__left {
     gap: 30px;
   }
+  .vacancy_step__desc {
+    font-size: 14px;
+    line-height: 16.1px;
+  }
   .form__file_button {
     font-size: 14px;
     line-height: 16.1px;
