@@ -2713,13 +2713,14 @@ svg path {
 .changephone__overlay,
 .changepass__overlay,
 .vacancy__popup {
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 1120px;
+  height: calc(100% - 40px);
   max-height: 100%;
   position: fixed;
   top: 0;
   left: 50%;
-  z-index: 121;
+  z-index: 12111;
   background: var(--white);
   opacity: 0;
   -webkit-transform: translateY(calc(-100% - 1px));
@@ -4661,6 +4662,7 @@ svg path {
   width: 100%;
   height: 40px;
   border-bottom: 1px solid var(--gray);
+  border-radius: 0 !important;
   color: var(--gray);
 }
 
@@ -4731,6 +4733,7 @@ svg path {
   height: 25px;
   appearance: none;
   border: 1px solid var(--gray);
+  border-radius: 0 !important;
   cursor: pointer;
 }
 
@@ -4961,7 +4964,7 @@ svg path {
 
 .form__input {
   padding-right: 55px;
-  background-color: var(--white);
+  background-color: transparent !important;
 }
 
 .toggle-show-password {
@@ -5462,6 +5465,12 @@ svg path {
   gap: 60px;
 }
 
+.vacancy__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .vacancy__heading,
 .vacancy__list {
   -webkit-touch-callout: none;
@@ -5598,6 +5607,12 @@ svg path {
   gap: 60px;
 }
 
+.vacancy_contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .vacancy_contact__heading {
   padding: 0 20px;
   -webkit-touch-callout: none;
@@ -5659,7 +5674,7 @@ svg path {
 
 .form__file {
   display: flex;
-  padding: 20px 0 40px;
+  padding: 20px 0;
   flex-direction: column;
   gap: 20px;
   -webkit-touch-callout: none;
@@ -5685,7 +5700,8 @@ svg path {
 }
 
 #vacancy__popup_name {
-  color: var(--green);
+  color: var(--green) !important;
+  pointer-events: none;
 }
 
 .form__file_button:hover {
@@ -6511,6 +6527,9 @@ svg path {
     font-size: 14px;
     line-height: 16.1px;
   }
+  .vacancy_step__link {
+    gap: 30px;
+  }
   .form__file_button {
     font-size: 14px;
     line-height: 16.1px;
@@ -7146,6 +7165,9 @@ svg path {
     font-size: 14px;
     line-height: 16.1px;
   }
+  .vacancy_step__link {
+    gap: 20px;
+  }
   .footer__list_bottom .footer__item:first-child {
     flex-direction: column-reverse;
     gap: 20px;
@@ -7761,7 +7783,7 @@ svg path {
     width: calc(50% - 5px);
   }
   .button__default {
-    padding: 17px;
+    padding: 27px;
   }
   .related__button {
     width: 100%;
@@ -7847,6 +7869,13 @@ svg path {
   .vacancy_contact__left {
     flex-wrap: wrap;
     flex-direction: row;
+  }
+  .vacancy_step__link {
+    gap: 10px;
+  }
+  .vacancy_step__head {
+    font-size: 24px;
+    line-height: 24px;
   }
   .footer__list_bottom .footer__item:last-child {
     width: 50%;
